@@ -1,0 +1,138 @@
+* {
+  box-sizing: border-box;
+}
+
+/* Style the body */
+body {
+  margin: 0;
+  background-color: #f1f1f1;
+  padding: 0 120px 0 120px;
+}
+
+.page {
+  display: flex;
+  flex-direction: column;
+  box-shadow: 5px 5px 15px gray;
+}
+
+/* Header/logo Title */
+.header {
+  padding: 20px;
+  text-align: left;
+  background: white;
+}
+
+.responsive-img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Style the top navigation bar */
+.navbar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #35456c;
+}
+
+.navbar ul {
+  display: block;
+  margin-block-start: 0em;
+  margin-block-end: 0em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+}
+
+/* Style the navigation bar links */
+.navbar a {
+  color: white;
+  padding: 14px 20px;
+  font-family: "lato", sans-serif;
+  list-style: none;
+  background-color: transparent;
+  text-decoration: none;
+  position: relative;
+  display: block;
+  padding: 10px 15px;
+  line-height: 20px;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  transition: all ease-in-out 0.3s;
+  color: #fff;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-size: 12px;
+  padding-left: 15px;
+  text-decoration: none;
+  text-align: center;
+}
+
+/* Change color on hover */
+.navbar a:hover {
+  background-color: #d9323a;
+  color: white;
+}
+
+/* Column container */
+.container {
+  flex: 1 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+/* Main column */
+.main {
+  flex: 1 0 auto;
+  background-color: white;
+  padding: 20px;
+}
+
+.navbar li {
+  font-size: 14px;
+  line-height: 1.42857143;
+  font-family: "lato", sans-serif;
+  color: #434a54;
+  list-style: none;
+  box-sizing: border-box;
+  display: block;
+  float: left;
+  border-left: 1px solid rgba(77, 77, 77, 0.2);
+  position: static;
+  transition: all ease-in-out 0.6s;
+}
+
+.caret {
+  font-family: "lato", sans-serif;
+  list-style: none;
+  line-height: 20px;
+  color: #fff;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-size: 12px;
+  box-sizing: border-box;
+  font-weight: 700;
+  display: inline-block;
+  width: 0;
+  height: 0;
+  margin-left: 2px;
+  vertical-align: middle;
+  border-top: 4px dashed;
+  border-right: 4px solid transparent;
+  border-left: 4px solid transparent;
+}
+
+/* Footer */
+.footer {
+  flex-shrink: 0;
+  padding: 20px;
+  text-align: center;
+  background: #ddd;
+}
+
+/* Responsive layout - when the screen is less than 700px wide, make the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 700px) {
+  .container,
+  .navbar {
+    flex-direction: column;
+  }
+}
