@@ -12,21 +12,19 @@
       media="screen"
       href="css/styles.css"
     />
-    <script src="js/load-content.js"></script>
   </head>
   <body>
-      <!-- Header -->
-      <div class="header">
-        <img
-          class="responsive-img"
-          src="assets/logo-mql.png"
-          alt="Logo MQL"
-          style="background-color: blueviolet;"
-        />
-      </div>
-
+    <!-- Header -->
+    <header class="header">
+      <!-- Logo -->
+      <img
+        class="responsive-img"
+        src="assets/logo-mql.png"
+        alt="Logo MQL"
+        style="background-color: blueviolet;"
+      />
       <!-- Navigation Bar -->
-      <div class="navbar">
+      <nav class="navbar">
         <ul>
           <li>
             <a id="condition-acces" onclick="loadContent(event)"
@@ -52,17 +50,19 @@
             <a id="contact" onclick="loadContent(event)">Contact</a>
           </li>
         </ul>
-      </div>
+      </nav>
+    </header>
 
-      <!-- The flexible grid (content) -->
-      <div class="container">
-        <div id="main" class="main"></div>
-      </div>
+    <!-- Main content -->
+    <main class="container">
+      <div id="main" class="main"></div>
+    </main>
 
-      <!-- Footer -->
-      <div class="footer">
-        <h2>Footer</h2>
-      </div>
-    </div>
+    <!-- Footer -->
+    <footer class="footer">
+      <h2>Footer</h2>
+    </footer>
+
+    <script src="js/load-content.js"></script>
   </body>
 </html>
