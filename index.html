@@ -1,61 +1,68 @@
 <!DOCTYPE html>
 <html>
-<head>
-<title>MQL Fès</title>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link
+  <head>
+    <title>Plateforme MQL</title>
+    <!-- TODO: -->
+    <meta name="description" content="Yousra est demandée à la caisse, merci" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
       rel="stylesheet"
       type="text/css"
       media="screen"
       href="css/styles.css"
     />
-<script src='js/load-content.js'></script>
-</head>
-<body>
-<div class="page">
-<!-- Header -->
-<div class="header">
-  <img class="responsive-img" src="assets/logo.png" alt="MQL Fès">
-</div>
+    <script src="js/load-content.js"></script>
+  </head>
+  <body>
+      <!-- Header -->
+      <div class="header">
+        <img
+          class="responsive-img"
+          src="assets/logo-mql.png"
+          alt="Logo MQL"
+          style="background-color: blueviolet;"
+        />
+      </div>
 
-<!-- Navigation Bar -->
-<div class="navbar">
-  <ul>
-    <li>
-      <a id="condition-acces" onclick="load_content(event)">Conditions d'accès</a>
-    </li>
-    <li>
-        <a id="activites" onclick="load_content(event)">Activités</a>
-    </li>
-    <li>
-        <a id="evenements" onclick="load_content(event)">évènements</a>
-    </li>
-    <li>
-        <a id="stages" onclick="load_content(event)">Stages</a>
-    </li>
-    <li>
-        <a id="laureats" onclick="load_content(event)">Lauréats</a>
-    </li>
-    <li>
-        <a id="partenaires" onclick="load_content(event)">Partenaires</a>
-    </li>
-    <li>
-        <a id="contact" onclick="load_content(event)">Contact</a>
-    </li>
-  </ul>
-</div>
+      <!-- Navigation Bar -->
+      <div class="navbar">
+        <ul>
+          <li>
+            <a id="condition-acces" onclick="loadContent(event)"
+              >Conditions d'accès</a
+            >
+          </li>
+          <li>
+            <a id="activites" onclick="loadContent(event)">Activités</a>
+          </li>
+          <li>
+            <a id="evenements" onclick="loadContent(event)">Evènements</a>
+          </li>
+          <li>
+            <a id="stages" onclick="loadContent(event)">Stages</a>
+          </li>
+          <li>
+            <a id="laureats" onclick="loadContent(event)">Lauréats</a>
+          </li>
+          <li>
+            <a id="partenaires" onclick="loadContent(event)">Partenaires</a>
+          </li>
+          <li>
+            <a id="contact" onclick="loadContent(event)">Contact</a>
+          </li>
+        </ul>
+      </div>
 
-<!-- The flexible grid (content) -->
-<div class="container">
-  <div id="main" class="main">
-  </div>
-</div>
+      <!-- The flexible grid (content) -->
+      <div class="container">
+        <div id="main" class="main"></div>
+      </div>
 
-<!-- Footer -->
-<div class="footer">
-  <h2>Footer</h2>
-</div>
-</div>
-</body>
+      <!-- Footer -->
+      <div class="footer">
+        <h2>Footer</h2>
+      </div>
+    </div>
+  </body>
 </html>
