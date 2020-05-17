@@ -71,6 +71,7 @@ body {
 .navbar a:hover {
   background-color: #d9323a;
   color: white;
+  cursor: pointer;
 }
 
 /* Column container */

@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>Page Title</title>
+<title>MQL Fès</title>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link
@@ -10,6 +10,7 @@
       media="screen"
       href="css/styles.css"
     />
+<script src='js/load-content.js'></script>
 </head>
 <body>
 <div class="page">
@@ -22,32 +23,32 @@
 <div class="navbar">
   <ul>
     <li>
-      <a href="#">Conditions d'accès</a>
+      <a id="condition-acces" onclick="load_content(event)">Conditions d'accès</a>
     </li>
     <li>
-        <a href="#">Activités</a>
+        <a id="activites" onclick="load_content(event)">Activités</a>
     </li>
     <li>
-        <a href="#">évènements</a>
+        <a id="evenements" onclick="load_content(event)">évènements</a>
     </li>
     <li>
-        <a href="#">Stages</a>
+        <a id="stages" onclick="load_content(event)">Stages</a>
     </li>
     <li>
-        <a href="#">Lauréats</a>
+        <a id="laureats" onclick="load_content(event)">Lauréats</a>
     </li>
     <li>
-        <a href="#">Partenaires</a>
+        <a id="partenaires" onclick="load_content(event)">Partenaires</a>
     </li>
     <li>
-        <a href="#">Contact</a>
+        <a id="contact" onclick="load_content(event)">Contact</a>
     </li>
   </ul>
 </div>
 
 <!-- The flexible grid (content) -->
 <div class="container">
-  <div class="main">
+  <div id="main" class="main">
   </div>
 </div>
 
