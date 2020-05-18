@@ -5,7 +5,6 @@
 html, body {
   height: 100%;
   display: flex;
-  flex-direction: row;
   justify-content: center;
   margin: 0;
 }
@@ -15,7 +14,6 @@ body {
   width: 90%;
   display: flex;
   flex-direction: column;
-  justify-content: center;
   margin: 0;
   background-color: #f1f1f1;
   box-shadow: 5px 5px 15px gray;
@@ -23,7 +21,6 @@ body {
 
 /* Header/logo Title */
 .header {
-  text-align: left;
   background: white;
 }
 
@@ -38,7 +35,6 @@ body {
   padding-right: 50px;
   display: flex;
   justify-content: center;
-  align-items: center;
   background-color: #35456c;
 }
 
@@ -46,42 +42,29 @@ body {
   display: block;
   margin-block-start: 0em;
   margin-block-end: 0em;
-  margin-inline-start: 0px;
-  margin-inline-end: 0px;
 }
 
 /* Style the navigation bar links */
 .navbar a {
   color: white;
   font-family: "lato", sans-serif;
-  list-style: none;
-  background-color: transparent;
   text-decoration: none;
   position: relative;
   line-height: 20px;
   transition: all ease-in-out 0.3s;
-  color: #fff;
   text-transform: uppercase;
   letter-spacing: 1px;
-  font-size: 12px;
-  padding-left: 15px;
-  text-decoration: none;
-  text-align: center;
+  font-size: 14px;
 }
 
 .navbar a:not(.icon) {
   padding: 10px 15px;
-  padding-top: 15px;
-  padding-bottom: 15px;
   display: block;
 }
 
 .icon {
   padding-bottom: 9px;
   padding-top: 11px;
-  padding-left: 15px;
-  padding-right: 15px;
-
   display: none;
 }
 
@@ -95,24 +78,13 @@ body {
 /* Column container */
 .container {
   flex: 1 0 auto;
+  padding: 20px;
+  background-color: white;
   display: flex;
   flex-wrap: wrap;
 }
 
-/* Main column */
-.main {
-  flex: 1 0 auto;
-  background-color: white;
-  padding: 20px;
-}
-
 .navbar li {
-  font-size: 14px;
-  line-height: 1.42857143;
-  font-family: "lato", sans-serif;
-  color: #434a54;
-  list-style: none;
-  box-sizing: border-box;
   display: block;
   float: left;
   border-left: 1px solid rgba(77, 77, 77, 0.2);
@@ -120,32 +92,55 @@ body {
   transition: all ease-in-out 0.6s;
 }
 
-.caret {
-  font-family: "lato", sans-serif;
-  list-style: none;
-  line-height: 20px;
-  color: #fff;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-  font-size: 12px;
-  box-sizing: border-box;
-  font-weight: 700;
-  display: inline-block;
-  width: 0;
-  height: 0;
-  margin-left: 2px;
-  vertical-align: middle;
-  border-top: 4px dashed;
-  border-right: 4px solid transparent;
-  border-left: 4px solid transparent;
-}
-
 /* Footer */
 .footer {
-  flex-shrink: 0;
+  justify-content: space-around;
+  display: flex;
+  flex-wrap: wrap;
   padding: 20px;
-  text-align: center;
-  background: #ddd;
+  color: rgba(255, 255, 255, 0.8) !important;
+  background-color: rgba(0, 0, 0, 0.9) !important;
+  line-height: 1.6;
+}
+
+.cr {
+  color: rgba(255, 255, 255, 0.8) !important;
+  background-color: #111111;
+  padding: 20px;
+}
+
+.adresse, .mentions-legales, .rs {
+  padding-top: 15px;
+}
+
+.mentions-legales > a {
+  text-decoration: none;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.mentions-legales > a:hover {
+  color: #d9323a;
+
+}
+
+.rs > li {
+  list-style: none;
+  display: inline-block;
+  cursor: pointer;
+}
+
+.titre {
+  font-family: "lato", sans-serif;
+  position: relative;
+  margin: 0;
+  line-height: 1.4;
+  text-transform: uppercase !important;
+  border-bottom: 1px solid #d9323a;
+}
+
+.titre > h2 {
+  margin-block-start: 0;
+  margin-block-end: 0.50em;
 }
 
 /* Responsive layout - when the screen is less than 700px wide, make the two columns stack on top of each other instead of next to each other */
@@ -167,13 +162,15 @@ body {
     display: block;
     text-align: right;
   }
-  .navbar li{
+  .navbar li {
     width: 100%;
   }
 }
 
 @media screen and (max-width: 970px) {
-  .navbar.responsive {position: relative;}
+  .navbar.responsive {
+    position: relative;
+  }
   .navbar.responsive .icon {
     width: 100%;
     position: relative;
