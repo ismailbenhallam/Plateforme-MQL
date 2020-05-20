@@ -1,12 +1,137 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-    <meta charset='utf-8'>
-    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
-    <meta name='viewport' content='width=device-width, initial-scale=1'>
-    <link rel='stylesheet' type='text/css' media='screen' href='css/activites.css'>
+    <title>Plateforme MQL (Master Qualité du Logiciel)</title>
+    <meta name="description" content="Le Master MQL est une véritable plateforme de formation et de production de la ressource
+    humaine très hautement qualifiée en ingénierie du logiciel. Le Master permet à l'étudiant d'une
+    part d'acquérir une compétence de pointe en haute technologie informatique et d'autre part une
+    très bonne maitrise de l'entreprise et de son écosystème avec une insertion facile, naturelle et
+    implicite dans les plus grandes SS2I du monde." />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" type="text/css" media="screen" href="css/styles.css" />
+
+    <!-- TODO: leave it or not -->
+    <!-- Chrome, Firefox OS and Opera -->
+    <meta name="theme-color" content="#35456c">
+    <!-- Windows Phone -->
+    <meta name="msapplication-navbutton-color" content="#35456c">
+    <!-- iOS Safari -->
+    <meta name="apple-mobile-web-app-status-bar-style" content="#35456c">
 </head>
-<body>
-    <h1>Activités</h1>
+
+<!-- FIXME: is this a name ? -->
+
+<body onload="activate();">
+    <!-- Header -->
+    <header class="header">
+
+        <!-- Logo -->
+        <a title="Accueil" href="./">
+            <img class="logo principal" src="assets/logo-mql.png" alt="Logo MQL" />
+        </a>
+        <p class="title slogon">Première passerelle d’Insertion Professionnelle en Informatique au Maroc</p>
+
+        <!-- Navigation Bar -->
+        <nav class="navbar" id="navbar">
+            <ul>
+                <li>
+                    <a href="javascript:toggleResponsiveNavbar();" class="icon" id="icon">
+                        <img src="assets/icon.svg" />
+                    </a>
+                </li>
+                <li>
+                    <a id="admission" href="./admission.html">Admission</a>
+                </li>
+                <li>
+                    <a id="programmes">Programme</a>
+                </li>
+                <li>
+                    <a id="debouches">Débouchés</a>
+                </li>
+                <li>
+                    <a id="activites" href="./activites.html">Activités et Evènements</a>
+                </li>
+                <li>
+                    <a id="stages">Stages</a>
+                </li>
+                <li>
+                    <a id="laureats">Lauréats</a>
+                </li>
+                <li>
+                    <a id="partenaires">Partenaires</a>
+                </li>
+                <li>
+                    <a id="contact">Contact</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Main content -->
+    <main class="container">
+        <div id="main" class="main">
+            <header>
+                <h1 class="title">Activités</h1>
+            </header>
+
+            <hr class="divider">
+
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer">
+            <div class="logo-wrapper">
+                <a href=" index.html"><img alt="Logo MQL" src="assets/logo-mql.png" class="logo" /></a>
+            </div>
+            <div class="contact">
+                <div class="titre">
+                    <h2>Nous contacter</h2>
+                </div>
+                <address class="adresse">
+                    Master Qualité Logiciel (N. Chenfour)<br />Département
+                    d’Informatique<br />
+                    Faculté des Sciences Dhar El Mahraz<br />BP : 1796 <br />Atlas-Fès -
+                    MAROC <br />
+                    E.mail : <a href="mailto:noureddine.chenfour@usmba.ac.ma"
+                        target="__blank">noureddine.chenfour@usmba.ac.ma</a><br />
+                    Site web : <a href="www.fsdm.usmba.ac.ma" target="__blank">www.fsdm.usmba.ac.ma</a> <br />
+                </address>
+            </div>
+            <div class="liens">
+                <div class="titre">
+                    <h2>Liens</h2>
+                </div>
+                <div class="mentions-legales">
+                    <a href="#">Mentions légales</a>
+                </div>
+            </div>
+            <div class="suivez-nous">
+                <div class="titre">
+                    <h2>Suivez-nous</h2>
+                </div>
+                <ul class="rs">
+                    <li>
+                        <a title="Twitter" href="#"> <img src="assets/twitter.png" /></a>
+                    </li>
+                    <li>
+                        <a title="Facebook" href="#"> <img src="assets/facebook.png" /></a>
+                    </li>
+                    <li>
+                        <a title="Youtube" href="#"> <img src="assets/youtube.png" /></a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="copyright">
+            <small>Copyright © 2020. Tous droits réservés.</small>
+        </div>
+    </footer>
+
+    <script src="js/responsive.js"></script>
 </body>
+
 </html>

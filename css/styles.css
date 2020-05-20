@@ -3,10 +3,10 @@
 }
 
 /* Selected text */
-::selection {
+/* ::selection {
   color: #fff;
   background: #d9323a;
-}
+} */
 
 /* First letter on every element */
 /* ::first-letter {
@@ -19,13 +19,13 @@
   height: 10px;
 }
 ::-webkit-scrollbar-track {
-  background: transparent;
+  background: #f1f1f1;
 }
 ::-webkit-scrollbar-thumb {
-  background: #bab4ae;
+  background: #888;
 }
 ::-webkit-scrollbar-thumb:hover {
-  background: #767375;
+  background: #555;
 }
 
 html,
@@ -34,16 +34,14 @@ body {
   flex-direction: row;
   justify-content: center;
   margin: 0;
-}
-
-body {
-  height: 100%;
+  overflow-x: hidden;
 }
 
 /* Style the body */
 body {
   background-image: url("../assets/background.png");
   width: 90%;
+  height: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -64,17 +62,25 @@ body {
   font-weight: bold;
   color: #445276;
   margin-top: 0;
-  margin-bottom: 20px;
+  margin-bottom: 0px;
+  padding-bottom: 20px;
   padding-left: 30px;
   padding-right: 30px;
 }
 
-.responsive-img {
-  max-width: 100%;
+.logo {
+  /* max-width: 100%; */
   width: 300px;
-  height: auto;
   margin-left: 25px;
 }
+
+.slogon {
+  animation: show-opacity linear 1s;
+}
+
+/* .principal.logo {
+  animation: show-opacity ease-out 1s;
+} */
 
 /* Style the top navigation bar */
 .navbar {
@@ -128,6 +134,10 @@ body {
   display: none;
 }
 
+.navbar a.selected {
+  background-color: #d9323a;
+}
+
 /* Change color on hover */
 .navbar a:hover {
   background-color: #d9323a;
@@ -166,10 +176,6 @@ body {
 .title {
   font-weight: 2em;
 }
-.title.indent::before {
-  content: "// ";
-  color: #049cdb;
-}
 
 /* Footer */
 .footer {
@@ -178,8 +184,16 @@ body {
   flex-wrap: wrap;
   padding: 20px;
   color: rgba(255, 255, 255, 0.8) !important;
-  background-color: #191919 !important;
+  background-color: #35456c !important;
   line-height: 1.6;
+}
+
+.logo-wrapper {
+  clip-path: circle(45%);
+  background-color: #191919;
+  display: flex;
+  align-items: center;
+  min-height: 300px;
 }
 
 .contact,
@@ -188,15 +202,17 @@ body {
   padding-bottom: 20px;
 }
 
-.cr {
+.copyright {
   font-family: "lato", sans-serif;
   color: rgba(255, 255, 255, 0.8) !important;
   background-color: #111111;
   padding: 20px;
 }
 
-.adresse {
+.adresse,
+.adresse * {
   font-family: "lato", sans-serif;
+  color: rgba(255, 255, 255, 0.8) !important;
 }
 
 .adresse,
@@ -237,7 +253,7 @@ body {
 
 .left-panel > h2 {
   font-family: robotolight;
-  color :rgb(59, 59, 59);
+  color: rgb(59, 59, 59);
   letter-spacing: 0.0357143rem;
   line-height: 1.4;
   font-weight: 500;
@@ -245,7 +261,7 @@ body {
 
 .left-panel > h3 {
   font-family: robotolight;
-  color :rgb(59, 59, 59);
+  color: rgb(59, 59, 59);
   letter-spacing: 0.0357143rem;
   font-size: 1.42857rem !important;
   line-height: 1.4;
@@ -259,32 +275,38 @@ body {
 }
 
 /* Responsive layout - when the screen is less than 700px wide, make the two columns stack on top of each other instead of next to each other */
+/* FIXME: */
+/* 480px
+768px
+1024 */
 @media screen and (max-width: 1145px) {
+  /* Navbar */
   .container,
   .navbar {
     flex-direction: column;
   }
-}
-
-@media screen and (max-width: 1145px) {
   .navbar a:not(.icon) {
     display: none;
   }
   .navbar {
     align-items: unset;
+    overflow: hidden;
+    height: 50px;
+    transition: 0.2s;
   }
   .navbar a.icon {
     display: block;
     text-align: right;
   }
+
   .navbar li {
     width: 100%;
   }
-}
 
-@media screen and (max-width: 1145px) {
   .navbar.responsive {
     position: relative;
+    /* This is the total height of the navbar, if more items are added or removed from this navbar, please adjust the height*/
+    height: 450px;
   }
   .navbar.responsive .icon {
     width: 100%;
@@ -294,5 +316,67 @@ body {
     float: none;
     display: block;
     text-align: left;
+  }
+
+  /* Header */
+  .logo-wrapper {
+    min-height: 280px;
+  }
+
+  .slogon {
+    animation: show-from-top ease-out 1s;
+  }
+
+  .principal.logo {
+    animation: show-from-top ease-out 1.2s;
+  }
+
+  /* TODO: */
+  /* h1,
+  h2 {
+    text-align: center;
+  } */
+}
+
+/********* Animations *********/
+@keyframes show-opacity {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes show-from-left {
+  0% {
+    position: relative;
+    left: -500px;
+  }
+  100% {
+    position: relative;
+    left: 0px;
+  }
+}
+
+@keyframes show-from-right {
+  0% {
+    position: relative;
+    right: -500px;
+  }
+  100% {
+    position: relative;
+    right: 0px;
+  }
+}
+
+@keyframes show-from-top {
+  0% {
+    position: relative;
+    top: -500px;
+  }
+  100% {
+    position: relative;
+    top: 0px;
   }
 }
