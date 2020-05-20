@@ -2,17 +2,6 @@
   box-sizing: border-box;
 }
 
-/* Selected text */
-/* ::selection {
-  color: #fff;
-  background: #d9323a;
-} */
-
-/* First letter on every element */
-/* ::first-letter {
-  font-size: 1.1em;
-} */
-
 /* Scrollbar */
 ::-webkit-scrollbar {
   width: 10px;
@@ -184,13 +173,13 @@ body {
   flex-wrap: wrap;
   padding: 20px;
   color: rgba(255, 255, 255, 0.8) !important;
-  background-color: #35456c !important;
+  background-color: #191919 !important;
   line-height: 1.6;
 }
 
 .logo-wrapper {
   clip-path: circle(45%);
-  background-color: #191919;
+  background-color: white;
   display: flex;
   align-items: center;
   min-height: 300px;

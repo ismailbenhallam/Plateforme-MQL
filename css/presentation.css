@@ -6,12 +6,13 @@
 }
 
 .left-panel{
-    max-width: 800px;
+    flex: 70%;
     padding-right: 20px;
 }
 
 .right-panel {
+    flex: 30%;
+    align-self: flex-start;
     padding-left: 50px;
-    margin-top: 30px;
     border-left: 2px solid#445276;
 }
