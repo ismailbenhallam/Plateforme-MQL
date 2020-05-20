@@ -166,10 +166,6 @@ body {
 .title {
   font-weight: 2em;
 }
-.title.indent::before {
-  content: "// ";
-  color: #049cdb;
-}
 
 /* Footer */
 .footer {
