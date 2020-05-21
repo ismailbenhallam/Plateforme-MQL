@@ -263,6 +263,32 @@ body {
   line-height: 1.5em;
 }
 
+.content{
+  font-family: "lato", sans-serif;
+  display: flex;
+  padding: 20px;
+  line-height: 1.6;
+}
+
+.left-panel{
+  float: left;
+  width: 70%;
+  padding-right: 20px;
+}
+
+.right-panel {
+  margin-top: 30px;
+  width: 300px;
+  padding-left: 20px;
+  height: 25%;
+  border-color: #e0e0e0;
+  border-top-color: #395180 !important;
+  padding: 22px 30px 34px;
+  margin-bottom: 25px;
+  border-width: 1px;
+  border-style: solid;
+}
+
 /* Responsive layout - when the screen is less than 700px wide, make the two columns stack on top of each other instead of next to each other */
 /* FIXME: */
 /* 480px
@@ -318,7 +344,7 @@ body {
 
   .principal.logo {
     animation: show-from-top ease-out 1.2s;
-  }
+ }
 
   /* TODO: */
   /* h1,
@@ -368,4 +394,74 @@ body {
     position: relative;
     top: 0px;
   }
+}
+
+.pls-container, .pls-container table, .cmsmasters_table, .tribe-mini-calendar, .tribe-events-calendar, .shop_table, .group_table, .variations, .shop_attributes {
+  border-collapse: collapse;
+  border-spacing: 0;
+  vertical-align: middle;
+}
+table {
+  border-collapse: separate;
+  border-spacing: 15px;
+  width: 100%;
+}
+
+.cmsmasters_table thead tr {
+  background-color: #395180;
+  color: white;
+}
+
+.cmsmasters_table tr {
+  border-width: 1px;
+  border-style: solid;
+}
+
+.cmsmasters_table tr td, .cmsmasters_table tr th {
+  font-size: 14px;
+  line-height: 20px;
+  font-weight: normal;
+  font-style: normal;
+  text-transform: none;
+  text-decoration: none;
+  padding: 5px;
+}
+
+.cmsmasters_table {
+  border-collapse: collapse;
+  border-spacing: 0;
+  vertical-align: middle;
+}
+
+.cmsmasters_heading {
+  text-align: center;
+  font-size: x-large;
+  font-weight: bold;
+  font-style: normal;
+  color: #395480;
+}
+
+.main header h2{
+  text-align: center;
+  font-family: Adobe Devanagari;
+  font-style: italic;
+  font-weight: bold;
+  color: #445276;
+  margin-top: 0;
+  margin-bottom: 0px;
+  padding-bottom: 20px;
+  padding-left: 30px;
+  padding-right: 30px;
+}
+
+.info:not(:last-child){
+  border-bottom: 1px solid #e0e0e0;
+  height: 37px;
+}
+
+.info img{
+  padding-right: 20px;
+  max-width: 50%;
+  float: left;
+  overflow: hidden;
 }
