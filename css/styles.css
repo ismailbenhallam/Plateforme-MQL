@@ -128,7 +128,7 @@ body {
 }
 
 /* Change color on hover */
-.navbar a:hover {
+.navbar a:not(.icon):hover {
   background-color: #d9323a;
   color: white;
   cursor: pointer;
