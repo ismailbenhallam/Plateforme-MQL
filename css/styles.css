@@ -17,6 +17,10 @@
   background: #555;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 html,
 body {
   display: flex;
@@ -28,7 +32,7 @@ body {
 
 /* Style the body */
 body {
-  background-image: url("../assets/background.png");
+  background-image: url("../images/background.png");
   width: 90%;
   height: 100%;
   display: flex;
@@ -68,8 +72,8 @@ body {
   margin-left: 25px;
 }
 
-.slogon {
-  animation: show-opacity linear 1s;
+.slogan {
+  animation: show-opacity linear 3s;
 }
 
 /* .principal.logo {
@@ -112,14 +116,14 @@ body {
   text-align: center;
 }
 
-.navbar a:not(.icon) {
+.navbar a:not(.navbar-icon) {
   padding: 10px 15px;
   padding-top: 15px;
   padding-bottom: 15px;
   display: block;
 }
 
-.icon {
+.navbar-icon {
   padding-bottom: 9px;
   padding-top: 11px;
   padding-left: 15px;
@@ -133,7 +137,7 @@ body {
 }
 
 /* Change color on hover */
-.navbar a:hover {
+.navbar a:not(.navbar-icon):hover {
   background-color: #d9323a;
   color: white;
   cursor: pointer;
@@ -150,6 +154,14 @@ body {
 .main {
   flex: 1 0;
   background-color: white;
+}
+
+.main > div {
+  display: none;
+}
+
+.main > div.active {
+  display: block;
 }
 
 .navbar li {
@@ -180,14 +192,14 @@ body {
   justify-content: space-around;
   display: flex;
   flex-wrap: wrap;
-  padding: 20px;
+  padding: 20px 0 0 0;
   color: rgba(255, 255, 255, 0.8) !important;
   background-color: #191919 !important;
   line-height: 1.6;
 }
 
 .logo-wrapper {
-  clip-path: circle(45%);
+  clip-path: circle(42%);
   background-color: white;
   display: flex;
   align-items: center;
@@ -205,6 +217,7 @@ body {
   color: rgba(255, 255, 255, 0.8) !important;
   background-color: #111111;
   padding: 20px;
+  flex-basis: 100%;
 }
 
 .adresse,
@@ -272,14 +285,20 @@ body {
   line-height: 1.5em;
 }
 
-.top-content{
+#presentation .top-content{
   font-family: "lato", sans-serif;
   display: flex;
-  padding: 40px 40px 0px 40px;
+  padding: 40px 40px 40px 40px;
   line-height: 1.6;
 }
 
-.left-panel{
+#contact .top-content ,#admission .top-content {
+  font-family: "lato", sans-serif;
+  padding: 40px 40px 40px 40px;
+  line-height: 1.6;
+}
+
+.left-panel {
   float: left;
   width: 70%;
   padding-right: 20px;
@@ -309,7 +328,7 @@ body {
   .navbar {
     flex-direction: column;
   }
-  .navbar a:not(.icon) {
+  .navbar a:not(.navbar-icon) {
     display: none;
   }
   .navbar {
@@ -318,7 +337,7 @@ body {
     height: 50px;
     transition: 0.2s;
   }
-  .navbar a.icon {
+  .navbar a.navbar-icon {
     display: block;
     text-align: right;
   }
@@ -332,11 +351,11 @@ body {
     /* This is the total height of the navbar, if more items are added or removed from this navbar, please adjust the height*/
     height: 450px;
   }
-  .navbar.responsive .icon {
+  .navbar.responsive .navbar-icon {
     width: 100%;
     position: relative;
   }
-  .navbar.responsive a:not(.icon) {
+  .navbar.responsive a:not(.navbar-icon) {
     float: none;
     display: block;
     text-align: left;
@@ -347,14 +366,14 @@ body {
     min-height: 280px;
   }
 
-  .slogon {
+  .slogan {
     animation: show-from-top ease-out 1s;
     padding-top: 0px;
   }
 
   .principal.logo {
     animation: show-from-top ease-out 1.2s;
- }
+  }
 
   /* TODO: */
   /* h1,
@@ -406,7 +425,15 @@ body {
   }
 }
 
-.pls-container, .pls-container table, .cmsmasters_table, .tribe-mini-calendar, .tribe-events-calendar, .shop_table, .group_table, .variations, .shop_attributes {
+.pls-container,
+.pls-container table,
+.cmsmasters_table,
+.tribe-mini-calendar,
+.tribe-events-calendar,
+.shop_table,
+.group_table,
+.variations,
+.shop_attributes {
   border-collapse: collapse;
   border-spacing: 0;
   vertical-align: middle;
@@ -427,7 +454,8 @@ table {
   border-style: solid;
 }
 
-.cmsmasters_table tr td, .cmsmasters_table tr th {
+.cmsmasters_table tr td,
+.cmsmasters_table tr th {
   font-size: 14px;
   line-height: 20px;
   font-weight: normal;
@@ -465,7 +493,7 @@ table {
   background-color: #d9323a;
 }
 
-.main header h2{
+.main header h2 {
   text-align: center;
   font-family: Adobe Devanagari;
   font-style: italic;
@@ -478,12 +506,12 @@ table {
   padding-right: 30px;
 }
 
-.info:not(:last-child){
+.info:not(:last-child) {
   border-bottom: 1px solid #e0e0e0;
   height: 37px;
 }
 
-.info img{
+.info img {
   padding-right: 20px;
   max-width: 50%;
   float: left;
@@ -534,4 +562,25 @@ table {
 
 .logo-page {
   width: 70px;
+}
+
+#toTop {
+  display: none;
+  position: fixed;
+  bottom: 20px;
+  right: -5px;
+  z-index: 99; /* Make sure it does not overlap */
+  border: none; /* Remove borders */
+  outline: none; /* Remove outline */
+  color: white; /* Text color */
+  cursor: pointer; /* Add a mouse pointer on hover */
+  padding: 15px; /* Some padding */
+  border-radius: 10px; /* Rounded corners */
+  font-size: 18px; /* Increase font size */
+  clip-path: circle(33%);
+  transition: background-color .3s ease-in-out;
+}
+
+#toTop:hover {
+  background-color: #555; /* Add a dark-grey background on hover */
 }
