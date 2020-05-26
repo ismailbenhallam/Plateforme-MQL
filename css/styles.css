@@ -73,7 +73,7 @@ body {
 }
 
 .slogan {
-  animation: show-opacity linear 3s;
+  /* animation: show-opacity linear 3s; */
 }
 
 /* .principal.logo {
@@ -285,14 +285,15 @@ body {
   line-height: 1.5em;
 }
 
-#presentation .top-content{
+#presentation .top-content {
   font-family: "lato", sans-serif;
   display: flex;
   padding: 40px 40px 40px 40px;
   line-height: 1.6;
 }
 
-#contact .top-content ,#admission .top-content {
+#contact .top-content,
+#admission .top-content {
   font-family: "lato", sans-serif;
   padding: 40px 40px 40px 40px;
   line-height: 1.6;
@@ -480,7 +481,6 @@ table {
   font-style: normal;
   color: white;
   margin-bottom: 0px;
-
 }
 
 .cmsmasters_heading_wrap {
@@ -532,7 +532,7 @@ table {
   flex-basis: 475px;
 }
 
-.main-content{
+.main-content {
   background-color: #f5f7ff;
   font-family: "lato", sans-serif;
   padding: 20px 40px 40px 40px;
@@ -578,7 +578,7 @@ table {
   border-radius: 10px; /* Rounded corners */
   font-size: 18px; /* Increase font size */
   clip-path: circle(33%);
-  transition: background-color .3s ease-in-out;
+  transition: background-color 0.3s ease-in-out;
 }
 
 #toTop:hover {
