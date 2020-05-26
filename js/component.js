@@ -8,7 +8,7 @@ const SLOGAN =
 
 /********** Listeners for Navbar **********/
 window.addEventListener("load", function () {
-  addContentCharByChar(document.getElementById("slogan"), SLOGAN);
+  // addContentCharByChar(document.getElementById("slogan"), SLOGAN);
 
   const INDEX = "presentation";
   const LINKS_SUFFIX = "-link";
@@ -115,5 +115,3 @@ const addContentCharByChar = function (
     }, delayBetweenCharacters * index);
   }
 };
-
-console.log(localStorage);

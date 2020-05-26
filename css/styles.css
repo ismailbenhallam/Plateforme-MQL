@@ -303,12 +303,17 @@ body {
 }
 
 #presentation .top-content {
-  font-family: "lato", sans-serif;
+  /* #partenaire .top-content  */
   display: flex;
-  padding: 40px;
-  line-height: 1.6;
 }
 
+#partenaires .partenaires-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+
+#presentation .top-content,
 #contact .top-content,
 #admission .top-content {
   font-family: "lato", sans-serif;
@@ -541,20 +546,21 @@ table {
   border-bottom: 1px solid black;
 } */
 
-@media (min-width: 768px) {
-  .case {
-    width: 25%;
-    float: left;
-  }
-}
-
-.case {
+#partenaires .partenaires-wrapper > div {
+  flex: 0 1 25%;
   border-right: 1px solid rgba(154, 154, 154, 0.2);
   padding-top: 40px;
 }
 
-.case img {
-  margin: 0 auto;
+/* @media (min-width: 768px) {
+  .case { */
+/* flex-basis: 0%; */
+/* float: left; */
+/* }
+} */
+
+#partenaires .partenaires-wrapper > div img {
+  margin: auto auto;
   /* filter: grayscale(100%); */
   /* transition: all ease-in-out 0.6s; */
   max-width: 127px;
@@ -563,9 +569,9 @@ table {
   background: transparent;
 }
 
-.case img:hover {
-  filter: none;
-}
+/* .case img:hover { */
+/* filter: none; */
+/* } */
 
 /********* Animations *********/
 @keyframes show-opacity {
