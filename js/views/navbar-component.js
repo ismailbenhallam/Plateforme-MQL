@@ -1,12 +1,29 @@
-const toggleResponsiveNavbar = function () {
+const NavbarComponent = function (service) {
+  /********** Load navbar items **********/
+  let navbarUl = document.querySelector("#navbar > ul");
+  service.items.forEach((item) => {
+    let li = document.createElement("li");
+    let a = document.createElement("a");
+    a.dataset.target = item.target;
+    a.id = item.id;
+    a.textContent = item.name;
+    li.appendChild(a);
+    navbarUl.appendChild(li);
+
+    /* Template :
+    <li>
+      <a id="id" data-target="target">name</a>
+    </li>
+    */
+  });
+};
+
+/********** Listeners for Navbar **********/
+window.toggleResponsiveNavbar = function () {
   const navbar = document.getElementById("navbar");
   navbar.classList.toggle("responsive");
 };
 
-const SLOGAN =
-  "Première passerelle d’Insertion Professionnelle en Informatique au Maroc";
-
-/********** Listeners for Navbar **********/
 window.addEventListener("load", function () {
   // addContentCharByChar(document.getElementById("slogan"), SLOGAN);
 
@@ -58,60 +75,3 @@ window.addEventListener("load", function () {
     });
   }
 });
-
-/********** Scroll To Top Button **********/
-window.onscroll = function () {
-  const toTopBtn = document.getElementById("toTop");
-  if (
-    document.body.scrollTop > 225 ||
-    document.documentElement.scrollTop > 225
-  ) {
-    toTopBtn.style.display = "block";
-  } else {
-    toTopBtn.style.display = "none";
-  }
-};
-
-const topFunction = function () {
-  document.body.scrollTop = 0; // For Safari
-  document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
-};
-
-/********** **********/
-const displayProgram = function (e) {
-  const id = e.target.id;
-  let tableId;
-  switch (id) {
-    case "semestrHehead1":
-      tableId = "table1";
-      break;
-    case "semestrHehead2":
-      tableId = "table2";
-      break;
-    case "semestrHehead3":
-      tableId = "table3";
-      break;
-    case "semestrHehead4":
-      tableId = "table4";
-      break;
-  }
-  const table = document.getElementById(tableId);
-  if (window.getComputedStyle(table).display === "table") {
-    table.style["display"] = "none";
-  } else {
-    table.style["display"] = "table";
-  }
-};
-
-const addContentCharByChar = function (
-  HTMLElement,
-  content,
-  delayBetweenCharacters = 35
-) {
-  HTMLElement.contentText = "";
-  for (const index in content) {
-    setTimeout(function () {
-      HTMLElement.insertAdjacentText("beforeend", content[index]);
-    }, delayBetweenCharacters * index);
-  }
-};

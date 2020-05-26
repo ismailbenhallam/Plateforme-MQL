@@ -73,7 +73,7 @@ body {
 }
 
 .slogan {
-  /* animation: show-opacity linear 3s; */
+  animation: show-opacity linear 3s;
 }
 
 /****** Style the top navigation bar ******/

@@ -1,5 +1,5 @@
-export const Partenaire = function (name, website, imgSrc) {
+const Partenaire = function (name, website, logoUrl) {
   this.name = name;
   this.website = website;
-  this.imgSrc = imgSrc;
+  this.logoUrl = logoUrl;
 };

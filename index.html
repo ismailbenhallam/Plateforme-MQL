@@ -41,27 +41,7 @@
             <img src="icons/navbar-icon.svg" />
           </a>
         </li>
-        <li>
-          <a id="presentation-link" data-target="presentation">Accueil</a>
-        </li>
-        <li>
-          <a id="admission-link" data-target="admission">Admission</a>
-        </li>
-        <li>
-          <a id="activites-link" data-target="activites">Activités et Evènements</a>
-        </li>
-        <li>
-          <a id="stages-link" data-target="stages">Stages</a>
-        </li>
-        <li>
-          <a id="laureats-link" data-target="laureats">Lauréats</a>
-        </li>
-        <li>
-          <a id="partenaires-link" data-target="partenaires">Partenaires</a>
-        </li>
-        <li>
-          <a id="contact-link" data-target="contact">Contact</a>
-        </li>
+        <!-- More items are added dynamically -->
       </ul>
     </nav>
   </header>
@@ -100,7 +80,7 @@
                 <ul>
                   <li>Développeurs d’applications spécifiques : Web - Mobile - Décisionnel - Client/Serveur</li>
                   <li>Développeurs en migration et intégration des systèmes d’information</li>
-                  <li>Spécialistes en support applicatif- maintenance des applications actives et en infogérance</li>
+                  <li>Spécialistes en support applicatif - maintenance des applications actives et en infogérance</li>
                 </ul>
             </ul>
             </p>
@@ -383,61 +363,7 @@
         <hr class="divider">
       </header>
       <div id="partenaires-wrapper" class="top-content partenaires-wrapper">
-        <!-- <div class="box-content"> -->
-        <!-- <div class="border-bottom"> -->
-        <!-- <div>
-          <a href="https://www.cgi.com/"><img src="images/partenaires/cgi-logo.png" /></a>
-        </div>
-        <div>
-          <a href="https://www.capgemini.com/"><img src="images/partenaires/capgemini-logo.png" /></a>
-        </div>
-        <div>
-          <a href="https://www.umanis.com/"><img src="images/partenaires/umanis-logo.png" /></a>
-        </div>
-        <div>
-          <a href="https://atos.net/"><img src="images/partenaires/atos-logo.png" /></a>
-        </div> -->
-        <!-- </div> -->
-        <!-- <div class="border-bottom"> -->
-        <!-- <div>
-          <a href="https://www.sqli.com/"><img src="images/partenaires/sqli-logo.png" /></a>
-        </div>
-        <div>
-          <a href="https://www.accenture.com/"><img src="images/partenaires/accenture-logo.png" /></a>
-        </div>
-        <div>
-          <a href="https://group.bnpparibas/"><img src="images/partenaires/bdsi-logo.png" /></a>
-        </div>
-        <div>
-          <a href="#"><img src="images/partenaires/fedaso-logo.png" /></a>
-        </div> -->
-        <!-- </div> -->
-        <!-- <div class="border-bottom"> -->
-        <!-- <div>
-          <a href="https://www.hps-worldwide.com/"><img src="images/partenaires/hps-logo.png" /></a>
-        </div>
-        <div>
-          <a href="https://www.lnet.ma/"><img src="images/partenaires/lnet-logo.png" /></a>
-        </div>
-        <div>
-          <a href="https://s2mworldwide.com/"><img src="images/partenaires/s2m-logo.jpg" /></a>
-        </div>
-        <div>
-          <a href="https://africa-technologies-services.sgcib.com/"><img
-              src="images/partenaires/societe-generale-logo.png" /></a>
-        </div> -->
-        <!-- </div> -->
-        <!-- <div class="border-bottom"> -->
-        <!-- <div>
-          <a href="https://www.soprasteria.com/"><img src="images/partenaires/soprasteria_logo.png" /></a>
-        </div>
-        <div>
-          <a href="https://logic-group.org/portfolio_skills/logo-design/">
-            <img src="images/partenaires/logic-group-logo.png" />
-          </a> -->
-        <!-- </div> -->
-        <!-- </div> -->
-        <!-- </div> -->
+        <!-- Partners are added dynamically -->
       </div>
     </div>
 
@@ -518,9 +444,19 @@
     <!-- Scroll To Top Button -->
     <img onclick="topFunction()" id="toTop" title="Go to top" src="icons/arrow-top.png" />
   </footer>
-
-  <script src="js/views/partenaires.js" type="module" defer="defer" async='async'></script>
-  <script src="js/component.js"></script>
+  <script src="js/utils.js" defer="defer"></script>
+  <script src="js/data/global.js" defer="defer"></script>
+  <script src="js/data/navbar-json.js" defer="defer"></script>
+  <script src="js/data/partenaires-json.js" defer="defer"></script>
+  <script src="js/models/navbar-item.js" defer="defer"></script>
+  <script src="js/models/partenaire.js" defer="defer"></script>
+  <script src="js/service/navbar-service.js" defer="defer"></script>
+  <script src="js/service/partenaire-service.js" defer="defer"></script>
+  <script src="js/views/partenaire-component.js" defer="defer"></script>
+  <script src="js/views/navbar-component.js" defer="defer"></script>
+  <script src="js/views/presentation-component.js" defer="defer"></script>
+  <script src="js/views/root-component.js" defer="defer"></script>
+  <script src="js/main.js" defer="defer"></script>
 </body>
 
 </html>
