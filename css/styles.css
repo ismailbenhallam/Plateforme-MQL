@@ -2,7 +2,7 @@
   box-sizing: border-box;
 }
 
-/* Scrollbar */
+/****** Scrollbar ******/
 ::-webkit-scrollbar {
   width: 10px;
   height: 10px;
@@ -30,7 +30,7 @@ body {
   overflow-x: hidden;
 }
 
-/* Style the body */
+/******* Style the body *******/
 body {
   background-image: url("../images/background.png");
   width: 90%;
@@ -43,7 +43,7 @@ body {
   box-shadow: 0px 0px 15px 9px black;
 }
 
-/* Header/logo Title */
+/****** Header/logo Title ******/
 .header {
   text-align: center;
   background: white;
@@ -76,11 +76,7 @@ body {
   /* animation: show-opacity linear 3s; */
 }
 
-/* .principal.logo {
-  animation: show-opacity ease-out 1s;
-} */
-
-/* Style the top navigation bar */
+/****** Style the top navigation bar ******/
 .navbar {
   padding-right: 50px;
   display: flex;
@@ -143,14 +139,13 @@ body {
   cursor: pointer;
 }
 
-/* Column container */
+/******* Main column *******/
 .container {
   flex: 1 0 auto;
   display: flex;
   flex-wrap: wrap;
 }
 
-/* Main column */
 .main {
   flex: 1 0;
   background-color: white;
@@ -187,7 +182,7 @@ body {
   display: flex;
 }
 
-/* Footer */
+/******* Footer *******/
 .footer {
   justify-content: space-around;
   display: flex;
@@ -246,6 +241,28 @@ body {
   list-style: none;
   display: inline-block;
   cursor: pointer;
+}
+
+/****** Scroll to top button ******/
+#toTop {
+  display: none;
+  position: fixed;
+  bottom: 20px;
+  right: -5px;
+  z-index: 99; /* Make sure it does not overlap */
+  border: none; /* Remove borders */
+  outline: none; /* Remove outline */
+  color: white; /* Text color */
+  cursor: pointer; /* Add a mouse pointer on hover */
+  padding: 15px; /* Some padding */
+  border-radius: 10px; /* Rounded corners */
+  font-size: 18px; /* Increase font size */
+  clip-path: circle(33%);
+  transition: background-color 0.3s ease-in-out;
+}
+
+#toTop:hover {
+  background-color: #555; /* Add a dark-grey background on hover */
 }
 
 .titre {
@@ -361,7 +378,8 @@ body {
     display: block;
     text-align: left;
   }
-
+}
+@media screen and (max-width: 768px) {
   /* Header */
   .logo-wrapper {
     min-height: 280px;
@@ -375,57 +393,7 @@ body {
   .principal.logo {
     animation: show-from-top ease-out 1.2s;
   }
-
-  /* TODO: */
-  /* h1,
-  h2 {
-    text-align: center;
-  } */
 }
-
-/********* Animations *********/
-@keyframes show-opacity {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
-}
-
-@keyframes show-from-left {
-  0% {
-    position: relative;
-    left: -500px;
-  }
-  100% {
-    position: relative;
-    left: 0px;
-  }
-}
-
-@keyframes show-from-right {
-  0% {
-    position: relative;
-    right: -500px;
-  }
-  100% {
-    position: relative;
-    right: 0px;
-  }
-}
-
-@keyframes show-from-top {
-  0% {
-    position: relative;
-    top: -500px;
-  }
-  100% {
-    position: relative;
-    top: 0px;
-  }
-}
-
 .pls-container,
 .pls-container table,
 .cmsmasters_table,
@@ -563,28 +531,7 @@ table {
 .logo-page {
   width: 70px;
 }
-
-#toTop {
-  display: none;
-  position: fixed;
-  bottom: 20px;
-  right: -5px;
-  z-index: 99; /* Make sure it does not overlap */
-  border: none; /* Remove borders */
-  outline: none; /* Remove outline */
-  color: white; /* Text color */
-  cursor: pointer; /* Add a mouse pointer on hover */
-  padding: 15px; /* Some padding */
-  border-radius: 10px; /* Rounded corners */
-  font-size: 18px; /* Increase font size */
-  clip-path: circle(33%);
-  transition: background-color .3s ease-in-out;
-}
-
-#toTop:hover {
-  background-color: #555; /* Add a dark-grey background on hover */
-/* partenaires */
-
+/******* partenaires *******/
 .box-content {
   box-shadow: 0 0 3px rgba(77, 77, 77, 0.2);
 }
@@ -608,8 +555,8 @@ table {
 
 .case img {
   margin: 0 auto;
-  filter: grayscale(100%);
-  transition: all ease-in-out 0.6s;
+  /* filter: grayscale(100%); */
+  /* transition: all ease-in-out 0.6s; */
   max-width: 127px;
   max-height: 78px;
   display: block;
@@ -618,4 +565,47 @@ table {
 
 .case img:hover {
   filter: none;
+}
+
+/********* Animations *********/
+@keyframes show-opacity {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes show-from-left {
+  0% {
+    position: relative;
+    left: -500px;
+  }
+  100% {
+    position: relative;
+    left: 0px;
+  }
+}
+
+@keyframes show-from-right {
+  0% {
+    position: relative;
+    right: -500px;
+  }
+  100% {
+    position: relative;
+    right: 0px;
+  }
+}
+
+@keyframes show-from-top {
+  0% {
+    position: relative;
+    top: -500px;
+  }
+  100% {
+    position: relative;
+    top: 0px;
+  }
 }
