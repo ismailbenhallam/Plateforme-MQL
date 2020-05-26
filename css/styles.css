@@ -288,14 +288,14 @@ body {
 #presentation .top-content {
   font-family: "lato", sans-serif;
   display: flex;
-  padding: 40px 40px 40px 40px;
+  padding: 40px;
   line-height: 1.6;
 }
 
 #contact .top-content,
 #admission .top-content {
   font-family: "lato", sans-serif;
-  padding: 40px 40px 40px 40px;
+  padding: 40px;
   line-height: 1.6;
 }
 
@@ -578,9 +578,44 @@ table {
   border-radius: 10px; /* Rounded corners */
   font-size: 18px; /* Increase font size */
   clip-path: circle(33%);
-  transition: background-color 0.3s ease-in-out;
+  transition: background-color .3s ease-in-out;
 }
 
 #toTop:hover {
   background-color: #555; /* Add a dark-grey background on hover */
+/* partenaires */
+
+.box-content {
+  box-shadow: 0 0 3px rgba(77, 77, 77, 0.2);
+}
+
+/* FIXME */
+/* .border-bottom {
+  border-bottom: 1px solid black;
+} */
+
+@media (min-width: 768px) {
+  .case {
+    width: 25%;
+    float: left;
+  }
+}
+
+.case {
+  border-right: 1px solid rgba(154, 154, 154, 0.2);
+  padding-top: 40px;
+}
+
+.case img {
+  margin: 0 auto;
+  filter: grayscale(100%);
+  transition: all ease-in-out 0.6s;
+  max-width: 127px;
+  max-height: 78px;
+  display: block;
+  background: transparent;
+}
+
+.case img:hover {
+  filter: none;
 }
