@@ -8,5 +8,5 @@ var navbarJSON = [
   { target: "stages" },
   { target: "laureats", name: "Lauréats" },
   { target: "partenaires" },
-  { target: "contact" },
+  // { target: "contact" },
 ];

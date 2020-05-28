@@ -1,10 +1,10 @@
-const LaureatComponent = function(service) {
+const LaureatComponent = function (service) {
   this.service = service;
   let id = 0;
   let i = 0;
   window.addEventListener("load", () => {
     const wrapper = document.getElementById("laureats-wrapper");
-    service.items.forEach(l => {
+    service.items.forEach((l) => {
       id++;
       let divPerson = document.createElement("div");
       divPerson.setAttribute("id", "person-" + id);
@@ -58,7 +58,7 @@ const LaureatComponent = function(service) {
       divPersonContent.appendChild(divWrap);
       divPerson.appendChild(divPersonContent);
       wrapper.appendChild(divPerson);
-      divPerson.addEventListener("mouseover", ids => {
+      divPerson.addEventListener("mouseover", (ids) => {
         ids = divPerson.id;
         const bioImgChild = document
           .getElementById(ids)
@@ -69,7 +69,7 @@ const LaureatComponent = function(service) {
           .getElementsByClassName("social")[0];
         social.classList.add("translate");
       });
-      divPerson.addEventListener("mouseout", ids => {
+      divPerson.addEventListener("mouseout", (ids) => {
         ids = divPerson.id;
         const bioImgChild = document
           .getElementById(ids)
@@ -98,9 +98,9 @@ const LaureatComponent = function(service) {
         el.parentElement.innerHTML =
           el.parentElement.innerHTML +
           "<div class='read-more'><a href='#' class='more'></a>";
-      } 
+      }
 
-      window.onclick = function(event) {
+      window.onclick = function (event) {
         if (event.target.className == "more") {
           event.preventDefault();
           event.target.parentElement.parentElement.classList.toggle("showAll");

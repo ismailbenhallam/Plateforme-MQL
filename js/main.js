@@ -6,3 +6,4 @@ let stageComponent = new StageComponent(
   partenaireService
 );
 new LaureatComponent(new LaureatService(laureatsJSON));
+new DeboucheComponent(new DeboucheService(debouchesJSON));

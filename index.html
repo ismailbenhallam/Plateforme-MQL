@@ -12,14 +12,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <link rel="stylesheet" type="text/css" media="screen" href="css/styles.css" />
   <link rel="stylesheet" href="css/Chart.min.css">
-
-  <!-- TODO: should we leave it or not ? -->
-  <!-- Chrome, Firefox OS and Opera -->
-  <meta name="theme-color" content="#35456c" />
-  <!-- Windows Phone -->
-  <meta name="msapplication-navbutton-color" content="#35456c" />
-  <!-- iOS Safari -->
-  <meta name="apple-mobile-web-app-status-bar-style" content="#35456c" />
 </head>
 
 <body>
@@ -259,15 +251,16 @@
               Casablanca Nearshore Park, Rabat Technopolis et Fès Shore avec un taux d’insertion de 100%
               des étudiants dans des multinationales : Capgemini, CGI Tcehnologies, Atos, Cegedim et Accenture.<br>
             </p>
-            <ul>
-              <li>Chef de projet informatique</li>
+            <ul id="debouches">
+              <!-- Debouches are added dynamically -->
+              <!-- <li>Chef de projet informatique</li>
               <li>Architectes logiciels</li>
               <li>Concepteur de haut niveau de systèmes muliti-tiers</li>
               <li>Ingénieur études et développement d’applications web et/ou mobiles</li>
               <li>Concepteur de systèmes d’informations</li>
               <li>Administrateur de bases de données</li>
               <li>Ingénieur études et développement en Informatique décisionnelle</li>
-              <li>Responsable d’infrastructures informatiques (systèmes et réseau)</li>
+              <li>Responsable d’infrastructures informatiques (systèmes et réseau)</li> -->
             </ul>
         </div>
       </div>
@@ -341,8 +334,7 @@
       <div class="main-content">
         <canvas id="bar"></canvas>
         <div id="choose-year-stage" style="margin: 20px 0 auto auto;text-align: center;">
-          <!-- a <input type="radio" value="a" /><br />
-          b <input type="radio" value="b" /><br /> -->
+          <!-- Choices are added dynamically -->
         </div>
         <div style="width: 90%;">
           <canvas id="pie"></canvas>
@@ -378,7 +370,7 @@
       </div>
     </div>
 
-    <!-- Contact -->
+    <!-- Contact
     <div id="contact">
       <header>
         <div>
@@ -400,7 +392,7 @@
           <br />
         </p>
       </div>
-    </div>
+    </div> -->
 
   </main>
 
@@ -453,7 +445,7 @@
     </div>
 
     <!-- Scroll To Top Button -->
-    <img onclick="topFunction()" id="toTop" title="Go to top" src="icons/arrow-top.png" />
+    <img id="toTop" title="Go to top" src="icons/arrow-top.png" />
   </footer>
   <script src="js/utils.js" defer="defer"></script>
   <script src="js/data/global.js" defer="defer"></script>
@@ -462,19 +454,27 @@
   <script src="js/data/promos-json.js" defer="defer"></script>
   <script src="js/data/promos-details-json.js" defer="defer"></script>
   <script src="js/data/laureats-json.js" defer="defer"></script>
+  <script src="js/data/debouches-json.js" defer="defer"></script>
+
   <script src="js/models/laureat.js" defer="defer"></script>
   <script src="js/models/navbar-item.js" defer="defer"></script>
   <script src="js/models/partenaire.js" defer="defer"></script>
   <script src="js/models/promo.js" defer="defer"></script>
   <script src="js/models/promo-details.js" defer="defer"></script>
+  <script src="js/models/debouche.js" defer="defer"></script>
+
   <script src="js/service/navbar-service.js" defer="defer"></script>
   <script src="js/service/partenaire-service.js" defer="defer"></script>
   <script src="js/service/stage-service.js" defer="defer"></script>
   <script src="js/service/laureat-service.js" defer="defer"></script>
+  <script src="js/service/debouche-service.js" defer="defer"></script>
+
   <script src="js/views/laureat-component.js" defer="defer"></script>
   <script src="js/views/partenaire-component.js" defer="defer"></script>
   <script src="js/views/navbar-component.js" defer="defer"></script>
   <script src="js/views/presentation-component.js" defer="defer"></script>
+  <script src="js/views/debouche-component.js" defer="defer"></script>
+
   <script src="js/Chart.bundle.min.js"></script>
   <script src="js/views/stage-component.js" defer="defer"></script>
   <script src="js/views/root-component.js" defer="defer"></script>
