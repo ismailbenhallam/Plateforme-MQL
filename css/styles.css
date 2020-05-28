@@ -562,11 +562,16 @@ table {
 #partenaires .partenaires-wrapper > div img {
   margin: auto auto;
   /* filter: grayscale(100%); */
-  /* transition: all ease-in-out 0.6s; */
+  transition: all ease-in-out 0.2s;
   max-width: 127px;
   max-height: 78px;
   display: block;
   background: transparent;
+}
+
+#partenaires .partenaires-wrapper > div img:hover {
+  transform: scale(1.1);
+  -webkit-transform: scale(1.1);
 }
 
 /* .case img:hover { */
@@ -579,6 +584,7 @@ table {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-evenly;
+  align-items: flex-start;
 }
 
 .person {
@@ -594,14 +600,17 @@ table {
   background-color: #fff;
   transition: box-shadow 0.25s, -webkit-box-shadow 0.25s;
   border-radius: 2px;
-  width: 300px;
+  flex-basis: 300px;
   height: auto;
   opacity: 0.3;
-  transition: all .5s;
+  transition: all 0.5s;
   transform: translateY(30px);
-  align-self: flex-start; /*FIXME in case u comment it the divs will have the same height but when u 
+  /* align-self: flex-start; */
+  /*FIXED : in case u comment it the divs will have the same height but when u 
   click at read more button they all become the same height even though it's not what we intended
-  so this is just a solution for now */
+  so this is just a solution for now 
+  
+  Solution : add align-items: flex-start to parent;*/
 }
 
 .person-content {
@@ -686,7 +695,7 @@ table {
   margin-right: -15px;
   margin-left: -15px;
   opacity: 0.3;
-  transition: all .5s;
+  transition: all 0.5s;
   transform: translateY(30px);
 }
 
@@ -719,7 +728,7 @@ table {
 }
 
 .animate {
-  transition-delay: .5s;
+  transition-delay: 0.5s;
   opacity: 1;
   transform: translate(0);
 }
@@ -739,6 +748,21 @@ table {
 }
 .showAll .read-more .more:before {
   content: "Lire moins";
+}
+
+.grow-shadow:hover {
+  box-shadow: 0 10px 10px -10px rgba(0, 0, 0, 0.5);
+  transform: scale(1.1);
+  -webkit-transform: scale(1.1);
+}
+
+.grow:hover {
+  transform: scale(1.1);
+  -webkit-transform: scale(1.1);
+}
+
+.glow:hover {
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.6);
 }
 
 /********* Animations *********/
