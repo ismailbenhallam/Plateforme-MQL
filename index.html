@@ -11,6 +11,8 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <link rel="stylesheet" type="text/css" media="screen" href="css/styles.css" />
+  <link rel="stylesheet" href="css/Chart.min.css">
+
   <!-- TODO: should we leave it or not ? -->
   <!-- Chrome, Firefox OS and Opera -->
   <meta name="theme-color" content="#35456c" />
@@ -334,8 +336,17 @@
         </div>
         <hr class="divider">
       </header>
-      <div class="top-content" style="height: 500px;">
-
+      <!-- <div class="top-content" style="height: 500px;">
+      </div> -->
+      <div class="main-content">
+        <canvas id="bar"></canvas>
+        <div id="choose-year-stage" style="margin: 20px 0 auto auto;text-align: center;">
+          <!-- a <input type="radio" value="a" /><br />
+          b <input type="radio" value="b" /><br /> -->
+        </div>
+        <div style="width: 90%;">
+          <canvas id="pie"></canvas>
+        </div>
       </div>
     </div>
 
@@ -448,13 +459,21 @@
   <script src="js/data/global.js" defer="defer"></script>
   <script src="js/data/navbar-json.js" defer="defer"></script>
   <script src="js/data/partenaires-json.js" defer="defer"></script>
+  <script src="js/data/promos-json.js" defer="defer"></script>
+  <script src="js/data/promos-details-json.js" defer="defer"></script>
   <script src="js/models/navbar-item.js" defer="defer"></script>
   <script src="js/models/partenaire.js" defer="defer"></script>
+  <script src="js/models/promo.js" defer="defer"></script>
+  <script src="js/models/promo-details.js" defer="defer"></script>
   <script src="js/service/navbar-service.js" defer="defer"></script>
   <script src="js/service/partenaire-service.js" defer="defer"></script>
+  <script src="js/service/stage-service.js" defer="defer"></script>
   <script src="js/views/partenaire-component.js" defer="defer"></script>
   <script src="js/views/navbar-component.js" defer="defer"></script>
   <script src="js/views/presentation-component.js" defer="defer"></script>
+
+  <script src="js/Chart.bundle.min.js"></script>
+  <script src="js/views/stage-component.js" defer="defer"></script>
   <script src="js/views/root-component.js" defer="defer"></script>
   <script src="js/main.js" defer="defer"></script>
 </body>

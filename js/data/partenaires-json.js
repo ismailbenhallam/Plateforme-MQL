@@ -10,6 +10,11 @@ var partenairesJSON = [
     logoUrl: "images/partenaires/capgemini-logo.png",
   },
   {
+    name: "Cegedim",
+    website: "https://www.cegedim.fr/",
+    logoUrl: "images/partenaires/cegedim-logo.png",
+  },
+  {
     name: "Umanis",
     website: "https://www.umanis.com/",
     logoUrl: "images/partenaires/umanis-logo.png",
@@ -40,7 +45,7 @@ var partenairesJSON = [
     logoUrl: "images/partenaires/hps-logo.png",
   },
   {
-    name: "Lnet",
+    name: "LNet Communication",
     website: "https://www.lnet.ma/",
     logoUrl: "images/partenaires/lnet-logo.png",
   },
@@ -63,5 +68,11 @@ var partenairesJSON = [
     name: "Logic Group",
     website: "https://logic-group.org/portfolio_skills/logo-design/",
     logoUrl: "images/partenaires/logic-group-logo.png",
+  },
+  {
+    //FIXME: website
+    name: "Fedaso",
+    website: "",
+    logoUrl: "images/partenaires/fedaso-logo.png",
   },
 ];
