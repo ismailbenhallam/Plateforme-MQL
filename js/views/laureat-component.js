@@ -106,6 +106,17 @@ const LaureatComponent = function (service) {
           event.target.parentElement.parentElement.classList.toggle("showAll");
         }
       };
+
+      window.onscroll = function() {
+        const people = document.getElementsByClassName("person");
+        const heading = document.getElementsByClassName("heading-laureat")[0];
+        window.scrollY > (heading.offsetHeight - 250) && window.scrollY !== 0 ? 
+        heading.classList.add("animate") : heading.classList.remove("animate");
+        for (let i = 0; i < people.length; i++) {
+          window.scrollY > (people[i].offsetHeight - 520)? 
+          people[i].classList.add("animate") : people[i].classList.remove("animate");
+        }  
+      };
     });
 
     /* Template :
