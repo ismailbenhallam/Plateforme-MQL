@@ -5,3 +5,4 @@ let stageComponent = new StageComponent(
   new StageService(promos, promosDetails),
   partenaireService
 );
+new LaureatComponent(new LaureatService(laureatsJSON));

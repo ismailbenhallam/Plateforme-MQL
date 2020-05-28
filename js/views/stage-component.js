@@ -11,7 +11,7 @@ const StageComponent = function (stageService, partenaireService) {
     input.type = "radio";
     input.value = pd.promo;
     div.appendChild(input);
-    div.appendChild(document.createElement("br"));
+    // div.appendChild(document.createElement("br"));
     annee = pd.promo;
   });
 
@@ -37,12 +37,7 @@ const StageComponent = function (stageService, partenaireService) {
   }
 
   this.buildBarChart(stageService, document.getElementById("bar"));
-  // buildPieChart(
-  //   stageService,
-  //   partenaireService,
-  //   2015,
-  //   document.getElementById("pie")
-  // );
+  inputs[inputs.length - 1].click();
 };
 
 // FIXME: parameters

@@ -573,6 +573,124 @@ table {
 /* filter: none; */
 /* } */
 
+/* Lauréats */
+
+.boxing {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.person {
+  font-family: "Nunito", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji",
+    "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  line-height: 1.7;
+  color: gray;
+  box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14),
+    0 3px 1px -2px rgba(0, 0, 0, 0.12), 0 1px 5px 0 rgba(0, 0, 0, 0.2);
+  position: relative;
+  margin: 25px;
+  background-color: #fff;
+  transition: box-shadow 0.25s, -webkit-box-shadow 0.25s;
+  border-radius: 2px;
+  width: 300px;
+  height: auto;
+  align-self: flex-start /*FIXME in case u comment it the divs will have the same height but when u 
+  click at read more button they all become the same height even though it's not what we intended
+  so this is just a solution for now */
+}
+
+.person-content {
+  padding: 15px;
+}
+
+.person-content > h2 {
+  font-size: 18px;
+  margin-block-start: 0;
+  margin-block-end: 0.3em;
+}
+
+.person-content > p {
+  margin-top: 0;
+  margin-bottom: 1rem;
+}
+
+.person-content .wrap .truncate > span {
+  display: inline;
+}
+
+.bio-img {
+  width: inherit;
+  height: 250px;
+  position: relative;
+  text-align: center;
+  overflow: hidden;
+}
+
+.person .bio-img .social a {
+  color: #fff;
+}
+
+.person .bio-img .social img {
+	width: 25px;
+	height: 25px;
+}
+
+.person .bio-img .img-fluid {
+  transform: translateY(0%);
+  transform: scale(1.06);
+}
+
+.person .bio-img .social.translate {
+  transform: translateY(0%);
+  transform: scale(1.06);
+}
+
+.bio-img > img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  position: relative;
+  transition: 0.3s all ease-in-out;
+}
+
+.person .bio-img .social {
+  z-index: 2;
+  padding: 10px 0;
+  width: 100%;
+  position: absolute;
+  bottom: 0%;
+  transform: translateY(100%);
+  transition: 0.3s all ease;
+  background: #4285f4;
+}
+
+.subtitle {
+  display: block;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  font-size: 12px;
+  font-weight: 700;
+  color: #4285f4;
+}
+
+/* read more */
+.toggledText span.trimmed{
+  display:none;
+}
+.read-more .more:before{
+  content:'Lire plus';
+}
+.showAll .toggledText span.morePoints{
+  display:none;
+}
+.showAll .toggledText span.trimmed{
+  display:inline;
+}
+.showAll .read-more .more:before{
+  content:'Lire moins';
+}
+
 /********* Animations *********/
 @keyframes show-opacity {
   0% {
