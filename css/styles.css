@@ -578,6 +578,7 @@ table {
 .boxing {
   display: flex;
   flex-wrap: wrap;
+  justify-content: space-evenly;
 }
 
 .person {
@@ -595,7 +596,10 @@ table {
   border-radius: 2px;
   width: 300px;
   height: auto;
-  align-self: flex-start /*FIXME in case u comment it the divs will have the same height but when u 
+  opacity: 0.3;
+  transition: all .5s;
+  transform: translateY(30px);
+  align-self: flex-start; /*FIXME in case u comment it the divs will have the same height but when u 
   click at read more button they all become the same height even though it's not what we intended
   so this is just a solution for now */
 }
@@ -616,7 +620,7 @@ table {
 }
 
 .person-content .wrap .truncate > span {
-  display: inline;
+  display: block;
 }
 
 .bio-img {
@@ -632,8 +636,8 @@ table {
 }
 
 .person .bio-img .social img {
-	width: 25px;
-	height: 25px;
+  width: 25px;
+  height: 25px;
 }
 
 .person .bio-img .img-fluid {
@@ -674,21 +678,67 @@ table {
   color: #4285f4;
 }
 
+.heading-laureat {
+  margin-top: 3rem;
+  justify-content: center;
+  display: flex;
+  flex-wrap: wrap;
+  margin-right: -15px;
+  margin-left: -15px;
+  opacity: 0.3;
+  transition: all .5s;
+  transform: translateY(30px);
+}
+
+.title-wrap {
+  text-align: center;
+  margin-bottom: 3rem;
+  max-width: 58.33333%;
+  padding-right: 15px;
+  padding-left: 15px;
+  font-family: "Nunito", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji",
+    "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+}
+
+.section-title {
+  font-size: 40px;
+  font-weight: 500;
+  margin-bottom: 0.5rem;
+  margin-top: 0;
+  line-height: 1.2;
+}
+
+.lead {
+  font-size: 1.25rem;
+  font-weight: 300;
+  margin-top: 0;
+  margin-bottom: 1rem;
+  line-height: 1.7;
+  color: gray;
+}
+
+.animate {
+  transition-delay: .5s;
+  opacity: 1;
+  transform: translate(0);
+}
+
 /* read more */
-.toggledText span.trimmed{
-  display:none;
+.toggledText span.trimmed {
+  display: none;
 }
-.read-more .more:before{
-  content:'Lire plus';
+.read-more .more:before {
+  content: "Lire plus";
 }
-.showAll .toggledText span.morePoints{
-  display:none;
+.showAll .toggledText span.morePoints {
+  display: none;
 }
-.showAll .toggledText span.trimmed{
-  display:inline;
+.showAll .toggledText span.trimmed {
+  display: inline;
 }
-.showAll .read-more .more:before{
-  content:'Lire moins';
+.showAll .read-more .more:before {
+  content: "Lire moins";
 }
 
 /********* Animations *********/
