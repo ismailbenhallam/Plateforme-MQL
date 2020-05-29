@@ -148,22 +148,25 @@ StageComponent.prototype.buildPieChart = buildPieChart = function (
   annee,
   canvas
 ) {
-  let labels = [];
+  let partenaires = [];
   // CGI, Capgemini...
   for (const pd of stageService.promosDetails) {
     if (pd.promo == annee) {
       for (const d of pd.details) {
-        labels.push(d.partenaire);
+        partenaires.push(d.partenaire);
       }
     }
   }
 
+  let labels = [];
   // Contrats CDI
   let nrbCDIPartenaire = [];
-  labels.forEach((partenaire) => {
-    nrbCDIPartenaire.push(
-      stageService.getPourcentagePartenaire(annee, partenaire).toFixed(2)
-    );
+  partenaires.forEach((partenaire) => {
+    let n = stageService.getPourcentagePartenaire(annee, partenaire).toFixed(2);
+    if (n > 0) {
+      nrbCDIPartenaire.push(n);
+      labels.push(partenaire);
+    }
   });
   let datasets = [];
 
