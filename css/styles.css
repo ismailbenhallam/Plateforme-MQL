@@ -315,7 +315,8 @@ body {
 
 #presentation .top-content,
 #contact .top-content,
-#admission .top-content {
+#admission .top-content,
+#stages .top-content {
   font-family: "lato", sans-serif;
   padding: 40px;
   line-height: 1.6;
@@ -397,6 +398,18 @@ body {
 
   .principal.logo {
     animation: show-from-top ease-out 1.2s;
+  }
+
+  .workflow.big {
+    display: none !important;
+  }
+
+  .workflow.small {
+    display: block !important;
+  }
+
+  .workflow {
+    width: 100% !important;
   }
 }
 .pls-container,
@@ -806,4 +819,38 @@ table {
     position: relative;
     top: 0px;
   }
+}
+
+.workflow-panel {
+  margin-top: 40px;
+  margin-bottom: 40px;
+}
+
+.workflow {
+  margin-left: auto;
+  margin-right: auto;
+  width: 90%;
+}
+
+.workflow.big {
+  display: block;
+}
+
+.workflow.small {
+  display: none;
+}
+
+.cmsmasters_table p {
+  color: #d9323a;
+  margin: 0px;
+}
+
+.data-panel {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+
+.cmsmasters_table.data {
+  width: 600px;
 }
