@@ -252,14 +252,7 @@
               des étudiants dans des multinationales : Capgemini, CGI Tcehnologies, Atos, Cegedim et Accenture.<br>
             </p>
             <ul>
-              <li>Chef de projet informatique</li>
-              <li>Architectes logiciels</li>
-              <li>Concepteur de haut niveau de systèmes muliti-tiers</li>
-              <li>Ingénieur études et développement d’applications web et/ou mobiles</li>
-              <li>Concepteur de systèmes d’informations</li>
-              <li>Administrateur de bases de données</li>
-              <li>Ingénieur études et développement en Informatique décisionnelle</li>
-              <li>Responsable d’infrastructures informatiques (systèmes et réseau)</li>
+              <!-- Debouches are added dynamically -->
             </ul>
         </div>
       </div>
@@ -462,6 +455,15 @@
 
         </div>
       </div>
+      <div class="main-content">
+        <canvas id="bar"></canvas>
+        <div id="choose-year-stage" style="margin: 20px 0 auto auto;text-align: center;">
+          <!-- Choices are added dynamically -->
+        </div>
+        <div style="width: 90%;">
+          <canvas id="pie"></canvas>
+        </div>
+      </div>
     </div>
 
     <!-- Lauréat -->
@@ -473,6 +475,13 @@
         </div>
         <hr class="divider">
       </header>
+      <div class="heading-laureat">
+        <div class="title-wrap">
+          <h2 class="section-title">Nos Lauréats</h2>
+          <p class="lead">12 Années d’existence, 9 Promotions sortie, 1 en stage, 1 en cours de formation,
+            350 Etudiants, 215 Tracés : Contrats CDI, 20 Entreprises.</p>
+        </div>
+      </div>
       <div id="laureats-wrapper" class="boxing">
         <!-- Laureats are added dynamically -->
       </div>
@@ -493,7 +502,7 @@
     </div>
 
     <!-- Contact -->
-    <div id="contact">
+    <!-- <div id="contact">
       <header>
         <div>
           <img class="logo-page" src="images/undraw_contact_us_15o2.svg">
@@ -514,7 +523,7 @@
           <br />
         </p>
       </div>
-    </div>
+    </div> -->
 
   </main>
 
@@ -567,7 +576,7 @@
     </div>
 
     <!-- Scroll To Top Button -->
-    <img onclick="topFunction()" id="toTop" title="Go to top" src="icons/arrow-top.png" />
+    <img id="toTop" title="Go to top" src="icons/arrow-top.png" />
   </footer>
   <script src="js/utils.js" defer="defer"></script>
   <script src="js/data/global.js" defer="defer"></script>
@@ -576,19 +585,27 @@
   <script src="js/data/promos-json.js" defer="defer"></script>
   <script src="js/data/promos-details-json.js" defer="defer"></script>
   <script src="js/data/laureats-json.js" defer="defer"></script>
+  <script src="js/data/debouches-json.js" defer="defer"></script>
+
   <script src="js/models/laureat.js" defer="defer"></script>
   <script src="js/models/navbar-item.js" defer="defer"></script>
   <script src="js/models/partenaire.js" defer="defer"></script>
   <script src="js/models/promo.js" defer="defer"></script>
   <script src="js/models/promo-details.js" defer="defer"></script>
+  <script src="js/models/debouche.js" defer="defer"></script>
+
   <script src="js/service/navbar-service.js" defer="defer"></script>
   <script src="js/service/partenaire-service.js" defer="defer"></script>
   <script src="js/service/stage-service.js" defer="defer"></script>
   <script src="js/service/laureat-service.js" defer="defer"></script>
+  <script src="js/service/debouche-service.js" defer="defer"></script>
+
   <script src="js/views/laureat-component.js" defer="defer"></script>
   <script src="js/views/partenaire-component.js" defer="defer"></script>
   <script src="js/views/navbar-component.js" defer="defer"></script>
   <script src="js/views/presentation-component.js" defer="defer"></script>
+  <script src="js/views/debouche-component.js" defer="defer"></script>
+
   <script src="js/Chart.bundle.min.js"></script>
   <script src="js/views/stage-component.js" defer="defer"></script>
   <script src="js/views/root-component.js" defer="defer"></script>
