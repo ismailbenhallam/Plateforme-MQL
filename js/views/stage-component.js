@@ -162,7 +162,8 @@ StageComponent.prototype.buildPieChart = buildPieChart = function (
   // Contrats CDI
   let nrbCDIPartenaire = [];
   partenaires.forEach((partenaire) => {
-    let n = stageService.getPourcentagePartenaire(annee, partenaire).toFixed(2);
+    // let n = stageService.getPourcentagePartenaire(annee, partenaire).toFixed(2);
+    let n = stageService.getContratsPartenaire(annee, partenaire);
     if (n > 0) {
       nrbCDIPartenaire.push(n);
       labels.push(partenaire);
