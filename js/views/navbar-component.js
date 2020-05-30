@@ -59,11 +59,9 @@ window.addEventListener("load", function () {
       // Hide the previous page
       document.getElementById(activePage).classList.remove("active");
 
-      // If a link was highlighted, make it inactive
-      if (activePage != INDEX)
-        document
-          .getElementById(activePage + LINKS_SUFFIX)
-          .classList.remove("active");
+      document
+        .getElementById(activePage + LINKS_SUFFIX)
+        .classList.remove("active");
 
       // Display the new active page
       activePage = link.dataset.target;

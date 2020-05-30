@@ -123,12 +123,13 @@ body {
   padding-bottom: 9px;
   padding-top: 11px;
   padding-left: 15px;
+
   padding-right: 15px;
 
   display: none;
 }
 
-.navbar a.selected {
+.navbar a.active {
   background-color: #d9323a;
 }
 

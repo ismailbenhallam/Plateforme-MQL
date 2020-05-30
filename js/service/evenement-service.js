@@ -15,6 +15,3 @@ const EvenementService = function (evenementsArray) {
     );
   }
 };
-
-// TODO:
-// EvenementService.prototype.evenementsParGenre = function () {};

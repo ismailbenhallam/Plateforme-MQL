@@ -2,58 +2,26 @@ const c = function (tagName) {
   return document.createElement(tagName);
 };
 
-const toReadeableString = function (date) {
-  let month;
-  switch (date.getMonth()) {
-    case 0:
-      month = "Janvier";
-      break;
-    case 1:
-      month = "Février";
-      break;
-    case 2:
-      month = "Mars";
-      break;
-    case 3:
-      month = "Avril";
-      break;
-    case 4:
-      month = "Maï";
-      break;
-    case 5:
-      month = "Juin";
-      break;
-    case 5:
-      month = "Juin";
-      break;
-    case 6:
-      month = "Juillet";
-      break;
-    case 7:
-      month = "Août";
-      break;
-    case 8:
-      month = "Septembre";
-      break;
-    case 9:
-      month = "Octobre";
-      break;
-    case 10:
-      month = "Novembre";
-      break;
-    case 11:
-      month = "Décembre";
-      break;
-
-    default:
-      month = NaN;
-      break;
-  }
-
-  return `${date.getDate()} ${month} ${date.getFullYear()}`;
-};
-
 const EvenementComponent = function (service) {
+  const showNextAndPrevious = function (
+    length,
+    currentPhotoIndex,
+    previous,
+    next
+  ) {
+    if (length == 1) {
+      previous.style.visibility = "hidden";
+      next.style.visibility = "hidden";
+      return;
+    }
+    if (currentPhotoIndex == 0) {
+      previous.style.visibility = "hidden";
+    } else previous.style.visibility = "visible";
+    if (currentPhotoIndex == length - 1) {
+      next.style.visibility = "hidden";
+    } else next.style.visibility = "visible";
+  };
+
   let wrapper = document.getElementById("evenements-wrapper");
   for (const e of service.items) {
     let event = c("div");
@@ -84,75 +52,78 @@ const EvenementComponent = function (service) {
     // </div>;
     let modal = c("div");
     modal.classList.add("evenement-modal");
+    document.body.appendChild(modal);
 
     let close = c("span");
     close.classList.add("evenement-close");
     close.innerHTML = "&times;";
     modal.appendChild(close);
 
-    let previous = c("img");
-    previous.classList.add("evenement-previous");
-    previous.src = "icons/next.png";
-    modal.appendChild(previous);
-
     let modalContent = c("img");
     modalContent.classList.add("evenement-modal-content");
-    modal.appendChild(modalContent);
-
-    let next = c("img");
-    next.classList.add("evenement-next");
-    next.src = "icons/next.png";
-    modal.appendChild(next);
-
-    document.body.appendChild(modal);
 
     photo.onclick = function () {
       modal.style.display = "flex";
       modalContent.src = photo.src;
     };
 
-    next.onclick = (eventF) => {
-      if (eventF.target.tagName != "IMG") return;
-      currentPhoto++;
-      console.log("currentPhoto " + currentPhoto);
-      console.log("e.photos.length" + e.photos.length);
-      if (currentPhoto < e.photos.length) {
-        modalContent.src =
-          "images/evenements/" + e.photosFolder + "/" + e.photos[currentPhoto];
-      } else {
-        currentPhoto--;
-        alert("plus de photos");
-      }
-    };
+    let previous;
+    if (e.photos.length > 1) {
+      previous = c("img");
+      previous.classList.add("evenement-previous");
+      previous.src = "icons/next.png";
+      modal.appendChild(previous);
 
-    previous.onclick = (eventF) => {
-      if (eventF.target.tagName != "IMG") return;
-      console.log("you got here");
-      "currentPhoto : " +
-        currentPhoto +
-        "\n" +
-        "currentPhoto >= 0" +
-        currentPhoto >=
-        0;
-      currentPhoto--;
-      if (currentPhoto >= 0) {
-        modalContent.src =
-          "images/evenements/" + e.photosFolder + "/" + e.photos[currentPhoto];
-      } else {
+      previous.onclick = (eventF) => {
+        if (eventF.target.tagName != "IMG") return;
+        currentPhoto--;
+        showNextAndPrevious(e.photos.length, currentPhoto, previous, next);
+        if (currentPhoto >= 0) {
+          modalContent.src =
+            "images/evenements/" +
+            e.photosFolder +
+            "/" +
+            e.photos[currentPhoto];
+        }
+      };
+    }
+
+    modal.appendChild(modalContent);
+
+    let next;
+    if (e.photos.length > 1) {
+      next = c("img");
+      next.classList.add("evenement-next");
+      next.src = "icons/next.png";
+      modal.appendChild(next);
+
+      next.onclick = (eventF) => {
+        if (eventF.target.tagName != "IMG") return;
         currentPhoto++;
-        alert("plus de photos");
-      }
-    };
+        showNextAndPrevious(e.photos.length, currentPhoto, previous, next);
+        if (currentPhoto < e.photos.length) {
+          modalContent.src =
+            "images/evenements/" +
+            e.photosFolder +
+            "/" +
+            e.photos[currentPhoto];
+        }
+      };
+      showNextAndPrevious(e.photos.length, currentPhoto, previous, next);
+    }
 
     close.onclick = function () {
       modal.style.display = "none";
       currentPhoto = 0;
+      showNextAndPrevious(e.photos.length, currentPhoto, previous, next);
     };
     modal.onclick = function (ef) {
       if (!ef.target.classList.contains("evenement-modal")) return;
       modal.style.display = "none";
       currentPhoto = 0;
+      showNextAndPrevious(e.photos.length, currentPhoto, previous, next);
     };
+
     /**********************/
 
     photoDiv.appendChild(photo);
@@ -172,5 +143,12 @@ const EvenementComponent = function (service) {
     description.classList.add("evenement-description");
     description.innerHTML = e.description;
     content.appendChild(description);
+
+    // e.photos.forEach((src) => {
+    //   let link = c("link");
+    //   link.rel = "preload";
+    //   link.href = src;
+    //   link.as = "image";
+    // });
   }
 };
