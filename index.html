@@ -237,7 +237,6 @@
                   </tbody>
                 </table>
               </div>
-
             </div>
           </div>
       </div>
@@ -268,6 +267,15 @@
         <hr class="divider">
       </header>
       <div class="top-content">
+        <p style="color:red">
+          Doit avoir une sensibilité scientifique et une aptitude à l’approche analytique
+          Rigoureux et méthodiste
+          il doit avoir le sens du relationnel, de la communication
+          Comme tout scientifique, il manifeste une curiosité sans fin et se tient au courant des évolutions dans son
+          domaine.
+          Capable à utiliser à bon escient l'essentiel des technologies matures ou innovantes
+          Capable de s'adapter à n'importe quel situation
+        </p>
         <h3>Condition d'accès</h3>
         L'accès au Master Qualité du Logiciels est limité par ses capacités
         d'accueil, l'admission se passe par trois étapes :
@@ -296,6 +304,8 @@
           équivalent.
         </p>
       </div>
+
+
     </div>
 
     <!-- Activites -->
@@ -324,8 +334,7 @@
         </div>
         <hr class="divider">
       </header>
-      <div class="top-content" style="height: 500px;">
-
+      <div id="evenements-wrapper" class="top-content evenements-wrapper">
       </div>
     </div>
 
@@ -509,7 +518,18 @@
         </div>
         <hr class="divider">
       </header>
-      <div id="partenaires-wrapper" class="top-content partenaires-wrapper">
+      <div class="main-content">
+        MQL est parfaitement consciente du rôle primordial du monde professionnel dans la formation de ses étudiants et
+        de la
+        contribution au développement académique, culturel et au rayonnement international du Maroc. C'est pour celà,
+        MQL a
+        construit un réseau de partenaires professionnels en informatique dans le secteur privé pour offrir à ses
+        étudiants des
+        opportunités de stages et des contacts solides, leur permettant ainsi une insertion dans le marché de travail
+        plus
+        facile.
+      </div>
+      <div id="partenaires-wrapper" class="main-content partenaires-wrapper">
         <!-- Partners are added dynamically -->
       </div>
     </div>
@@ -599,6 +619,7 @@
   <script src="js/data/promos-details-json.js" defer="defer"></script>
   <script src="js/data/laureats-json.js" defer="defer"></script>
   <script src="js/data/debouches-json.js" defer="defer"></script>
+  <script src="js/data/evenement-json.js" defer="defer"></script>
 
   <script src="js/models/laureat.js" defer="defer"></script>
   <script src="js/models/navbar-item.js" defer="defer"></script>
@@ -606,18 +627,21 @@
   <script src="js/models/promo.js" defer="defer"></script>
   <script src="js/models/promo-details.js" defer="defer"></script>
   <script src="js/models/debouche.js" defer="defer"></script>
+  <script src="js/models/evenement.js" defer="defer"></script>
 
   <script src="js/service/navbar-service.js" defer="defer"></script>
   <script src="js/service/partenaire-service.js" defer="defer"></script>
   <script src="js/service/stage-service.js" defer="defer"></script>
   <script src="js/service/laureat-service.js" defer="defer"></script>
   <script src="js/service/debouche-service.js" defer="defer"></script>
+  <script src="js/service/evenement-service.js" defer="defer"></script>
 
   <script src="js/views/laureat-component.js" defer="defer"></script>
   <script src="js/views/partenaire-component.js" defer="defer"></script>
   <script src="js/views/navbar-component.js" defer="defer"></script>
   <script src="js/views/presentation-component.js" defer="defer"></script>
   <script src="js/views/debouche-component.js" defer="defer"></script>
+  <script src="js/views/evenement-component.js" defer="defer"></script>
 
   <script src="js/Chart.bundle.min.js"></script>
   <script src="js/views/stage-component.js" defer="defer"></script>

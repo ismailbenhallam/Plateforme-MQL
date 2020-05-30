@@ -30,11 +30,11 @@ window.addEventListener("load", function () {
 
   const INDEX = "presentation";
   const LINKS_SUFFIX = "-link";
-  let activePage;
+  let activePage = INDEX;
 
   // To keep the user in the last page visited
   try {
-    activePage = localStorage.page;
+    activePage = sessionStorage.page;
     if (activePage == null) activePage = INDEX;
     document.getElementById(INDEX).classList.remove("active");
     document.getElementById(activePage).classList.add("active");
@@ -67,7 +67,7 @@ window.addEventListener("load", function () {
 
       // Display the new active page
       activePage = link.dataset.target;
-      localStorage.page = activePage;
+      sessionStorage.page = activePage;
       link.classList.add("active");
       document.getElementById(activePage).classList.add("active");
 
