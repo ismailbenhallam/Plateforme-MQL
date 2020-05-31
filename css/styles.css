@@ -272,7 +272,7 @@ body {
   width: 30%;
   padding: 5px;
   margin: 20px;
-  max-height: 500px;
+  max-height: auto;
   box-shadow: 0 0 8px rgba(0, 0, 0, 0.6);
   transition: all 0.1s, width 0.5s, height 0.5s;
 }
@@ -297,6 +297,8 @@ body {
 }
 
 .evenement-title {
+  font-weight: 500;
+  font-size: 18px;
   margin: 1px auto 20px auto;
   padding: 5px 0px 5px 30px;
   color: White;
@@ -327,7 +329,7 @@ body {
 
 .evenement-photo > img {
   cursor: pointer;
-  max-width: 60%;
+  max-width: 90%;
   /* transition: 0.1s; */
   max-height: 600px;
 }
@@ -596,6 +598,8 @@ table {
 }
 
 .person-content > h2 {
+  font-weight: 500;
+  font-size: 18px;
   margin-block-start: 0;
   margin-block-end: 0.3em;
 }
@@ -622,6 +626,7 @@ h3 {
 }
 
 .person .bio-img .social a {
+  padding: 5px;
   color: #fff;
 }
 
@@ -660,6 +665,7 @@ h3 {
 }
 
 .subtitle {
+  font-size: 14px;
   display: block;
   text-transform: uppercase;
   color: #4285f4;
