@@ -316,7 +316,8 @@ body {
 #presentation .top-content,
 #contact .top-content,
 #admission .top-content,
-#stages .top-content {
+#stages .top-content,
+#activites .top-content {
   font-family: "lato", sans-serif;
   padding: 40px;
   line-height: 1.6;
@@ -849,8 +850,83 @@ table {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-evenly;
+  padding-bottom: 30px;
 }
 
 .cmsmasters_table.data {
   width: 600px;
+}
+
+.main-activity{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  padding-top: 40px;
+  padding-bottom: 40px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 80%;
+}
+
+.main-activity:not(.first){
+  border-top: 1px solid #395480;
+}
+
+.main-activity div{
+  flex-basis: 400px;
+}
+
+.main-activity img{
+  width: 300px;
+  top : 300px;
+  border: 1px solid black;
+}
+
+.title-activity {
+  text-align: center;
+  color: #000;
+  font-size: 25px;
+  font-weight: 700;
+}
+
+.activity-presentation {
+  padding-bottom: 30px;
+}
+
+.chart-panel {
+  width: 60%;
+  height: auto;
+  border: 1px solid #395480;;
+}
+
+.data-panel p {
+  flex-basis: 250px;
+  margin-top: 60px;
+}
+
+#choose-year-stage {
+  margin: 20px 0 auto auto;
+  text-align: center;
+}
+
+.pie-wrapper {
+  width: 90%;
+}
+
+.stats {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  margin-top: 50px;
+}
+
+.stats div {
+  border: 1px solid grey;
+  border-radius: 70%;
+  padding: 15px;
+}
+
+.stats div img{
+  width: 55px;
+  height: 50px;
 }
