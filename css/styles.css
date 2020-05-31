@@ -905,3 +905,8 @@ h3 {
   background: white; 
   text-indent: 15px;
 }
+
+.paragraph {
+  text-indent: 15px;
+  padding: 20px 40px 60px 40px;
+}
