@@ -28,6 +28,13 @@ const EvenementComponent = function (service) {
     wrapper.appendChild(event);
     event.classList.add("evenement");
 
+    // Scroll to the event
+    new ResizeObserver(function () {
+      console.log("loged");
+
+      event.scrollIntoView({ behavior: "auto", block: "start" });
+    }).observe(event);
+
     let title = c("h2");
     title.classList.add("evenement-title");
     if (e.titleColor !== undefined) title.style.backgroundColor = e.titleColor;
@@ -136,7 +143,48 @@ const EvenementComponent = function (service) {
 
     let description = c("div");
     description.classList.add("evenement-description");
-    description.innerHTML = e.description;
     content.appendChild(description);
+
+    /************************/
+    const charLimit = 100;
+    if (e.description.length <= charLimit)
+      description.innerHTML = e.description;
+    else {
+      let showStr = e.description.slice(0, charLimit);
+      let hideStr = e.description.slice(charLimit);
+
+      description.innerHTML = showStr;
+      let morePoints = c("span");
+      morePoints.textContent = "...";
+      morePoints.style.display = "inline";
+      let moreText = c("span");
+      moreText.style.display = "none";
+      moreText.textContent = hideStr;
+      description.appendChild(morePoints);
+      description.appendChild(moreText);
+
+      let readMore = c("div");
+      readMore.style.cursor = "pointer";
+      readMore.textContent = "Lire plus";
+      description.appendChild(readMore);
+
+      readMore.onclick = function (ef) {
+        if (ef.target == readMore) {
+          if (description.classList.contains("evenement-show-all")) {
+            moreText.style.display = "none";
+            morePoints.style.display = "inline";
+            readMore.textContent = "Lire Plus";
+          } else {
+            moreText.style.display = "inline";
+            morePoints.style.display = "none";
+            readMore.textContent = "Lire Moins";
+          }
+          description.classList.toggle("evenement-show-all");
+          event.classList.toggle("active");
+
+          ef.preventDefault();
+        }
+      };
+    }
   }
 };

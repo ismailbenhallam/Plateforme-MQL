@@ -262,16 +262,25 @@ body {
 /******** Evenements ********/
 .evenements-wrapper {
   display: flex;
-  flex-direction: column;
+  flex-flow: row wrap;
+  justify-content: center;
   align-items: center;
 }
 
 .evenement {
-  max-width: 90%;
+  /* flex: 0 0 30%; */
+  width: 30%;
   padding: 5px;
   margin: 20px;
+  max-height: 500px;
   box-shadow: 0 0 8px rgba(0, 0, 0, 0.6);
-  transition: all 0.1s;
+  transition: all 0.1s, width 0.5s, height 0.5s;
+}
+
+.evenement.active {
+  width: 90%;
+  max-height: 100%;
+  background-color: black;
 }
 
 .evenement:nth-child(odd) {
@@ -591,7 +600,7 @@ table {
   margin-block-end: 0.3em;
 }
 
-h3{
+h3 {
   color: black;
 }
 
@@ -709,7 +718,7 @@ h3{
 .showAll .read-more .more:before {
   content: "Lire moins";
 }
-
+/*****************/
 .grow-shadow:hover {
   box-shadow: 0 10px 10px -10px rgba(0, 0, 0, 0.5);
   transform: scale(1.1);
@@ -812,7 +821,7 @@ h3{
   width: 600px;
 }
 
-.main-activity{
+.main-activity {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-evenly;
@@ -823,17 +832,17 @@ h3{
   width: 80%;
 }
 
-.main-activity:not(.first){
+.main-activity:not(.first) {
   border-top: 1px solid #395480;
 }
 
-.main-activity div{
+.main-activity div {
   flex-basis: 400px;
 }
 
-.main-activity img{
+.main-activity img {
   width: 300px;
-  top : 300px;
+  top: 300px;
   border: 1px solid black;
 }
 
@@ -851,7 +860,7 @@ h3{
 .chart-panel {
   width: 60%;
   height: auto;
-  border: 1px solid #395480;;
+  border: 1px solid #395480;
 }
 
 .data-panel p {
@@ -881,7 +890,7 @@ h3{
   padding: 15px;
 }
 
-.stats div img{
+.stats div img {
   width: 55px;
   height: 50px;
 }

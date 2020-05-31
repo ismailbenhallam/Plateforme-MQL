@@ -22,3 +22,4 @@ ajouter une page de chargement au début
 background à changer
 enlever les liens du footer
 ajouter hero (last events/ news)
+stage pré-embauche et pas PFE !
