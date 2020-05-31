@@ -8,6 +8,7 @@ const PartenaireComponent = function (service) {
       let div = document.createElement("div");
       let a = document.createElement("a");
       let img = document.createElement("img");
+      img.classList.add("moveOnHover");
       a.setAttribute("title", p.name);
       a.setAttribute("href", p.website);
       img.setAttribute("src", p.logoUrl);

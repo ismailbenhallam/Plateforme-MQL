@@ -95,7 +95,7 @@
                 <div id="cmsmasters_heading_23w6k8k25"
                   class="cmsmasters_heading_wrap cmsmasters_heading_align_left fadeInUp animated"
                   data-animation="fadeInUp" data-delay="100">
-                  <h4 class="cmsmasters_heading" id="semestrHehead1" onclick="displayProgram(event)">Semestre 1</h4>
+                  <h4 class="cmsmasters_heading" id="semestrHehead1">Semestre 1</h4>
                 </div>
                 <table class="cmsmasters_table" id="table1">
                   <caption></caption>
@@ -137,7 +137,7 @@
                 <div id="cmsmasters_heading_npmt7tqsvx"
                   class="cmsmasters_heading_wrap cmsmasters_heading_align_left fadeInUp animated"
                   data-animation="fadeInUp" data-delay="100">
-                  <h4 class="cmsmasters_heading" id="semestrHehead2" onclick="displayProgram(event)">Semestre 2</h4>
+                  <h4 class="cmsmasters_heading" id="semestrHehead2">Semestre 2</h4>
                 </div>
                 <table class="cmsmasters_table" id="table2">
                   <caption></caption>
@@ -179,7 +179,7 @@
                 <div id="cmsmasters_heading_rqmpsdavcg"
                   class="cmsmasters_heading_wrap cmsmasters_heading_align_left fadeInUp animated"
                   data-animation="fadeInUp" data-delay="100">
-                  <h4 class="cmsmasters_heading" id="semestrHehead3" onclick="displayProgram(event)">Semestre 3</h4>
+                  <h4 class="cmsmasters_heading" id="semestrHehead3">Semestre 3</h4>
                 </div>
                 <table class="cmsmasters_table" id="table3">
                   <caption></caption>
@@ -225,7 +225,7 @@
                 <div id="cmsmasters_heading_nls3bv8jd9"
                   class="cmsmasters_heading_wrap cmsmasters_heading_align_left fadeInUp animated"
                   data-animation="fadeInUp" data-delay="100">
-                  <h4 class="cmsmasters_heading" id="semestrHehead4" onclick="displayProgram(event)">Semestre 4</h4>
+                  <h4 class="cmsmasters_heading" id="semestrHehead4">Semestre 4</h4>
                 </div>
                 <table class="cmsmasters_table" id="table4">
                   <caption></caption>
@@ -243,7 +243,6 @@
                   </tbody>
                 </table>
               </div>
-
             </div>
           </div>
       </div>
@@ -285,9 +284,17 @@
           <li>Entretien oral</li>
         </ul>
 
+        <h3>Prérequis pour suivre le master MQL</h3>
+        <ul>
+          <li>Avoir une sensibilité scientifique</li>
+          <li>Avoir une aptitude à l’approche analytique</li>
+          <li>Avoir le sens du relationnel et de la communication</li>
+          <li>Doit manifester une curiosité sans fin et se tient au courant des évolutions dans son
+            domaine.</li>
+          <li>Capable à utiliser à bon escient l'essentiel des technologies matures ou innovantes</li>
+          <li>Capable de s'adapter à n'importe quel situation</li>
+         </ul>
         <h3>Modalités d'inscription</h3>
-        <!-- FIXME: -->
-        <!-- Candidater sur : <a href="#">www.mql-inscription.com</a> -->
         Dossier de candidature :
         <ul>
           <li>Photocopies des Attestations de réussite</li>
@@ -415,8 +422,7 @@
         </div>
         <hr class="divider">
       </header>
-      <div class="top-content" style="height: 500px;">
-
+      <div id="evenements-wrapper" class="top-content evenements-wrapper">
       </div>
     </div>
 
@@ -431,7 +437,7 @@
       </header>
       <div class="top-content">
         <div>
-          <p>
+          <p style="text-indent: 15px;">
             Un stage de fin d’études de six mois en milieu professionnel sous la direction d'un
             professeur (encadrant pédagogique) avec un éventuel co-encadrant (ou encadrant
             professionnel) est obligatoire au cours du 4ème semestre.<br>
@@ -506,35 +512,17 @@
         </div>
         <hr class="divider">
       </header>
-      <div id="partenaires-wrapper" class="top-content partenaires-wrapper">
+      <div class="main-content" style="background: white; text-indent: 15px;">
+          MQL est parfaitement consciente du rôle primordial du monde professionnel dans la formation de ses étudiants et
+          de la contribution au développement académique, culturel et au rayonnement international du Maroc. C'est pour celà,
+          MQL a construit un réseau de partenaires professionnels en informatique dans le secteur privé pour offrir à ses
+          étudiants des opportunités de stages et des contacts solides, leur permettant ainsi une insertion dans le marché de travail
+          plus facile.
+      </div>
+      <div id="partenaires-wrapper" class="main-content partenaires-wrapper" style="background: white;">
         <!-- Partners are added dynamically -->
       </div>
     </div>
-
-    <!-- Contact -->
-    <!-- <div id="contact">
-      <header>
-        <div>
-          <img class="logo-page" src="images/undraw_contact_us_15o2.svg">
-          <h1 class="title page">Contact</h1>
-        </div>
-        <hr class="divider">
-      </header>
-      <div class="top-content">
-        <p>
-          Master Qualité Logiciel (N. Chenfour)<br />Département d’Informatique<br />
-          Faculté des Sciences Dhar El Mahraz<br />BP : 1796 <br />Atlas-Fès -
-          MAROC
-          <br />
-          E.mail :
-          <a href="mailto:noureddine.chenfour@usmba.ac.ma" target="__blank">noureddine.chenfour@usmba.ac.ma</a><br />
-          Site web :
-          <a href="www.fsdm.usmba.ac.ma" target="__blank">www.fsdm.usmba.ac.ma</a>
-          <br />
-        </p>
-      </div>
-    </div> -->
-
   </main>
 
   <!-- Footer -->
@@ -596,6 +584,7 @@
   <script src="js/data/promos-details-json.js" defer="defer"></script>
   <script src="js/data/laureats-json.js" defer="defer"></script>
   <script src="js/data/debouches-json.js" defer="defer"></script>
+  <script src="js/data/evenement-json.js" defer="defer"></script>
 
   <script src="js/models/laureat.js" defer="defer"></script>
   <script src="js/models/navbar-item.js" defer="defer"></script>
@@ -603,18 +592,21 @@
   <script src="js/models/promo.js" defer="defer"></script>
   <script src="js/models/promo-details.js" defer="defer"></script>
   <script src="js/models/debouche.js" defer="defer"></script>
+  <script src="js/models/evenement.js" defer="defer"></script>
 
   <script src="js/service/navbar-service.js" defer="defer"></script>
   <script src="js/service/partenaire-service.js" defer="defer"></script>
   <script src="js/service/stage-service.js" defer="defer"></script>
   <script src="js/service/laureat-service.js" defer="defer"></script>
   <script src="js/service/debouche-service.js" defer="defer"></script>
+  <script src="js/service/evenement-service.js" defer="defer"></script>
 
   <script src="js/views/laureat-component.js" defer="defer"></script>
   <script src="js/views/partenaire-component.js" defer="defer"></script>
   <script src="js/views/navbar-component.js" defer="defer"></script>
   <script src="js/views/presentation-component.js" defer="defer"></script>
   <script src="js/views/debouche-component.js" defer="defer"></script>
+  <script src="js/views/evenement-component.js" defer="defer"></script>
 
   <script src="js/Chart.bundle.min.js"></script>
   <script src="js/views/stage-component.js" defer="defer"></script>
