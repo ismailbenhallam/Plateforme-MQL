@@ -1,27 +1,23 @@
-**************Yousra**********************************************
-l'onglet actif doit rester rouge
+*****Yousra***************
 menu déscent en entier avec son bouton lors du clic
-descriptif du programme simple sans boutons, et le mot semestre ne fais pas partie du tableau, ykun ghir un titre simple
-établir le système de sessions 
 favicon
-police et couleur universel pour toute les pages
 passage descriptif sur activités
 logo suivez nous à changer
-flèches pour voir photos
 la première photo tkun chi haja li 3endha 3ala9a b logo ta3 charikat
-partenaires sans backgound
 boutons suivez-nous à changer
-ajouter une pagination pour lauréats
+ajouter une pagination pour lauréats et pour évènements.
+lister les evenements par ordre décroissant de date
 fixer l'animation des pages
-*********************Hamza******************************************
+toTop keyt3enkech mera mera w makeybghich yban surtt lors de l'actualisation
+onglet Accueil doit devenir rouge lorsqu'on clique sur logo du header  
+********Hamza***************
 stage soit tableaux soit chart
 statistiques pour la page présentation
 lauréat passage descriptif
-lister lea lauréat en fonction de la promotion
-évènements soit appeler une autre page lorsqu'on clique sur lire la suite  soit augmenter la hauteur de la matcard comme pour lauréats
-police universel pour toute les pages
+lister les lauréat en fonction de la promotion
+évènements : augmenter la hauteur de la matcard comme pour lauréats
 titre d'event: couleur unique
-****************Ismail************************************************
+*****Ismail*****************
 ajouter une page de chargement au début
 background à changer
 enlever les liens du footer

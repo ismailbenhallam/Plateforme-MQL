@@ -38,8 +38,7 @@ const EvenementComponent = function (service) {
     photoDiv.classList.add("evenement-photo");
     let photo = c("img");
     let currentPhoto = 0;
-    photo.src =
-      "images/evenements/" + e.photosFolder + "/" + e.photos[currentPhoto];
+    photo = e.photos[currentPhoto];
 
     /*********** Modal ***********/
     // The Modal
@@ -79,11 +78,7 @@ const EvenementComponent = function (service) {
         currentPhoto--;
         showNextAndPrevious(e.photos.length, currentPhoto, previous, next);
         if (currentPhoto >= 0) {
-          modalContent.src =
-            "images/evenements/" +
-            e.photosFolder +
-            "/" +
-            e.photos[currentPhoto];
+          modalContent.src = e.photos[currentPhoto].src;
         }
       };
     }
@@ -102,11 +97,7 @@ const EvenementComponent = function (service) {
         currentPhoto++;
         showNextAndPrevious(e.photos.length, currentPhoto, previous, next);
         if (currentPhoto < e.photos.length) {
-          modalContent.src =
-            "images/evenements/" +
-            e.photosFolder +
-            "/" +
-            e.photos[currentPhoto];
+          modalContent.src = e.photos[currentPhoto].src;
         }
       };
       showNextAndPrevious(e.photos.length, currentPhoto, previous, next);
@@ -115,13 +106,17 @@ const EvenementComponent = function (service) {
     close.onclick = function () {
       modal.style.display = "none";
       currentPhoto = 0;
-      showNextAndPrevious(e.photos.length, currentPhoto, previous, next);
+      if (e.photos.length > 1) {
+        showNextAndPrevious(e.photos.length, currentPhoto, previous, next);
+      }
     };
     modal.onclick = function (ef) {
       if (!ef.target.classList.contains("evenement-modal")) return;
       modal.style.display = "none";
       currentPhoto = 0;
-      showNextAndPrevious(e.photos.length, currentPhoto, previous, next);
+      if (e.photos.length > 1) {
+        showNextAndPrevious(e.photos.length, currentPhoto, previous, next);
+      }
     };
 
     /**********************/
@@ -143,12 +138,5 @@ const EvenementComponent = function (service) {
     description.classList.add("evenement-description");
     description.innerHTML = e.description;
     content.appendChild(description);
-
-    // e.photos.forEach((src) => {
-    //   let link = c("link");
-    //   link.rel = "preload";
-    //   link.href = src;
-    //   link.as = "image";
-    // });
   }
 };

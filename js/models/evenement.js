@@ -13,7 +13,12 @@ const Evenement = function (
   this.date = new Date(date);
   this.lieu = lieu;
   this.description = description;
-  this.photos = photos;
+  this.photos = [];
+  photos.forEach((ph) => {
+    let i = new Image();
+    i.src = "images/evenements/" + photosFolder + "/" + ph;
+    this.photos.push(i);
+  });
   this.photosFolder = photosFolder;
   this.titleColor = titleColor;
 };
