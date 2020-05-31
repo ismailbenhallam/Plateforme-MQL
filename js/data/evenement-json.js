@@ -1,15 +1,22 @@
 const evenementsJSON = [
-  // {
-  //   nom: "Cérémonie de remise des diplomes 2019",
-  //   genre: "Cérémonie de remise des diplomes",
-  //   date: "2019-10-21",
-  //   lieu: "Fès",
-  //   description:
-  //     "Cérémonie de remise des diplomes Comme chaque année les étudiants de la première année MQL organisent en fin de cycle de formation une cérémonie de remise des diplomes des lauréats du master MQL promotion 2019. Cette cérémonie à caractère festif a regroupé le corps professoral de la formation, le Conseil des étudiants, et familles des lauréats et leurs amis. La cérémonie a été initié par un mot d'ouverture de M. Mohammed BELLAMLIH le Doyen de la faculté, où il a félicité les lauréats d'avoir réussis leur formation avec brio, et l'ensemble des enseignents pour avoir assuré une formation de haut niveau permettant ainsi aux lauréats une insertion professionnelle évidente, se joint à lui dans une parole élogieuse, le coordinateur du master M. Noureddine CHENFOUR pour féliciter ses étudiants qu'il a guidés jusqu'au bout avec bienveillance et dévouement. En marge de cette manifestation, c'est tenu la présentation du master et des différents activités et évènements organisés durant ces deux années de formation, suivi par le témoignage de quelques lauréats.<br/><br/> Au cours de cette cérémonie, 32 lauréats de la promotion 2019, ont obtenus leurs diplômes, ce qui fait un total de 350 lauréats diplômés relevant du master MQL depuis sa création en 2007.",
-  //   photos: ["photo1.jpg", "photo2.jpg", "photo3.jpg", "photo4.jpg"],
-  //   photosFolder: "remise-diplomes/",
-  //   titleColor: "#d9323a",
-  // },
+  {
+    nom: "Cérémonie de remise des diplomes - Promotion 2018",
+    genre: "Cérémonie de remise des diplomes",
+    date: "2019-04-27",
+    lieu: "FSDM Fès",
+    description:
+      "Cérémonie de remise des diplomes Comme chaque année les étudiants de la première année MQL organisent en fin de cycle de formation une cérémonie de remise des diplomes des lauréats du master MQL promotion 2019. Cette cérémonie à caractère festif a regroupé le corps professoral de la formation, le Conseil des étudiants, et familles des lauréats et leurs amis. La cérémonie a été initié par un mot d'ouverture de M. Mohammed BELLAMLIH le Doyen de la faculté, où il a félicité les lauréats d'avoir réussis leur formation avec brio, et l'ensemble des enseignents pour avoir assuré une formation de haut niveau permettant ainsi aux lauréats une insertion professionnelle évidente, se joint à lui dans une parole élogieuse, le coordinateur du master M. Noureddine CHENFOUR pour féliciter ses étudiants qu'il a guidés jusqu'au bout avec bienveillance et dévouement. En marge de cette manifestation, c'est tenu la présentation du master et des différents activités et évènements organisés durant ces deux années de formation, suivi par le témoignage de quelques lauréats.<br/><br/> Au cours de cette cérémonie, 32 lauréats de la promotion 2019, ont obtenus leurs diplômes, ce qui fait un total de 350 lauréats diplômés relevant du master MQL depuis sa création en 2007.",
+    photos: [
+      "photo1.jpg",
+      "photo2.jpg",
+      "photo3.jpg",
+      "photo4.jpg",
+      "photo5.jpg",
+      "photo6.jpg",
+    ],
+    photosFolder: "remise-diplomes/2019",
+    titleColor: "#d9323a",
+  },
   // Red Hope
   // Dans le cadre de la compétition nationale Company Program d'injaz al maghreb qui s'est déroulée à Casablanca le 19 Septembre 2018, les étudiants du Master MQL ont remporté le prix de l'innovation de Boeing attribué au projet "Red Hope"sous la direction du Pr. CHENFOUR Nourreddine, RedHope est une plateforme Web dont le but principal est de simplifier la collecte du sang pour les Centres Régionaux de Transfusion Sanguine ainsi que faciliter le don du sang pour les citoyens.
 

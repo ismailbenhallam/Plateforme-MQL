@@ -30,8 +30,6 @@ const EvenementComponent = function (service) {
 
     // Scroll to the event
     new ResizeObserver(function () {
-      console.log("loged");
-
       event.scrollIntoView({ behavior: "auto", block: "start" });
     }).observe(event);
 
@@ -166,6 +164,8 @@ const EvenementComponent = function (service) {
       let readMore = c("div");
       readMore.style.cursor = "pointer";
       readMore.textContent = "Lire plus";
+      readMore.style.color = "cyan";
+      readMore.style.textDecoration = "underline";
       description.appendChild(readMore);
 
       readMore.onclick = function (ef) {
