@@ -30,8 +30,6 @@ const EvenementComponent = function (service) {
 
     // Scroll to the event
     new ResizeObserver(function () {
-      console.log("loged");
-
       event.scrollIntoView({ behavior: "auto", block: "start" });
     }).observe(event);
 

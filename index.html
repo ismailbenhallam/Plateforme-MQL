@@ -104,153 +104,8 @@
       <div class="main-content">
         <h2 class="section-header">Déscriptif du programme</h3>
           <div class="programme-content">
-            <div class="programme">
-              <div class="semestre">
-                <div>
-                  <h4 class="semestre_header" id="semestrHehead1">Semestre 1</h4>
-                </div>
-                <table class="semestre_table" id="table1">
-                  <caption></caption>
-                  <thead>
-                    <tr>
-                      <th>Module</th>
-                      <th>Intitulé des Modules</th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    <tr>
-                      <td>M1</td>
-                      <td>Ingénierie de l’Objet et Technologie Java</td>
-                    </tr>
-                    <tr>
-                      <td>M2</td>
-                      <td>Technologie XML</td>
-                    </tr>
-                    <tr>
-                      <td>M3</td>
-                      <td>Génie Logiciel & Modélisation UML</td>
-                    </tr>
-                    <tr>
-                      <td>M4</td>
-                      <td>Bases de données</td>
-                    </tr>
-                    <tr>
-                      <td>M5</td>
-                      <td>Audit & Qualité du Logiciel</td>
-                    </tr>
-                    <tr>
-                      <td>M6</td>
-                      <td>Communication Professionnelle</td>
-                    </tr>
-                  </tbody>
-                </table>
-              </div>
-              <div class="semestre">
-                <div>
-                  <h4 class="semestre_header" id="semestrHehead2">Semestre 2</h4>
-                </div>
-                <table class="semestre_table" id="table2">
-                  <caption></caption>
-                  <thead>
-                    <tr>
-                      <th>Module</th>
-                      <th>Intitulé des Modules</th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    <tr>
-                      <td>M7</td>
-                      <td>Design Patterns</td>
-                    </tr>
-                    <tr>
-                      <td>M8</td>
-                      <td>Ingénierie du Web</td>
-                    </tr>
-                    <tr>
-                      <td>M9</td>
-                      <td>Architecture Java EE</td>
-                    </tr>
-                    <tr>
-                      <td>M10</td>
-                      <td>Technologies Mobiles</td>
-                    </tr>
-                    <tr>
-                      <td>M11</td>
-                      <td>Portails d’entreprises</td>
-                    </tr>
-                    <tr>
-                      <td>M12</td>
-                      <td>Gestion de projets & Méthodes Agiles</td>
-                    </tr>
-                  </tbody>
-                </table>
-              </div>
-              <div class="semestre">
-                <div>
-                  <h4 class="semestre_header" id="semestrHehead3">Semestre 3</h4>
-                </div>
-                <table class="semestre_table" id="table3">
-                  <caption></caption>
-                  <thead>
-                    <tr>
-                      <th>Module</th>
-                      <th>Intitulé des Modules</th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    <tr>
-                      <td>M13</td>
-                      <td>Frameworks Java EE</td>
-                    </tr>
-                    <tr>
-                      <td>M14</td>
-                      <td>Plateforme Applicative Microsoft</td>
-                    </tr>
-                    <tr>
-                      <td>M15</td>
-                      <td>Outils d’industrialisation &
-                        environnement Offshore</td>
-                    </tr>
-                    <tr>
-                      <td>M16</td>
-                      <td>Business Intelligence & Big Data</td>
-                    </tr>
-                    <tr>
-                      <td>M17</td>
-                      <td>Cloud Computing</td>
-                    </tr>
-                    <tr>
-                      <td>M18</td>
-                      <td>Culture d’entreprise<br>
-                      </td>
-                    </tr>
-                  </tbody>
-                </table>
-              </div>
-
-              <div class="semestre">
-                <div>
-                  <h4 class="semestre_header" id="semestrHehead4">Semestre 4</h4>
-                </div>
-                <table class="semestre_table" id="table4">
-                  <caption></caption>
-                  <thead>
-                    <tr>
-                      <th>Module</th>
-                      <th>Intitulé des Modules</th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    <tr>
-                      <td>M19-M24</td>
-                      <td>Stage pré embauche dans des
-                        multinationales actives en développement
-                        offshore
-                      </td>
-                    </tr>
-                  </tbody>
-                </table>
-              </div>
+            <div id="programme" class="programme">
+              <!-- Programme is added dynamically -->
             </div>
           </div>
       </div>
@@ -595,6 +450,7 @@
   <script src="js/data/laureats-json.js" defer="defer"></script>
   <script src="js/data/debouches-json.js" defer="defer"></script>
   <script src="js/data/evenement-json.js" defer="defer"></script>
+  <script src="js/data/semestres-json.js" defer="defer"></script>
 
   <script src="js/models/laureat.js" defer="defer"></script>
   <script src="js/models/navbar-item.js" defer="defer"></script>
@@ -603,6 +459,8 @@
   <script src="js/models/promo-details.js" defer="defer"></script>
   <script src="js/models/debouche.js" defer="defer"></script>
   <script src="js/models/evenement.js" defer="defer"></script>
+  <script src="js/models/module.js" defer="defer"></script>
+  <script src="js/models/semestre.js" defer="defer"></script>
 
   <script src="js/service/navbar-service.js" defer="defer"></script>
   <script src="js/service/partenaire-service.js" defer="defer"></script>
@@ -610,6 +468,7 @@
   <script src="js/service/laureat-service.js" defer="defer"></script>
   <script src="js/service/debouche-service.js" defer="defer"></script>
   <script src="js/service/evenement-service.js" defer="defer"></script>
+  <script src="js/service/programme-service.js" defer="defer"></script>
 
   <script src="js/views/laureat-component.js" defer="defer"></script>
   <script src="js/views/partenaire-component.js" defer="defer"></script>
