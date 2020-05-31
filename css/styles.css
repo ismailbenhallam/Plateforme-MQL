@@ -475,15 +475,8 @@ body {
     width: 100% !important;
   }
 }
-.pls-container,
-.pls-container table,
-.cmsmasters_table,
-.tribe-mini-calendar,
-.tribe-events-calendar,
-.shop_table,
-.group_table,
-.variations,
-.shop_attributes {
+
+.semestre_table {
   border-collapse: collapse;
 }
 
@@ -491,22 +484,22 @@ table {
   width: 100%;
 }
 
-.cmsmasters_table thead tr {
+.semestre_table thead tr {
   background-color: #395180;
   color: white;
 }
 
-.cmsmasters_table tr {
+.semestre_table tr {
   border-width: 1px;
   border-style: solid;
 }
 
-.cmsmasters_table tr td,
-.cmsmasters_table tr th {
+.semestre_table tr td,
+.semestre_table tr th {
   padding: 5px;
 }
 
-.cmsmasters_heading {
+.semestre_header {
   padding: 15px;
   margin-bottom: 0px;
 }
@@ -527,7 +520,7 @@ table {
   padding: 20px 40px 60px 40px;
 }
 
-.cmsmasters_table tbody {
+.semestre_table tbody {
   background-color: white;
 }
 
@@ -811,7 +804,7 @@ h3 {
   display: none;
 }
 
-.cmsmasters_table p {
+.semestre_table p {
   color: #d9323a;
   margin: 0px;
 }
@@ -823,7 +816,7 @@ h3 {
   padding-bottom: 30px;
 }
 
-.cmsmasters_table.data {
+.semestre_table.data {
   width: 600px;
 }
 
