@@ -28,6 +28,16 @@ body {
   justify-content: center;
   margin: 0;
   overflow-x: hidden;
+  font-family: "Nunito", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji",
+    "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  line-height: 1.7;
+  letter-spacing: 1px;
+  font-weight: 400; 
+  color: gray;
+  list-style: none;
+  text-decoration: none;
+  font-size: 16px;
 }
 
 /******* Style the body *******/
@@ -50,20 +60,12 @@ body {
 }
 
 .title {
-  font-family: Adobe Devanagari;
-  font-weight: bold;
   color: #445276;
   margin-top: 0;
   margin-bottom: 0px;
   padding-bottom: 13px;
   padding-left: 15px;
   padding-right: 30px;
-}
-
-.page {
-  font-size: 40px;
-  font-weight: 900;
-  padding-top: 10px;
 }
 
 .logo {
@@ -94,21 +96,18 @@ body {
 }
 
 /* Style the navigation bar links */
+.navbar li {
+  display: block;
+  float: left;
+  border-left: 1px solid rgba(77, 77, 77, 0.2);
+  transition: all ease-in-out 0.6s;
+}
+
 .navbar a {
   color: white;
-  font-family: "lato", sans-serif;
-  list-style: none;
-  background-color: transparent;
-  text-decoration: none;
-  position: relative;
-  line-height: 20px;
   transition: all ease-in-out 0.3s;
-  color: #fff;
   text-transform: uppercase;
-  letter-spacing: 1px;
-  font-size: 12px;
   padding-left: 15px;
-  text-decoration: none;
   text-align: center;
 }
 
@@ -125,7 +124,6 @@ body {
   padding-left: 15px;
 
   padding-right: 15px;
-
   display: none;
 }
 
@@ -141,12 +139,6 @@ body {
 }
 
 /******* Main column *******/
-.container {
-  flex: 1 0 auto;
-  display: flex;
-  flex-wrap: wrap;
-}
-
 .main {
   flex: 1 0;
   background-color: white;
@@ -160,22 +152,8 @@ body {
   display: block;
 }
 
-.navbar li {
-  font-size: 14px;
-  line-height: 1.42857143;
-  font-family: "lato", sans-serif;
-  color: #434a54;
-  list-style: none;
-  box-sizing: border-box;
-  display: block;
-  float: left;
-  border-left: 1px solid rgba(77, 77, 77, 0.2);
-  position: static;
-  transition: all ease-in-out 0.6s;
-}
-
 .main header {
-  padding-top: 40px;
+  padding-top: 30px;
 }
 
 .main header div {
@@ -191,7 +169,6 @@ body {
   padding: 20px 0 0 0;
   color: rgba(255, 255, 255, 0.8) !important;
   background-color: #191919 !important;
-  line-height: 1.6;
 }
 
 .logo-wrapper {
@@ -202,15 +179,7 @@ body {
   min-height: 300px;
 }
 
-.contact,
-.liens,
-.suivez-nous {
-  padding-bottom: 20px;
-}
-
 .copyright {
-  font-family: "lato", sans-serif;
-  color: rgba(255, 255, 255, 0.8) !important;
   background-color: #111111;
   padding: 20px;
   flex-basis: 100%;
@@ -218,7 +187,6 @@ body {
 
 .adresse,
 .adresse * {
-  font-family: "lato", sans-serif;
   color: rgba(255, 255, 255, 0.8) !important;
 }
 
@@ -229,8 +197,6 @@ body {
 }
 
 .mentions-legales > a {
-  font-family: "lato", sans-serif;
-  text-decoration: none;
   color: rgba(255, 255, 255, 0.8);
 }
 
@@ -239,7 +205,6 @@ body {
 }
 
 .rs > li {
-  list-style: none;
   display: inline-block;
   cursor: pointer;
 }
@@ -257,7 +222,6 @@ body {
   cursor: pointer; /* Add a mouse pointer on hover */
   padding: 15px; /* Some padding */
   border-radius: 10px; /* Rounded corners */
-  font-size: 18px; /* Increase font size */
   clip-path: circle(33%);
   transition: background-color 0.3s ease-in-out;
 }
@@ -267,10 +231,6 @@ body {
 }
 
 .titre {
-  font-family: "lato", sans-serif;
-  position: relative;
-  margin: 0;
-  line-height: 1.4;
   text-transform: uppercase !important;
   border-bottom: 1px solid #d9323a;
 }
@@ -278,29 +238,6 @@ body {
 .titre > h2 {
   margin-block-start: 0;
   margin-block-end: 0.5em;
-}
-
-.left-panel > h2 {
-  font-family: robotolight;
-  color: rgb(59, 59, 59);
-  letter-spacing: 0.0357143rem;
-  line-height: 1.4;
-  font-weight: 500;
-}
-
-.left-panel > h3 {
-  font-family: robotolight;
-  color: rgb(59, 59, 59);
-  letter-spacing: 0.0357143rem;
-  font-size: 1.42857rem !important;
-  line-height: 1.4;
-  font-weight: 500;
-}
-
-.left-panel > p {
-  letter-spacing: 0.3px;
-  padding-left: 20px;
-  line-height: 1.5em;
 }
 
 #presentation .top-content {
@@ -318,55 +255,21 @@ body {
 #contact .top-content,
 #admission .top-content,
 #stages .top-content {
-  font-family: "lato", sans-serif;
   padding: 40px;
-  line-height: 1.6;
 }
 
-.left-panel {
-  float: left;
-  width: 70%;
-  padding-right: 20px;
-}
-
-.right-panel {
-  margin-top: 30px;
-  width: 300px;
-  padding-left: 20px;
-  height: 25%;
-  border-color: #e0e0e0;
-  border-top-color: #395180 !important;
-  padding: 22px 30px 34px;
-  margin-bottom: 25px;
-  border-width: 1px;
-  border-style: solid;
-}
-
-/******** Evèenements ********/
+/******** Evenements ********/
 .evenements-wrapper {
   display: flex;
-  /* flex-wrap: wrap; */
   flex-direction: column;
-  justify-content: space-evenly;
   align-items: center;
 }
 
 .evenement {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-evenly;
   max-width: 90%;
-  align-items: center;
-
   padding: 5px;
   margin: 20px;
-
-  /* -webkit-box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14) 0 3px 1px -2px rgba(0, 0, 0, 0.12),
-    0 1px 5px 0 rgba(0, 0, 0, 0.2);
-  box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14),
-    0 3px 1px -2px rgba(0, 0, 0, 0.12), 0 1px 5px 0 rgba(0, 0, 0, 0.2); */
   box-shadow: 0 0 8px rgba(0, 0, 0, 0.6);
-  border-radius: 2px;
   transition: all 0.1s;
 }
 
@@ -379,27 +282,14 @@ body {
 }
 
 .evenement:hover {
-  /* -webkit-box-shadow: 2px 2px 2px 0 rgba(0, 0, 0, 0.14) 1px 3px 1px -2px rgba(0, 0, 0, 0.12),
-    3px 1px 5px 0 rgba(0, 0, 0, 0.2);
-  box-shadow: 2px 2px 2px 0 rgba(0, 0, 0, 0.14) 1px 3px 1px -2px rgba(0, 0, 0, 0.12),
-    3px 1px 5px 0 rgba(0, 0, 0, 0.2); */
-
   transform: scale(1.01);
   -webkit-transform: scale(1.01);
 }
 
 .evenement-title {
   margin: 1px auto 20px auto;
-  /* margin: 0 20px 10px -20px; */
-  text-align: left;
-  width: 100%;
-  font-size: 20px;
-  font-family: Arial;
   padding: 5px 0px 5px 30px;
-  background-color: black;
   color: White;
-  font-weight: 400;
-  position: relative;
 }
 
 .evenement-content {
@@ -407,14 +297,11 @@ body {
   flex-direction: column;
   justify-content: space-evenly;
   align-items: center;
-  line-height: 1.2em;
   margin: 20px;
   text-indent: 1em;
 }
 
 .evenement-content .evenement-coordonnees {
-  font-family: Nunito cursive;
-  font-weight: 700;
   color: #4285f4;
   margin: 20px auto;
 }
@@ -489,7 +376,6 @@ body {
 .evenement-next:hover,
 .evenement-next:focus {
   color: #bbb;
-  text-decoration: none;
   cursor: pointer;
 }
 
@@ -584,12 +470,9 @@ body {
 .variations,
 .shop_attributes {
   border-collapse: collapse;
-  border-spacing: 0;
-  vertical-align: middle;
 }
+
 table {
-  border-collapse: separate;
-  border-spacing: 15px;
   width: 100%;
 }
 
@@ -605,69 +488,12 @@ table {
 
 .cmsmasters_table tr td,
 .cmsmasters_table tr th {
-  font-size: 14px;
-  line-height: 20px;
-  font-weight: normal;
-  font-style: normal;
-  text-transform: none;
-  text-decoration: none;
   padding: 5px;
 }
 
-.cmsmasters_table {
-  border-collapse: collapse;
-  border-spacing: 0;
-  vertical-align: middle;
-}
-
 .cmsmasters_heading {
-  user-select: none;
   padding: 15px;
-  text-align: center;
-  font-size: x-large;
-  font-weight: bold;
-  font-style: normal;
-  color: white;
   margin-bottom: 0px;
-}
-
-.cmsmasters_heading_wrap {
-  cursor: pointer;
-  background-color: #395480;
-  border-radius: 50px 50px 0px 0px;
-}
-
-.cmsmasters_heading_wrap:hover {
-  background-color: #d9323a;
-}
-
-.main header h2 {
-  text-align: center;
-  font-family: Adobe Devanagari;
-  font-style: italic;
-  font-weight: bold;
-  color: #445276;
-  margin-top: 0;
-  margin-bottom: 0px;
-  padding-bottom: 20px;
-  padding-left: 30px;
-  padding-right: 30px;
-}
-
-.info:not(:last-child) {
-  border-bottom: 1px solid #e0e0e0;
-  height: 37px;
-}
-
-.info img {
-  padding-right: 20px;
-  max-width: 50%;
-  float: left;
-  overflow: hidden;
-}
-
-.programme-panel {
-  display: flex;
 }
 
 .programme {
@@ -682,19 +508,7 @@ table {
 
 .main-content {
   background-color: #f5f7ff;
-  font-family: "lato", sans-serif;
   padding: 20px 40px 40px 40px;
-  line-height: 1.6;
-}
-
-.headerDiv {
-  display: block;
-  font-size: 1.17em;
-  margin-block-start: 1em;
-  margin-block-end: 1em;
-  margin-inline-start: 0px;
-  margin-inline-end: 0px;
-  font-weight: bold;
 }
 
 .cmsmasters_table tbody {
@@ -704,8 +518,6 @@ table {
 .section-header {
   text-align: center;
   color: #000;
-  font-size: 35px;
-  font-weight: 900;
 }
 
 .logo-page {
@@ -715,11 +527,6 @@ table {
 .box-content {
   box-shadow: 0 0 3px rgba(77, 77, 77, 0.2);
 }
-
-/* FIXME */
-/* .border-bottom {
-  border-bottom: 1px solid black;
-} */
 
 .partenaires-wrapper.main-content {
   margin-bottom: 20px;
@@ -731,20 +538,11 @@ table {
   padding-top: 40px;
 }
 
-/* @media (min-width: 768px) {
-  .case { */
-/* flex-basis: 0%; */
-/* float: left; */
-/* }
-} */
-
 #partenaires .partenaires-wrapper > div img {
   margin: auto auto;
-  /* filter: grayscale(100%); */
   max-width: 127px;
   max-height: 78px;
   display: block;
-  background: transparent;
 }
 
 #partenaires .partenaires-wrapper > div {
@@ -752,13 +550,8 @@ table {
 }
 
 #partenaires .partenaires-wrapper > div:hover {
-  /* -webkit-transform: scale(1.1) translate(5px, -5px); */
   transform: translateY(-5px) scale(1.1);
 }
-
-/* .case img:hover { */
-/* filter: none; */
-/* } */
 
 /* Lauréats */
 
@@ -770,11 +563,6 @@ table {
 }
 
 .person {
-  font-family: "Nunito", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
-    "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji",
-    "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-  line-height: 1.7;
-  color: gray;
   box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14),
     0 3px 1px -2px rgba(0, 0, 0, 0.12), 0 1px 5px 0 rgba(0, 0, 0, 0.2);
   position: relative;
@@ -787,12 +575,6 @@ table {
   opacity: 0.3;
   transition: all 0.5s;
   transform: translateY(30px);
-  /* align-self: flex-start; */
-  /*FIXED : in case u comment it the divs will have the same height but when u 
-  click at read more button they all become the same height even though it's not what we intended
-  so this is just a solution for now 
-  
-  Solution : add align-items: flex-start to parent;*/
 }
 
 .person-content {
@@ -800,7 +582,6 @@ table {
 }
 
 .person-content > h2 {
-  font-size: 18px;
   margin-block-start: 0;
   margin-block-end: 0.3em;
 }
@@ -863,9 +644,6 @@ table {
 .subtitle {
   display: block;
   text-transform: uppercase;
-  letter-spacing: 0.1em;
-  font-size: 12px;
-  font-weight: 700;
   color: #4285f4;
 }
 
@@ -887,25 +665,16 @@ table {
   max-width: 58.33333%;
   padding-right: 15px;
   padding-left: 15px;
-  font-family: "Nunito", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
-    "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji",
-    "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
 }
 
 .section-title {
-  font-size: 40px;
-  font-weight: 500;
   margin-bottom: 0.5rem;
   margin-top: 0;
-  line-height: 1.2;
 }
 
 .lead {
-  font-size: 1.25rem;
-  font-weight: 300;
   margin-top: 0;
   margin-bottom: 1rem;
-  line-height: 1.7;
   color: gray;
 }
 
