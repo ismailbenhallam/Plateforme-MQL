@@ -25,6 +25,13 @@ const LaureatComponent = function (service) {
       img.setAttribute("alt", "linkedin");
       a.appendChild(img);
       divSocial.appendChild(a);
+      let a2 = document.createElement("a");
+      a2.setAttribute("href", "mailto:"+l.email);
+      let img2 = document.createElement("img");
+      img2.setAttribute("src", "icons/email.svg");
+      img2.setAttribute("alt", "email");
+      a2.appendChild(img2);
+      divSocial.appendChild(a2);
       divBioImg.appendChild(imgPerson);
       divBioImg.appendChild(divSocial);
       divPerson.appendChild(divBioImg);
@@ -34,6 +41,10 @@ const LaureatComponent = function (service) {
       name.textContent = l.nom + " (" + l.promotion + ")";
       let job = document.createElement("SPAN");
       job.className = "subtitle";
+      if (l.ville == "") {
+        job.textContent =
+        l.posteOccupe + " à " + l.lieu + ", " + l.pays + ".";
+      }
       job.textContent =
         l.posteOccupe + " à " + l.lieu + ", " + l.ville + ", " + l.pays + ".";
       let divWrap = document.createElement("div");
@@ -46,8 +57,14 @@ const LaureatComponent = function (service) {
       spanPFE.textContent = "PFE : " + l.pfe;
       let spanCDI = document.createElement("SPAN");
       spanCDI.textContent = "Premier CDI : " + l.cdi;
+      if(l.cdi == "") {
+        spanCDI.textContent = "";
+      }
       let spanExp = document.createElement("SPAN");
       spanExp.textContent = "Expérience Précedentes : ";
+      if(l.experiences == "") {
+        spanExp.textContent = "";
+      } 
       toggledText.appendChild(spanExp);
       toggledText.append(l.experiences);
       divTruncate.appendChild(spanPFE);

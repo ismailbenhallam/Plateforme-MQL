@@ -15,7 +15,6 @@ const EvenementService = function (evenementsArray) {
     );
   }
   this.items.sort((a, b) => {
-    console.log(a.date.getTime() > b.date.getTime());
     return b.date.getTime() - a.date.getTime();
   });
 };

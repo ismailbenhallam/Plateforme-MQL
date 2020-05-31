@@ -164,7 +164,7 @@ const EvenementComponent = function (service) {
       let readMore = c("div");
       readMore.style.cursor = "pointer";
       readMore.textContent = "Lire plus";
-      readMore.style.color = "cyan";
+      readMore.style.color = "black";
       readMore.style.textDecoration = "underline";
       description.appendChild(readMore);
 
