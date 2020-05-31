@@ -29,7 +29,7 @@ const LaureatComponent = function (service) {
       a2.setAttribute("href", "mailto:"+l.email);
       let img2 = document.createElement("img");
       img2.setAttribute("src", "icons/email.svg");
-      img2.setAttribute("alt", "email");
+      img2.setAttribute("alt", l.email);
       a2.appendChild(img2);
       divSocial.appendChild(a2);
       divBioImg.appendChild(imgPerson);
@@ -54,19 +54,19 @@ const LaureatComponent = function (service) {
       let toggledText = document.createElement("p");
       toggledText.className = "toggledText";
       let spanPFE = document.createElement("SPAN");
-      spanPFE.textContent = "PFE : " + l.pfe;
+      spanPFE.textContent = "Stage pré-embauche : " + l.pfe;
       let spanCDI = document.createElement("SPAN");
       spanCDI.textContent = "Premier CDI : " + l.cdi;
       if(l.cdi == "") {
         spanCDI.textContent = "";
       }
-      let spanExp = document.createElement("SPAN");
-      spanExp.textContent = "Expérience Précedentes : ";
-      if(l.experiences == "") {
-        spanExp.textContent = "";
-      } 
-      toggledText.appendChild(spanExp);
-      toggledText.append(l.experiences);
+      // let spanExp = document.createElement("SPAN");
+      // spanExp.textContent = "Expérience Précedentes : ";
+      // if(l.experiences == "") {
+      //   spanExp.textContent = "";
+      // } 
+      // toggledText.appendChild(spanExp);
+      // toggledText.append(l.experiences);
       divTruncate.appendChild(spanPFE);
       divTruncate.appendChild(spanCDI);
       divTruncate.appendChild(toggledText);
