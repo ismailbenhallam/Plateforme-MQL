@@ -13,7 +13,6 @@ const LaureatService = function(laureatsArray) {
         l.pays,
         l.pfe,
         l.cdi,
-        l.experiences,
         l.photo 
       )
     );

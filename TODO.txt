@@ -1,5 +1,4 @@
 *****Yousra***************
-contenu du descriptif du programme à changer
 passage descriptif sur activités
 ajouter une pagination pour lauréats et pour évènements. 
 lister les evenements par ordre décroissant de date
@@ -12,11 +11,8 @@ stage soit tableaux soit chart
 statistiques pour la page présentation
 lauréat passage descriptif
 lister les lauréat en fonction de la promotion
-évènements : augmenter la hauteur de la matcard comme pour lauréats
 titre d'event: couleur unique
 *****Ismail*****************
 ajouter une page de chargement au début
 background à changer
-enlever les liens du footer
 ajouter hero (last events/ news)
-stage pré-embauche et pas PFE !

@@ -9,7 +9,6 @@ const Laureat = function (
   pays,
   pfe,
   cdi,
-  experiences,
   photo
 ) {
   this.email = email;
@@ -22,6 +21,5 @@ const Laureat = function (
   this.pays = pays;
   this.pfe = pfe;
   this.cdi = cdi;
-  this.experiences = experiences;
   this.photo = photo;
 };
