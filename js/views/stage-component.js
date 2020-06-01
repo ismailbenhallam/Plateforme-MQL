@@ -17,7 +17,7 @@ StageComponent.prototype.createPromotionsDetailsTable = function () {
   let thead = document.createElement("thead");
   table.appendChild(thead);
   let tr = document.createElement("tr");
-  table.appendChild(tr);
+  thead.appendChild(tr);
 
   // promotions
   let th = document.createElement("th");
