@@ -9,8 +9,8 @@ var laureatsJSON = [
     lieu: "Capgemini",
     posteOccupe: "Stagiaire",
     ville: "Lyon",
-    pays: "France", 
-    photo: "el-morabet-hicham.jpg"
+    pays: "France",
+    photo: "el-morabet-hicham.jpg",
   },
   {
     email: "elkhairy.ibtissam96@gmail.com",
@@ -23,11 +23,12 @@ var laureatsJSON = [
     posteOccupe: "Ingénieur développement logiciel",
     ville: "Casablanca",
     pays: "France",
-    photo: "el-khairy-ibtissam.jpg"
+    photo: "el-khairy-ibtissam.jpg",
   },
   {
     email: "aymane.hammioui@gmail.com",
-    linkedin: "https://www.linkedin.com/in/aymane-hammioui-%E2%98%81%EF%B8%8F-535584139/",
+    linkedin:
+      "https://www.linkedin.com/in/aymane-hammioui-%E2%98%81%EF%B8%8F-535584139/",
     nom: "HAMMIOUI Aymane",
     promotion: "2016-2018",
     pfe: "Cegedim",
@@ -36,7 +37,7 @@ var laureatsJSON = [
     posteOccupe: "Consultant Technique",
     ville: "Casablanca",
     pays: "Maroc",
-    photo: "hammioui-aymane.jpg"
+    photo: "hammioui-aymane.jpg",
   },
   {
     email: "hichamhaidar96@gmail.com",
@@ -49,7 +50,7 @@ var laureatsJSON = [
     posteOccupe: "",
     ville: "Fès",
     pays: "Maroc",
-    photo: "haidar-hicham.jpg"
+    photo: "haidar-hicham.jpg",
   },
   {
     email: "imouad.you@gmail.com",
@@ -62,7 +63,7 @@ var laureatsJSON = [
     posteOccupe: "Ingénieur concepteur développeur (Microsoft)",
     ville: "Rabat",
     pays: "Maroc",
-    photo: "user.png"
+    photo: "user.png",
   },
   {
     email: "safae.filali.sadiq@gmail.com",
@@ -75,7 +76,7 @@ var laureatsJSON = [
     posteOccupe: "Concepteur développeur",
     ville: "Rabat",
     pays: "Maroc",
-    photo: "Filali-Sadiq.jpg"
+    photo: "Filali-Sadiq.jpg",
   },
   {
     email: "ghita.lvsl@gmail.com",
@@ -87,8 +88,8 @@ var laureatsJSON = [
     lieu: "Capgemini",
     posteOccupe: "Software Engineer",
     ville: "Rabat",
-    pays: "Maroc", 
-    photo: "user.png"
+    pays: "Maroc",
+    photo: "user.png",
   },
   {
     email: "zerkoun.fatima@gmail.com",
@@ -101,7 +102,7 @@ var laureatsJSON = [
     posteOccupe: "Ingénieur stagiaire d’études et développement",
     ville: "Rabat",
     pays: "Maroc",
-    photo: "zerkoun-fatima.jpg"
+    photo: "zerkoun-fatima.jpg",
   },
   {
     email: "belarbi.ahmed21@gmail.com",
@@ -114,7 +115,7 @@ var laureatsJSON = [
     posteOccupe: "Software engineer PL/SQL",
     ville: "Casablanca",
     pays: "Maroc",
-    photo: "Ahmed-Belarbi.jpeg"
+    photo: "Ahmed-Belarbi.jpeg",
   },
   {
     email: "ayoub.dadi25@gmail.com",
@@ -127,7 +128,7 @@ var laureatsJSON = [
     posteOccupe: "Ingénieur d'études et développement",
     ville: "Casablanca",
     pays: "Maroc",
-    photo: "ayoub-dadi.jpg"
+    photo: "ayoub-dadi.jpg",
   },
   {
     email: "chaimae.laalahmi@gmail.com",
@@ -139,8 +140,8 @@ var laureatsJSON = [
     lieu: "Capgemini",
     posteOccupe: "Software engineer",
     ville: "Rabat",
-    pays: "Maroc",  
-    photo: "laalahmi-chaimae.jpg"
+    pays: "Maroc",
+    photo: "laalahmi-chaimae.jpg",
   },
   {
     email: "anouarmajdoulif@gmail.com",
@@ -153,7 +154,7 @@ var laureatsJSON = [
     posteOccupe: "Technical Consultant",
     ville: "Casablanca",
     pays: "Maroc",
-    photo: "majdoulif-anouar.jpg"
+    photo: "majdoulif-anouar.jpg",
   },
   {
     email: "hmestadi@sqli.com",
@@ -165,12 +166,13 @@ var laureatsJSON = [
     lieu: "SQLI",
     posteOccupe: "Stagiaire",
     ville: "Rabat",
-    pays: "Maroc", 
-    photo: "mestadi-hala.jpg"
+    pays: "Maroc",
+    photo: "mestadi-hala.jpg",
   },
   {
     email: "driouich.fatimaezzahrae@gmail.com",
-    linkedin: "https://www.linkedin.com/in/fatima-ez-zahrae-driouich-9802811a0/",
+    linkedin:
+      "https://www.linkedin.com/in/fatima-ez-zahrae-driouich-9802811a0/",
     nom: "DRIOUICH Fatima ez-zahrae",
     promotion: "2018-2020",
     pfe: "DXC Technology",
@@ -179,7 +181,7 @@ var laureatsJSON = [
     posteOccupe: "Stagiaire",
     ville: "",
     pays: "Maroc",
-    photo: "fatima-ezzahrae-driouich.jpg"
+    photo: "fatima-ezzahrae-driouich.jpg",
   },
   {
     email: "mahboub.marwa.96@gmail.com",
@@ -191,8 +193,8 @@ var laureatsJSON = [
     lieu: "Capgemini",
     posteOccupe: "Ingénieure d'études et développement",
     ville: "Casablanca",
-    pays: "Maroc",    
-    photo: "mahboub-marwa.jpg"
+    pays: "Maroc",
+    photo: "mahboub-marwa.jpg",
   },
   {
     email: "el.mansour@hotmail.fr",
@@ -204,8 +206,8 @@ var laureatsJSON = [
     lieu: "Royale Marocaine d'Assurances",
     posteOccupe: "Ingénieur d'études et de développement, MOE",
     ville: "Casablanca",
-    pays: "Maroc",  
-    photo: "Riad-EL-MANSOUR.jpg"
+    pays: "Maroc",
+    photo: "Riad-EL-MANSOUR.jpg",
   },
   {
     email: "nizar.yakoubi@usmba.ac.ma",
@@ -217,8 +219,8 @@ var laureatsJSON = [
     lieu: "Cgi",
     posteOccupe: "IED Fullstack Java Jee",
     ville: "",
-    pays: "France",   
-    photo: "user.png"
+    pays: "France",
+    photo: "user.png",
   },
   {
     email: "badr.zer@gmail.com",
@@ -230,8 +232,8 @@ var laureatsJSON = [
     lieu: "Total Direct Energie",
     posteOccupe: "Coach agile",
     ville: "Paris",
-    pays: "France",  
-    photo: "Badr-ZEROUAL.jpeg"
+    pays: "France",
+    photo: "Badr-ZEROUAL.jpeg",
   },
   {
     email: "chr.mouna@gmail.com",
@@ -244,7 +246,7 @@ var laureatsJSON = [
     posteOccupe: "Consultante BI",
     ville: "Casablanca",
     pays: "Maroc",
-    photo: "CHRAIBI-Mouna.jpg"
+    photo: "CHRAIBI-Mouna.jpg",
   },
   {
     email: "selma.elmansour@gmail.com",
@@ -257,8 +259,8 @@ var laureatsJSON = [
     posteOccupe: "Software Engineer",
     ville: "Casablanca",
     pays: "Maroc",
-    
-    photo: "Selma-Elmansour.jpg"
+
+    photo: "Selma-Elmansour.jpg",
   },
   {
     email: "gamrani.ayoub@gmail.com",
@@ -271,7 +273,7 @@ var laureatsJSON = [
     posteOccupe: "Consultant Java JEE",
     ville: "",
     pays: "France",
-    photo: "gamrini-ayyoub.jpg"
+    photo: "gamrini-ayyoub.jpg",
   },
   {
     email: "elgaddarchaimae@gmail.com",
@@ -283,8 +285,8 @@ var laureatsJSON = [
     lieu: "Capgemini",
     posteOccupe: "Software engineer",
     ville: "Rabat",
-    pays: "Maroc",  
-    photo: "user.png"
+    pays: "Maroc",
+    photo: "user.png",
   },
   {
     email: "nabetwafae@gmail.com",
@@ -296,8 +298,8 @@ var laureatsJSON = [
     lieu: "CEGEDIM",
     posteOccupe: "Consultante en systèmes d’information de ressources humaines",
     ville: "Rabat",
-    pays: "Maroc",    
-    photo: "Wafae-Nabet.jpg"
+    pays: "Maroc",
+    photo: "Wafae-Nabet.jpg",
   },
   {
     email: "aalouch.hind.inside@gmail.com",
@@ -310,7 +312,7 @@ var laureatsJSON = [
     posteOccupe: "Ingénieur de développement informatique",
     ville: "Marrakech",
     pays: "Maroc",
-    photo: "user.png"
+    photo: "user.png",
   },
   {
     email: "youness.mouhim1@gmail.com",
@@ -322,8 +324,8 @@ var laureatsJSON = [
     lieu: "Vivaliente Inc",
     posteOccupe: "Consultant Oracle applications confirmé",
     ville: "",
-    pays: "France",    
-    photo: "Youness-Mouhim.jpg"
+    pays: "France",
+    photo: "Youness-Mouhim.jpg",
   },
   {
     email: "daoud.wirzgane@outlook.com",
@@ -336,7 +338,7 @@ var laureatsJSON = [
     posteOccupe: "Analyse programmeur",
     ville: "Casablanca",
     pays: "Maroc",
-    photo: "wirzgane-daoud.jpg"
+    photo: "wirzgane-daoud.jpg",
   },
   {
     email: "abdelhamid.elguarti@usmba.ac.ma",
@@ -349,7 +351,7 @@ var laureatsJSON = [
     posteOccupe: "",
     ville: "",
     pays: "France",
-    photo: "user.png"
+    photo: "user.png",
   },
   {
     email: "galaxy.darbouz@gmail.com",
@@ -361,8 +363,8 @@ var laureatsJSON = [
     lieu: "SQLI",
     posteOccupe: "Front-end Engineer",
     ville: "Rabat",
-    pays: "Maroc",  
-    photo: "DARBOUZ-Soufiane.jpg"
+    pays: "Maroc",
+    photo: "DARBOUZ-Soufiane.jpg",
   },
   {
     linkedin: "https://www.linkedin.com/in/misdakmarouane/",
@@ -375,7 +377,7 @@ var laureatsJSON = [
     posteOccupe: "Stagiaire",
     lieu: "Capgemini",
     pays: "Maroc",
-    photo: "MISDAK-Marouane.jpg"
+    photo: "MISDAK-Marouane.jpg",
   },
   {
     linkedin: "https://www.linkedin.com/in/hajar-zaghba/",
@@ -388,7 +390,7 @@ var laureatsJSON = [
     posteOccupe: "Stagiaire",
     lieu: "CEGEDIM",
     pays: "Maroc",
-    photo: "ZAGHBA-Hajar.jpg"
+    photo: "ZAGHBA-Hajar.jpg",
   },
   {
     linkedin: "https://www.linkedin.com/in/hatim-essadeq-371a9a136/",
@@ -401,7 +403,7 @@ var laureatsJSON = [
     posteOccupe: "Stagiaire",
     lieu: "Capgemini",
     pays: "Maroc",
-    photo: "Essadeq-Hatim.jpg"
+    photo: "Essadeq-Hatim.jpg",
   },
   {
     linkedin: "https://www.linkedin.com/in/amjida-abderrahim-756648153/",
@@ -414,7 +416,7 @@ var laureatsJSON = [
     posteOccupe: "Stagiaire",
     lieu: "Colas Digital Solutions",
     pays: "Maroc",
-    photo: "Amjida-Abderrahim.jpg"
+    photo: "Amjida-Abderrahim.jpg",
   },
   {
     linkedin: "https://www.linkedin.com/in/redouane-baghdad-0a5645134/",
@@ -427,7 +429,7 @@ var laureatsJSON = [
     posteOccupe: "Stagiaire",
     lieu: "SQLI",
     pays: "Maroc",
-    photo: "BAGHDAD-Redouane.jpg"
+    photo: "BAGHDAD-Redouane.jpg",
   },
   {
     linkedin: "#",
@@ -440,7 +442,7 @@ var laureatsJSON = [
     posteOccupe: "Stagiaire",
     lieu: "Intelcia département PPV",
     pays: "Maroc",
-    photo: "user.png"
+    photo: "user.png",
   },
   {
     linkedin: "https://www.linkedin.com/in/nesrin-lakhal-760098169/",
@@ -451,9 +453,9 @@ var laureatsJSON = [
     pfe: "Capgemini",
     cdi: "",
     posteOccupe: "Stagiaire",
-    lieu: "Capgemini", 
+    lieu: "Capgemini",
     pays: "Maroc",
-    photo: "user.png"
+    photo: "user.png",
   },
   {
     linkedin: "https://www.linkedin.com/in/omar-ismaili-alaoui-3b66b6ab/",
@@ -466,7 +468,7 @@ var laureatsJSON = [
     posteOccupe: "Stagiaire",
     lieu: "Capgemini",
     pays: "Maroc",
-    photo: "user.png"
+    photo: "user.png",
   },
   {
     linkedin: "https://www.linkedin.com/in/zakaryaebenabbou/",
@@ -477,9 +479,9 @@ var laureatsJSON = [
     pfe: "Capgemini",
     cdi: "Capgemini",
     posteOccupe: "Software Engineer Java / Cobol",
-    lieu: "Capgemini", 
+    lieu: "Capgemini",
     pays: "Maroc",
-    photo: "user.png" 
+    photo: "user.png",
   },
   {
     linkedin: "https://www.linkedin.com/in/nourimane-ziani/",
@@ -490,9 +492,9 @@ var laureatsJSON = [
     pfe: "CEGEDIM",
     cdi: "",
     posteOccupe: "Stagiaire",
-    lieu: "CEGEDIM", 
+    lieu: "CEGEDIM",
     pays: "Maroc",
-    photo: "ZIANi-Nour-Imane.jpg"  
+    photo: "ZIANi-Nour-Imane.jpg",
   },
   {
     email: "#",
@@ -504,8 +506,8 @@ var laureatsJSON = [
     lieu: "CGI",
     posteOccupe: "Stagiaire",
     ville: "Fès",
-    pays: "Maroc", 
-    photo: "user.png"
+    pays: "Maroc",
+    photo: "user.png",
   },
   {
     email: "#",
@@ -517,8 +519,8 @@ var laureatsJSON = [
     lieu: "CGI",
     posteOccupe: "Ingénieur contrôle et pilotage",
     ville: "Fès",
-    pays: "Maroc", 
-    photo: "TAJMOUATI-Hind.jpg"
+    pays: "Maroc",
+    photo: "TAJMOUATI-Hind.jpg",
   },
   {
     email: "#",
@@ -530,8 +532,8 @@ var laureatsJSON = [
     lieu: "Oracle EBS",
     posteOccupe: "Ingénieur Analyste Java / Java EE",
     ville: "Casablanca",
-    pays: "Maroc", 
-    photo: "BENNANI-Mehdi.jpg"
+    pays: "Maroc",
+    photo: "BENNANI-Mehdi.jpg",
   },
   {
     email: "#",
@@ -543,8 +545,8 @@ var laureatsJSON = [
     lieu: "CGI",
     posteOccupe: "Ingénieur Etudes & développement",
     ville: "Fès",
-    pays: "Maroc", 
-    photo: "HMAMED-Wafae.jpg"
+    pays: "Maroc",
+    photo: "HMAMED-Wafae.jpg",
   },
   {
     email: "#",
@@ -556,8 +558,8 @@ var laureatsJSON = [
     lieu: "CGI",
     posteOccupe: "Software Engineer",
     ville: "Fès",
-    pays: "Maroc", 
-    photo: "user.png"
+    pays: "Maroc",
+    photo: "user.png",
   },
   {
     email: "#",
@@ -569,8 +571,8 @@ var laureatsJSON = [
     lieu: "CGI",
     posteOccupe: "Stagiaire",
     ville: "Fès",
-    pays: "Maroc", 
-    photo: "user.png"
+    pays: "Maroc",
+    photo: "user.png",
   },
   {
     email: "#",
@@ -582,8 +584,8 @@ var laureatsJSON = [
     lieu: "CGI",
     posteOccupe: "Senior developer webMethods",
     ville: "Fès",
-    pays: "Maroc", 
-    photo: "KARYM-Dounia.jpg"
+    pays: "Maroc",
+    photo: "KARYM-Dounia.jpg",
   },
   {
     email: "#",
@@ -595,8 +597,8 @@ var laureatsJSON = [
     lieu: "Capgemini",
     posteOccupe: "Software Developer",
     ville: "Casablanca",
-    pays: "Maroc", 
-    photo: "BOUZRIA-Souhayla.jpg"
+    pays: "Maroc",
+    photo: "BOUZRIA-Souhayla.jpg",
   },
   {
     email: "#",
@@ -608,8 +610,8 @@ var laureatsJSON = [
     lieu: "Aubay",
     posteOccupe: "Développeur d'études et développement",
     ville: "",
-    pays: "France", 
-    photo: "user.png"
+    pays: "France",
+    photo: "user.png",
   },
   {
     email: "#",
@@ -621,8 +623,8 @@ var laureatsJSON = [
     lieu: "Aubay",
     posteOccupe: "Développeur d'études et développement",
     ville: "",
-    pays: "France", 
-    photo: "user.png"
+    pays: "France",
+    photo: "user.png",
   },
   {
     email: "#",
@@ -634,8 +636,8 @@ var laureatsJSON = [
     lieu: "Sylob",
     posteOccupe: "Consultante Java JEE",
     ville: "Casablanca",
-    pays: "Maroc", 
-    photo: "user.png"
+    pays: "Maroc",
+    photo: "user.png",
   },
   {
     email: "#",
@@ -647,8 +649,8 @@ var laureatsJSON = [
     lieu: "Ausy",
     posteOccupe: "Consultant",
     ville: "",
-    pays: "France", 
-    photo: "user.png"
+    pays: "France",
+    photo: "user.png",
   },
   {
     email: "#",
@@ -660,8 +662,8 @@ var laureatsJSON = [
     lieu: "CGI",
     posteOccupe: "Fullstack Software Engineer",
     ville: "Casablanca",
-    pays: "Maroc", 
-    photo: "ELKHARRAT-Issam.jpg"
+    pays: "Maroc",
+    photo: "ELKHARRAT-Issam.jpg",
   },
   {
     email: "#",
@@ -673,8 +675,8 @@ var laureatsJSON = [
     lieu: "Capgemini",
     posteOccupe: "Développeur Java/JEE",
     ville: "Casablanca",
-    pays: "Maroc", 
-    photo: "user.png"
+    pays: "Maroc",
+    photo: "user.png",
   },
   {
     email: "#",
@@ -686,8 +688,8 @@ var laureatsJSON = [
     lieu: "AMAYAS Consulting",
     posteOccupe: "Consultante fullstack",
     ville: "",
-    pays: "France", 
-    photo: "user.png"
+    pays: "France",
+    photo: "user.png",
   },
   {
     email: "#",
@@ -699,8 +701,8 @@ var laureatsJSON = [
     lieu: "Banque de France",
     posteOccupe: "Consultant SOA/ESB webMethods",
     ville: "",
-    pays: "France", 
-    photo: "user.png"
+    pays: "France",
+    photo: "user.png",
   },
   {
     email: "#",
@@ -712,8 +714,8 @@ var laureatsJSON = [
     lieu: "Capgemini",
     posteOccupe: "Consultant COBOL Mainframe",
     ville: "Casablanca",
-    pays: "Maroc", 
-    photo: "user.png"
+    pays: "Maroc",
+    photo: "user.png",
   },
   {
     email: "#",
@@ -725,8 +727,8 @@ var laureatsJSON = [
     lieu: "Atos",
     posteOccupe: "Consultante SharePoint Confirmée",
     ville: "Casablanca",
-    pays: "Maroc", 
-    photo: "user.png"
+    pays: "Maroc",
+    photo: "user.png",
   },
   {
     email: "#",
@@ -738,8 +740,8 @@ var laureatsJSON = [
     lieu: "Capgemini",
     posteOccupe: "Software Engineer",
     ville: "Casablanca",
-    pays: "Maroc", 
-    photo: "BENHIBA-Saloua.jpg"
+    pays: "Maroc",
+    photo: "BENHIBA-Saloua.jpg",
   },
   {
     email: "#",
@@ -751,7 +753,7 @@ var laureatsJSON = [
     lieu: "Oracle",
     posteOccupe: "Développeur Logiciel",
     ville: "Casablanca",
-    pays: "Maroc", 
-    photo: "BASRI-Taha.jpg"
+    pays: "Maroc",
+    photo: "BASRI-Taha.jpg",
   },
 ];

@@ -17,6 +17,7 @@
 </head>
 
 <body>
+  <script src="js/views/loading-component.js"></script>
 
   <!-- Header -->
   <header id="header" class="header">
@@ -354,17 +355,17 @@
         </div>
         <hr class="divider">
       </header>
-      <FORM name="choix">
-          <SELECT class="select" name="promotion" size="1" onchange="LaureatComponent(new LaureatService(laureatsJSON));">
-            <OPTION>2013-2015</OPTION>
-            <OPTION>2014-2016</OPTION>
-            <OPTION>2015-2017</OPTION>
-            <OPTION>2016-2018</OPTION>
-            <OPTION>2017-2019</OPTION>
-            <OPTION>2018-2020</OPTION>
-            <OPTION selected>Toutes les promotions</OPTION> 
-          </SELECT>
-        </FORM>
+      <FORM>
+        <SELECT id="laureats-select-promo" class="select" size="1">
+          <!-- <OPTION>2013-2015</OPTION>
+          <OPTION>2014-2016</OPTION>
+          <OPTION>2015-2017</OPTION>
+          <OPTION>2016-2018</OPTION>
+          <OPTION>2017-2019</OPTION>
+          <OPTION>2018-2020</OPTION>
+          <OPTION selected>Toutes les promotions</OPTION> -->
+        </SELECT>
+      </FORM>
       <div id="laureats-wrapper" class="boxing">
         <!-- Laureats are added dynamically -->
       </div>

@@ -1,23 +1,5 @@
 const EvenementComponent = function (service) {
   const charLimit = 200;
-  const showNextAndPrevious = function (
-    length,
-    currentPhotoIndex,
-    previous,
-    next
-  ) {
-    if (length == 1) {
-      previous.style.visibility = "hidden";
-      next.style.visibility = "hidden";
-      return;
-    }
-    if (currentPhotoIndex == 0) {
-      previous.style.visibility = "hidden";
-    } else previous.style.visibility = "visible";
-    if (currentPhotoIndex == length - 1) {
-      next.style.visibility = "hidden";
-    } else next.style.visibility = "visible";
-  };
 
   let wrapper = document.getElementById("evenements-wrapper");
   for (const e of service.items) {
@@ -81,7 +63,7 @@ const EvenementComponent = function (service) {
       previous.onclick = (eventF) => {
         if (eventF.target.tagName != "IMG") return;
         currentPhoto--;
-        showNextAndPrevious(e.photos.length, currentPhoto, previous, next);
+        this.showNextAndPrevious(e.photos.length, currentPhoto, previous, next);
         if (currentPhoto >= 0) {
           modalContent.src = e.photos[currentPhoto].src;
         }
@@ -100,19 +82,19 @@ const EvenementComponent = function (service) {
       next.onclick = (eventF) => {
         if (eventF.target.tagName != "IMG") return;
         currentPhoto++;
-        showNextAndPrevious(e.photos.length, currentPhoto, previous, next);
+        this.showNextAndPrevious(e.photos.length, currentPhoto, previous, next);
         if (currentPhoto < e.photos.length) {
           modalContent.src = e.photos[currentPhoto].src;
         }
       };
-      showNextAndPrevious(e.photos.length, currentPhoto, previous, next);
+      this.showNextAndPrevious(e.photos.length, currentPhoto, previous, next);
     }
 
     close.onclick = function () {
       modal.style.display = "none";
       currentPhoto = 0;
       if (e.photos.length > 1) {
-        showNextAndPrevious(e.photos.length, currentPhoto, previous, next);
+        this.showNextAndPrevious(e.photos.length, currentPhoto, previous, next);
       }
     };
     modal.onclick = function (ef) {
@@ -120,7 +102,7 @@ const EvenementComponent = function (service) {
       modal.style.display = "none";
       currentPhoto = 0;
       if (e.photos.length > 1) {
-        showNextAndPrevious(e.photos.length, currentPhoto, previous, next);
+        this.showNextAndPrevious(e.photos.length, currentPhoto, previous, next);
       }
     };
 
@@ -185,8 +167,30 @@ const EvenementComponent = function (service) {
         }
       };
     }
+
+    // window.addEventListener("load", () => {
     new ResizeObserver(function () {
       event.scrollIntoView({ behavior: "auto", block: "start" });
     }).observe(event);
+    // });
   }
+};
+
+EvenementComponent.prototype.showNextAndPrevious = function (
+  length,
+  currentPhotoIndex,
+  previous,
+  next
+) {
+  if (length == 1) {
+    previous.style.visibility = "hidden";
+    next.style.visibility = "hidden";
+    return;
+  }
+  if (currentPhotoIndex == 0) {
+    previous.style.visibility = "hidden";
+  } else previous.style.visibility = "visible";
+  if (currentPhotoIndex == length - 1) {
+    next.style.visibility = "hidden";
+  } else next.style.visibility = "visible";
 };

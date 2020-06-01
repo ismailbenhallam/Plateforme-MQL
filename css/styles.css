@@ -273,7 +273,7 @@ body {
   margin: 20px;
   max-height: auto;
   box-shadow: 0 0 8px rgba(0, 0, 0, 0.6);
-  transition: all 0.1s, width 0.5s, height 0.5s;
+  /* transition: all 0.1s, width 0.5s, height 0.5s; */
 }
 
 .evenement-body {
@@ -629,6 +629,12 @@ h3 {
 .bio-img {
   width: inherit;
   height: 250px;
+  /*********/
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* background-color: #888; */
+  /*********/
   position: relative;
   text-align: center;
   overflow: hidden;
@@ -654,8 +660,14 @@ h3 {
 }
 
 .bio-img > img {
-  width: 100%;
-  height: 100%;
+  /* width: 100%;
+  height: 100%; */
+  /*********/
+  width: auto;
+  height: auto;
+  max-width: 100%;
+  max-height: 100%;
+  /*********/
   display: block;
   position: relative;
   transition: 0.3s all ease-in-out;
@@ -928,4 +940,41 @@ form {
   padding-left: 15px;
   color: #555555;
   cursor: pointer;
+}
+
+#loadingPage {
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 1000;
+  background-color: white;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#loadingPage > img {
+  display: block;
+  width: auto;
+  height: auto;
+  max-width: 200px;
+  animation: rotate 2s infinite;
+}
+
+/* @media screen and (min-width: 768px) {
+  #loadingPage > img {
+    max-width: 200px;
+  }
+} */
+
+@keyframes rotate {
+  50% {
+    transform: scaleX(-1);
+  }
+  100% {
+    transform: scaleX(1);
+  }
 }
