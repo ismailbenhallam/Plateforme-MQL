@@ -408,7 +408,8 @@ body {
     width: 100%;
   }
 
-  .contact,.liens {
+  .contact,
+  .liens {
     padding: 15px;
   }
 }
@@ -542,16 +543,16 @@ table {
   font-weight: 650;
 }
 
-.colored_datan:th-child(even) td{
+.colored_data:nth-child(even) {
   background-color: white;
 }
 
-.colored_datan:th-child(odd) td{
+.colored_data:nth-child(odd) {
   background-color: lavender;
 }
 
-.highlight tbody tr:nth-child(1) :last-child, 
-.highlight tbody tr:nth-child(2) :last-child, 
+.highlight tbody tr:nth-child(1) :last-child,
+.highlight tbody tr:nth-child(2) :last-child,
 .highlight tbody tr:nth-child(16) :last-child {
   font-weight: 650;
   color: red;
@@ -886,7 +887,6 @@ h3 {
 }
 
 .colored_data td {
-  
 }
 
 .data-panel {
