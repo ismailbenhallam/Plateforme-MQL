@@ -619,7 +619,6 @@ h3 {
 }
 
 .person .bio-img .social a {
-  padding: 5px;
   color: #fff;
 }
 
@@ -701,22 +700,6 @@ h3 {
   transform: translate(0);
 }
 
-/* read more */
-.toggledText span.trimmed {
-  display: none;
-}
-.read-more .more:before {
-  content: "Lire plus";
-}
-.showAll .toggledText span.morePoints {
-  display: none;
-}
-.showAll .toggledText span.trimmed {
-  display: inline;
-}
-.showAll .read-more .more:before {
-  content: "Lire moins";
-}
 /*****************/
 .grow-shadow:hover {
   box-shadow: 0 10px 10px -10px rgba(0, 0, 0, 0.5);
@@ -883,7 +866,7 @@ h3 {
   margin-top: 50px;
 }
 
-.stats p{
+.stats p {
   text-align: center;
   color: #000;
   font-weight: bold;
@@ -902,7 +885,7 @@ h3 {
 }
 
 .partenaires-content {
-  background: white; 
+  background: white;
   text-indent: 15px;
 }
 
@@ -910,3 +893,23 @@ h3 {
   text-indent: 15px;
   padding: 20px 40px 60px 40px;
 }
+
+form {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.select {
+  outline: 0;
+  margin: 15px;
+  border: 0;
+  background: #f9f9f9;
+  font-size: 1.2em;
+  position: relative;
+  width: 350px;
+  height: 45px;
+  border-radius: 5px;
+  padding-left: 15px;
+  color: #555555;
+  cursor: pointer;
+  }
