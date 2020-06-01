@@ -512,6 +512,34 @@ table {
   color: white;
 }
 
+.semestre_table_cell_title {
+  background-color: #395180;
+  color: white;
+  padding-left: 10px;
+}
+
+.numbers {
+  text-align: end;
+  padding-right: 10px;
+  font-size: small;
+  font-weight: 650;
+}
+
+.highlight{
+  font-weight: 650;
+  color: red;
+}
+
+.total {
+  font-weight: 650;
+  color: #395480;
+}
+
+.title_cell {
+  font-weight: 650;
+  color: black;
+}
+
 .semestre_table tr {
   border-width: 1px;
   border-style: solid;
@@ -520,6 +548,7 @@ table {
 .semestre_table_cell {
   padding: 5px;
   background-color: white;
+  text-align: center;
 }
 
 .semestre_header {
@@ -829,6 +858,10 @@ h3 {
   margin: 0px;
 }
 
+.colored_data td {
+  background-color: lavender;
+}
+
 .data-panel {
   display: flex;
   flex-wrap: wrap;
@@ -839,6 +872,7 @@ h3 {
 
 .semestre_table.data {
   width: 600px;
+  font-weight: 500;
 }
 
 .main-activity {
@@ -884,7 +918,6 @@ h3 {
 
 .data-panel p {
   flex-basis: 250px;
-  margin-top: 60px;
 }
 
 #choose-year-stage {
@@ -911,6 +944,8 @@ h3 {
 
 .stats-wrapper {
   text-align: center;
+  padding-right: 15px;
+  padding-left: 15px;
 }
 
 .stats div img {
