@@ -1,0 +1,9 @@
+*****Yousra***************
+ajouter une pagination pour lauréats et pour évènements. 
+lister les lauréat en fonction du pays (Maroc, ou autre)
+fixer probleme de innerHTML dans events
+mettre la photo du flyer pour cérémonie 
+ajouter qlqs animations dans les pages
+*****Ismail*****************
+background à changer
+ajouter hero (last events/ news)
