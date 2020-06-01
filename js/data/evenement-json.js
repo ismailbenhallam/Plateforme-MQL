@@ -1,4 +1,18 @@
 const evenementsJSON = [
+  // Journée de l'entreprenariat
+  // Dans le cadre des activités parascolaires, les étudiants du Master MQL ont organisé en coordination avec le professeur Mme.X, une journée d'entreprenariat le X/X/2020 au centre de conférence de la FSDM  dans laquelle est organisé une compétition dont chaque équipe est supposé pitcher l'idée de sa futur potentielle entreprise. Cette journée a connu la participation de XX etudiants des différents master de la FSDM, et à l'issu de cet évènement parmi les projets présentés trois d'entre eux ont été primé comme étant les meilleurs projets à concrétiser en bénéficiant comme prix d'une assistance financière et d'un bon coaching tout au long de la réalisaton de ces projets.
+
+  // {
+  //   nom: "Journée Entreprenariat 2019 - Red Hope",
+  //   genre: "Journée Entreprenariat",
+  //   date: "2019-01-09",
+  //   lieu: "FSDM Fès",
+  //   description:
+  //     "Dans le cadre de la compétition nationale Company Program d'injaz al maghreb qui s'est déroulée à Casablanca le 19 Septembre 2018, les étudiants du Master MQL ont remporté le prix de l'innovation de Boeing attribué au projet 'Red Hope' sous la direction du Pr. CHENFOUR Nourreddine, RedHope est une plateforme Web dont le but principal est de simplifier la collecte du sang pour les Centres Régionaux de Transfusion Sanguine ainsi que faciliter le don du sang pour les citoyens.",
+  //   photos: ["photo1.jpg"],
+  //   photosFolder: "Journee-entreprenariat/2019",
+  //   titleColor: "#d9323a",
+  // },
   {
     nom: "Cérémonie de remise des diplomes - Promotion 2018",
     genre: "Cérémonie de remise des diplomes",
@@ -17,11 +31,6 @@ const evenementsJSON = [
     photosFolder: "remise-diplomes/2019",
     titleColor: "#d9323a",
   },
-  // Red Hope
-  // Dans le cadre de la compétition nationale Company Program d'injaz al maghreb qui s'est déroulée à Casablanca le 19 Septembre 2018, les étudiants du Master MQL ont remporté le prix de l'innovation de Boeing attribué au projet "Red Hope"sous la direction du Pr. CHENFOUR Nourreddine, RedHope est une plateforme Web dont le but principal est de simplifier la collecte du sang pour les Centres Régionaux de Transfusion Sanguine ainsi que faciliter le don du sang pour les citoyens.
-
-  // Journée de l'entreprenariat
-  // Dans le cadre des activités parascolaires, les étudiants du Master MQL ont organisé en coordination avec le professeur Mme.X, une journée d'entreprenariat le X/X/2020 au centre de conférence de la FSDM  dans laquelle est organisé une compétition dont chaque équipe est supposé pitcher l'idée de sa futur potentielle entreprise. Cette journée a connu la participation de XX etudiants des différents master de la FSDM, et à l'issu de cet évènement parmi les projets présentés trois d'entre eux ont été primé comme étant les meilleurs projets à concrétiser en bénéficiant comme prix d'une assistance financière et d'un bon coaching tout au long de la réalisaton de ces projets.
 
   {
     nom: "Campagne de stages CGI 2019",
@@ -75,15 +84,4 @@ const evenementsJSON = [
     photosFolder: "campagnes-stages/Capgemini-2019",
     titleColor: "#0572AE",
   },
-  // {
-  //   nom: "Session de recrutement Umanis 2020",
-  //   genre: "Session de recrutement",
-  //   date: "2019-1-22",
-  //   lieu: "Fès",
-  //   description:
-  //     "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nesciunt ut reprehenderit eos modi magnam tempore enim autem exercitationem, similique officia assumenda porro, numquam dolorem alias architecto vel esse id quasi?",
-  //   photos: ["photo1.jpg", "photo2.jpg", "photo3.jpg"],
-  //   photosFolder: "SRU2019",
-  //   titleColor: "rgb(213,5,16)",
-  // },
 ];
