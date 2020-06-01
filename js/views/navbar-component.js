@@ -26,21 +26,18 @@ window.toggleResponsiveNavbar = function () {
 };
 
 window.addEventListener("load", function () {
-  // addContentCharByChar(document.getElementById("slogan"), SLOGAN);
-
   const INDEX = "presentation";
   const LINKS_SUFFIX = "-link";
   let activePage = INDEX;
 
   // To keep the user in the last page visited
   try {
-    activePage = sessionStorage.page;
+    activePage = sessionStorage.activePage;
     if (activePage == null) activePage = INDEX;
     document.getElementById(INDEX).classList.remove("active");
     document.getElementById(activePage).classList.add("active");
     document.getElementById(activePage + LINKS_SUFFIX).classList.add("active");
   } catch (err) {
-    console.log("catch");
     activePage = INDEX;
   }
 
@@ -65,12 +62,19 @@ window.addEventListener("load", function () {
 
       // Display the new active page
       activePage = link.dataset.target;
-      sessionStorage.page = activePage;
+      sessionStorage.activePage = activePage;
       link.classList.add("active");
       document.getElementById(activePage).classList.add("active");
+      document
+        .getElementById(activePage + LINKS_SUFFIX)
+        .classList.add("active");
 
       // Close the navbar
       document.getElementById("navbar").classList.remove("responsive");
+
+      setTimeout(() => {
+        document.body.scrollIntoView({ behavior: "auto", block: "start" });
+      }, 50);
     });
   }
 });

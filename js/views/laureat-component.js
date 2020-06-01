@@ -1,10 +1,39 @@
-const LaureatComponent = function (service) {
-  this.service = service;
+const LaureatComponent = function(service) {
+  const expr = document.choix.promotion.selectedIndex;
+  switch (expr) {
+    case 0:
+      this.service = service.items.filter( p => p.promotion == "2013-2015");
+      console.log("0 :" + this.service);
+      //window.dispatchEvent(new Event('load')); for triggering the load event once again
+      break;
+    case 1:
+        this.service = service.items.filter(p => p.promotion == "2014-2016");
+        console.log("1 :" + this.service);
+      break;
+    case 2:
+        this.service = service.items.filter(p => p.promotion == "2015-2017");
+        console.log("2 :" + this.service);
+      break;
+    case 3:
+        this.service = service.items.filter(p => p.promotion == "2016-2018");
+        console.log("3 :" + this.service);
+      break;
+    case 4:
+        this.service = service.items.filter(p => p.promotion == "2017-2019");
+        console.log("4 :" + this.service);
+      break;
+    case 5:
+        this.service = service.items.filter(p => p.promotion == "2018-2020");
+        console.log("5 :" + this.service);
+      break;
+    default:
+        this.service = service.items;
+  } 
   let id = 0;
-  let i = 0;
   window.addEventListener("load", () => {
     const wrapper = document.getElementById("laureats-wrapper");
-    service.items.forEach((l) => {
+    console.log("load" + this.service);
+    this.service.forEach(l => {
       id++;
       let divPerson = document.createElement("div");
       divPerson.setAttribute("id", "person-" + id);
@@ -25,13 +54,6 @@ const LaureatComponent = function (service) {
       img.setAttribute("alt", "linkedin");
       a.appendChild(img);
       divSocial.appendChild(a);
-      let a2 = document.createElement("a");
-      a2.setAttribute("href", "mailto:"+l.email);
-      let img2 = document.createElement("img");
-      img2.setAttribute("src", "icons/email.svg");
-      img2.setAttribute("alt", l.email);
-      a2.appendChild(img2);
-      divSocial.appendChild(a2);
       divBioImg.appendChild(imgPerson);
       divBioImg.appendChild(divSocial);
       divPerson.appendChild(divBioImg);
@@ -42,8 +64,7 @@ const LaureatComponent = function (service) {
       let job = document.createElement("SPAN");
       job.className = "subtitle";
       if (l.ville == "") {
-        job.textContent =
-        l.posteOccupe + " à " + l.lieu + ", " + l.pays + ".";
+        job.textContent = l.posteOccupe + " à " + l.lieu + ", " + l.pays + ".";
       }
       job.textContent =
         l.posteOccupe + " à " + l.lieu + ", " + l.ville + ", " + l.pays + ".";
@@ -57,16 +78,9 @@ const LaureatComponent = function (service) {
       spanPFE.textContent = "Stage pré-embauche : " + l.pfe;
       let spanCDI = document.createElement("SPAN");
       spanCDI.textContent = "Premier CDI : " + l.cdi;
-      if(l.cdi == "") {
+      if (l.cdi == "") {
         spanCDI.textContent = "";
       }
-      // let spanExp = document.createElement("SPAN");
-      // spanExp.textContent = "Expérience Précedentes : ";
-      // if(l.experiences == "") {
-      //   spanExp.textContent = "";
-      // } 
-      // toggledText.appendChild(spanExp);
-      // toggledText.append(l.experiences);
       divTruncate.appendChild(spanPFE);
       divTruncate.appendChild(spanCDI);
       divTruncate.appendChild(toggledText);
@@ -76,7 +90,7 @@ const LaureatComponent = function (service) {
       divPersonContent.appendChild(divWrap);
       divPerson.appendChild(divPersonContent);
       wrapper.appendChild(divPerson);
-      divPerson.addEventListener("mouseover", (ids) => {
+      divPerson.addEventListener("mouseover", ids => {
         ids = divPerson.id;
         const bioImgChild = document
           .getElementById(ids)
@@ -87,7 +101,7 @@ const LaureatComponent = function (service) {
           .getElementsByClassName("social")[0];
         social.classList.add("translate");
       });
-      divPerson.addEventListener("mouseout", (ids) => {
+      divPerson.addEventListener("mouseout", ids => {
         ids = divPerson.id;
         const bioImgChild = document
           .getElementById(ids)
@@ -99,38 +113,8 @@ const LaureatComponent = function (service) {
         social.classList.remove("translate");
       });
 
-      const charLimit = 100;
-      var numberOfToggled = document.getElementsByClassName("toggledText");
-      var el = numberOfToggled[i];
-      i++;
-      var elText = el.innerHTML.trim();
-
-      if (elText.length > charLimit) {
-        var showStr = elText.slice(0, charLimit);
-        var hideStr = elText.slice(charLimit);
-        el.innerHTML =
-          showStr +
-          '<span class="morePoints">...</span> <span class="trimmed">' +
-          hideStr +
-          "</span>";
-        el.parentElement.innerHTML =
-          el.parentElement.innerHTML +
-          "<div class='read-more'><a href='#' class='more'></a>";
-      }
-
-      window.onclick = function (event) {
-        if (event.target.className == "more") {
-          event.preventDefault();
-          event.target.parentElement.parentElement.classList.toggle("showAll");
-        }
-      };
-
-      window.onscroll = function () {
+      window.onscroll = function() {
         const people = document.getElementsByClassName("person");
-        const heading = document.getElementsByClassName("heading-laureat")[0];
-        window.scrollY > heading.offsetHeight - 250 && window.scrollY !== 0
-          ? heading.classList.add("animate")
-          : heading.classList.remove("animate");
         for (let i = 0; i < people.length; i++) {
           window.scrollY > people[i].offsetHeight - 520
             ? people[i].classList.add("animate")

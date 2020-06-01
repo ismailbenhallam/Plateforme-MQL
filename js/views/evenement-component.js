@@ -1,8 +1,5 @@
-const c = function (tagName) {
-  return document.createElement(tagName);
-};
-
 const EvenementComponent = function (service) {
+  const charLimit = 200;
   const showNextAndPrevious = function (
     length,
     currentPhotoIndex,
@@ -24,24 +21,27 @@ const EvenementComponent = function (service) {
 
   let wrapper = document.getElementById("evenements-wrapper");
   for (const e of service.items) {
-    let event = c("div");
+    let event = document.createElement("div");
     wrapper.appendChild(event);
     event.classList.add("evenement");
 
     // Scroll to the event
     new ResizeObserver(function () {
-      event.scrollIntoView({ behavior: "auto", block: "start" });
+      event.scrollIntoView({ behavior: "smooth", block: "start" });
     }).observe(event);
 
-    let title = c("h2");
+    let title = document.createElement("h2");
+    let body = document.createElement("div");
+    body.classList.add("evenement-body");
+
     title.classList.add("evenement-title");
-    if (e.titleColor !== undefined) title.style.backgroundColor = e.titleColor;
     title.textContent = e.nom;
     event.appendChild(title);
+    event.appendChild(body);
 
-    let photoDiv = c("div");
+    let photoDiv = document.createElement("div");
     photoDiv.classList.add("evenement-photo");
-    let photo = c("img");
+    let photo = document.createElement("img");
     let currentPhoto = 0;
     photo = e.photos[currentPhoto];
 
@@ -54,16 +54,16 @@ const EvenementComponent = function (service) {
     // <img id="modal-content"></img>
     // <img id="next" src="\icons\next.png"></img>
     // </div>;
-    let modal = c("div");
+    let modal = document.createElement("div");
     modal.classList.add("evenement-modal");
     document.body.appendChild(modal);
 
-    let close = c("span");
+    let close = document.createElement("span");
     close.classList.add("evenement-close");
     close.innerHTML = "&times;";
     modal.appendChild(close);
 
-    let modalContent = c("img");
+    let modalContent = document.createElement("img");
     modalContent.classList.add("evenement-modal-content");
 
     photo.onclick = function () {
@@ -73,7 +73,7 @@ const EvenementComponent = function (service) {
 
     let previous;
     if (e.photos.length > 1) {
-      previous = c("img");
+      previous = document.createElement("img");
       previous.classList.add("evenement-previous");
       previous.src = "icons/next.png";
       modal.appendChild(previous);
@@ -92,7 +92,7 @@ const EvenementComponent = function (service) {
 
     let next;
     if (e.photos.length > 1) {
-      next = c("img");
+      next = document.createElement("img");
       next.classList.add("evenement-next");
       next.src = "icons/next.png";
       modal.appendChild(next);
@@ -127,24 +127,23 @@ const EvenementComponent = function (service) {
     /**********************/
 
     photoDiv.appendChild(photo);
-    event.appendChild(photoDiv);
+    body.appendChild(photoDiv);
 
-    let content = c("div");
+    let content = document.createElement("div");
     content.classList.add("evenement-content");
-    event.appendChild(content);
+    body.appendChild(content);
 
-    let evenementCoordonnees = c("div");
+    let evenementCoordonnees = document.createElement("div");
     evenementCoordonnees.classList.add("evenement-coordonnees");
     evenementCoordonnees.textContent =
       toReadeableString(e.date) + " - " + e.lieu;
     content.appendChild(evenementCoordonnees);
 
-    let description = c("div");
+    let description = document.createElement("div");
     description.classList.add("evenement-description");
     content.appendChild(description);
 
     /************************/
-    const charLimit = 100;
     if (e.description.length <= charLimit)
       description.innerHTML = e.description;
     else {
@@ -152,16 +151,16 @@ const EvenementComponent = function (service) {
       let hideStr = e.description.slice(charLimit);
 
       description.innerHTML = showStr;
-      let morePoints = c("span");
+      let morePoints = document.createElement("span");
       morePoints.textContent = "...";
       morePoints.style.display = "inline";
-      let moreText = c("span");
+      let moreText = document.createElement("span");
       moreText.style.display = "none";
       moreText.textContent = hideStr;
       description.appendChild(morePoints);
       description.appendChild(moreText);
 
-      let readMore = c("div");
+      let readMore = document.createElement("div");
       readMore.style.cursor = "pointer";
       readMore.textContent = "Lire plus";
       readMore.style.color = "black";
@@ -186,5 +185,8 @@ const EvenementComponent = function (service) {
         }
       };
     }
+    new ResizeObserver(function () {
+      event.scrollIntoView({ behavior: "auto", block: "start" });
+    }).observe(event);
   }
 };
