@@ -531,6 +531,7 @@ table {
 }
 
 .semestre_table_cell_title {
+  padding-right: 10px;
   background-color: #395180;
   color: white;
   padding-left: 10px;
@@ -556,6 +557,10 @@ table {
 .highlight tbody tr:nth-child(16) :last-child {
   font-weight: 650;
   color: red;
+}
+
+.highlight tbody tr:nth-child(16) :first-child {
+  text-align: end;
 }
 
 .total {
