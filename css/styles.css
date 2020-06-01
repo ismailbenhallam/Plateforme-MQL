@@ -542,7 +542,9 @@ table {
   font-weight: 650;
 }
 
-.highlight tbody tr:nth-child(1) :last-child, .highlight tbody tr:nth-child(2) :last-child, .highlight tbody tr:nth-child(16) :last-child {
+.highlight tbody tr:nth-child(1) :last-child, 
+.highlight tbody tr:nth-child(2) :last-child, 
+.highlight tbody tr:nth-child(16) :last-child {
   font-weight: 650;
   color: red;
 }
@@ -898,6 +900,26 @@ h3 {
   width: 80%;
 }
 
+.deroulement {
+  width: 325px;
+  height: 300px;
+}
+
+.travaux {
+  width: 325px;
+  height: 300px;
+}
+
+.equipe {
+  width: 325px;
+  height: 300px;
+}
+
+.soft {
+  width: 325px;
+  height: 300px;
+}
+
 .main-activity:not(.first) {
   border-top: 1px solid #395480;
 }
@@ -907,8 +929,7 @@ h3 {
 }
 
 .main-activity img {
-  width: 300px;
-  top: 300px;
+  margin-top: 25px;
   border: 1px solid black;
 }
 
