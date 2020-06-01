@@ -27,7 +27,7 @@ const EvenementComponent = function (service) {
 
     // Scroll to the event
     new ResizeObserver(function () {
-      event.scrollIntoView({ behavior: "auto", block: "start" });
+      event.scrollIntoView({ behavior: "smoth", block: "start" });
     }).observe(event);
 
     let title = document.createElement("h2");

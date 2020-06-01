@@ -5,7 +5,7 @@ let stageComponent = new StageComponent(
   new StageService(promos, promosDetails),
   partenaireService
 );
-new LaureatComponent(new LaureatService(laureatsJSON));
 new DeboucheComponent(new DeboucheService(debouchesJSON));
 new EvenementComponent(new EvenementService(evenementsJSON));
 new PresentationComponent(new ProgrammeService(semestresJSON));
+new LaureatComponent(new LaureatService(laureatsJSON));
