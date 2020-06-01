@@ -1,25 +1,11 @@
 const evenementsJSON = [
-  // Journée de l'entreprenariat
-  // Dans le cadre des activités parascolaires, les étudiants du Master MQL ont organisé en coordination avec le professeur Mme.X, une journée d'entreprenariat le X/X/2020 au centre de conférence de la FSDM  dans laquelle est organisé une compétition dont chaque équipe est supposé pitcher l'idée de sa futur potentielle entreprise. Cette journée a connu la participation de XX etudiants des différents master de la FSDM, et à l'issu de cet évènement parmi les projets présentés trois d'entre eux ont été primé comme étant les meilleurs projets à concrétiser en bénéficiant comme prix d'une assistance financière et d'un bon coaching tout au long de la réalisaton de ces projets.
-
-  // {
-  //   nom: "Journée Entreprenariat 2019 - Red Hope",
-  //   genre: "Journée Entreprenariat",
-  //   date: "2019-01-09",
-  //   lieu: "FSDM Fès",
-  //   description:
-  //     "Dans le cadre de la compétition nationale Company Program d'injaz al maghreb qui s'est déroulée à Casablanca le 19 Septembre 2018, les étudiants du Master MQL ont remporté le prix de l'innovation de Boeing attribué au projet 'Red Hope' sous la direction du Pr. CHENFOUR Nourreddine, RedHope est une plateforme Web dont le but principal est de simplifier la collecte du sang pour les Centres Régionaux de Transfusion Sanguine ainsi que faciliter le don du sang pour les citoyens.",
-  //   photos: ["photo1.jpg"],
-  //   photosFolder: "Journee-entreprenariat/2019",
-  //   titleColor: "#d9323a",
-  // },
   {
-    nom: "Cérémonie de remise des diplomes - Promotion 2018",
-    genre: "Cérémonie de remise des diplomes",
+    nom: "Cérémonie de remise des diplômes - Promotion 2018",
+    genre: "Cérémonie de remise des diplômes",
     date: "2019-04-27",
     lieu: "FSDM Fès",
     description:
-      "Le <b>Master Qualité du Logiciels</b> organise la <b>4ème édition</b> de <b><i>la Cérémonie de Remises des Diplomes</i></b> sous le thème <b><i>Formation et Insertion</i></b> le <b>Samedi 27 Avril 2019</b> Au <b>Centre des Conférences de la Faculté des Sciences Dhar El Mehraz de Fès</b>. Cette cérémonie à caractère festif a regroupé le corps professoral de la formation, le Conseil des étudiants, et familles des lauréats et leurs amis.</br></br>La cérémonie a été initié par un mot d'ouverture de <b>M. Mohammed BELLAMLIH le Doyen de la faculté</b>, ou il a félicité les lauréats d'avoir réussis leur formation avec brio, et l'ensemble des enseignents pour avoir assuré une formation de haut niveau permettant ainsi aux lauréats une insertion professionnelle évidente, se joint à lui dans une parole élogieuse, <b>le Coordinateur du Master M. Noureddine CHENFOUR</b> pour féliciter ses étudiants qu'il les a guidés jusqu'au bout avec bienveillance et dévouement.</br></br>En marge de cette manifestation, c'est tenu la présentation du master et des différentes activités et évènements organisés durant ces deux années de formation, suivi par le témoignage de quelques lauréats. Au cours de cette cérémonie, <b>32 lauréats</b> ont obtenus leurs diplômes, ce qui fait un total de <b>350 lauréats</b> diplômés relevant du master MQL depuis sa création en <b>2007</b>.",
+      "Le <b>Master Qualité du Logiciels</b> organise la <b>4ème édition</b> de <b><i>la Cérémonie de Remises des Diplômes</i></b> sous le thème <b><i>Formation et Insertion</i></b> le <b>Samedi 27 Avril 2019</b> Au <b>Centre des Conférences de la Faculté des Sciences Dhar El Mehraz de Fès</b>. Cette cérémonie à caractère festif a regroupé le corps professoral de la formation, le Conseil des étudiants, et familles des lauréats et leurs amis.</br></br>La cérémonie a été initié par un mot d'ouverture de <b>M. Mohammed BELLAMLIH le Doyen de la faculté</b>, ou il a félicité les lauréats d'avoir réussis leur formation avec brio, et l'ensemble des enseignents pour avoir assuré une formation de haut niveau permettant ainsi aux lauréats une insertion professionnelle évidente, se joint à lui dans une parole élogieuse, <b>le Coordinateur du Master M. Noureddine CHENFOUR</b> pour féliciter ses étudiants qu'il les a guidés jusqu'au bout avec bienveillance et dévouement.</br></br>En marge de cette manifestation, c'est tenu la présentation du master et des différentes activités et évènements organisés durant ces deux années de formation, suivi par le témoignage de quelques lauréats. Au cours de cette cérémonie, <b>32 lauréats</b> ont obtenus leurs diplômes, ce qui fait un total de <b>350 lauréats</b> diplômés relevant du master MQL depuis sa création en <b>2007</b>.",
     photos: [
       "photo1.jpg",
       "photo2.jpg",

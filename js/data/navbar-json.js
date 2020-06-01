@@ -5,7 +5,7 @@ var navbarJSON = [
   { target: "presentation", name: "Accueil" },
   { target: "admission" },
   { target: "activites", name: "Activités" },
-  { target: "evenements", name: "Evènements" },
+  { target: "evenements", name: "Évènements" },
   { target: "stages" },
   { target: "laureats", name: "Lauréats" },
   { target: "partenaires" },

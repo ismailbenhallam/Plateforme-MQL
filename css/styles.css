@@ -331,7 +331,7 @@ body {
   /* margin: 1px; */
   padding: 5px 30px 5px 30px;
   color: White;
-  background-color: dodgerblue;
+  background-color: #395480;
 }
 
 .evenement-content {
@@ -542,7 +542,17 @@ table {
   font-weight: 650;
 }
 
-.highlight tbody tr:nth-child(1) :last-child, .highlight tbody tr:nth-child(2) :last-child, .highlight tbody tr:nth-child(16) :last-child {
+.colored_datan:th-child(even) td{
+  background-color: white;
+}
+
+.colored_datan:th-child(odd) td{
+  background-color: lavender;
+}
+
+.highlight tbody tr:nth-child(1) :last-child, 
+.highlight tbody tr:nth-child(2) :last-child, 
+.highlight tbody tr:nth-child(16) :last-child {
   font-weight: 650;
   color: red;
 }
@@ -876,7 +886,7 @@ h3 {
 }
 
 .colored_data td {
-  background-color: lavender;
+  
 }
 
 .data-panel {
@@ -898,6 +908,26 @@ h3 {
   width: 80%;
 }
 
+.deroulement {
+  width: 325px;
+  height: 300px;
+}
+
+.travaux {
+  width: 325px;
+  height: 300px;
+}
+
+.equipe {
+  width: 325px;
+  height: 300px;
+}
+
+.soft {
+  width: 325px;
+  height: 300px;
+}
+
 .main-activity:not(.first) {
   border-top: 1px solid #395480;
 }
@@ -907,8 +937,7 @@ h3 {
 }
 
 .main-activity img {
-  width: 300px;
-  top: 300px;
+  margin-top: 25px;
   border: 1px solid black;
 }
 
