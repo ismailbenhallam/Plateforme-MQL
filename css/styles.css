@@ -494,9 +494,9 @@ table {
   border-style: solid;
 }
 
-.semestre_table tr td,
-.semestre_table tr th {
+.semestre_table_cell {
   padding: 5px;
+  background-color: white;
 }
 
 .semestre_header {
@@ -788,6 +788,8 @@ h3 {
 .workflow-panel {
   margin-top: 40px;
   margin-bottom: 40px;
+  margin-left: 5%;
+  margin-right: 5%;
 }
 
 .workflow {
@@ -814,6 +816,7 @@ h3 {
   flex-wrap: wrap;
   justify-content: space-evenly;
   padding-bottom: 30px;
+  padding-top: 30px;
 }
 
 .semestre_table.data {
@@ -859,7 +862,6 @@ h3 {
 .chart-panel {
   width: 60%;
   height: auto;
-  border: 1px solid #395480;
 }
 
 .data-panel p {

@@ -27,7 +27,9 @@ const PresentationComponent = function (service) {
     for (const module of semestre.modules) {
       let trModule = document.createElement("tr");
       let tdModuleNum = document.createElement("td");
+      tdModuleNum.classList.add("semestre_table_cell");
       let tdModuleNom = document.createElement("td");
+      tdModuleNom.classList.add("semestre_table_cell");
 
       if (module.num == null) {
         // tdModuleNum.textContent = module.nom;
