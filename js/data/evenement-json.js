@@ -48,14 +48,15 @@ const evenementsJSON = [
     titleColor: "rgb(225, 25, 55)",
   },
   {
-    nom: "Journée d'Entreprenariat",
+    nom: "Journée entrepreneuriale 'Mon Business Model'",
     genre: "Compétitions",
-    date: "2019-04-27",
+    date: "2018-01-04",
     lieu: "FSDM Fès",
     description:
-    "Dans le cadre des activités parascolaires, les étudiants du <b>Master MQL</b> ont organisé en coordination avec <b>Mme. X, une journée d'entreprenariat le X/X/2020 au centre de conférence de la Faculté des Sciences Dhar El Mehraz de Fès</b> dans laquelle est organisé une compétition dont chaque équipe est supposée pitcher l'idée de sa futur potentielle entreprise.</br>Cette journée a connu la participation de <b>70 etudiants</b> des différents Master de la FSDM, et à l'issu de cet évènement parmi les projets présentés trois d'entre eux ont été primé comme étant les meilleurs projets à concrétiser en bénéficiant comme prix d'une assistance financière et d'un bon coaching tout au long de la réalisaton de ces projets.",
+    "Dans le cadre des activités parascolaires, les étudiants du <b>Master MQL</b> ont organisé en coordination avec <b>Mme. REMMAL, une journée d'entreprenariat le X/X/2020 au centre de conférence de la Faculté des Sciences Dhar El Mehraz de Fès</b> dans laquelle est organisé une compétition dont chaque équipe est supposée pitcher l'idée de sa futur potentielle entreprise.</br>Cette journée a connu la participation de <b>70 etudiants</b> des différents Master de la FSDM, et à l'issu de cet évènement parmi les projets présentés trois d'entre eux ont été primé comme étant les meilleurs projets à concrétiser en bénéficiant comme prix d'une assistance financière et d'un bon coaching tout au long de la réalisaton de ces projets.",
     photos: [
-      "RedHope1.jpg"
+      "ideaChallenge1.png",
+      "ideaChallenge2.png"
     ],
     photosFolder: "entreprenariat",
     titleColor: "#d9323a",

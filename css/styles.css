@@ -296,6 +296,12 @@ body {
     align-items: center;
   }
 }
+
+@media screen and (max-width: 550px) {
+  .data {
+    font-size: 10px;
+  }
+}
 .evenement.active .evenement-body {
   display: block;
 }
@@ -400,6 +406,10 @@ body {
 @media only screen and (max-width: 700px) {
   .modal-content {
     width: 100%;
+  }
+
+  .contact,.liens {
+    padding: 15px;
   }
 }
 
@@ -877,11 +887,6 @@ h3 {
   padding-top: 30px;
 }
 
-.semestre_table.data {
-  width: 600px;
-  font-weight: 500;
-}
-
 .main-activity {
   display: flex;
   flex-wrap: wrap;
@@ -916,11 +921,6 @@ h3 {
 
 .activity-presentation {
   padding-bottom: 30px;
-}
-
-.chart-panel {
-  width: 60%;
-  height: auto;
 }
 
 .data-panel p {

@@ -1,5 +1,4 @@
 const Laureat = function (
-  email,
   linkedin,
   nom,
   promotion,
@@ -11,7 +10,6 @@ const Laureat = function (
   cdi,
   photo
 ) {
-  this.email = email;
   this.linkedin = linkedin;
   this.nom = nom;
   this.promotion = promotion;
