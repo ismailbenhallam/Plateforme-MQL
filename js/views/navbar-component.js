@@ -72,9 +72,9 @@ window.addEventListener("load", function () {
       // Close the navbar
       document.getElementById("navbar").classList.remove("responsive");
 
-      setTimeout(() => {
-        document.body.scrollIntoView({ behavior: "auto", block: "start" });
-      }, 50);
+      // setTimeout(() => {
+      //   document.body.scrollIntoView({ behavior: "auto", block: "start" });
+      // }, 50);
     });
   }
 });

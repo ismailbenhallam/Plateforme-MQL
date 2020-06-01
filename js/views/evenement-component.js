@@ -7,11 +7,6 @@ const EvenementComponent = function (service) {
     wrapper.appendChild(event);
     event.classList.add("evenement");
 
-    // Scroll to the event
-    new ResizeObserver(function () {
-      event.scrollIntoView({ behavior: "smooth", block: "start" });
-    }).observe(event);
-
     let title = document.createElement("h2");
     let body = document.createElement("div");
     body.classList.add("evenement-body");
@@ -164,15 +159,11 @@ const EvenementComponent = function (service) {
           event.classList.toggle("active");
 
           ef.preventDefault();
+
+          event.scrollIntoView({ behavior: "auto", block: "start" });
         }
       };
     }
-
-    // window.addEventListener("load", () => {
-    new ResizeObserver(function () {
-      event.scrollIntoView({ behavior: "auto", block: "start" });
-    }).observe(event);
-    // });
   }
 };
 
