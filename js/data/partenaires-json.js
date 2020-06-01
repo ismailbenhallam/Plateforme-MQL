@@ -75,4 +75,19 @@ var partenairesJSON = [
     website: "",
     logoUrl: "images/partenaires/fedaso-logo.png",
   },
+  {
+    name: "Maroc Numeric Cluster",
+    website: "http://www.marocnumericcluster.org/",
+    logoUrl: "images/partenaires/maroc-numeric-cluster-logo.jpg",
+  },
+  {
+    name: "Alten",
+    website: "https://www.alten.ma/",
+    logoUrl: "images/partenaires/alten-logo.png",
+  },
+  {
+    name: "Université Bretagne Occidentale - Brest - France",
+    website: "https://www.univ-brest.fr/",
+    logoUrl: "images/partenaires/ubo-logo.png",
+  }
 ];

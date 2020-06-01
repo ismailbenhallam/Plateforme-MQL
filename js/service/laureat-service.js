@@ -3,7 +3,6 @@ const LaureatService = function (laureatsArray) {
   laureatsArray.forEach((l) => {
     this.items.push(
       new Laureat(
-        l.email,
         l.linkedin,
         l.nom,
         l.promotion,

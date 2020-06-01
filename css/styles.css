@@ -279,7 +279,8 @@ body {
 .evenement-body {
   display: flex;
   flex-direction: row;
-  align-items: flex-start;
+  align-content: center;
+  /* justify-content: flex-start; */
 }
 
 .evenement-body > * {
@@ -327,8 +328,8 @@ body {
 .evenement-title {
   font-weight: 500;
   font-size: 18px;
-  margin: 1px auto 20px auto;
-  padding: 5px 0px 5px 30px;
+  /* margin: 1px; */
+  padding: 5px 30px 5px 30px;
   color: White;
   background-color: dodgerblue;
 }
@@ -361,6 +362,12 @@ body {
   max-width: 100%;
   /* transition: 0.1s; */
   /* max-height: 600px; */
+}
+
+@media screen and (min-width: 768px) {
+  .evenement.active .evenement-photo > img {
+    max-width: 60%;
+  }
 }
 
 .evenement-photo > img:hover {
@@ -535,7 +542,7 @@ table {
   font-weight: 650;
 }
 
-.highlight{
+.highlight {
   font-weight: 650;
   color: red;
 }
@@ -931,8 +938,10 @@ h3 {
 
 .stats {
   display: flex;
-  flex-wrap: wrap;
-  justify-content: space-evenly;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-items: center;
+  align-content: flex-start;
   margin-top: 50px;
 }
 
@@ -946,6 +955,15 @@ h3 {
   text-align: center;
   padding-right: 15px;
   padding-left: 15px;
+  flex: 1 1 0px;
+}
+@media screen and (max-width: 768px) {
+  .stats {
+    flex-wrap: nowrap;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+  }
 }
 
 .stats div img {
