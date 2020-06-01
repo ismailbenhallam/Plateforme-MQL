@@ -1019,6 +1019,9 @@ form {
 }
 
 .select {
+  font-family: "Nunito", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+  "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji",
+  "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";;
   outline: 0;
   margin: 15px;
   border: 0;
