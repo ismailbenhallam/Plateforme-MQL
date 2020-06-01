@@ -1,6 +1,6 @@
 /********** Listener for displaying the Top Button **********/
-window.onscroll = function () {
-  const HEADER_HEIGHT = 225;
+const HEADER_HEIGHT = 225;
+window.addEventListener("scroll", function () {
   const toTopBtn = document.getElementById("toTop");
   if (
     document.body.scrollTop > HEADER_HEIGHT ||
@@ -10,7 +10,19 @@ window.onscroll = function () {
   } else {
     toTopBtn.style.display = "none";
   }
-};
+});
+// window.onscroll = function () {
+//   const toTopBtn = document.getElementById("toTop");
+//   if (
+//     document.body.scrollTop > HEADER_HEIGHT ||
+//     document.documentElement.scrollTop > HEADER_HEIGHT
+//   ) {
+//     alert("scroll");
+//     toTopBtn.style.display = "block";
+//   } else {
+//     toTopBtn.style.display = "none";
+//   }
+// };
 
 /********** Scroll To Top Button **********/
 document.getElementById("toTop").addEventListener("click", () => {
