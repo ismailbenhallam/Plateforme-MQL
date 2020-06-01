@@ -1,7 +1,7 @@
 var laureatsJSON = [
   {
     email: "elmorabethicham@gmail.com",
-    linkedin: "#",
+    linkedin: "https://www.linkedin.com/in/hicham-elmorabet-a70044172/",
     nom: "EL MORABET Hicham",
     promotion: "2017-2019",
     pfe: "Umanis, Casablanca",
@@ -10,11 +10,11 @@ var laureatsJSON = [
     posteOccupe: "Stagiaire",
     ville: "Lyon",
     pays: "France", 
-    photo: "user.png"
+    photo: "el-morabet-hicham.jpg"
   },
   {
     email: "elkhairy.ibtissam96@gmail.com",
-    linkedin: "#",
+    linkedin: "https://www.linkedin.com/in/ibtissam-el-khairy-173b33141/",
     nom: "El khairy Ibtissam",
     promotion: "2017-2019",
     pfe: "Cegedim",
@@ -23,11 +23,11 @@ var laureatsJSON = [
     posteOccupe: "Ingénieur développement logiciel",
     ville: "Casablanca",
     pays: "France",
-    photo: "ibis-imy.jpg"
+    photo: "el-khairy-ibtissam.jpg"
   },
   {
     email: "aymane.hammioui@gmail.com",
-    linkedin: "#",
+    linkedin: "https://www.linkedin.com/in/aymane-hammioui-%E2%98%81%EF%B8%8F-535584139/",
     nom: "HAMMIOUI Aymane",
     promotion: "2016-2018",
     pfe: "Cegedim",
@@ -36,11 +36,11 @@ var laureatsJSON = [
     posteOccupe: "Consultant Technique",
     ville: "Casablanca",
     pays: "Maroc",
-    photo: "user.png"
+    photo: "hammioui-aymane.jpg"
   },
   {
     email: "hichamhaidar96@gmail.com",
-    linkedin: "#",
+    linkedin: "https://www.linkedin.com/in/hicham-haidar-050b1212b/",
     nom: "HAIDAR Hicham",
     promotion: "2018-2020",
     pfe: "CGI Fès",
@@ -49,11 +49,11 @@ var laureatsJSON = [
     posteOccupe: "",
     ville: "Fès",
     pays: "Maroc",
-    photo: "user.png"
+    photo: "haidar-hicham.jpg"
   },
   {
     email: "imouad.you@gmail.com",
-    linkedin: "#",
+    linkedin: "https://www.linkedin.com/in/mouad-youssef/",
     nom: "YOUSSEF Mouad",
     promotion: "2018-2020",
     pfe: "SQLI Rabat",
@@ -66,7 +66,7 @@ var laureatsJSON = [
   },
   {
     email: "safae.filali.sadiq@gmail.com",
-    linkedin: "#",
+    linkedin: "https://www.linkedin.com/in/safae-filali-sadiq-622b9a119/",
     nom: "FILALI SADIQ Safae",
     promotion: "2016-2018",
     pfe: "Capgemini",
@@ -92,7 +92,7 @@ var laureatsJSON = [
   },
   {
     email: "zerkoun.fatima@gmail.com",
-    linkedin: "#",
+    linkedin: "https://www.linkedin.com/in/fatima-zerkoun-51883213a/",
     nom: "ZERKOUN Fatima",
     promotion: "2018-2020",
     pfe: "CGI",
@@ -105,7 +105,7 @@ var laureatsJSON = [
   },
   {
     email: "belarbi.ahmed21@gmail.com",
-    linkedin: "#",
+    linkedin: "https://www.linkedin.com/in/ahmed-belarbi-509908170/",
     nom: "BELARBI Ahmed",
     promotion: "2017-2019",
     pfe: "Capgemini",
@@ -114,12 +114,11 @@ var laureatsJSON = [
     posteOccupe: "Software engineer PL/SQL",
     ville: "Casablanca",
     pays: "Maroc",
-    
     photo: "Ahmed-Belarbi.jpeg"
   },
   {
     email: "ayoub.dadi25@gmail.com",
-    linkedin: "#",
+    linkedin: "https://www.linkedin.com/in/ayoub-dadi-ba0a63105/",
     nom: "DADI Ayoub",
     promotion: "2016-2018",
     pfe: "CGI technologies et solutions",
@@ -132,7 +131,7 @@ var laureatsJSON = [
   },
   {
     email: "chaimae.laalahmi@gmail.com",
-    linkedin: "#",
+    linkedin: "https://www.linkedin.com/in/chaimae-laalahmi/",
     nom: "LAALAHMI Chaimae",
     promotion: "2017-2019",
     pfe: "Capgemini",
@@ -141,11 +140,11 @@ var laureatsJSON = [
     posteOccupe: "Software engineer",
     ville: "Rabat",
     pays: "Maroc",  
-    photo: "user.png"
+    photo: "laalahmi-chaimae.jpg"
   },
   {
     email: "anouarmajdoulif@gmail.com",
-    linkedin: "#",
+    linkedin: "https://www.linkedin.com/in/anouar-ma/",
     nom: "MAJDOULIF Anouar",
     promotion: "2017-2019",
     pfe: "Capgemini",
@@ -154,11 +153,11 @@ var laureatsJSON = [
     posteOccupe: "Technical Consultant",
     ville: "Casablanca",
     pays: "Maroc",
-    photo: "user.png"
+    photo: "majdoulif-anouar.jpg"
   },
   {
     email: "hmestadi@sqli.com",
-    linkedin: "#",
+    linkedin: "https://www.linkedin.com/in/hala-mestadi/",
     nom: "MESTADI Hala",
     promotion: "2018-2020",
     pfe: "SQLI",
@@ -167,11 +166,11 @@ var laureatsJSON = [
     posteOccupe: "Stagiaire",
     ville: "Rabat",
     pays: "Maroc", 
-    photo: "user.png"
+    photo: "mestadi-hala.jpg"
   },
   {
     email: "driouich.fatimaezzahrae@gmail.com",
-    linkedin: "#",
+    linkedin: "https://www.linkedin.com/in/fatima-ez-zahrae-driouich-9802811a0/",
     nom: "DRIOUICH Fatima ez-zahrae",
     promotion: "2018-2020",
     pfe: "DXC Technology",
@@ -184,7 +183,7 @@ var laureatsJSON = [
   },
   {
     email: "mahboub.marwa.96@gmail.com",
-    linkedin: "#",
+    linkedin: "https://www.linkedin.com/in/marwa-mahboub-76a445142/",
     nom: "MAHBOUB Marwa",
     promotion: "2017-2019",
     pfe: "Capgemini",
@@ -193,11 +192,11 @@ var laureatsJSON = [
     posteOccupe: "Ingénieure d'études et développement",
     ville: "Casablanca",
     pays: "Maroc",    
-    photo: "user.png"
+    photo: "mahboub-marwa.jpg"
   },
   {
     email: "el.mansour@hotmail.fr",
-    linkedin: "#",
+    linkedin: "https://www.linkedin.com/in/riad-el-mansour-53836bb8/",
     nom: "EL MANSOUR Riad",
     promotion: "2016-2018",
     pfe: "Capgemini",
@@ -210,7 +209,7 @@ var laureatsJSON = [
   },
   {
     email: "nizar.yakoubi@usmba.ac.ma",
-    linkedin: "#",
+    linkedin: "https://www.linkedin.com/in/nizar-yakoubi/",
     nom: "YAKOUBI Nizar",
     promotion: "2016-2018",
     pfe: "Cgi",
@@ -222,21 +221,8 @@ var laureatsJSON = [
     photo: "user.png"
   },
   {
-    email: "bouzria.souhayla@gmail.com",
-    linkedin: "#",
-    nom: "BOUZRIA Souhayla",
-    promotion: "2017-2019",
-    pfe: "Capgemini",
-    cdi: "Capgemini",
-    lieu: "Capgemini",
-    posteOccupe: "Software engineer",
-    ville: "Casablanca",
-    pays: "Maroc", 
-    photo: "user.png"
-  },
-  {
     email: "badr.zer@gmail.com",
-    linkedin: "#",
+    linkedin: "https://www.linkedin.com/in/badr-zeroual-90b36b85/",
     nom: "ZEROUAL Badr",
     promotion: "2012-2014",
     pfe: "Alten",
@@ -249,7 +235,7 @@ var laureatsJSON = [
   },
   {
     email: "chr.mouna@gmail.com",
-    linkedin: "#",
+    linkedin: "https://www.linkedin.com/in/mouna-chraibi-302895174/",
     nom: "CHRAIBI Mouna",
     promotion: "2017-2019",
     pfe: "Umanis",
@@ -258,12 +244,11 @@ var laureatsJSON = [
     posteOccupe: "Consultante BI",
     ville: "Casablanca",
     pays: "Maroc",
-    
-    photo: "user.png"
+    photo: "CHRAIBI-Mouna.jpg"
   },
   {
     email: "selma.elmansour@gmail.com",
-    linkedin: "#",
+    linkedin: "https://www.linkedin.com/in/salma-el-mansour-8b7580123/",
     nom: "EL Mansour Salma",
     promotion: "2016-2018",
     pfe: "Capgemeni",
@@ -277,7 +262,7 @@ var laureatsJSON = [
   },
   {
     email: "gamrani.ayoub@gmail.com",
-    linkedin: "#",
+    linkedin: "https://www.linkedin.com/in/ayyoub-gamrani/",
     nom: "GAMRANI Ayyoub",
     promotion: "2016-2018",
     pfe: "CGI Technologies et Solutions",
@@ -286,8 +271,7 @@ var laureatsJSON = [
     posteOccupe: "Consultant Java JEE",
     ville: "",
     pays: "France",
-    
-    photo: "user.png"
+    photo: "gamrini-ayyoub.jpg"
   },
   {
     email: "elgaddarchaimae@gmail.com",
@@ -304,7 +288,7 @@ var laureatsJSON = [
   },
   {
     email: "nabetwafae@gmail.com",
-    linkedin: "#",
+    linkedin: "https://www.linkedin.com/in/wafae-nabet-2032b811b/",
     nom: "NABET Wafae",
     promotion: "2018-2020",
     pfe: "CEGEDIM",
@@ -317,7 +301,7 @@ var laureatsJSON = [
   },
   {
     email: "aalouch.hind.inside@gmail.com",
-    linkedin: "#",
+    linkedin: "https://www.linkedin.com/in/hind-aalouch-3a885a156/",
     nom: "AALOUCH Hind",
     promotion: "2018-2020",
     pfe: "Spacebyte AG",
@@ -330,7 +314,7 @@ var laureatsJSON = [
   },
   {
     email: "youness.mouhim1@gmail.com",
-    linkedin: "#",
+    linkedin: "https://www.linkedin.com/in/youness-mouhim-75918597/",
     nom: "MOUHIM Youness",
     promotion: "2015-2017",
     pfe: "CGI",
@@ -343,7 +327,7 @@ var laureatsJSON = [
   },
   {
     email: "daoud.wirzgane@outlook.com",
-    linkedin: "#",
+    linkedin: "https://www.linkedin.com/in/daoud-wirzgane-06688a129/",
     nom: "WIRZGANE Daoud",
     promotion: "2018-2020",
     pfe: "Intelcia",
@@ -352,11 +336,11 @@ var laureatsJSON = [
     posteOccupe: "Analyse programmeur",
     ville: "Casablanca",
     pays: "Maroc",
-    photo: "user.png"
+    photo: "wirzgane-daoud.jpg"
   },
   {
     email: "abdelhamid.elguarti@usmba.ac.ma",
-    linkedin: "#",
+    linkedin: "https://www.linkedin.com/in/abdelhamid-el-guarti-9a118011b/",
     nom: "EL GUARTI Abdelhamid",
     promotion: "2014-2016",
     pfe: "CEGEDIM",
@@ -369,7 +353,7 @@ var laureatsJSON = [
   },
   {
     email: "galaxy.darbouz@gmail.com",
-    linkedin: "#",
+    linkedin: "https://www.linkedin.com/in/soufiane-darbouz-b50a57196/",
     nom: "DARBOUZ Soufiane",
     promotion: "2018-2020",
     pfe: "SQLI",
@@ -378,10 +362,10 @@ var laureatsJSON = [
     posteOccupe: "Front-end Engineer",
     ville: "Rabat",
     pays: "Maroc",  
-    photo: "user.png"
+    photo: "DARBOUZ-Soufiane.jpg"
   },
   {
-    linkedin: "#",
+    linkedin: "https://www.linkedin.com/in/misdakmarouane/",
     nom: "MISDAK Marouane",
     email: "misdak.marouane@gmail.com",
     ville: "Casablanca",
@@ -391,10 +375,10 @@ var laureatsJSON = [
     posteOccupe: "Stagiaire",
     lieu: "Capgemini",
     pays: "Maroc",
-    photo: "user.png"
+    photo: "MISDAK-Marouane.jpg"
   },
   {
-    linkedin: "#",
+    linkedin: "https://www.linkedin.com/in/hajar-zaghba/",
     nom: "ZAGHBA Hajar",
     email: "zaghba.hajar@gmail.com",
     ville: "Rabat",
@@ -404,10 +388,10 @@ var laureatsJSON = [
     posteOccupe: "Stagiaire",
     lieu: "CEGEDIM",
     pays: "Maroc",
-    photo: "user.png"
+    photo: "ZAGHBA-Hajar.jpg"
   },
   {
-    linkedin: "#",
+    linkedin: "https://www.linkedin.com/in/hatim-essadeq-371a9a136/",
     nom: "Essadeq Hatim",
     email: "hatim.essadeq@usmba.ac.ma",
     ville: "Casablanca",
@@ -417,10 +401,10 @@ var laureatsJSON = [
     posteOccupe: "Stagiaire",
     lieu: "Capgemini",
     pays: "Maroc",
-    photo: "user.png"
+    photo: "Essadeq-Hatim.jpg"
   },
   {
-    linkedin: "#",
+    linkedin: "https://www.linkedin.com/in/amjida-abderrahim-756648153/",
     nom: "Amjida Abderrahim",
     email: "amjidaabderahim@gmail.com",
     ville: "Casablanca",
@@ -430,10 +414,10 @@ var laureatsJSON = [
     posteOccupe: "Stagiaire",
     lieu: "Colas Digital Solutions",
     pays: "Maroc",
-    photo: "user.png"
+    photo: "Amjida-Abderrahim.jpg"
   },
   {
-    linkedin: "#",
+    linkedin: "https://www.linkedin.com/in/redouane-baghdad-0a5645134/",
     nom: "BAGHDAD Redouane",
     email: "radwanbaghd@gmail.com",
     ville: "Rabat",
@@ -443,7 +427,7 @@ var laureatsJSON = [
     posteOccupe: "Stagiaire",
     lieu: "SQLI",
     pays: "Maroc",
-    photo: "user.png"
+    photo: "BAGHDAD-Redouane.jpg"
   },
   {
     linkedin: "#",
@@ -459,7 +443,7 @@ var laureatsJSON = [
     photo: "user.png"
   },
   {
-    linkedin: "#",
+    linkedin: "https://www.linkedin.com/in/nesrin-lakhal-760098169/",
     nom: "LAKHAL Nesrin",
     email: "nisrin.lakhal01@gmail.com",
     ville: "Rabat",
@@ -472,7 +456,7 @@ var laureatsJSON = [
     photo: "user.png"
   },
   {
-    linkedin: "#",
+    linkedin: "https://www.linkedin.com/in/omar-ismaili-alaoui-3b66b6ab/",
     nom: "ISMAILI ALAOUI Omar",
     email: "omarismailialaoui18@gmail.com",
     ville: "Rabat",
@@ -485,7 +469,7 @@ var laureatsJSON = [
     photo: "user.png"
   },
   {
-    linkedin: "#",
+    linkedin: "https://www.linkedin.com/in/zakaryaebenabbou/",
     nom: "Benabbou Zakaryae",
     email: "zakaryaebenabbouu@gmail.com",
     ville: "Casablanca",
@@ -498,7 +482,7 @@ var laureatsJSON = [
     photo: "user.png" 
   },
   {
-    linkedin: "#",
+    linkedin: "https://www.linkedin.com/in/nourimane-ziani/",
     nom: "ZIANi Nour-Imane",
     email: "zianinourimane@gmail.com",
     ville: "Rabat",
@@ -508,7 +492,7 @@ var laureatsJSON = [
     posteOccupe: "Stagiaire",
     lieu: "CEGEDIM", 
     pays: "Maroc",
-    photo: "user.png"  
+    photo: "ZIANi-Nour-Imane.jpg"  
   },
   {
     email: "#",
@@ -525,7 +509,7 @@ var laureatsJSON = [
   },
   {
     email: "#",
-    linkedin: "#",
+    linkedin: "https://www.linkedin.com/in/hind-tajmouati-228a71120/",
     nom: "TAJMOUATI Hind",
     promotion: "2016-2018",
     pfe: "CGI",
@@ -534,11 +518,11 @@ var laureatsJSON = [
     posteOccupe: "Ingénieur contrôle et pilotage",
     ville: "Fès",
     pays: "Maroc", 
-    photo: "user.png"
+    photo: "TAJMOUATI-Hind.jpg"
   },
   {
     email: "#",
-    linkedin: "#",
+    linkedin: "https://www.linkedin.com/in/mehdi-bennani-214029132/",
     nom: "BENNANI Mehdi",
     promotion: "2015-2017",
     pfe: "CGI Fès",
@@ -547,11 +531,11 @@ var laureatsJSON = [
     posteOccupe: "Ingénieur Analyste Java / Java EE",
     ville: "Casablanca",
     pays: "Maroc", 
-    photo: "user.png"
+    photo: "BENNANI-Mehdi.jpg"
   },
   {
     email: "#",
-    linkedin: "#",
+    linkedin: "https://www.linkedin.com/in/wafae-hmamed-52572710b/",
     nom: "HMAMED Wafae",
     promotion: "2016-2018",
     pfe: "CGI",
@@ -560,7 +544,7 @@ var laureatsJSON = [
     posteOccupe: "Ingénieur Etudes & développement",
     ville: "Fès",
     pays: "Maroc", 
-    photo: "user.png"
+    photo: "HMAMED-Wafae.jpg"
   },
   {
     email: "#",
@@ -577,7 +561,7 @@ var laureatsJSON = [
   },
   {
     email: "#",
-    linkedin: "#",
+    linkedin: "https://www.linkedin.com/in/elomarisaleh/",
     nom: "EL OMARI Saleh",
     promotion: "2018-2020",
     pfe: "CGI",
@@ -590,7 +574,7 @@ var laureatsJSON = [
   },
   {
     email: "#",
-    linkedin: "#",
+    linkedin: "https://www.linkedin.com/in/douniakarym/",
     nom: "KARYM Dounia",
     promotion: "2016-2018",
     pfe: "CGI",
@@ -599,11 +583,11 @@ var laureatsJSON = [
     posteOccupe: "Senior developer webMethods",
     ville: "Fès",
     pays: "Maroc", 
-    photo: "user.png"
+    photo: "KARYM-Dounia.jpg"
   },
   {
     email: "#",
-    linkedin: "#",
+    linkedin: "https://www.linkedin.com/in/souhayla-bouzria-82b550140/",
     nom: "BOUZRIA Souhayla",
     promotion: "2017-2019",
     pfe: "Capgemini",
@@ -612,11 +596,11 @@ var laureatsJSON = [
     posteOccupe: "Software Developer",
     ville: "Casablanca",
     pays: "Maroc", 
-    photo: "user.png"
+    photo: "BOUZRIA-Souhayla.jpg"
   },
   {
     email: "#",
-    linkedin: "#",
+    linkedin: "https://www.linkedin.com/in/samiha-el-bouchikhi-207737118/",
     nom: "EL BOUCHIKHI Samiha",
     promotion: "2015-2017",
     pfe: "Capgemini",
@@ -629,7 +613,7 @@ var laureatsJSON = [
   },
   {
     email: "#",
-    linkedin: "#",
+    linkedin: "https://www.linkedin.com/in/omar-boushabi/",
     nom: "BOUSHABI Omar",
     promotion: "2015-2017",
     pfe: "Capgemini",
@@ -642,7 +626,7 @@ var laureatsJSON = [
   },
   {
     email: "#",
-    linkedin: "#",
+    linkedin: "https://www.linkedin.com/in/majda-agharbi-719858129/",
     nom: "AGHARBI Majda",
     promotion: "2015-2017",
     pfe: "Sylob",
@@ -655,7 +639,7 @@ var laureatsJSON = [
   },
   {
     email: "#",
-    linkedin: "#",
+    linkedin: "https://www.linkedin.com/in/elkharrat-issam-987145124/",
     nom: "ELKHARRAT Issam",
     promotion: "2015-2017",
     pfe: "CGI",
@@ -668,7 +652,7 @@ var laureatsJSON = [
   },
   {
     email: "#",
-    linkedin: "#",
+    linkedin: "https://www.linkedin.com/in/saadmoumen/",
     nom: "MOUMEN Saad",
     promotion: "2015-2017",
     pfe: "Capgemini",
@@ -677,11 +661,11 @@ var laureatsJSON = [
     posteOccupe: "Fullstack Software Engineer",
     ville: "Casablanca",
     pays: "Maroc", 
-    photo: "user.png"
+    photo: "ELKHARRAT-Issam.jpg"
   },
   {
     email: "#",
-    linkedin: "#",
+    linkedin: "https://www.linkedin.com/in/saad-haidar-926990101/",
     nom: "HAIDAR Saad",
     promotion: "2014-2016",
     pfe: "Atos",
@@ -694,7 +678,7 @@ var laureatsJSON = [
   },
   {
     email: "#",
-    linkedin: "#",
+    linkedin: "https://www.linkedin.com/in/nissrine-gmih-4097a9b9/",
     nom: "GMIH Nissrine",
     promotion: "2013-2015",
     pfe: "CGI",
@@ -707,7 +691,7 @@ var laureatsJSON = [
   },
   {
     email: "#",
-    linkedin: "#",
+    linkedin: "https://www.linkedin.com/in/rianioussama/",
     nom: "RIANI Oussama",
     promotion: "2014-2016",
     pfe: "CGI",
@@ -720,7 +704,7 @@ var laureatsJSON = [
   },
   {
     email: "#",
-    linkedin: "#",
+    linkedin: "https://www.linkedin.com/in/hamza-bouhouss-81a93ab4/",
     nom: "BOUHOUSS Hamza",
     promotion: "2015-2017",
     pfe: "Capgemini",
@@ -733,7 +717,7 @@ var laureatsJSON = [
   },
   {
     email: "#",
-    linkedin: "#",
+    linkedin: "https://www.linkedin.com/in/hanae-ez-zaher-4715a3105/",
     nom: "EZ-ZAHER Hanae",
     promotion: "2014-2016",
     pfe: "Atos",
@@ -746,7 +730,7 @@ var laureatsJSON = [
   },
   {
     email: "#",
-    linkedin: "#",
+    linkedin: "https://www.linkedin.com/in/saloua-benhiba-1701a7118/",
     nom: "BENHIBA Saloua",
     promotion: "2014-2016",
     pfe: "Atos",
@@ -755,11 +739,11 @@ var laureatsJSON = [
     posteOccupe: "Software Engineer",
     ville: "Casablanca",
     pays: "Maroc", 
-    photo: "user.png"
+    photo: "BENHIBA-Saloua.jpg"
   },
   {
     email: "#",
-    linkedin: "#",
+    linkedin: "https://www.linkedin.com/in/tahabasri/",
     nom: "BASRI Taha",
     promotion: "2017-2019",
     pfe: "CGI",
@@ -768,6 +752,6 @@ var laureatsJSON = [
     posteOccupe: "Développeur Logiciel",
     ville: "Casablanca",
     pays: "Maroc", 
-    photo: "user.png"
+    photo: "BASRI-Taha.jpg"
   },
 ];

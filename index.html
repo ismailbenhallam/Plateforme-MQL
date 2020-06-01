@@ -183,7 +183,7 @@
         </div>
         <hr class="divider">
       </header>
-      <div class="top-content">
+      <div class="top-content paragraph">
         <!--
         <div class="workflow-panel">
           <img id="workflowBig" class="workflow big" src="images/workflow-big.png">
@@ -354,13 +354,17 @@
         </div>
         <hr class="divider">
       </header>
-      <div class="heading-laureat">
-        <div class="title-wrap">
-          <h2 class="section-title">Nos Lauréats</h2>
-          <p class="lead">12 Années d’existence, 9 Promotions sortie, 1 en stage, 1 en cours de formation,
-            350 Etudiants, 215 Tracés : Contrats CDI, 20 Entreprises.</p>
-        </div>
-      </div>
+      <FORM name="choix">
+          <SELECT class="select" name="promotion" size="1" onchange="LaureatComponent(new LaureatService(laureatsJSON));">
+            <OPTION>2013-2015</OPTION>
+            <OPTION>2014-2016</OPTION>
+            <OPTION>2015-2017</OPTION>
+            <OPTION>2016-2018</OPTION>
+            <OPTION>2017-2019</OPTION>
+            <OPTION>2018-2020</OPTION>
+            <OPTION selected>Toutes les promotions</OPTION> 
+          </SELECT>
+        </FORM>
       <div id="laureats-wrapper" class="boxing">
         <!-- Laureats are added dynamically -->
       </div>
@@ -375,7 +379,7 @@
         </div>
         <hr class="divider">
       </header>
-      <div class="main-content partenaire-content">
+      <div class="top-content paragraph">
         MQL est parfaitement consciente du rôle primordial du monde professionnel dans la formation de ses étudiants et
         de la contribution au développement académique, culturel et au rayonnement international du Maroc. C'est pour
         celà,
