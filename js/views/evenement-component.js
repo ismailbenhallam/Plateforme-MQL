@@ -23,14 +23,6 @@ const EvenementComponent = function (service) {
     photo = e.photos[currentPhoto];
 
     /*********** Modal ***********/
-    // The Modal
-    // <div id="modal" class="modal">
-    /* The Close Button */
-    // <span id="close">&times;</span>
-    // <img id="previous" src="\icons\next.png"></img>
-    // <img id="modal-content"></img>
-    // <img id="next" src="\icons\next.png"></img>
-    // </div>;
     let modal = document.createElement("div");
     modal.classList.add("evenement-modal");
     document.body.appendChild(modal);
@@ -133,7 +125,7 @@ const EvenementComponent = function (service) {
       morePoints.style.display = "inline";
       let moreText = document.createElement("span");
       moreText.style.display = "none";
-      moreText.textContent = hideStr;
+      moreText.innerHTML = hideStr;
       description.appendChild(morePoints);
       description.appendChild(moreText);
 
