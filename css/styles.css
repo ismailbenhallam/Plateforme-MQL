@@ -902,10 +902,6 @@ h3 {
 
 .partenaires-content {
   background: white;
-<<<<<<< HEAD
-  text-indent: 15px;
-}
-=======
   text-indent: 15px;
 }
 
@@ -932,5 +928,4 @@ form {
   padding-left: 15px;
   color: #555555;
   cursor: pointer;
-  }
->>>>>>> 2145469ad3f9a93cf2b546616054e99c0190e971
+}
