@@ -119,7 +119,7 @@ StageComponent.prototype.createCDIsDetailsTable = function () {
   let table = document.createElement("table");
   wrapper.appendChild(table);
   //   table.id = "table1";
-  table.classList.add("semestre_table", "data");
+  table.classList.add("semestre_table", "data", "highlight");
 
   let thead = document.createElement("thead");
   table.appendChild(thead);
