@@ -18,7 +18,7 @@ const LaureatService = function (laureatsArray) {
     );
   });
 
-  this.items.sort((a, b) => this.sortByPromoThenByName(a, b));
+  this.items.sort((a, b) => this.sortByName(a, b));
 
   this.promos = {};
   this.items.forEach((l) => {
@@ -35,4 +35,8 @@ LaureatService.prototype.sortByPromoThenByName = (a, b) => {
   let comparePromos = b.promotion.substr(0, 4) - a.promotion.substr(0, 4);
   if (comparePromos == 0) return a.nom.localeCompare(b.nom);
   return comparePromos;
+};
+
+LaureatService.prototype.sortByName = (a, b) => {
+  return a.nom.localeCompare(b.nom);
 };

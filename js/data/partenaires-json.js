@@ -83,11 +83,11 @@ var partenairesJSON = [
   {
     name: "Alten",
     website: "https://www.alten.ma/",
-    logoUrl: "images/partenaires/alten-logo.png",
+    logoUrl: "images/partenaires/alten-logo.jpg",
   },
   {
     name: "Université Bretagne Occidentale - Brest - France",
     website: "https://www.univ-brest.fr/",
     logoUrl: "images/partenaires/ubo-logo.png",
-  }
+  },
 ];

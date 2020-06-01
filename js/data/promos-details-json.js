@@ -36,7 +36,7 @@ const promosDetails = [
       { partenaire: "Logic Group", contratsCDI: 1 },
       { partenaire: "Sopra Steria", contratsCDI: 1 },
       { partenaire: "BDSI Maroc", contratsCDI: 0 },
-      { partenaire: "FEDASO", contratsCDI: 0 },
+      { partenaire: "FEDASO", contratsCDI: 1 },
     ],
   },
   {
