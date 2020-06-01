@@ -550,6 +550,7 @@ table {
 .colored_data:nth-child(odd) {
   background-color: lavender;
 }
+
 .highlight tbody tr:nth-child(1) :last-child,
 .highlight tbody tr:nth-child(2) :last-child,
 .highlight tbody tr:nth-child(16) :last-child {
@@ -1016,8 +1017,8 @@ form {
 
 .select {
   font-family: "Nunito", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
-  "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji",
-  "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";;
+    "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji",
+    "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   outline: 0;
   margin: 15px;
   border: 0;
