@@ -1,18 +1,9 @@
 *****Yousra***************
-passage descriptif sur activités
 ajouter une pagination pour lauréats et pour évènements. 
-lister les evenements par ordre décroissant de date
-fixer l'animation des pages
-toTop keyt3enkech mera mera w makeybghich yban surtt lors de l'actualisation
-onglet Accueil doit devenir rouge lorsqu'on clique sur logo du header  
-stat looking horrible on mobile
-********Hamza***************
-stage soit tableaux soit chart
-statistiques pour la page présentation
-lauréat passage descriptif
-lister les lauréat en fonction de la promotion
-titre d'event: couleur unique
+lister les lauréat en fonction du pays (Maroc, ou autre)
+fixer probleme de innerHTML dans events
+mettre la photo du flyer pour cérémonie 
+ajouter qlqs animations dans les pages
 *****Ismail*****************
-ajouter une page de chargement au début
 background à changer
 ajouter hero (last events/ news)
