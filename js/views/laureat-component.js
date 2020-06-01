@@ -122,34 +122,4 @@ const LaureatComponent = function (service) {
       }
     }
   });
-
-  /* Template :
-        <div id="laureats-wrapper" class="boxing">
-          <div id="person-1" class="person" onmouseover="showBar('person-1')" onmouseout="hideBar('person-1')">
-            <div class="bio-img">
-                <img src="images/yousra.jpg" alt="person">
-                <div id="social" class="social">
-                  <a href="#"><img src="icons/linkedin.svg" alt="linkedin"></a>
-                </div>
-            </div>
-
-            <div class="person-content">
-              <h2>YOUSRA MEKKAOUI (2019/2021)</h2>
-              <span class="subtitle">FrontEnd Developer à Lunorsys GMBH, Berlin, Deutschland.</span>
-              <div class="wrap">
-                  <div class="truncate">
-                    <span>PFE : Lunorsys GMBH</span>
-                    <span>Premier CDI : Lunorsys GMBH</span>
-                    <p class="toggledText">
-                      <span>Expérience Précedentes : </span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatum excepturi corporis qui doloribus perspiciatis ipsa modi accusantium repellat.
-                      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatum excepturi corporis qui doloribus perspiciatis ipsa modi accusantium repellat.
-                    </p>
-                  </div>
-                </div>
-            </div>
-          </div>
-        </div>
-
-        */
-  // });
 };

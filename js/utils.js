@@ -52,16 +52,3 @@ const toReadeableString = function (date) {
 
   return `${date.getDate()} ${month} ${date.getFullYear()}`;
 };
-
-// const addContentCharByChar = function (
-//   HTMLElement,
-//   content,
-//   delayBetweenCharacters = 35
-// ) {
-//   HTMLElement.contentText = "";
-//   for (const index in content) {
-//     setTimeout(function () {
-//       HTMLElement.insertAdjacentText("beforeend", content[index]);
-//     }, delayBetweenCharacters * index);
-//   }
-// };

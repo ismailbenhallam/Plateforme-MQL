@@ -4,18 +4,11 @@ const NavbarComponent = function (service) {
   service.items.forEach((item) => {
     let li = document.createElement("li");
     let a = document.createElement("a");
-    // a.classList.add("grow-shadow");
     a.dataset.target = item.target;
     a.id = item.id;
     a.textContent = item.name;
     li.appendChild(a);
     navbarUl.appendChild(li);
-
-    /* Template :
-    <li>
-      <a id="id" data-target="target">name</a>
-    </li>
-    */
   });
 };
 
@@ -71,10 +64,6 @@ window.addEventListener("load", function () {
 
       // Close the navbar
       document.getElementById("navbar").classList.remove("responsive");
-
-      // setTimeout(() => {
-      //   document.body.scrollIntoView({ behavior: "auto", block: "start" });
-      // }, 50);
     });
   }
 });
