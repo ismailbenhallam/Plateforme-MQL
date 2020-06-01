@@ -32,8 +32,6 @@ const PresentationComponent = function (service) {
       tdModuleNom.classList.add("semestre_table_cell");
 
       if (module.num == null) {
-        // tdModuleNum.textContent = module.nom;
-        // tdModuleNum["colspan"] = 2;
         tdModuleNum.textContent = "";
       } else {
         tdModuleNum.textContent = "M" + module.num;

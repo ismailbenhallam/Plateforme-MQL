@@ -15,12 +15,6 @@ const PartenaireComponent = function (service) {
       a.appendChild(img);
       div.appendChild(a);
       wrapper.appendChild(div);
-
-      /* Template :
-      <div>
-        <a title="name" href="website"><img src="imgSrc" /></a>
-      </div>
-      */
     }
   });
 };
