@@ -273,13 +273,20 @@ body {
   margin: 20px;
   max-height: auto;
   box-shadow: 0 0 8px rgba(0, 0, 0, 0.6);
-  /* transition: all 0.1s, width 0.5s, height 0.5s; */
+  transition: all 0.2s;
 }
 
 .evenement-body {
   display: flex;
   flex-direction: row;
   align-items: flex-start;
+}
+
+.evenement-body > * {
+  flex: 1 1 50%;
+}
+.evenement-photo {
+  flex-basis: 40%;
 }
 
 @media screen and (max-width: 768px) {
@@ -345,9 +352,9 @@ body {
 
 .evenement-photo > img {
   cursor: pointer;
-  max-width: 90%;
+  max-width: 100%;
   /* transition: 0.1s; */
-  max-height: 600px;
+  /* max-height: 600px; */
 }
 
 .evenement-photo > img:hover {

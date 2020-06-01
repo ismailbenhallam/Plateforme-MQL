@@ -1,5 +1,5 @@
 const EvenementComponent = function (service) {
-  const charLimit = 200;
+  const charLimit = 450;
 
   let wrapper = document.getElementById("evenements-wrapper");
   for (const e of service.items) {
