@@ -69,7 +69,6 @@ body {
 }
 
 .logo {
-  /* max-width: 100%; */
   width: 300px;
   margin-left: 25px;
 }
@@ -215,19 +214,19 @@ body {
   position: fixed;
   bottom: 20px;
   right: -5px;
-  z-index: 99; /* Make sure it does not overlap */
-  border: none; /* Remove borders */
-  outline: none; /* Remove outline */
-  color: white; /* Text color */
-  cursor: pointer; /* Add a mouse pointer on hover */
-  padding: 15px; /* Some padding */
-  border-radius: 10px; /* Rounded corners */
+  z-index: 99;
+  border: none;
+  outline: none;
+  color: white;
+  cursor: pointer;
+  padding: 15px;
+  border-radius: 10px;
   clip-path: circle(33%);
   transition: background-color 0.3s ease-in-out;
 }
 
 #toTop:hover {
-  background-color: #555; /* Add a dark-grey background on hover */
+  background-color: #555;
 }
 
 .titre {
@@ -241,7 +240,6 @@ body {
 }
 
 #presentation .top-content {
-  /* #partenaire .top-content  */
   display: flex;
 }
 
@@ -280,7 +278,6 @@ body {
   display: flex;
   flex-direction: row;
   align-content: center;
-  /* justify-content: flex-start; */
 }
 
 .evenement-body > * {
@@ -307,8 +304,6 @@ body {
 }
 
 .evenement.active {
-  /* width: 90%; */
-  /* max-height: 100%; */
   background-color: black;
 }
 
@@ -328,7 +323,6 @@ body {
 .evenement-title {
   font-weight: 500;
   font-size: 18px;
-  /* margin: 1px; */
   padding: 5px 30px 5px 30px;
   color: White;
   background-color: #395480;
@@ -360,8 +354,6 @@ body {
 .evenement-photo > img {
   cursor: pointer;
   max-width: 100%;
-  /* transition: 0.1s; */
-  /* max-height: 600px; */
 }
 
 @media screen and (min-width: 768px) {
@@ -390,11 +382,6 @@ body {
 
 .evenement-modal-content {
   display: block;
-  /* margin-left: auto;
-  margin-right: auto; */
-
-  /* align-self: center; */
-  /* width: 80%; */
   max-width: 100%;
   max-height: 100%;
 
@@ -445,11 +432,6 @@ body {
   width: 60px;
   height: 60px;
 }
-/* Responsive layout - when the screen is less than 700px wide, make the two columns stack on top of each other instead of next to each other */
-/* FIXME: */
-/* 480px
-768px
-1024 */
 @media screen and (max-width: 1145px) {
   /* Navbar */
   .container,
@@ -698,12 +680,9 @@ h3 {
 .bio-img {
   width: inherit;
   height: 250px;
-  /*********/
   display: flex;
   justify-content: center;
   align-items: center;
-  /* background-color: #888; */
-  /*********/
   position: relative;
   text-align: center;
   overflow: hidden;
@@ -729,14 +708,10 @@ h3 {
 }
 
 .bio-img > img {
-  /* width: 100%;
-  height: 100%; */
-  /*********/
   width: auto;
   height: auto;
   max-width: 100%;
   max-height: 100%;
-  /*********/
   display: block;
   position: relative;
   transition: 0.3s all ease-in-out;
@@ -1059,12 +1034,6 @@ form {
   max-width: 200px;
   animation: rotate 4s infinite;
 }
-
-/* @media screen and (min-width: 768px) {
-  #loadingPage > img {
-    max-width: 200px;
-  }
-} */
 
 @keyframes rotate {
   50% {
