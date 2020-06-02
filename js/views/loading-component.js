@@ -3,7 +3,7 @@ const LoadingComponent = function () {
   loadingPage.id = "loadingPage";
 
   let logo = document.createElement("img");
-  logo.src = "/images/logo-mql-cropped.png";
+  logo.src = "images/logo-mql-cropped.png";
   loadingPage.appendChild(logo);
 
   loadingPage.style["text-align"] = "center";
