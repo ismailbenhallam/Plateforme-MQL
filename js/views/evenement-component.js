@@ -77,14 +77,14 @@ const EvenementComponent = function (service) {
       this.showNextAndPrevious(e.photos.length, currentPhoto, previous, next);
     }
 
-    close.onclick = function () {
+    close.onclick = () => {
       modal.style.display = "none";
       currentPhoto = 0;
       if (e.photos.length > 1) {
         this.showNextAndPrevious(e.photos.length, currentPhoto, previous, next);
       }
     };
-    modal.onclick = function (ef) {
+    modal.onclick = (ef) => {
       if (!ef.target.classList.contains("evenement-modal")) return;
       modal.style.display = "none";
       currentPhoto = 0;
