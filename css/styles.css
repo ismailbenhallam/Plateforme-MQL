@@ -161,51 +161,193 @@ body {
 }
 
 /******* Footer *******/
-.footer {
-  justify-content: space-around;
+#footer {
+  background-image: linear-gradient(60deg, #35456C 0%, #768abc 100%);
+}
+
+#footer .footer-map > iframe {
+  height: 344px;
+  width: 100%;
+  /*margin-bottom: 20px;*/
+  position: relative;
+}
+
+
+#footer .footer-link {
+  margin-top: 10px;
+  margin-left: 1px;
+}
+
+
+#footer .h1 {
+  color: white;
+  text-align: left;
+  font-size: 20px;
+  padding-top: 10px;
+  padding-bottom: 35px;
+  text-transform: uppercase;
+
+}
+
+#footer .footer-link > div > img {
+  padding-left: 10px;
+  height: 25px;
+  width: 25px;
+}
+
+#footer .mediaLinks {
+  padding-top: 10px;
+  position: relative;
   display: flex;
-  flex-wrap: wrap;
-  padding: 20px 0 0 0;
-  color: rgba(255, 255, 255, 0.8) !important;
-  background-color: #191919 !important;
+  justify-content: center;
 }
 
-.logo-wrapper {
-  clip-path: circle(42%);
-  background-color: white;
+#footer .fa {
+  font-size: 15px;
+  padding-top: 7px;
+  width: 30px;
+  height: 30px;
+  text-align: center;
+  text-decoration: none;
+  margin: 5px 5px;
+}
+
+#footer .fa:hover {
+  opacity: 0.7;
+}
+
+#footer .fa-facebook {
+  background: #3B5998;
+  color: white;
+  border-radius: 50px;
+}
+
+#footer .fa-google {
+  background: #dd4b39;
+  color: white;
+  border-radius: 50px;
+}
+
+#footer .fa-linkedin {
+  background: #007bb5;
+  color: white;
+  border-radius: 50px;
+}
+
+#footer .fa-youtube {
+  background: #bb0000;
+  color: white;
+  border-radius: 50px;
+}
+
+#footer .footer-contact {
+  /*margin-top: 10px;*/
+  border-radius: 50px;
+
+}
+
+#footer .footer-contact > pre {
+  font-family: "Muli", sans-serif;
+  font-size: 12px;
+  color: white;
+  text-align: left;
+  letter-spacing: 1px;
+  text-transform: capitalize;
+  padding-bottom: 20px;
+}
+
+#footer .copyright > p {
+  color: white !important;
+  margin-top: 0;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  border-top: 1px solid white;
+  text-align: center;
+}
+
+#footer .footer-contact .local {
+  font-family: "Muli", sans-serif;
+  font-size: 12px;
+  color: white;
+  letter-spacing: 1px;
+  text-transform: capitalize;
+  text-align: left;
+  padding-bottom: 5px;
+  text-decoration: none;
+}
+
+#footer .footer-contact .local a {
+  font-family: "Muli", sans-serif;
+  font-size: 12px;
+  color: white;
+  letter-spacing: 1px;
+  text-transform: capitalize;
+  text-align: left;
+  padding-bottom: 5px;
+  text-decoration: none;
+}
+
+#footer .footer-contact > div > img {
+  height: 30px;
+  width: 30px;
+  border-radius: 50%;
+
+}
+
+/* added to fix compability */
+#footer .footer1 {
   display: flex;
-  align-items: center;
-  min-height: 300px;
+  flex-direction: row;
 }
 
-.copyright {
-  background-color: #111111;
-  padding: 20px;
-  flex-basis: 100%;
+#footer .footer1 .footer-section {
+  flex: 1;
+  padding: 0 30px 0px 30px;
 }
 
-.adresse,
-.adresse * {
-  color: rgba(255, 255, 255, 0.8) !important;
-}
-
-.adresse,
-.mentions-legales,
-.rs {
-  padding-top: 15px;
-}
-
-.mentions-legales > a {
-  color: rgba(255, 255, 255, 0.8);
-}
-
-.mentions-legales > a:hover {
-  color: #d9323a;
-}
-
-.rs > li {
-  display: inline-block;
+#footer .footer-links > div {
+  text-decoration: none;
+  text-align: left;
+  color: white;
   cursor: pointer;
+  font-size: 12px;
+  text-transform: uppercase;
+  /*border-bottom: 1px solid white;*/
+}
+
+.footer-links > hr {
+  margin-bottom: 5px;
+  margin-top: 5px;
+}
+
+#footer .footer-links > div:hover {
+  text-decoration: none;
+  font-size: 14px;
+  /*color: red;*/
+  letter-spacing: initial;
+  margin-right: 5px;
+}
+
+#footer .footer .footer-section h1 {
+  padding-top: -20px;
+  color: white;
+}
+
+#footer .footer1 {
+  /*background: #364B62;*/
+  height: 100%;
+  width: 100%;
+  font-size: 14px;
+  font-family: "Muli", sans-serif;
+  padding-top: 0px;
+  background-image: linear-gradient(60deg, #35456C 0%, #768abc 100%);
+  padding-right: 0px;
+}
+
+#footer .footer-bottom p {
+  text-align: center;
+  color: white !important;
+  border-top: 1px solid white;
 }
 
 /****** Scroll to top button ******/
