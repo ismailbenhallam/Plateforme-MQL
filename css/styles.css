@@ -706,6 +706,9 @@ body {
   .mql-info-container{
     flex-direction: column;
   }
+  .about{
+    flex-direction: column-reverse;
+  }
 }
 
 @media screen and (max-width: 550px) {
@@ -1605,32 +1608,32 @@ form {
 }
 
 .about {
-  display: flex;
-  margin-left: 19%;
-  padding-bottom: 35px;
+    width: 1000px;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .about-text {
-  width: 54%;
-  padding: 0px 117px 0 0;
+  flex: 2;
 }
 
 .about-img {
   position: relative;
-  right: 5%;
-  top: 40px;
+  flex: 1;
 }
 
 .about-text h3 {
-  /* color: #403e3e; */
   color: #09448a;
-  font-family: "Myriad Pro", Myriad, "Liberation Sans", "Nimbus Sans L",
-    "Helvetica Neue", Helvetica, Arial, sans-serif;
-  /* font-weight: bold; */
   font-size: 23px;
   line-height: 14px;
 }
-
+.about-text p:nth-child(2) {
+  color: #F01626;
+  font-weight: bold;
+  line-height: 15px;
+}
 .about-text button {
   width: 120px;
   height: 40px;
@@ -1649,6 +1652,7 @@ form {
 button a {
   color: white;
   text-decoration: none;
+  font-size: 15px;
 }
 
 .banner-container {
