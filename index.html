@@ -81,32 +81,8 @@
 
       <div class="image-content">
         <div class="mql-info mql-padding">
-          <div class="mql-info-container">
-            <div class="mql-info-text">
-              <img src="icons/iconmonstr-school-20-72.png" alt="">
-              <h3>12</h3>
-              <p>Années d'existence</p>
-            </div>
-            <div class="mql-info-text">
-              <img src="icons/iconmonstr-school-23-72.png" alt="">
-              <h3>12</h3>
-              <p>Promotions</p>
-            </div>
-            <div class="mql-info-text">
-              <img src="icons/iconmonstr-school-26-72.png" alt="">
-              <h3>350</h3>
-              <p>étudiants</p>
-            </div>
-            <div class="mql-info-text">
-              <img src="icons/iconmonstr-building-16-72.png" alt="">
-              <h3>215</h3>
-              <p>Tracés : Contrats CDI</p>
-            </div>
-            <div class="mql-info-text">
-              <img src="icons/iconmonstr-handshake-1-72.png" alt="">
-              <h3>20</h3>
-              <p>Partenaires</p>
-            </div>
+          <div class="mql-info-container" id="informations">
+           <!-- informations are added dynamically-->
           </div>
         </div>
       </div>
@@ -455,6 +431,7 @@
   <script src="js/data/debouches-json.js" defer="defer"></script>
   <script src="js/data/evenement-json.js" defer="defer"></script>
   <script src="js/data/semestres-json.js" defer="defer"></script>
+  <script src="js/data/information-json.js" defer="defer"></script>
 
   <script src="js/models/laureat.js" defer="defer"></script>
   <script src="js/models/navbar-item.js" defer="defer"></script>
@@ -465,6 +442,7 @@
   <script src="js/models/evenement.js" defer="defer"></script>
   <script src="js/models/module.js" defer="defer"></script>
   <script src="js/models/semestre.js" defer="defer"></script>
+  <script src="js/models/information.js" defer="defer"></script>
 
   <script src="js/service/navbar-service.js" defer="defer"></script>
   <script src="js/service/partenaire-service.js" defer="defer"></script>
@@ -473,6 +451,7 @@
   <script src="js/service/debouche-service.js" defer="defer"></script>
   <script src="js/service/evenement-service.js" defer="defer"></script>
   <script src="js/service/programme-service.js" defer="defer"></script>
+  <script src="js/service/information-service.js" defer="defer"></script>
 
   <script src="js/views/laureat-component.js" defer="defer"></script>
   <script src="js/views/partenaire-component.js" defer="defer"></script>
@@ -480,6 +459,7 @@
   <script src="js/views/presentation-component.js" defer="defer"></script>
   <script src="js/views/debouche-component.js" defer="defer"></script>
   <script src="js/views/evenement-component.js" defer="defer"></script>
+  <script src="js/views/information-component.js" defer="defer"></script>
 
   <!-- <script src="js/Chart.bundle.min.js"></script> -->
   <script src="js/views/stage-component.js" defer="defer"></script>

@@ -703,6 +703,9 @@ body {
     flex-direction: column;
     align-items: center;
   }
+  .mql-info-container{
+    flex-direction: column;
+  }
 }
 
 @media screen and (max-width: 550px) {
@@ -1571,14 +1574,21 @@ form {
 
 .mql-info-container {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
   position: relative;
 }
-
+.mql-info-text {
+  padding: 0 15px;
+  text-align: center;
+}
+.mql-info .mql-info-text p {
+  color: #FFFFFF;
+  font-size: 18px;
+  text-transform: uppercase;
+}
 .mql-padding {
   padding: 130px 15px 135px;
-  text-align: center;
 }
 
 .mql-info {
@@ -1589,10 +1599,6 @@ form {
   background-repeat: no-repeat;
 }
 
-.mql-info-text,
-.mql-info-text h3 {
-  color: white;
-}
 
 .about-wrapper {
   padding: 72px 0px;
