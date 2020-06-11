@@ -14,6 +14,5 @@ window.addEventListener("scroll", function () {
 
 /********** Scroll To Top Button **********/
 document.getElementById("toTop").addEventListener("click", () => {
-  document.body.scrollTop = 0; // For Safari
-  document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+  window.toTop();
 });

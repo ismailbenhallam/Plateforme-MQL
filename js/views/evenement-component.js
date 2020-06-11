@@ -104,8 +104,9 @@ const EvenementComponent = function (service) {
 
     let evenementCoordonnees = document.createElement("div");
     evenementCoordonnees.classList.add("evenement-coordonnees");
-    evenementCoordonnees.textContent =
-      toReadeableString(e.date) + " - " + e.lieu;
+    evenementCoordonnees.textContent = `${e.date.toReadeableString()} - ${
+      e.lieu
+    }`;
     content.appendChild(evenementCoordonnees);
 
     let description = document.createElement("div");

@@ -2,9 +2,9 @@ String.prototype.capitalize = function () {
   return this[0].toUpperCase() + this.slice(1);
 };
 
-const toReadeableString = function (date) {
+Date.prototype.toReadeableString = function () {
   let month;
-  switch (date.getMonth()) {
+  switch (this.getMonth()) {
     case 0:
       month = "Janvier";
       break;
@@ -50,5 +50,16 @@ const toReadeableString = function (date) {
       break;
   }
 
-  return `${date.getDate()} ${month} ${date.getFullYear()}`;
+  return `${this.getDate()} ${month} ${this.getFullYear()}`;
+};
+
+revereseColorAndBackgroundColor = function (element) {
+  let color = element.color;
+  element.color = element.backgroundColor;
+  element.backgroundColor = element.color;
+};
+
+window.toTop = function () {
+  document.body.scrollTop = 0; // For Safari
+  document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
 };
