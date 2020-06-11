@@ -3,6 +3,6 @@ const DeboucheComponent = function (service) {
   for (const item of service.items) {
     let li = document.createElement("li");
     li.textContent = item.role;
-    ul.appendChild(li);
+    //ul.appendChild(li);
   }
 };

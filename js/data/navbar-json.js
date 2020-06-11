@@ -9,7 +9,7 @@ var navbarJSON = [
   { target: "evenements", name: "Évènements" },
   { target: "stages" },
   { target: "laureats", name: "Lauréats" },
-  { target: "partenaires" },
+  // { target: "partenaires" },
   {
     target: "formation",
     children: [

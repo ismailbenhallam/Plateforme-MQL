@@ -1,4 +1,5 @@
 const PresentationComponent = function (service) {
+  /*
   for (const semestre of service.items) {
     let semestreDiv = document.createElement("div");
     document.getElementById("programme").appendChild(semestreDiv);
@@ -44,4 +45,5 @@ const PresentationComponent = function (service) {
       tdModuleNom.textContent = module.nom;
     }
   }
+  */
 };

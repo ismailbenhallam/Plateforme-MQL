@@ -35,54 +35,7 @@
             <div class="bar"></div>
           </div>
           <ul>
-            <!-- <li>
-              <span id="accueil-span">Accueil</span>
-            </li>
-            <li>
-              <span id="apropos-span">A propos</span>
-            </li>
-            <li>
-              <span id="formation-span">Formation</span>
-              <ul>
-                <li>
-                  <span>Activités</span>
-                </li>
-                <li>
-                  <span>Programme</span>
-                </li>
-                <li>
-                  <span>Professeurs</span>
-                </li>
-              </ul>
-            </li>
-            <li>
-              <span id="etudiants-span">Espace Etudiant</span>
-              <ul>
-                <li>
-                  <span>Selectiones</span>
-                </li>
-                <li>
-                  <span>Laureats</span>
-                </li>
-              </ul>
-            </li>
-            <li>
-              <span>Evenements</span>
-            </li>
-            <li>
-              <span>Partenaires</span>
-            </li>
-            <li>
-              <div class="search">
-                <input type="text" class="searchTerm" placeholder="Rechercher..." onkeyup="search(this.value)">
-                <button type="submit" class="searchButton">
-                  <img src="icons/search_icon_white.png" alt="search">
-                </button>
-
-              </div>
-              <div class="search-res" id="search-res">
-              </div>
-            </li> -->
+            <!-- Added dynamically -->
           </ul>
         </nav>
       </div>
@@ -92,91 +45,79 @@
 
   <!-- Main content -->
   <main class="main">
-    <div id="test1">
+    <div id="test1" style="margin: 100px;background-color: black;color:white">
       Teeest 1
     </div>
-    <div id="test2">
+    <div id="test2" style="margin: 100px;background-color: yellow;">
       Teeest 2
       Machi Lorem ipsum
     </div>
     <!-- Presentation -->
     <div id="presentation">
-      <header>
-        <div>
-          <img class="logo-page" src="images/undraw_Presentation_62e1.svg">
-          <h1 class="title page">Présentation</h1>
-        </div>
-        <hr class="divider">
-      </header>
+      <div class="image-content">
+        <section class="banner_image">
+          <div class="banner-container">
+            <h3>master mql</h3>
+            <h1><span>Première passerelle d’Insertion Professionnelle en Informatique au Maroc</span></h1>
+          </div>
+        </section>
+      </div>
 
       <div class="top-content">
-        <div>
-          <h2 class="section-header">Objectifs de la formation</h3>
-            <p>
-              Le Master MQL est une véritable plateforme de formation et de production de la ressource
-              humaine très hautement qualifiée en ingénierie du logiciel. Le Master permet à l’étudiant d’une
-              part d’acquérir une compétence de pointe en haute technologie informatique et d’autre part une
-              très bonne maitrise de l’entreprise et de son écosystème avec une insertion facile, naturelle et
-              implicite dans les plus grandes SS2I du monde.
-
-            <ul>
-              <li>Fournir aux étudiants une formation scientifique et technique de haut niveau en Informatique alliant
-                un
-                enseignement technologique de pointe et un enseignement théorique solide permettant de s’adapter à
-                l'évolution rapide des technologies de l'information et de la communication.</li>
-              <li>Enrichir l’offre de formation de l’université et participer à son ouverture sur l’environnement
-                socio-économique.</li>
-              <li>Répondre aux besoins des entreprises en cadres de haut niveau dans divers domaines de l’informatique
-                appliquée- en particulier dans les métiers de l’offshore- à savoir :
-                <ul>
-                  <li>Développeurs d’applications spécifiques : Web - Mobile - Décisionnel - Client/Serveur</li>
-                  <li>Développeurs en migration et intégration des systèmes d’information</li>
-                  <li>Spécialistes en support applicatif - maintenance des applications actives et en infogérance</li>
-                </ul>
-            </ul>
-            </p>
-            <div class="stats">
-              <div class="stats-wrapper">
-                <div class="stats-icon"><img src="icons/iconmonstr-school-20.svg" alt=""></div>
-                <p>12 Années d’existance</p>
-              </div>
-              <div class="stats-wrapper">
-                <div class="stats-icon"><img src="icons/iconmonstr-school-26.svg" alt=""></div>
-                <p>9 Promotions sorties</p>
-              </div>
-              <div class="stats-wrapper">
-                <div class="stats-icon"><img src="icons/iconmonstr-school-23.svg" alt=""></div>
-                <p>350 Etudiants</p>
-              </div>
-              <div class="stats-wrapper">
-                <div class="stats-icon"><img src="icons/iconmonstr-building-16.svg" alt=""></div>
-                <p>215 Contrats CDI</p>
-              </div>
-            </div>
+        <div class="about">
+          <div class="about-text">
+            <h3>Master MQL</h3>
+            <p>Le Master Spécialisé MQL est une formation accréditée dans le cadre du programme Offshore.</p>
+            <p>Programme intergouvernemental France-Maroc FSP-ARESM Programme OTI (Offshoring des Technologies de
+              l’Information) Mobilité et Double diplôme avec l’université de Brest (UBO) Insertion Professionnelle des
+              étudiants.</p>
+            <button> <a href="components/about.html">Lire la suite</a> </button>
+          </div>
+          <div class="about-img">
+            <img src="images/logo-mql.png">
+          </div>
         </div>
       </div>
 
-      <div class="main-content">
-        <h2 class="section-header">Déscriptif du programme</h3>
-          <div class="programme-content">
-            <div id="programme" class="programme">
-              <!-- Programme is added dynamically -->
+      <div class="image-content">
+        <div class="mql-info mql-padding">
+          <div class="mql-info-container">
+            <div class="mql-info-text">
+              <img src="icons/iconmonstr-school-20-72.png" alt="">
+              <h3>12</h3>
+              <p>Années d'existence</p>
+            </div>
+            <div class="mql-info-text">
+              <img src="icons/iconmonstr-school-23-72.png" alt="">
+              <h3>12</h3>
+              <p>Promotions</p>
+            </div>
+            <div class="mql-info-text">
+              <img src="icons/iconmonstr-school-26-72.png" alt="">
+              <h3>350</h3>
+              <p>étudiants</p>
+            </div>
+            <div class="mql-info-text">
+              <img src="icons/iconmonstr-building-16-72.png" alt="">
+              <h3>215</h3>
+              <p>Tracés : Contrats CDI</p>
+            </div>
+            <div class="mql-info-text">
+              <img src="icons/iconmonstr-handshake-1-72.png" alt="">
+              <h3>20</h3>
+              <p>Partenaires</p>
             </div>
           </div>
+        </div>
       </div>
 
-      <div class="top-content">
-        <div>
-          <h2 class="section-header">Débouchés de la Formation</h3>
-            <p>
-              Le Master MQL participe très activement dans le domaine de l’offshore. Le principal « client »
-              MQL se trouve dans tous les parcs d’activité offshore et Outsourcing au Maroc et principalement
-              Casablanca Nearshore Park, Rabat Technopolis et Fès Shore avec un taux d’insertion de 100%
-              des étudiants dans des multinationales : Capgemini, CGI Technologies, Atos, Cegedim et Accenture.<br>
-            </p>
-            <ul id="debouches">
-              <!-- Debouches are added dynamically -->
-            </ul>
+      <div class="main-content" style="background: white;">
+        <div class="swiper-title">
+          <h2 class="special-heading-tag">Nos partenaires<strong> nous font confiance</strong></h2>
+          <hr>
+        </div>
+        <div id="partenaires-wrapper" class="main-content partenaires-wrapper" style="background: white;">
+          <!-- Partners are added dynamically -->
         </div>
       </div>
     </div>
@@ -402,7 +343,7 @@
     </div>
 
     <!-- Partenaires -->
-    <div id="partenaires">
+    <!-- <div id="partenaires">
       <header>
         <div>
           <img class="logo-page" src="images/undraw_agreement_aajr.svg">
@@ -427,9 +368,9 @@
         </ul>
       </div>
       <div id="partenaires-wrapper" class="main-content partenaires-wrapper" style="background: white;">
-        <!-- Partners are added dynamically -->
+        <-- Partners are added dynamically ->
       </div>
-    </div>
+    </div> -->
   </main>
 
   <!-- Footer -->
