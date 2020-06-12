@@ -4,7 +4,13 @@
 // The "children" preperty represent the sub-menus
 var navbarJSON = [
   { target: "presentation", name: "Accueil" },
-  { target: "admission" },
+  {
+    target: "nous rejoindre",
+    children: [
+      { target: "selection" },
+      { target: "admission" },
+    ]
+  },
   { target: "activites", name: "Activités" },
   { target: "evenements", name: "Évènements" },
   { target: "stages" },
