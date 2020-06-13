@@ -17,8 +17,8 @@ const NavbarComponent = function (service) {
 
 NavbarComponent.prototype.createNavbarItems = function () {
   this.service.items.forEach((item) => {
-    let li = document.createElement("li");
-    let a = document.createElement("a");
+    let li = create("li");
+    let a = create("a");
     a.id = item.id;
     a.dataset.target = item.target;
     a.textContent = item.name;
@@ -30,11 +30,11 @@ NavbarComponent.prototype.createNavbarItems = function () {
       item.children.length > 0
     ) {
       delete a.dataset.target;
-      let ul = document.createElement("ul");
+      let ul = create("ul");
       li.appendChild(ul);
       item.children.forEach((child) => {
-        let childLi = document.createElement("li");
-        let a = document.createElement("a");
+        let childLi = create("li");
+        let a = create("a");
         childLi.appendChild(a);
         a.id = child.id;
         a.textContent = child.name;
@@ -60,23 +60,23 @@ NavbarComponent.prototype.createNavbarItems = function () {
 };
 
 NavbarComponent.prototype.createSearchZone = function () {
-  let li = document.createElement("li");
+  let li = create("li");
   this.navbarUl.appendChild(li);
-  let div = document.createElement("div");
+  let div = create("div");
   div.className = "search";
   li.appendChild(div);
-  let input = document.createElement("input");
+  let input = create("input");
   div.appendChild(input);
   input.className = "searchTerm";
   input.placeholder = "Rechercher...";
   input.addEventListener("keyup", (event) => {
     search(event.target.value);
   });
-  let button = document.createElement("button");
+  let button = create("button");
   div.appendChild(button);
   button.type = "submit";
   button.className = "searchButton";
-  let img = document.createElement("img");
+  let img = create("img");
   button.appendChild(img);
   img.src = "icons/search_icon_white.png";
   img.alt = "search";

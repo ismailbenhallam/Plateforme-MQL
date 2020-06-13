@@ -415,7 +415,7 @@ body {
 .main {
   flex: 1 0;
   background-color: white;
-  margin-top : -20px;
+  margin-top: -20px;
 }
 
 .main > div {
@@ -651,6 +651,7 @@ body {
   margin-block-end: 0.5em;
 }
 
+/***** Presentation *****/
 #presentation .top-content {
   display: flex;
 }
@@ -669,6 +670,84 @@ body {
 #selection .top-content {
   padding: 40px;
 }
+
+/***** Tricker *****/
+* {
+  box-sizing: border-box;
+}
+
+@-webkit-keyframes ticker {
+  0% {
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+    visibility: visible;
+  }
+  100% {
+    -webkit-transform: translate3d(-100%, 0, 0);
+    transform: translate3d(-100%, 0, 0);
+  }
+}
+
+@keyframes ticker {
+  0% {
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+    visibility: visible;
+  }
+  100% {
+    -webkit-transform: translate3d(-100%, 0, 0);
+    transform: translate3d(-100%, 0, 0);
+  }
+}
+
+.ticker-wrapper {
+  top: 300px;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  height: 2rem;
+  background-color: #e41b17;
+  box-sizing: content-box;
+}
+
+.ticker-wrapper .ticker {
+  display: inline-block;
+  height: 2rem;
+  line-height: 2rem;
+  white-space: nowrap;
+  padding-right: 100%;
+  box-sizing: content-box;
+  -webkit-animation-iteration-count: infinite;
+  animation-iteration-count: infinite;
+  -webkit-animation-timing-function: linear;
+  animation-timing-function: linear;
+  -webkit-animation-name: ticker;
+  animation-name: ticker;
+  -webkit-animation-duration: 30s;
+  animation-duration: 30s;
+}
+
+.ticker-wrapper .ticker-item {
+  display: inline-block;
+  padding: 0 2rem;
+  font-size: 1rem;
+  color: white;
+}
+
+.ticker-wrapper .ticker-item:hover {
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+/* body {
+  padding-bottom: 5rem;
+}
+
+h1,
+h2,
+p {
+  padding: 0 5%;
+} */
 
 /******** Evenements ********/
 .evenements-wrapper {
@@ -705,10 +784,10 @@ body {
     flex-direction: column;
     align-items: center;
   }
-  .mql-info-container{
+  .mql-info-container {
     flex-direction: column;
   }
-  .about{
+  .about {
     flex-direction: column-reverse;
   }
 }
@@ -1579,7 +1658,7 @@ form {
 
 .mql-info-container {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-evenly;
   align-items: center;
   position: relative;
 }
@@ -1588,7 +1667,7 @@ form {
   text-align: center;
 }
 .mql-info .mql-info-text p {
-  color: #FFFFFF;
+  color: #ffffff;
   font-size: 18px;
   text-transform: uppercase;
 }
@@ -1604,17 +1683,16 @@ form {
   background-repeat: no-repeat;
 }
 
-
 .about-wrapper {
   padding: 72px 0px;
 }
 
 .about {
-    width: 1000px;
-    margin: auto;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  width: 1000px;
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .about-text {
@@ -1632,7 +1710,7 @@ form {
   line-height: 14px;
 }
 .about-text p:nth-child(2) {
-  color: #F01626;
+  color: #f01626;
   font-weight: bold;
   line-height: 15px;
 }
@@ -1685,57 +1763,57 @@ button a {
 }
 
 .banner_image {
-    opacity: 1;
-    animation-name: fadeInOpacity;
-    animation-iteration-count: 5s infinite;
-    animation-timing-function: ease-in;
-    animation-duration: 20s;
-    -webkit-animation: fadeInOpacity 13s infinite;
-    -moz-animation: fadeInOpacity 13s infinite;
-    -o-animation: fadeInOpacity 13s infinite;
-    animation: fadeInOpacity 13s infinite;
+  opacity: 1;
+  animation-name: fadeInOpacity;
+  animation-iteration-count: 5s infinite;
+  animation-timing-function: ease-in;
+  animation-duration: 20s;
+  -webkit-animation: fadeInOpacity 13s infinite;
+  -moz-animation: fadeInOpacity 13s infinite;
+  -o-animation: fadeInOpacity 13s infinite;
+  animation: fadeInOpacity 13s infinite;
 }
 
 @keyframes fadeInOpacity {
-    0% {
-        background: url(../images/photo-accueil1.png) no-repeat center center;
-        background-size: cover;
-        width: 100%;
-        height: 400px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
-    25% {
-        background: url(../images/photo-accueil2.png) no-repeat top center;
-        background-size: cover;
-        width: 100%;
-        height: 400px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
-    50% {
-        background: url(../images/photo-accueil3.png) no-repeat center center;
-        background-size: cover;
-        width: 100%;
-        height: 400px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
-    100% {
-        background: url(../images/photo-accueil1.png) no-repeat center center;
-        background-size: cover;
-        width: 100%;
-        height: 400px;
-        display: flex;
-        justify-content: right;
-        align-items: center;
-    }
+  0% {
+    background: url(../images/photo-accueil1.png) no-repeat center center;
+    background-size: cover;
+    width: 100%;
+    height: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  25% {
+    background: url(../images/photo-accueil2.png) no-repeat top center;
+    background-size: cover;
+    width: 100%;
+    height: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  50% {
+    background: url(../images/photo-accueil3.png) no-repeat center center;
+    background-size: cover;
+    width: 100%;
+    height: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  100% {
+    background: url(../images/photo-accueil1.png) no-repeat center center;
+    background-size: cover;
+    width: 100%;
+    height: 400px;
+    display: flex;
+    justify-content: right;
+    align-items: center;
+  }
 }
 /*SELECTION*/
-.selection-details ul{
+.selection-details ul {
   list-style: none;
 }
 h3.title-default-left:before {
@@ -1769,7 +1847,7 @@ h3.title-default-left:before {
 }
 
 .timeline ul:before {
-  content: '';
+  content: "";
   position: absolute;
   width: 2px;
   height: 100%;
@@ -1871,7 +1949,7 @@ ul li:nth-child(even) .content:after {
 }
 
 .timeline ul li:nth-child(even):before {
-  content: '';
+  content: "";
   position: absolute;
   top: 51px;
   left: -4px;

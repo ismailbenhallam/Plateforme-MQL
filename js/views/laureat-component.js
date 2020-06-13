@@ -3,14 +3,14 @@ const LaureatComponent = function (service) {
 
   let select = document.getElementById("laureats-select-promo");
 
-  let optionAll = document.createElement("option");
+  let optionAll = create("option");
   optionAll.selected = true;
   optionAll.value = ALL;
   optionAll.textContent = "Toutes les promotions";
   select.appendChild(optionAll);
 
   for (const promo in service.promos) {
-    let option = document.createElement("option");
+    let option = create("option");
     option.value = promo;
     option.textContent = promo;
     select.appendChild(option);
@@ -20,22 +20,22 @@ const LaureatComponent = function (service) {
   const wrapper = document.getElementById("laureats-wrapper");
   service.items.forEach((l) => {
     id++;
-    let divPerson = document.createElement("div");
+    let divPerson = create("div");
     divPerson.dataset.promotion = l.promotion;
     divPerson.setAttribute("id", "person-" + id);
     divPerson.className = "person";
     // divPerson.classList.add("grow-shadow");
-    let divBioImg = document.createElement("div");
+    let divBioImg = create("div");
     divBioImg.className = "bio-img";
-    let imgPerson = document.createElement("img");
+    let imgPerson = create("img");
     imgPerson.setAttribute("src", "images/laureats/" + l.photo);
     imgPerson.setAttribute("alt", l.nom);
-    let divSocial = document.createElement("div");
+    let divSocial = create("div");
     divSocial.setAttribute("id", "social");
     divSocial.className = "social";
-    let a = document.createElement("a");
+    let a = create("a");
     a.setAttribute("href", l.linkedin);
-    let img = document.createElement("img");
+    let img = create("img");
     img.setAttribute("src", "icons/linkedin.svg");
     img.setAttribute("alt", "linkedin");
     a.appendChild(img);
@@ -43,26 +43,26 @@ const LaureatComponent = function (service) {
     divBioImg.appendChild(imgPerson);
     divBioImg.appendChild(divSocial);
     divPerson.appendChild(divBioImg);
-    let divPersonContent = document.createElement("div");
+    let divPersonContent = create("div");
     divPersonContent.className = "person-content";
-    let name = document.createElement("h2");
+    let name = create("h2");
     name.textContent = l.nom + " (" + l.promotion + ")";
-    let job = document.createElement("SPAN");
+    let job = create("SPAN");
     job.className = "subtitle";
     if (l.ville == "") {
       job.textContent = l.posteOccupe + " à " + l.lieu + ", " + l.pays + ".";
     }
     job.textContent =
       l.posteOccupe + " à " + l.lieu + ", " + l.ville + ", " + l.pays + ".";
-    let divWrap = document.createElement("div");
+    let divWrap = create("div");
     divWrap.className = "wrap";
-    let divTruncate = document.createElement("div");
+    let divTruncate = create("div");
     divTruncate.className = "truncate";
-    let toggledText = document.createElement("p");
+    let toggledText = create("p");
     toggledText.className = "toggledText";
-    let spanPFE = document.createElement("SPAN");
+    let spanPFE = create("SPAN");
     spanPFE.textContent = "Stage pré-embauche : " + l.pfe;
-    let spanCDI = document.createElement("SPAN");
+    let spanCDI = create("SPAN");
     spanCDI.textContent = "Premier CDI : " + l.cdi;
     if (l.cdi == "") {
       spanCDI.textContent = "";

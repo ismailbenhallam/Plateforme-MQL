@@ -3,12 +3,12 @@ const EvenementComponent = function (service) {
 
   let wrapper = document.getElementById("evenements-wrapper");
   for (const e of service.items) {
-    let event = document.createElement("div");
+    let event = create("div");
     wrapper.appendChild(event);
     event.classList.add("evenement");
 
-    let title = document.createElement("h2");
-    let body = document.createElement("div");
+    let title = create("h2");
+    let body = create("div");
     body.classList.add("evenement-body");
 
     title.classList.add("evenement-title");
@@ -16,23 +16,23 @@ const EvenementComponent = function (service) {
     event.appendChild(title);
     event.appendChild(body);
 
-    let photoDiv = document.createElement("div");
+    let photoDiv = create("div");
     photoDiv.classList.add("evenement-photo");
-    let photo = document.createElement("img");
+    let photo = create("img");
     let currentPhoto = 0;
     photo = e.photos[currentPhoto];
 
     /*********** Modal ***********/
-    let modal = document.createElement("div");
+    let modal = create("div");
     modal.classList.add("evenement-modal");
     document.body.appendChild(modal);
 
-    let close = document.createElement("span");
+    let close = create("span");
     close.classList.add("evenement-close");
     close.innerHTML = "&times;";
     modal.appendChild(close);
 
-    let modalContent = document.createElement("img");
+    let modalContent = create("img");
     modalContent.classList.add("evenement-modal-content");
 
     photo.onclick = function () {
@@ -42,7 +42,7 @@ const EvenementComponent = function (service) {
 
     let previous;
     if (e.photos.length > 1) {
-      previous = document.createElement("img");
+      previous = create("img");
       previous.classList.add("evenement-previous");
       previous.src = "icons/next.png";
       modal.appendChild(previous);
@@ -61,7 +61,7 @@ const EvenementComponent = function (service) {
 
     let next;
     if (e.photos.length > 1) {
-      next = document.createElement("img");
+      next = create("img");
       next.classList.add("evenement-next");
       next.src = "icons/next.png";
       modal.appendChild(next);
@@ -98,18 +98,18 @@ const EvenementComponent = function (service) {
     photoDiv.appendChild(photo);
     body.appendChild(photoDiv);
 
-    let content = document.createElement("div");
+    let content = create("div");
     content.classList.add("evenement-content");
     body.appendChild(content);
 
-    let evenementCoordonnees = document.createElement("div");
+    let evenementCoordonnees = create("div");
     evenementCoordonnees.classList.add("evenement-coordonnees");
     evenementCoordonnees.textContent = `${e.date.toReadeableString()} - ${
       e.lieu
     }`;
     content.appendChild(evenementCoordonnees);
 
-    let description = document.createElement("div");
+    let description = create("div");
     description.classList.add("evenement-description");
     content.appendChild(description);
 
@@ -121,16 +121,16 @@ const EvenementComponent = function (service) {
       let hideStr = e.description.slice(charLimit);
 
       description.innerHTML = showStr;
-      let morePoints = document.createElement("span");
+      let morePoints = create("span");
       morePoints.textContent = "...";
       morePoints.style.display = "inline";
-      let moreText = document.createElement("span");
+      let moreText = create("span");
       moreText.style.display = "none";
       moreText.innerHTML = hideStr;
       description.appendChild(morePoints);
       description.appendChild(moreText);
 
-      let readMore = document.createElement("div");
+      let readMore = create("div");
       readMore.style.cursor = "pointer";
       readMore.textContent = "Lire plus";
       readMore.style.color = "black";

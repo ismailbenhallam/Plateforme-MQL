@@ -53,13 +53,11 @@ Date.prototype.toReadeableString = function () {
   return `${this.getDate()} ${month} ${this.getFullYear()}`;
 };
 
-revereseColorAndBackgroundColor = function (element) {
-  let color = element.color;
-  element.color = element.backgroundColor;
-  element.backgroundColor = element.color;
-};
+const $ = (id) => document.getElementById(id);
+const create = (tag) => document.createElement(tag);
 
-window.toTop = function () {
-  document.body.scrollTop = 0; // For Safari
-  document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
-};
+// revereseColorAndBackgroundColor = function (element) {
+//   let color = element.color;
+//   element.color = element.backgroundColor;
+//   element.backgroundColor = element.color;
+// };

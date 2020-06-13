@@ -15,7 +15,6 @@ const evenementsJSON = [
       "photo6.jpg",
     ],
     photosFolder: "remise-diplomes/2019",
-    titleColor: "#d9323a",
   },
   {
     nom: "Red Hope",
@@ -26,7 +25,6 @@ const evenementsJSON = [
       "Dans le cadre de la <b>Compétition Nationale Company Program d'Injaz Al Maghreb</b> qui s'est déroulée à <b>Casablanca</b> le <b>19 Septembre 2018</b>, les étudiants du Master MQL ont remporté <b>le prix de l'innovation de Boeing</b> attribué au projet <b>'Red Hope'</b> sous la direction du <b>Pr. CHENFOUR Nourreddine</b>, RedHope est une plateforme Web dont le but principal est de simplifier la collecte du sang pour les Centres Régionaux de Transfusion Sanguine ainsi que faciliter le don du sang pour les citoyens.",
     photos: ["RedHope4.jpg", "RedHope2.jpg", "RedHope3.jpg", "RedHope1.jpg"],
     photosFolder: "entreprenariat",
-    titleColor: "rgb(225, 25, 55)",
   },
   {
     nom: "Journée entrepreneuriale 'Mon Business Model'",
@@ -37,7 +35,6 @@ const evenementsJSON = [
       "Dans le cadre des activités parascolaires, les étudiants du <b>Master MQL</b> ont organisé en coordination avec <b>Mme. REMMAL, une journée d'entreprenariat le 04/01/2018 au centre de conférence de la Faculté des Sciences Dhar El Mehraz de Fès</b> dans laquelle est organisé une compétition dont chaque équipe est supposée pitcher l'idée de sa futur potentielle entreprise.</br>Cette journée a connu la participation de <b>70 etudiants</b> des différents Master de la FSDM, et à l'issu de cet évènement parmi les projets présentés trois d'entre eux ont été primé comme étant les meilleurs projets à concrétiser en bénéficiant comme prix d'une assistance financière et d'un bon coaching tout au long de la réalisaton de ces projets.",
     photos: ["ideaChallenge1.png", "ideaChallenge2.png"],
     photosFolder: "entreprenariat",
-    titleColor: "#d9323a",
   },
   {
     nom: "Campagne de stages CGI 2019",
@@ -54,7 +51,6 @@ const evenementsJSON = [
       "photo5.jpg",
     ],
     photosFolder: "campagnes-stages/CGI-2019",
-    titleColor: "rgb(225, 25, 55)",
   },
   {
     nom: "Campagne de stages Umanis 2019",
@@ -71,7 +67,6 @@ const evenementsJSON = [
       "photo5.jpg",
     ],
     photosFolder: "campagnes-stages/Umanis-2019",
-    titleColor: "rgb(213,8,19)",
   },
   {
     nom: "Campagne de stages Capgemini 2019",
@@ -89,6 +84,5 @@ const evenementsJSON = [
       "photo6.jpg",
     ],
     photosFolder: "campagnes-stages/Capgemini-2019",
-    titleColor: "#0572AE",
   },
 ];

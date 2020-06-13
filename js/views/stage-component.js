@@ -9,105 +9,105 @@ const StageComponent = function (stageService, partenaireService) {
 
 StageComponent.prototype.createPromotionsDetailsTable = function () {
   let wrapper = document.getElementById("table-insertions-wrapper");
-  let table = document.createElement("table");
+  let table = create("table");
   wrapper.appendChild(table);
   //   table.id = "table1";
   table.classList.add("semestre_table", "data");
 
-  let thead = document.createElement("thead");
+  let thead = create("thead");
   table.appendChild(thead);
-  let tr = document.createElement("tr");
+  let tr = create("tr");
   thead.appendChild(tr);
 
   // promotions
-  let th = document.createElement("th");
+  let th = create("th");
   th.textContent = "Promotion";
   tr.appendChild(th);
 
   let years = [];
   for (const promo of this.stageService.promos) {
-    let th = document.createElement("th");
+    let th = create("th");
     th.textContent = promo.annee;
     years.push(promo.annee);
     tr.appendChild(th);
   }
 
   // nombre d'étudiants
-  tr = document.createElement("tr");
+  tr = create("tr");
   tr.classList.add("colored_data");
   table.appendChild(tr);
-  let td = document.createElement("td");
+  let td = create("td");
   td.classList.add("semestre_table_cell", "title_cell");
   td.innerHTML = "Nb. d'étudiants";
   tr.appendChild(td);
 
   for (const promo of this.stageService.promos) {
-    td = document.createElement("td");
+    td = create("td");
     td.classList.add("semestre_table_cell");
     td.textContent = promo.etudiants;
     tr.appendChild(td);
   }
 
   // insertions stage
-  tr = document.createElement("tr");
+  tr = create("tr");
   tr.classList.add("colored_data");
   table.appendChild(tr);
-  td = document.createElement("td");
+  td = create("td");
   td.classList.add("semestre_table_cell", "title_cell");
   td.innerHTML =
     "Insertion Stage <p>+Multinationale<br>+Rémunéré<br>+Pré-embauche</p >";
   tr.appendChild(td);
 
   for (const promo of this.stageService.promos) {
-    td = document.createElement("td");
+    td = create("td");
     td.classList.add("semestre_table_cell");
     td.textContent = promo.insertionsStage;
     tr.appendChild(td);
   }
 
   // Pourcentage insertions stage
-  tr = document.createElement("tr");
+  tr = create("tr");
   tr.classList.add("colored_data");
   table.appendChild(tr);
-  td = document.createElement("td");
+  td = create("td");
   td.classList.add("semestre_table_cell", "title_cell");
   td.textContent = "Pourcentage";
   tr.appendChild(td);
 
   for (const promo of this.stageService.promos) {
-    td = document.createElement("td");
+    td = create("td");
     td.classList.add("semestre_table_cell");
     td.textContent = Math.round(promo.getPourcentageStage()) + "%";
     tr.appendChild(td);
   }
 
   // contrats CDI
-  tr = document.createElement("tr");
+  tr = create("tr");
   tr.classList.add("colored_data");
   table.appendChild(tr);
-  td = document.createElement("td");
+  td = create("td");
   td.classList.add("semestre_table_cell", "title_cell");
   td.innerHTML = "Insertion Définitive :<p>+ Contrat CDI</p>";
   tr.appendChild(td);
 
   for (const promo of this.stageService.promos) {
-    td = document.createElement("td");
+    td = create("td");
     td.classList.add("semestre_table_cell");
     td.textContent = promo.contratsCDI;
     tr.appendChild(td);
   }
 
   // Pourcentage contrats CDI
-  tr = document.createElement("tr");
+  tr = create("tr");
   tr.classList.add("colored_data");
   table.appendChild(tr);
-  td = document.createElement("td");
+  td = create("td");
   td.classList.add("semestre_table_cell", "title_cell");
   td.textContent = "Pourcentage";
   tr.appendChild(td);
 
   for (const promo of this.stageService.promos) {
-    td = document.createElement("td");
+    td = create("td");
     td.classList.add("semestre_table_cell");
     td.textContent = Math.round(promo.getPourcentageCDI()) + "%";
     tr.appendChild(td);
@@ -116,30 +116,30 @@ StageComponent.prototype.createPromotionsDetailsTable = function () {
 
 StageComponent.prototype.createCDIsDetailsTable = function () {
   let wrapper = document.getElementById("table-CDIs-wrapper");
-  let table = document.createElement("table");
+  let table = create("table");
   wrapper.appendChild(table);
   //   table.id = "table1";
   table.classList.add("semestre_table", "data", "highlight");
 
-  let thead = document.createElement("thead");
+  let thead = create("thead");
   table.appendChild(thead);
-  let tr = document.createElement("tr");
+  let tr = create("tr");
   thead.appendChild(tr);
 
   // Years
-  let th = document.createElement("th");
+  let th = create("th");
   //   th.innerHTML = "<span></span>";
   tr.appendChild(th);
   thead.appendChild(tr);
 
   let years = [];
   for (const promo of this.stageService.promosDetails) {
-    let th = document.createElement("th");
+    let th = create("th");
     th.textContent = promo.promo;
     years.push(promo.promo);
     tr.appendChild(th);
   }
-  th = document.createElement("th");
+  th = create("th");
   th.textContent = "Total";
   tr.appendChild(th);
 
@@ -148,26 +148,26 @@ StageComponent.prototype.createCDIsDetailsTable = function () {
     partenaires.push(detail.partenaire);
   }
 
-  let tbody = document.createElement("tbody");
+  let tbody = create("tbody");
   table.appendChild(tbody);
 
   let total = 0;
   let totalCDI = 0;
   for (const p of partenaires) {
-    tr = document.createElement("tr");
-    td = document.createElement("td");
+    tr = create("tr");
+    td = create("td");
     td.classList.add("semestre_table_cell_title");
     td.textContent = p;
     tr.appendChild(td);
     for (const y of years) {
-      td = document.createElement("td");
+      td = create("td");
       td.classList.add("semestre_table_cell");
       let nbr = this.stageService.getContratsPartenaire(y, p);
       total += nbr;
       td.textContent = nbr == 0 ? "" : nbr;
       tr.appendChild(td);
     }
-    td = document.createElement("td");
+    td = create("td");
     td.classList.add("semestre_table_cell");
     td.textContent = total;
     tr.appendChild(td);
@@ -175,8 +175,8 @@ StageComponent.prototype.createCDIsDetailsTable = function () {
     total = 0;
   }
 
-  tr = document.createElement("tr");
-  td = document.createElement("td");
+  tr = create("tr");
+  td = create("td");
   td.classList.add("semestre_table_cell_title");
   td.textContent = "Contrat CDI";
   tr.appendChild(td);
@@ -185,13 +185,13 @@ StageComponent.prototype.createCDIsDetailsTable = function () {
   for (const y of years) {
     let nbr = this.stageService.getNbrCDI(y);
     totalCDI += nbr;
-    td = document.createElement("td");
+    td = create("td");
     td.classList.add("semestre_table_cell");
     td.textContent = nbr;
     tr.appendChild(td);
   }
 
-  td = document.createElement("td");
+  td = create("td");
   td.classList.add("semestre_table_cell");
   td.textContent = totalCDI;
   tr.appendChild(td);

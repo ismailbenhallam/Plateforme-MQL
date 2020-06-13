@@ -5,9 +5,9 @@ const PartenaireComponent = function (service) {
     const wrapper = document.getElementById("partenaires-wrapper");
 
     for (const p of service.items) {
-      let div = document.createElement("div");
-      let a = document.createElement("a");
-      let img = document.createElement("img");
+      let div = create("div");
+      let a = create("a");
+      let img = create("img");
       img.classList.add("moveOnHover");
       a.setAttribute("title", p.name);
       a.setAttribute("href", p.website);

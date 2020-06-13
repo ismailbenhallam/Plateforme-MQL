@@ -9,5 +9,6 @@ new DeboucheComponent(new DeboucheService(debouchesJSON));
 new EvenementComponent(new EvenementService(evenementsJSON));
 new PresentationComponent(new ProgrammeService(semestresJSON));
 new LaureatComponent(new LaureatService(laureatsJSON));
-let informationService = new InformationService(informations);
+let informationService = new InformationService(informationsJSON);
 let informationComponent = new InformationComponent(informationService);
+new AnnonceComponent(new AnnonceService(annoncesJSON));
