@@ -12,3 +12,4 @@ new LaureatComponent(new LaureatService(laureatsJSON));
 let informationService = new InformationService(informationsJSON);
 let informationComponent = new InformationComponent(informationService);
 new AnnonceComponent(new AnnonceService(annoncesJSON));
+new ProfesseurComponent(new ProfesseurService(professeursJSON));

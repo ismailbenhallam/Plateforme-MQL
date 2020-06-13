@@ -690,6 +690,21 @@ body {
     padding: 40px;
 }
 
+/********* Mot du coordonnateur **************/
+
+.presentation {
+    padding: 100px 30px 100px 30px;
+    display: flex;
+    width: 82%;
+    margin: auto;
+}
+
+@media (max-width: 1000px) {
+    .presentation {
+        flex-flow: column-reverse;
+    }
+}
+
 
 /******** Evenements ********/
 
