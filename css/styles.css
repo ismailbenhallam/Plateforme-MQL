@@ -537,6 +537,54 @@ body {
   }
 }
 
+/******** Annonces ********/
+#annonces-wrapper {
+  /* Hhhhhhhhhh */
+  background-color: yellowgreen;
+  color: #000;
+  padding-left: 50px;
+  padding-bottom: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: flex-start;
+}
+.annonce {
+  display: flex;
+  flex-direction: column;
+}
+.annonce-details {
+  font-size: 18px;
+  text-decoration: none;
+  cursor: default;
+  color: white;
+}
+.annonce-details.has-link {
+  text-decoration: underline;
+  cursor: pointer;
+}
+@keyframes appearAndDisappear {
+  0% {
+  }
+  100% {
+  }
+}
+.annonce-details.has-link:hover {
+  cursor: pointer;
+  color: red;
+}
+.annonce-details::before {
+  content: "> ";
+  color: tomato;
+  font-size: large;
+  font-weight: 500;
+}
+.annonce-date {
+  font-size: 12px;
+  color: black;
+  padding-left: 10px;
+}
+
 /***** End Header section *****/
 
 /******* Main column *******/
