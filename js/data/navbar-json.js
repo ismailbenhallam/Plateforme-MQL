@@ -5,30 +5,19 @@
 var navbarJSON = [
   { target: "presentation", name: "Accueil" },
   {
-    target: "masterMQL", name: "Master MQL",
+    target: "masterMQL",
+    name: "Master MQL",
     children: [
       { target: "coordinateur", name: "Mot du Coordonnateur" },
-      { target: "presentationMaster", name:"Présentation" },
-    ]
+      { target: "presentationMaster", name: "Présentation" },
+    ],
   },
   {
     target: "nous rejoindre",
-    children: [
-      { target: "selection" },
-      { target: "admission" },
-    ]
+    children: [{ target: "selection" }, { target: "admission" }],
   },
   { target: "activites", name: "Activités" },
   { target: "evenements", name: "Évènements" },
   { target: "stages" },
-  { target: "laureats", name: "Lauréats" }
-  // { target: "partenaires" },
-  // {
-  //   target: "formation",
-  //   children: [
-  //     // FIXME: just for test purpose
-  //     { target: "test1" },
-  //     { target: "test2" },
-  //   ],
-  // },
+  { target: "laureats", name: "Lauréats" },
 ];
