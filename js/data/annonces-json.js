@@ -26,17 +26,17 @@ const annoncesJSON = [
     link: "https://www.google.com",
   },
   {
-    nom: "Liste principale",
-    genre: "Inscription",
-    date: "2020-10-15",
-    description: "Liste principale MQL 2020/2021",
-    link: "https://www.google.com",
-  },
-  {
     nom: "Liste d'attente",
     genre: "Inscription",
     date: "2020-10-15",
     description: "Liste d'attente MQL 2020/2021",
+    link: "https://www.google.com",
+  },
+  {
+    nom: "Liste principale",
+    genre: "Inscription",
+    date: "2020-10-15",
+    description: "Liste principale MQL 2020/2021",
     link: "https://www.google.com",
   },
   {

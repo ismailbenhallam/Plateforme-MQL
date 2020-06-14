@@ -1,4 +1,4 @@
-const PresentationComponent = function (service) {
+const ProgrammeComponent = function (service) {
   for (const semestre of service.items) {
     let semestreDiv = create("div");
     $("programme").appendChild(semestreDiv);

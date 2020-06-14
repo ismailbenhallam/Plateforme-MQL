@@ -152,7 +152,7 @@ const EvenementComponent = function (service) {
           description.classList.toggle("evenement-show-all");
           eventDiv.classList.toggle("active");
           ef.preventDefault();
-          eventDiv.scrollIntoView({ behavior: "auto", block: "start" });
+          scrollTo(eventDiv);
         }
       };
     }
