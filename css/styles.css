@@ -842,7 +842,7 @@ body {
   flex-wrap: wrap;
   justify-content: space-evenly;
 }
-
+#presentationMaster .top-content,
 #presentation .top-content,
 #contact .top-content,
 #admission .top-content,
@@ -850,6 +850,20 @@ body {
 #activites .top-content,
 #selection .top-content {
   padding: 40px;
+}
+
+/************ Mot du coordinateur **************/
+.presentation {
+    width: 82%;
+    margin: auto;
+    padding: 100px 30px 100px 30px;
+    display: flex;
+}
+
+@media (max-width: 1000px) {
+    .presentation {
+        flex-flow: column-reverse;
+    }
 }
 
 /******** Evenements ********/
