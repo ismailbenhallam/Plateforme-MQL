@@ -864,6 +864,12 @@ body {
     .presentation {
         flex-flow: column-reverse;
     }
+    .main-footer{
+        flex-direction:column;
+    }
+    .footer-box p{
+        text-align: center;
+    }
 }
 
 /******** Evenements ********/
@@ -1051,41 +1057,44 @@ body {
 }
 
 @media screen and (max-width: 1145px) {
-  /* Navbar */
-  .container,
-  .navbar {
-    flex-direction: column;
-  }
-  .navbar a:not(.navbar-icon) {
-    display: none;
-  }
-  .navbar {
-    align-items: unset;
-    overflow: hidden;
-    height: 50px;
-    transition: 0.2s;
-  }
-  .navbar a.navbar-icon {
-    display: block;
-    text-align: right;
-  }
-  .navbar li {
-    width: 100%;
-  }
-  .navbar.responsive {
-    position: relative;
-    /* This is the total height of the navbar, if more items are added or removed from this navbar, please adjust the height*/
-    height: 450px;
-  }
-  .navbar.responsive .navbar-icon {
-    width: 100%;
-    position: relative;
-  }
-  .navbar.responsive a:not(.navbar-icon) {
-    float: none;
-    display: block;
-    text-align: left;
-  }
+    /* Navbar */
+    .container,
+    .navbar {
+        flex-direction: column;
+    }
+    .navbar a:not(.navbar-icon) {
+        display: none;
+    }
+    .navbar {
+        align-items: unset;
+        overflow: hidden;
+        height: 50px;
+        transition: 0.2s;
+    }
+    .navbar a.navbar-icon {
+        display: block;
+        text-align: right;
+    }
+    .navbar li {
+        width: 100%;
+    }
+    .navbar.responsive {
+        position: relative;
+        /* This is the total height of the navbar, if more items are added or removed from this navbar, please adjust the height*/
+        height: 450px;
+    }
+    .navbar.responsive .navbar-icon {
+        width: 100%;
+        position: relative;
+    }
+    .navbar.responsive a:not(.navbar-icon) {
+        float: none;
+        display: block;
+        text-align: left;
+    }
+    .main-footer{
+        padding: 40px 0px !important;
+	}
 }
 
 @media screen and (max-width: 768px) {
@@ -2169,12 +2178,97 @@ ul.event-wrapper {
   padding: 0;
 }
 
-h3.title-default-left {
-  position: relative;
-  letter-spacing: 1px;
-  text-align: center;
-  font-weight: 300;
-  font-size: 28px;
-  color: #09448a;
-  margin: 0 0 28px 0;
+
+/*footer*/
+.main-footer{
+	display:flex;
+	align-items:center;
+	background: url(../images/footer-bg.jpg);
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-attachment: scroll;
+	background-position: 50% 0%;
+	padding: 80px 60px;
+	position: relative;
+}
+.main-footer::before{
+	width: 100%;
+	height: 100%;
+	content: "";
+	position: absolute;
+	left: 0;
+	top: 0;
+	background: rgba(0,0,0,0.75);
+}
+.footer-box{
+	width:50%;
+	padding:0 15px;
+	position:relative;
+}
+
+.footer-box h2{
+	font-size: 20px;
+	font-weight: 500;
+	margin-bottom: 15px;
+	color: #fff;
+}
+.footer-box hr{
+	background: #d00937;
+	width: 80px;
+	height: 3px;
+	border:none;
+	margin: 5px 0px 15px 0px;	
+}
+.footer-box p{
+	font-size: 14px;
+	color: #fff;
+	margin-top: 0;
+	line-height: 24px;
+}
+.footer-box ul{
+	margin: 0px;
+	padding: 0px;
+}
+.footer-box ul li{
+	list-style-type: none;
+}
+.footer-box ul li a{
+	font-size: 13px;
+	color: #fff;
+	display: block;
+	padding: 8px 0px;
+	line-height: 24px;
+	border-bottom: 1px solid #aaaaaa;
+    transition: .5s;
+    text-decoration: none;
+}
+.footer-box ul li a:hover{
+	padding-left: 5px;
+	color: #d00937;
+}
+.footer-address{
+	width: 100%;
+	height: auto;
+	margin-top: 45px;
+}
+.footer-address h6{
+	font-size: 14px;
+	font-weight: 500;
+	color: #fff;
+	margin: 0px;
+	margin-top: 20px;
+}
+.footer-address h6 a{
+	color: #fff;
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+}
+.footer-address h6 a img{
+	border:1px solid #d00937;
+	padding:6px;
+	margin-right: 10px;
+}
+.footer-address h6 a:hover{
+	color: #d00937;
 }
