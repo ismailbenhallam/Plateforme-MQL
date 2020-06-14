@@ -113,8 +113,8 @@ NavbarComponent.prototype.addNavbarItemsListener = function () {
     try {
       activePage = sessionStorage.activePage;
       if (activePage == null) activePage = INDEX;
-      document.getElementById(INDEX).classList.remove("active");
-      document.getElementById(activePage).classList.add("active");
+      $(INDEX).classList.remove("active");
+      $(activePage).classList.add("active");
       document
         .getElementById(activePage + LINKS_SUFFIX)
         .classList.add("active");
@@ -137,7 +137,7 @@ NavbarComponent.prototype.addNavbarItemsListener = function () {
         window.toTop();
 
         // Hide the previous page
-        document.getElementById(activePage).classList.remove("active");
+        $(activePage).classList.remove("active");
 
         document
           .getElementById(activePage + LINKS_SUFFIX)
@@ -147,13 +147,13 @@ NavbarComponent.prototype.addNavbarItemsListener = function () {
         activePage = link.dataset.target;
         sessionStorage.activePage = activePage;
         link.classList.add("active");
-        document.getElementById(activePage).classList.add("active");
+        $(activePage).classList.add("active");
         document
           .getElementById(activePage + LINKS_SUFFIX)
           .classList.add("active");
 
         // Close the navbar
-        document.getElementById("navbar").classList.remove("responsive");
+        $("navbar").classList.remove("responsive");
       });
     }
   });

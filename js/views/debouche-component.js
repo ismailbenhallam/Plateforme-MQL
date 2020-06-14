@@ -1,5 +1,5 @@
 const DeboucheComponent = function (service) {
-  let ul = document.getElementById("debouches");
+  let ul = $("debouches");
   for (const item of service.items) {
     let li = create("li");
     li.textContent = item.role;

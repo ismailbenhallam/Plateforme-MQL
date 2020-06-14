@@ -2,7 +2,7 @@ const PartenaireComponent = function (service) {
   this.service = service;
 
   window.addEventListener("load", function () {
-    const wrapper = document.getElementById("partenaires-wrapper");
+    const wrapper = $("partenaires-wrapper");
 
     for (const p of service.items) {
       let div = create("div");

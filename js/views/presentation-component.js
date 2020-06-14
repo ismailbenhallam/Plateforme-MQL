@@ -2,7 +2,7 @@ const PresentationComponent = function (service) {
   /*
   for (const semestre of service.items) {
     let semestreDiv = create("div");
-    document.getElementById("programme").appendChild(semestreDiv);
+    $("programme").appendChild(semestreDiv);
     semestreDiv.classList.add("semestre");
     let semestreTitle = create("div");
     let h4 = create("h4");

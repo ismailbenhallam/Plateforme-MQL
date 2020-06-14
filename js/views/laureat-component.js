@@ -1,7 +1,7 @@
 const LaureatComponent = function (service) {
   const ALL = "all";
 
-  let select = document.getElementById("laureats-select-promo");
+  let select = $("laureats-select-promo");
 
   let optionAll = create("option");
   optionAll.selected = true;
@@ -17,7 +17,7 @@ const LaureatComponent = function (service) {
   }
 
   let id = 0;
-  const wrapper = document.getElementById("laureats-wrapper");
+  const wrapper = $("laureats-wrapper");
   service.items.forEach((l) => {
     id++;
     let divPerson = create("div");

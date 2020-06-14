@@ -46,12 +46,4 @@ const annoncesJSON = [
     description: "Liste finale MQL 2020/2021",
     link: "https://www.google.com",
   },
-  {
-    nom: "Test1",
-    genre: "Test",
-    date: "2009-10-20",
-    description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit.Rem aliquid molestiae voluptas neque at ut.Soluta quo id, nulla praesentium hic maxime recusandae reiciendis, voluptate fugit necessitatibus ea voluptatibus laborum",
-    link: "https://www.google.com",
-  },
 ];

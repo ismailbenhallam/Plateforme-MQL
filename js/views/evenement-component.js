@@ -1,11 +1,11 @@
 const EvenementComponent = function (service) {
   const charLimit = 450;
 
-  let wrapper = document.getElementById("evenements-wrapper");
+  this.wrapper = $("evenements-wrapper");
   for (const e of service.items) {
-    let event = create("div");
-    wrapper.appendChild(event);
-    event.classList.add("evenement");
+    let eventDiv = create("div");
+    this.wrapper.appendChild(eventDiv);
+    eventDiv.classList.add("evenement");
 
     let title = create("h2");
     let body = create("div");
@@ -13,8 +13,8 @@ const EvenementComponent = function (service) {
 
     title.classList.add("evenement-title");
     title.textContent = e.nom;
-    event.appendChild(title);
-    event.appendChild(body);
+    eventDiv.appendChild(title);
+    eventDiv.appendChild(body);
 
     let photoDiv = create("div");
     photoDiv.classList.add("evenement-photo");
@@ -137,8 +137,9 @@ const EvenementComponent = function (service) {
       readMore.style.textDecoration = "underline";
       description.appendChild(readMore);
 
-      readMore.onclick = function (ef) {
+      readMore.onclick = (ef) => {
         if (ef.target == readMore) {
+          // this.showEventDetails(e, eventDiv);
           if (description.classList.contains("evenement-show-all")) {
             moreText.style.display = "none";
             morePoints.style.display = "inline";
@@ -149,11 +150,9 @@ const EvenementComponent = function (service) {
             readMore.textContent = "Lire Moins";
           }
           description.classList.toggle("evenement-show-all");
-          event.classList.toggle("active");
-
+          eventDiv.classList.toggle("active");
           ef.preventDefault();
-
-          event.scrollIntoView({ behavior: "auto", block: "start" });
+          eventDiv.scrollIntoView({ behavior: "auto", block: "start" });
         }
       };
     }
@@ -177,4 +176,25 @@ EvenementComponent.prototype.showNextAndPrevious = function (
   if (currentPhotoIndex == length - 1) {
     next.style.visibility = "hidden";
   } else next.style.visibility = "visible";
+};
+
+EvenementComponent.prototype.showEventDetails = function (event, eventDiv) {
+  this.wrapper.style.display = "none";
+  let eventDetails = $("evenement-details");
+  eventDetails.style.display = "block";
+  // TODO: Ismaïl
+  eventDetails.innerHTML = event.description;
+  let span = create("span");
+  span.textContent = "Lire moins";
+  span.style.textDecoration = "underline";
+  eventDetails.appendChild(span);
+
+  span.addEventListener("click", (e) => {
+    eventDetails.style.display = "none";
+    this.wrapper.style.display = "flex";
+    scrollTo(eventDiv);
+    // event.scrollIntoView({ behavior: "auto", block: "start" });
+  });
+
+  eventDetails.scrollIntoView({ behavior: "auto", block: "start" });
 };

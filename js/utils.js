@@ -56,6 +56,10 @@ Date.prototype.toReadeableString = function () {
 const $ = (id) => document.getElementById(id);
 const create = (tag) => document.createElement(tag);
 
+const scrollTo = (element) => {
+  element.scrollIntoView({ behavior: "auto", block: "start" });
+};
+
 // revereseColorAndBackgroundColor = function (element) {
 //   let color = element.color;
 //   element.color = element.backgroundColor;

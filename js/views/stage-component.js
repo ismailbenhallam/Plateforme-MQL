@@ -8,10 +8,9 @@ const StageComponent = function (stageService, partenaireService) {
 };
 
 StageComponent.prototype.createPromotionsDetailsTable = function () {
-  let wrapper = document.getElementById("table-insertions-wrapper");
+  let wrapper = $("table-insertions-wrapper");
   let table = create("table");
   wrapper.appendChild(table);
-  //   table.id = "table1";
   table.classList.add("semestre_table", "data");
 
   let thead = create("thead");
@@ -115,7 +114,7 @@ StageComponent.prototype.createPromotionsDetailsTable = function () {
 };
 
 StageComponent.prototype.createCDIsDetailsTable = function () {
-  let wrapper = document.getElementById("table-CDIs-wrapper");
+  let wrapper = $("table-CDIs-wrapper");
   let table = create("table");
   wrapper.appendChild(table);
   //   table.id = "table1";
