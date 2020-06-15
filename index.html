@@ -649,7 +649,8 @@
   <footer>
     <div class="main-footer">
       <div class="footer-box">
-        <a data-target="presentation"><img src="images/white-usmba-logo.png" width="100%;" height="100%;" /></a>
+        <a data-target="presentation"><img src="images/logo-mql-cropped.png" class="footer-logo" /></a>
+        <!-- TODO: leave the <p> or not ? -->
         <p>Le Master MQL est une véritable plateforme de formation et de production de la ressource humaine très
           hautement qualifiée en ingénierie du logiciel.</p>
       </div>
@@ -657,20 +658,20 @@
         <h2>Liens utiles</h2>
         <hr>
         <ul>
-          <li><a href="#" onclick="spa.show('presentation')">Présentation</a></li>
-          <li><a href="#" onclick="spa.show('activites')">Activités</a></li>
-          <li><a href="#" onclick="spa.show('evenements')">Événements</a></li>
-          <li><a href="#" onclick="spa.show('laureats')">Lauréats</a></li>
+          <li><a data-target="presentation">Présentation</a></li>
+          <li><a data-target="activites">Activités</a></li>
+          <li><a data-target="evenements">Événements</a></li>
+          <li><a data-target="laureats">Lauréats</a></li>
         </ul>
       </div>
       <div class="footer-box">
         <h2>Nos Événements</h2>
         <hr>
         <ul>
-          <li><a href="#" onclick="spa.show('evenements')">Compagne de stages</a></li>
-          <li><a href="#" onclick="spa.show('evenements')">Remise des diplômes</a></li>
-          <li><a href="#" onclick="spa.show('evenements')">Company Program d'Injaz</a></li>
-          <li><a href="#" onclick="spa.show('evenements')">Journée entrepreneuriale</a></li>
+          <li><a data-target="evenements">Compagne de stages</a></li>
+          <li><a data-target="evenements">Remise des diplômes</a></li>
+          <li><a data-target="evenements">Company Program d'Injaz</a></li>
+          <li><a data-target="evenements">Journée entrepreneuriale</a></li>
         </ul>
 
       </div>
