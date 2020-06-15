@@ -29,6 +29,7 @@ NavbarComponent.prototype.createNavbarItems = function () {
       item.children !== null &&
       item.children.length > 0
     ) {
+      a.classList.add("has-children");
       delete a.dataset.target;
       let ul = create("ul");
       li.appendChild(ul);
@@ -41,20 +42,6 @@ NavbarComponent.prototype.createNavbarItems = function () {
         a.dataset.target = child.target;
         ul.appendChild(childLi);
       });
-      // <li>
-      //   <a id="formation-span">Formation</a>
-      //   <ul>
-      //     <li>
-      //       <a>Activités</a>
-      //     </li>
-      //     <li>
-      //       <a>Programme</a>
-      //     </li>
-      //     <li>
-      //       <span>Professeurs</span>
-      //     </li>
-      //   </ul>
-      // <li>
     }
   });
 };
@@ -80,19 +67,6 @@ NavbarComponent.prototype.createSearchZone = function () {
   button.appendChild(img);
   img.src = "icons/search_icon_white.png";
   img.alt = "search";
-  /*
-<li>
-  <div class="search">
-    <input type="text" class="searchTerm" placeholder="Rechercher..." onkeyup="search(this.value)">
-    <button type="submit" class="searchButton">
-      <img src="icons/search_icon_white.png" alt="search">
-    </button>
-
-  </div>
-  <div class="search-res" id="search-res">
-  </div>
-</li>
-*/
 };
 
 NavbarComponent.prototype.addHamburgerIconListener = function () {

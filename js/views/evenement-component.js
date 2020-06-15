@@ -84,6 +84,7 @@ const EvenementComponent = function (service) {
         this.showNextAndPrevious(e.photos.length, currentPhoto, previous, next);
       }
     };
+
     modal.onclick = (ef) => {
       if (!ef.target.classList.contains("evenement-modal")) return;
       modal.style.display = "none";
