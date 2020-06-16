@@ -7,13 +7,22 @@ const EvenementComponent = function (service) {
     this.wrapper.appendChild(eventDiv);
     eventDiv.classList.add("evenement");
 
-    let title = create("h2");
+    let divDate = create("div");
+    divDate.classList.add("div-date");
+
+    let spanDate = create("SPAN");
+    spanDate.classList.add("date");
+
+    let em = create("EM");
+    em.textContent = e.date.toReadeableString().slice(0, 2);
+    strArray = e.date.toReadeableString().split(" ");
+    spanDate.textContent = strArray[1];
+    spanDate.appendChild(em);
+    divDate.appendChild(spanDate);
+    eventDiv.appendChild(divDate);
+
     let body = create("div");
     body.classList.add("evenement-body");
-
-    title.classList.add("evenement-title");
-    title.textContent = e.nom;
-    eventDiv.appendChild(title);
     eventDiv.appendChild(body);
 
     let photoDiv = create("div");
@@ -102,6 +111,11 @@ const EvenementComponent = function (service) {
     let content = create("div");
     content.classList.add("evenement-content");
     body.appendChild(content);
+
+    let title = create("h2");
+    title.classList.add("evenement-title");
+    title.textContent = e.nom;
+    content.appendChild(title);
 
     let evenementCoordonnees = create("div");
     evenementCoordonnees.classList.add("evenement-coordonnees");
