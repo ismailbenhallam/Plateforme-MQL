@@ -40,6 +40,7 @@ NavbarComponent.prototype.createNavbarItems = function () {
         a.id = child.id;
         a.textContent = child.name;
         a.dataset.target = child.target;
+        a.dataset.parent = item.id;
         ul.appendChild(childLi);
       });
     }
@@ -79,7 +80,7 @@ NavbarComponent.prototype.addHamburgerIconListener = function () {
 
 NavbarComponent.prototype.addNavbarItemsListener = function () {
   window.addEventListener("load", function () {
-    const INDEX = "presentation";
+    const INDEX = "accueil";
     const LINKS_SUFFIX = "-link";
     let activePage = INDEX;
 
@@ -89,9 +90,12 @@ NavbarComponent.prototype.addNavbarItemsListener = function () {
       if (activePage == null) activePage = INDEX;
       $(INDEX).classList.remove("active");
       $(activePage).classList.add("active");
-      document
-        .getElementById(activePage + LINKS_SUFFIX)
-        .classList.add("active");
+      let activeLink = $(activePage + LINKS_SUFFIX);
+      activeLink.classList.add("active");
+
+      // if the menu has a parent menu
+      if (activeLink.dataset.parent)
+        $(activeLink.dataset.parent).classList.add("active");
     } catch (err) {
       activePage = INDEX;
     }
@@ -113,18 +117,26 @@ NavbarComponent.prototype.addNavbarItemsListener = function () {
         // Hide the previous page
         $(activePage).classList.remove("active");
 
-        document
-          .getElementById(activePage + LINKS_SUFFIX)
-          .classList.remove("active");
+        // TODO: Ismaïl
+        // if (activePage != INDEX)
+        let activeLink = $(activePage + LINKS_SUFFIX);
+        activeLink.classList.remove("active");
+
+        // if the menu has a parent menu
+        if (activeLink.dataset.parent)
+          $(activeLink.dataset.parent).classList.remove("active");
 
         // Display the new active page
         activePage = link.dataset.target;
         sessionStorage.activePage = activePage;
         link.classList.add("active");
         $(activePage).classList.add("active");
-        document
-          .getElementById(activePage + LINKS_SUFFIX)
-          .classList.add("active");
+        activeLink = $(activePage + LINKS_SUFFIX);
+        activeLink.classList.add("active");
+
+        // if the menu has a parent menu
+        if (activeLink.dataset.parent)
+          $(activeLink.dataset.parent).classList.add("active");
 
         // Close the navbar
         $("navbar").classList.remove("responsive");
