@@ -1,12 +1,43 @@
 const EvenementComponent = function (service) {
   const charLimit = 450;
+  const ALL = "all";
 
-  this.wrapper = $("evenements-wrapper");
+  let select = $("evenement-select-genre");
+  
+  let optionAll = create("option");
+  optionAll.selected = true;
+  optionAll.value = ALL;
+  optionAll.textContent = "Tout les évènements";
+  select.appendChild(optionAll);
+  
+  for (const event in service.eventTypes) {
+    let option = create("option");
+    option.value = event;
+    option.textContent = event;
+    select.appendChild(option);
+  }
+  
+  const wrapper = $("evenements-wrapper");
   for (const e of service.items) {
     let eventDiv = create("div");
-    this.wrapper.appendChild(eventDiv);
+    eventDiv.dataset.genre = e.genre;
+    wrapper.appendChild(eventDiv);
+    select.addEventListener("change", function () {
+      if (select.value == ALL) {
+        for (const eventDiv of wrapper.children) {
+          eventDiv.style.display = "block";
+        }
+       } else {
+        for (const eventDiv of wrapper.children) {
+          if (eventDiv.dataset.genre == select.value)
+          eventDiv.style.display = "block";
+          else eventDiv.style.display = "none";
+        }
+      }
+    });
     eventDiv.classList.add("evenement");
-
+    let divG = create("div");
+    divG.style.display = "flex";
     let divDate = create("div");
     divDate.classList.add("div-date");
 
@@ -19,11 +50,12 @@ const EvenementComponent = function (service) {
     spanDate.textContent = strArray[1];
     spanDate.appendChild(em);
     divDate.appendChild(spanDate);
-    eventDiv.appendChild(divDate);
+    divG.appendChild(divDate);
 
     let body = create("div");
     body.classList.add("evenement-body");
-    eventDiv.appendChild(body);
+    divG.appendChild(body);
+    eventDiv.appendChild(divG);
 
     let photoDiv = create("div");
     photoDiv.classList.add("evenement-photo");
@@ -194,7 +226,7 @@ EvenementComponent.prototype.showNextAndPrevious = function (
 };
 
 EvenementComponent.prototype.showEventDetails = function (event, eventDiv) {
-  this.wrapper.style.display = "none";
+  wrapper.style.display = "none";
   let eventDetails = $("evenement-details");
   eventDetails.style.display = "block";
   // TODO: Ismaïl
@@ -206,7 +238,7 @@ EvenementComponent.prototype.showEventDetails = function (event, eventDiv) {
 
   span.addEventListener("click", (e) => {
     eventDetails.style.display = "none";
-    this.wrapper.style.display = "flex";
+    wrapper.style.display = "flex";
     scrollTo(eventDiv);
     // event.scrollIntoView({ behavior: "auto", block: "start" });
   });

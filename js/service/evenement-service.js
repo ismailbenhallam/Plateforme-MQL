@@ -17,4 +17,10 @@ const EvenementService = function (evenementsArray) {
   this.items.sort((a, b) => {
     return b.date.getTime() - a.date.getTime();
   });
+
+  this.eventTypes = {};
+  this.items.forEach((e) => {
+    if (!this.eventTypes.hasOwnProperty(e.genre)) this.eventTypes[e.genre] = [];
+    this.eventTypes[e.genre].push(e);
+  });
 };
