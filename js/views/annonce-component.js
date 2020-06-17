@@ -60,4 +60,4 @@ const AnnonceComponent = function (service) {
   */
 };
 
-AnnonceComponent.prototype.ICON_NEXT = "../icons/next1.png";
+AnnonceComponent.prototype.ICON_NEXT = "icons/next1.png";
