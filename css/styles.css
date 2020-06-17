@@ -976,6 +976,13 @@ margin-top: 110px;
   .presentation {
     flex-flow: column-reverse;
   }
+  .about{
+    flex-direction: column-reverse;
+    padding: 0 50px !important;
+  }
+  .about-info{
+    padding: 0px !important;
+  }
 }
 
 /******** Evenements ********/
@@ -1048,9 +1055,7 @@ margin-top: 110px;
   .mql-info-container {
     flex-direction: column;
   }
-  .about {
-    flex-direction: column-reverse;
-  }
+
 }
 
 @media screen and (max-width: 550px) {
@@ -1942,14 +1947,14 @@ form {
 .about-container {
   padding: 72px 0 30px;
 }
-.about{
+.about {
   max-width: 1170px;
   margin: auto;
   display: flex;
-  align-items:center;
-  padding:0 15px
+  align-items: center;
+  padding: 0 15px;
 }
-.about-info{
+.about-info {
   flex: 1;
   padding: 0 6em 0 0;
 }
@@ -1965,14 +1970,14 @@ form {
   color: #09448a;
   font-size: 2em;
   padding-bottom: 10px;
-line-height:1.2em;
+  line-height: 1.2em;
 }
-.about-img{
-flex:1;
+.about-img {
+  flex: 1;
 }
-.about-img img{
-width:100%;
-height:100%;
+.about-img img {
+  width: 100%;
+  height: 100%;
 }
 .about-text button {
   width: 120px;
