@@ -13,20 +13,43 @@ const AnnonceComponent = function (service) {
     annoncesWrapper.appendChild(annonce);
     annonce.classList.add("annonce");
 
-    let annonceDetails = create("a");
-    annonce.appendChild(annonceDetails);
-    annonceDetails.classList.add("annonce-details");
-    annonceDetails.textContent = a.genre + " - " + a.nom;
-    if (a.link) {
-      annonceDetails.href = a.link;
-      annonceDetails.classList.add("has-link");
-    }
-
     let annonceDate = create("span");
     annonce.appendChild(annonceDate);
     annonceDate.classList.add("annonce-date");
     annonceDate.textContent = a.date.toReadeableString();
+
+    let annonceDetails = create("div");
+    annonce.appendChild(annonceDetails);
+    annonceDetails.classList.add("annonce-details");
+    let icon = create("img");
+    icon.src = this.ICON_NEXT;
+    annonceDetails.appendChild(icon);
+    let annonceDetailsLink = create("a");
+    annonceDetails.appendChild(annonceDetailsLink);
+    annonceDetailsLink.textContent = a.genre + " - " + a.nom;
+    if (a.link) {
+      annonceDetailsLink.href = a.link;
+      annonceDetailsLink.classList.add("has-link");
+    }
+
+    // last element
+    if (i != service.items.length - 1) {
+      let separator = create("div");
+      separator.className = "separator";
+      annonce.appendChild(separator);
+    }
   }
+
+  /*
+    <div class="annonce">
+        <span class="annonce-date">20 Octobre 2020</span>
+        <div class="annonce-details">
+            <img src="icons/next1.png" />
+            <a href="#">Inscription - Liste finale </a>
+        </div>
+    </div>
+    <div class="separator"></div>
+  */
 
   /*
   <div class="annonce">
@@ -36,3 +59,5 @@ const AnnonceComponent = function (service) {
   </div>
   */
 };
+
+AnnonceComponent.prototype.ICON_NEXT = "icons/next1.png";

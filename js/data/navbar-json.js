@@ -3,7 +3,7 @@
 // if "id" is not present it takes the value of "target" + "-link" suffix
 // The "children" preperty represent the sub-menus
 var navbarJSON = [
-  { target: "presentation", name: "Accueil" },
+  { target: "accueil" },
   {
     target: "masterMQL",
     name: "Master MQL",

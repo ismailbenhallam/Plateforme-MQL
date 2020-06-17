@@ -78,24 +78,18 @@ const LaureatComponent = function (service) {
     wrapper.appendChild(divPerson);
     divPerson.addEventListener("mouseover", (ids) => {
       ids = divPerson.id;
-      const bioImgChild = document
-        .getElementById(ids)
-        .getElementsByClassName("bio-img")[0].firstElementChild;
+      const bioImgChild = $(ids).getElementsByClassName("bio-img")[0]
+        .firstElementChild;
       bioImgChild.classList.add("img-fluid");
-      const social = document
-        .getElementById(ids)
-        .getElementsByClassName("social")[0];
+      const social = $(ids).getElementsByClassName("social")[0];
       social.classList.add("translate");
     });
     divPerson.addEventListener("mouseout", (ids) => {
       ids = divPerson.id;
-      const bioImgChild = document
-        .getElementById(ids)
-        .getElementsByClassName("bio-img")[0].firstElementChild;
+      const bioImgChild = $(ids).getElementsByClassName("bio-img")[0]
+        .firstElementChild;
       bioImgChild.classList.remove("img-fluid");
-      const social = document
-        .getElementById(ids)
-        .getElementsByClassName("social")[0];
+      const social = $(ids).getElementsByClassName("social")[0];
       social.classList.remove("translate");
     });
   });

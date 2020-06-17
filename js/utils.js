@@ -18,7 +18,7 @@ Date.prototype.toReadeableString = function () {
       month = "Avril";
       break;
     case 4:
-      month = "Maï";
+      month = "Mai";
       break;
     case 5:
       month = "Juin";

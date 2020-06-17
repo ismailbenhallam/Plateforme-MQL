@@ -5,8 +5,7 @@ const annoncesJSON = [
     date: "2020-08-15",
     // date_debut: "2020-08-15",
     // date_fin: "2020-09-20",
-    description:
-      "Ouverture d'inscription wll3ibat, lmhm matktbouch Lorem wkda.",
+    // description: "Ouverture d'inscription MQL 2020/2021",
     link: "https://www.google.com",
   },
   {
