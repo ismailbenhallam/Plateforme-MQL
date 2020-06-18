@@ -1,37 +1,61 @@
 const EvenementComponent = function (service) {
   const charLimit = 450;
-  const ALL = "all";
+  const ALL = "all";  
+  let applyButton = $("apply");
+  let groupeCheckbox = $("group-checkbox");
 
-  let select = $("evenement-select-genre");
-  
-  let optionAll = create("option");
-  optionAll.selected = true;
-  optionAll.value = ALL;
-  optionAll.textContent = "Tout les évènements";
-  select.appendChild(optionAll);
-  
+  let labelAll = create("LABEL");
+  let inputAll = create("INPUT");
+  inputAll.setAttribute("type", "checkbox");
+  inputAll.checked = true;
+  inputAll.value = ALL;
+  let spanAll = create("SPAN");
+  spanAll.textContent = "Tout les évènements";
+  labelAll.appendChild(inputAll);
+  labelAll.appendChild(spanAll);
+  groupeCheckbox.appendChild(labelAll);
+
   for (const event in service.eventTypes) {
-    let option = create("option");
-    option.value = event;
-    option.textContent = event;
-    select.appendChild(option);
-  }
-  
+      let label = create("LABEL");
+      let input = create("INPUT");
+      input.setAttribute("type", "checkbox");
+      input.value = event;
+      let span = create("SPAN");
+      span.textContent = event;
+      label.appendChild(input);
+      label.appendChild(span);
+      groupeCheckbox.appendChild(label);
+    }
+
+  let filterButton = $("filter");
+  let divExpand = $("expand");
+  filterButton.addEventListener("click", function() {
+    if (divExpand.style.display === "none") {
+      divExpand.style.display = "block";
+    } else {
+      divExpand.style.display = "none";
+    }
+  });
+
+
   const wrapper = $("evenements-wrapper");
   for (const e of service.items) {
     let eventDiv = create("div");
     eventDiv.dataset.genre = e.genre;
     wrapper.appendChild(eventDiv);
-    select.addEventListener("change", function () {
-      if (select.value == ALL) {
-        for (const eventDiv of wrapper.children) {
-          eventDiv.style.display = "block";
+    applyButton.addEventListener("click", function() {
+      const valuesChecked = [];
+      for (let i=0; i < groupeCheckbox.children.length; i++) {
+        if(groupeCheckbox.children[i].children[0].checked){
+          valuesChecked.push(groupeCheckbox.children[i].children[0].value);
         }
-       } else {
         for (const eventDiv of wrapper.children) {
-          if (eventDiv.dataset.genre == select.value)
-          eventDiv.style.display = "block";
-          else eventDiv.style.display = "none";
+          if(valuesChecked.includes(ALL)){
+            eventDiv.style.display = "block";
+          } 
+          else if (valuesChecked.includes(eventDiv.dataset.genre)){
+            eventDiv.style.display = "block";
+          } else eventDiv.style.display = "none";
         }
       }
     });
