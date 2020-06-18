@@ -21,3 +21,6 @@ new EvenementComponent(evenementService);
 new ActualiteComponent(actualiteService);
 new StageComponent(stageService, partenaireService);
 new LaureatComponent(laureatService);
+
+// To change the default style for all 'Select' elements with '.custom-select' class
+new SelectComponent();

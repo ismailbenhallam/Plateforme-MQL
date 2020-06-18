@@ -1,16 +1,17 @@
 const LaureatComponent = function (service) {
   const ALL = "all";
-
   let select = $("laureats-select-promo");
 
   let optionAll = create("option");
+  optionAll.classList.add("option");
   optionAll.selected = true;
   optionAll.value = ALL;
   optionAll.textContent = "Toutes les promotions";
   select.appendChild(optionAll);
 
-  for (const promo in service.promos) {
+  for (const promo of service.promoYears) {
     let option = create("option");
+    option.classList.add("option");
     option.value = promo;
     option.textContent = promo;
     select.appendChild(option);
@@ -116,4 +117,9 @@ const LaureatComponent = function (service) {
       }
     }
   });
+
+  // Hide all 'Lauréats' by default
+  // for (const divPerson of wrapper.children) {
+  //   divPerson.style.display = "none";
+  // }
 };

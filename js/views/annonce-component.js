@@ -32,32 +32,13 @@ const AnnonceComponent = function (service) {
       annonceDetailsLink.classList.add("has-link");
     }
 
-    // last element
+    // Add a separator after every element except the last one
     if (i != service.items.length - 1) {
       let separator = create("div");
       separator.className = "separator";
       annonce.appendChild(separator);
     }
   }
-
-  /*
-    <div class="annonce">
-        <span class="annonce-date">20 Octobre 2020</span>
-        <div class="annonce-details">
-            <img src="icons/next1.png" />
-            <a href="#">Inscription - Liste finale </a>
-        </div>
-    </div>
-    <div class="separator"></div>
-  */
-
-  /*
-  <div class="annonce">
-    <span class="annonce-details">
-      Inscription - Ouverture d'inscription MQL 2020/2021</span>
-    <span class="annonce-date">2020 Aout 15</span>
-  </div>
-  */
 };
 
 AnnonceComponent.prototype.ICON_NEXT = "icons/next1.png";

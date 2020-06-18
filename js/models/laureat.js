@@ -11,7 +11,8 @@ const Laureat = function (
   photo
 ) {
   this.linkedin = linkedin;
-  this.nom = nom;
+  nom = nom.split(" ");
+  this.nom = nom[0].toUpperCase() + " " + nom[1].capitalize();
   this.promotion = promotion;
   this.posteOccupe = posteOccupe;
   this.lieu = lieu;

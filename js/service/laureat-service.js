@@ -1,5 +1,8 @@
 const LaureatService = function (laureatsArray) {
   this.items = [];
+  this.promos = {};
+  this.promoYears = [];
+
   laureatsArray.forEach((l) => {
     this.items.push(
       new Laureat(
@@ -16,18 +19,21 @@ const LaureatService = function (laureatsArray) {
       )
     );
   });
-
   this.items.sort((a, b) => this.sortByName(a, b));
 
-  this.promos = {};
   this.items.forEach((l) => {
-    if (!this.promos.hasOwnProperty(l.promotion)) this.promos[l.promotion] = [];
+    if (!this.promos.hasOwnProperty(l.promotion)) {
+      this.promos[l.promotion] = [];
+      this.promoYears.push(l.promotion);
+    }
     this.promos[l.promotion].push(l);
   });
 
   for (const promo in this.promos) {
     this.promos[promo].sort((a, b) => this.sortByPromoThenByName(a, b));
   }
+
+  this.promoYears.sort((a, b) => b.localeCompare(a));
 };
 
 LaureatService.prototype.sortByPromoThenByName = (a, b) => {
