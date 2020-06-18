@@ -1040,6 +1040,48 @@ body {
   }
 }
 
+/* filtre */
+
+.form {
+  margin: 40px;
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: column;
+}
+
+.group-checkbox {
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+}
+
+.btn-filter {
+    outline: none;
+    font: inherit;
+    cursor: pointer;
+    font-size: .75rem;
+    text-transform: uppercase;
+    letter-spacing: .1em;
+    padding: .6rem 1.5rem;
+    background-color:#4285f4;
+    border: 1px solid #4285f4;
+    color: #fff;
+    border-radius: 1000px;
+}
+
+.btn-apply {
+  outline: none;
+  font: inherit;
+  cursor: pointer;
+  font-size: .75rem;
+  text-transform: uppercase;
+  letter-spacing: .1em;
+  padding: .6rem 1.5rem;
+  background-color: #4285f4;
+  border: 1px solid #4285f4;
+  color: #fff;
+}
+
 /******** Evenements ********/
 
 .evenements-wrapper {
