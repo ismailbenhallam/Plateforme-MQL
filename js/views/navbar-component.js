@@ -140,6 +140,10 @@ NavbarComponent.prototype.addNavbarItemsListener = function () {
 
         // Close the navbar
         $("navbar").classList.remove("responsive");
+
+        let hamburger = document.querySelector("#navbar ul");
+        hamburger.classList.remove("active");
+
       });
     }
   });

@@ -1031,6 +1031,13 @@ body {
   .presentation {
     flex-flow: column-reverse;
   }
+  .about {
+    flex-direction: column-reverse;
+    padding: 0 50px !important;
+  }
+  .about-info {
+    padding: 0px !important;
+  }
 }
 
 /******** Evenements ********/
@@ -1103,9 +1110,6 @@ body {
   .mql-info-container {
     flex-direction: column;
   }
-  .about {
-    flex-direction: column-reverse;
-  }
 }
 
 @media screen and (max-width: 550px) {
@@ -1116,10 +1120,6 @@ body {
 
 .evenement.active .evenement-body {
   display: block;
-}
-
-.evenement:nth-child(1) {
-  border: none;
 }
 
 .evenement-title {
@@ -1411,8 +1411,7 @@ table {
   padding-top: 40px;
 }
 
-#activites header hr,
-.partenaires hr {
+hr {
   width: 50px;
   border: none;
   height: 3px;
@@ -2604,7 +2603,7 @@ ul.event-wrapper {
 }
 
 .section-title-act {
-  font-size: 4rem;
+  font-size: 60px;
   font-weight: 300;
   color: black;
   margin-bottom: 10px;
@@ -2620,6 +2619,10 @@ ul.event-wrapper {
 
 @media only screen and (max-width: 768px) {
   /* For mobile phones: */
+  .section-title-act {
+    font-size: 50px;
+  }
+
   .activity-item {
     margin: 0;
     width: 100%;
