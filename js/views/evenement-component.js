@@ -31,8 +31,10 @@ const EvenementComponent = function (service) {
   let divExpand = $("expand");
   filterButton.addEventListener("click", function() {
     if (divExpand.style.display === "none") {
+      filterButton.children[1].setAttribute("src", "icons/collapse-arrow.png");
       divExpand.style.display = "block";
     } else {
+      filterButton.children[1].setAttribute("src", "icons/expand-arrow.png");
       divExpand.style.display = "none";
     }
   });
@@ -41,7 +43,10 @@ const EvenementComponent = function (service) {
   const wrapper = $("evenements-wrapper");
   for (const e of service.items) {
     let eventDiv = create("div");
+    let separator = create("div");
+    separator.className = "separator";
     eventDiv.dataset.genre = e.genre;
+    wrapper.appendChild(separator);
     wrapper.appendChild(eventDiv);
     applyButton.addEventListener("click", function() {
       const valuesChecked = [];
@@ -168,8 +173,9 @@ const EvenementComponent = function (service) {
     content.classList.add("evenement-content");
     body.appendChild(content);
 
-    let title = create("h2");
-    title.classList.add("evenement-title");
+    let title = create("h3");
+    title.classList.add("title-default-left");
+    title.style.margin = 0;
     title.textContent = e.nom;
     content.appendChild(title);
 

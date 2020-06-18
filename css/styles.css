@@ -719,7 +719,7 @@ body {
   text-decoration: underline;
   padding-left: 10px;
 }
-.annonces-content .separator {
+.annonces-content .separator, .separator {
   background-image: -webkit-linear-gradient(
     left,
     transparent,
@@ -1043,9 +1043,8 @@ body {
 /* filtre */
 
 .form {
-  margin: 40px;
+  margin: 40px 0 0 40px;
   display: flex;
-  justify-content: flex-start;
   flex-direction: column;
 }
 
@@ -1063,10 +1062,15 @@ body {
     text-transform: uppercase;
     letter-spacing: .1em;
     padding: .6rem 1.5rem;
-    background-color:#4285f4;
-    border: 1px solid #4285f4;
+    background-color:#09448a;
+    border: 1px solid #09448a;
     color: #fff;
-    border-radius: 1000px;
+    border-radius: 18px;
+}
+
+.icon-10 {
+  width: 10px;
+  height: 10px;
 }
 
 .btn-apply {
@@ -1076,9 +1080,9 @@ body {
   font-size: .75rem;
   text-transform: uppercase;
   letter-spacing: .1em;
-  padding: .6rem 1.5rem;
-  background-color: #4285f4;
-  border: 1px solid #4285f4;
+  padding: .5rem 1rem;
+  background-color: #09448a;
+  border: 1px solid #09448a;
   color: #fff;
 }
 
@@ -1097,8 +1101,8 @@ body {
   padding: 5px;
   padding: 40px 0 40px 0;
   max-height: auto;
+  color: #000;
   background-color: white;
-  border-top: 2px solid #4285f4;
   transition: all 0.2s;
 }
 
@@ -1164,17 +1168,17 @@ body {
   display: block;
 }
 
-.evenement-title {
+/* .evenement-title {
   font-weight: 500;
   font-size: 18px;
   color: #000;
-}
+} */
 
 .evenement-content {
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
-  align-items: center;
+  /* align-items: center; */
   margin: 0 20px 20px 20px;
 }
 
@@ -1183,8 +1187,7 @@ body {
 }
 
 .evenement-content .evenement-coordonnees {
-  color: #4285f4;
-  /* margin: 20px auto; */
+  font-weight: 500;
 }
 
 .evenement-photo {

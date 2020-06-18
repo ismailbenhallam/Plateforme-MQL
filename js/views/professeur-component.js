@@ -9,7 +9,7 @@ const ProfesseurComponent = function (service) {
     let divBioImg = create("div");
     divBioImg.className = "bio-img";
     let imgPerson = create("img");
-    imgPerson.setAttribute("src", "../images/professeurs/" + p.photo);
+    imgPerson.setAttribute("src", "images/professeurs/" + p.photo);
     imgPerson.setAttribute("alt", p.nom);
     let divSocial = create("div");
     divSocial.setAttribute("id", "social");
