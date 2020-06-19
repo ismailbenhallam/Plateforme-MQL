@@ -209,8 +209,8 @@ body {
 #header .header {
   min-height: 8vh;
   background-color: white;
-  border-bottom: solid 1px rgba(216, 220, 231, 0.91);
   transition: 0.3s ease background-color;
+  box-shadow: 0 8px 6px -6px ;
 }
 
 #header .nav-bar {
@@ -761,7 +761,6 @@ body {
 }
 
 .main header div {
-  padding-left: 25px;
   display: flex;
 }
 
@@ -1155,6 +1154,12 @@ body {
   }
   .mql-info-container {
     flex-direction: column;
+  }
+  .about-img{
+    display: none;
+  }
+  .banner-container{
+    width: 100% !important;
   }
 }
 
@@ -2094,15 +2099,15 @@ button a {
   line-height: 3.4vw;
   text-align: center;
   color: #fff;
-  width: 49%;
+  width: 693px;
   margin: auto;
   position: relative;
-  top: 20%;
+  top: 28%;
 }
 
 .banner-container h3 {
   color: #f9f9f9;
-  font-size: 1.8vw;
+  font-size: 1vw;
   line-height: inherit;
   letter-spacing: 2px;
   text-transform: uppercase;
@@ -2112,7 +2117,7 @@ button a {
 .banner-container h1 {
   margin-top: 0;
   font-family: "Raleway", sans-serif;
-  font-size: 2.9vw;
+  font-size: 2.4vw;
   color: #fff;
   text-transform: uppercase;
   letter-spacing: 2px;
@@ -2700,4 +2705,37 @@ ul.event-wrapper {
 
 #activities .all-activities .activity-img {
   height: 100%;
+}
+
+/**** header title****/
+header .events-header{
+  margin: 60px 0 25px 0;
+}
+.events-header h1 {
+  text-shadow: 0 1px 0 rgba(255, 255, 255, .7), 0px 2px 0 rgba(0, 0, 0, .5);
+    text-transform: uppercase;
+    text-align: center;
+    color: #35456c;;
+    letter-spacing: 4px;
+    font: normal 35px/1 Verdana, Helvetica;
+    position: relative;
+    width: 500px;
+    margin: auto;
+}
+.events-header h1:before,h1:after {
+  position:absolute;
+  content:"";
+  width:80px;
+  bottom:17px;
+  height: 1px;
+}
+.events-header h1:before {
+    left: 0;
+    top: 18px;
+    background-image: linear-gradient(to left, #d9323a , #fff);
+}
+.events-header h1:after {
+  right: 0;
+  top: 18px;
+  background-image: linear-gradient(to right, #d9323a , #fff);
 }
