@@ -73,7 +73,7 @@
     <script src="js/main.js" defer="defer"></script>
 </head>
 
-<body>
+<body onscroll="progressBar()">
     <script src="js/views/loading-component.js"></script>
 
     <!-- Header -->
@@ -81,6 +81,9 @@
         <!-- Scroll To Top Button -->
         <img id="toTop" title="Go to top" src="icons/arrow-top.png" />
         <div class="header container sticky">
+            <div class="progress-container">
+                <div class="progress-bar" id="myBar"></div>
+            </div>
             <div class="nav-bar">
 
                 <!-- Logo -->
