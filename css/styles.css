@@ -719,7 +719,8 @@ body {
   text-decoration: underline;
   padding-left: 10px;
 }
-.annonces-content .separator, .separator {
+.annonces-content .separator,
+.separator {
   background-image: -webkit-linear-gradient(
     left,
     transparent,
@@ -1055,17 +1056,17 @@ body {
 }
 
 .btn-filter {
-    outline: none;
-    font: inherit;
-    cursor: pointer;
-    font-size: .75rem;
-    text-transform: uppercase;
-    letter-spacing: .1em;
-    padding: .6rem 1.5rem;
-    background-color:#09448a;
-    border: 1px solid #09448a;
-    color: #fff;
-    border-radius: 18px;
+  outline: none;
+  font: inherit;
+  cursor: pointer;
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  padding: 0.6rem 1.5rem;
+  background-color: #09448a;
+  border: 1px solid #09448a;
+  color: #fff;
+  border-radius: 18px;
 }
 
 .icon-10 {
@@ -1077,10 +1078,10 @@ body {
   outline: none;
   font: inherit;
   cursor: pointer;
-  font-size: .75rem;
+  font-size: 0.75rem;
   text-transform: uppercase;
-  letter-spacing: .1em;
-  padding: .5rem 1rem;
+  letter-spacing: 0.1em;
+  padding: 0.5rem 1rem;
   background-color: #09448a;
   border: 1px solid #09448a;
   color: #fff;
@@ -1945,9 +1946,15 @@ form {
     cursor: pointer;
     /*border-bottom: 2px solid #D9323A;*/
   }
-  #header .nav-list ul li a.has-children {
+
+  #header .nav-list ul li a.shouldnt-be-active {
     cursor: default;
   }
+  #header .nav-list ul li a.shouldnt-be-active:hover {
+    color: #d9323a;
+    background-color: white;
+  }
+
   #header .nav-list ul a:after {
     display: none;
   }
