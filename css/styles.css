@@ -2563,7 +2563,7 @@ ul.event-wrapper {
 
 /* Begin activities section */
 
-#activities > * {
+#activities>* {
   font-family: "Montserrat", sans-serif;
 }
 
@@ -2577,12 +2577,13 @@ ul.event-wrapper {
 
 #activities .activities-header {
   text-align: center;
-  max-width: 800px;
   margin: 0 auto 30px;
+  width: 100%;
 }
 
 #activities .activities-header p {
-  text-align: left;
+  color: black;
+  text-align: justify;
 }
 
 #activities .all-activities {
@@ -2590,60 +2591,6 @@ ul.event-wrapper {
   align-items: center;
   justify-content: center;
   flex-direction: column;
-}
-
-#activities .activity-item {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-  margin: 20px auto;
-  overflow: hidden;
-  border-radius: 10px;
-  flex-direction: row;
-  height: 500px;
-  width: 100%;
-  margin: 0;
-  width: 100%;
-  border-radius: 0;
-}
-
-#activities .activity-info {
-  padding: 30px;
-  flex-basis: 50%;
-  height: 100%;
-  margin: auto;
-  display: flex;
-  align-items: flex-start;
-  flex-direction: column;
-  /*background-image: linear-gradient(60deg, #29323c 0%, #485563 100%);*/
-  /*background-image: linear-gradient(60deg, #35456c 0%, #768abc 100%);*/
-  background-image: linear-gradient(60deg, #547ee6 0%, #272626 100%);
-  color: white;
-}
-
-#activities .activity-info h2 {
-  font-weight: 500;
-  margin-bottom: -10px;
-}
-
-#activities .activity-info p {
-  color: white;
-  font-size: 14px;
-}
-
-#activities .activity-img {
-  flex-basis: 50%;
-  height: 300px;
-  overflow: hidden;
-}
-
-#activities .activity-img img {
-  transition: 0.3s ease transform;
-}
-
-#activities .activity-item:hover .activity-img img {
-  transform: scale(1.1);
 }
 
 .container-act {
@@ -2655,50 +2602,8 @@ ul.event-wrapper {
   /*background-color: white;*/
 }
 
-.myImg {
-  height: 100%;
-  width: 100%;
-  object-fit: cover;
-}
-
-.hidden {
-  display: none;
-}
-
-.section-title-act {
-  font-size: 60px;
-  font-weight: 300;
-  color: black;
-  margin-bottom: 10px;
-  text-transform: uppercase;
-  letter-spacing: 0.2rem;
-  text-align: center;
-}
-
-.section-title-act span {
-  /*color: #D9323A;*/
-  color: #35456c;
-}
-
 @media only screen and (max-width: 768px) {
   /* For mobile phones: */
-  .section-title-act {
-    font-size: 50px;
-  }
-
-  .activity-item {
-    margin: 0;
-    width: 100%;
-    border-radius: 0;
-    height: 100%;
-  }
-  .activity-info {
-    width: 55rem;
-    overflow: scroll;
-  }
-  .activity-img {
-    display: none;
-  }
   .activities-header p,
   .activity-info p {
     font-size: 0.9rem;
@@ -2708,17 +2613,165 @@ ul.event-wrapper {
   }
 }
 
-#activities .activity-item:nth-child(even) {
-  flex-direction: row-reverse;
+
+.blog-post {
+  width: 100%;
+  max-width: 70rem;
+  height: 95%;
+  padding-left: 1cm;
+  padding-right: 1cm;
+  margin-left: 3cm;
+  background: center;
+  box-shadow: 0 1.4rem 5rem rgba(0, 0, 0, .1);
+  display: flex;
+  align-items: center;
+  border-radius: .8rem;
 }
 
-#activities .all-activities .activity-info {
-  height: 100%;
+.blog-post__img {
+  min-width: 15rem;
+  max-width: 15rem;
+  height: 17rem;
+  transform: translateX(-8rem);
+  position: relative;
 }
 
-#activities .all-activities .activity-img {
+.blog-post__img img {
+  width: 100%;
   height: 100%;
+  object-fit: cover;
+  display: block;
+  border-radius: .8rem;
 }
+
+.blog-post__date span {
+  display: block;
+  color: rgba(0, 0, 0, .5);
+  font-size: 1.6rem;
+  font-weight: 600;
+  margin: .5rem 0;
+}
+
+.blog-post__title {
+  font-size: 1.8rem;
+  font-weight: 300;
+  color: #d9323a;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+  letter-spacing: 0.2rem;
+  text-align: center;
+}
+
+.blog-post__title span {
+  color: #35456c;
+}
+
+.blog-post__text {
+  margin-bottom: 3rem;
+  font-size: .4cm;
+  color: black;
+}
+
+.blog-post__info {
+  margin-left: -1.3cm;
+}
+
+@media screen and (max-width:1068px) {
+  .blog-post {
+    max-width: 50rem;
+  }
+  .blog-post__img {
+    min-width: 20rem;
+    max-width: 30rem;
+    object-fit: cover;
+  }
+  .activities-header p {
+    margin: 2rem;
+  }
+}
+
+@media screen and (max-width:900px) {
+  .blog-post {
+    padding: 2.5rem;
+    padding-top: 4cm;
+    flex-direction: column;
+    max-width: 40rem;
+    min-width: 10rem;
+    margin-right: 5rem;
+  }
+  .activities-header p {
+    margin: 2rem;
+  }
+  .blog-post__img {
+    min-width: 10rem;
+    max-width: 40rem;
+    transform: translate(0, -8rem);
+  }
+  .blog-post__info {
+    margin-top: -160px;
+    margin-left: 1.3cm;
+  }
+}
+
+@media screen and (max-width:768px) {
+  .blog-post {
+    padding: 2.5rem;
+    padding-top: 4cm;
+    flex-direction: column;
+    max-width: 40rem;
+    min-width: 10rem;
+    margin-right: 5rem;
+  }
+  .blog-post__img {
+    min-width: 10rem;
+    max-width: 40rem;
+    transform: translate(0, -8rem);
+  }
+  .blog-post__info {
+    margin-top: -160px;
+    margin-left: 1.3cm;
+  }
+  .blog-post__info .blog-post__title {
+    text-align: center;
+  }
+  .section-title-act {
+    font-size: 30px;
+  }
+}
+
+@media screen and (max-width:600px) {
+  .blog-post {
+    padding: 2.5rem;
+    padding-top: 4cm;
+    flex-direction: column;
+    max-width: 40rem;
+    min-width: 15rem;
+    margin-right: 5rem;
+  }
+  .blog-post__img {
+    min-width: 20rem;
+    max-width: 20rem;
+    transform: translate(0, -8rem);
+  }
+  .blog-post__info {
+    margin-top: -160px;
+    margin-left: 1.3cm;
+    margin-right: 1.3cm;
+  }
+  .blog-post__info .blog-post__title {
+    text-align: center;
+  }
+  .section-title-act {
+    margin-top: 40px;
+    font-size: 16px;
+  }
+}
+
+
+
+
+/**** end activities section ****/
+
 
 /**** header title****/
 header .events-header{
@@ -2751,4 +2804,18 @@ header .events-header{
   right: 0;
   top: 18px;
   background-image: linear-gradient(to right, #d9323a , #fff);
+}
+
+.section-subtitle-act {
+  font-size: 30px;
+  font-weight: 300;
+  color: #d9323a;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+  letter-spacing: 0.2rem;
+  text-align: center;
+}
+
+.section-subtitle-act span {
+  color: #35456c;
 }
