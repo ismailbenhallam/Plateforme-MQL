@@ -13,7 +13,6 @@ var navbarJSON = [
     ],
   },
   {
-    target: null,
     name: "Nous rejoindre",
     children: [{ target: "selection" }, { target: "admission" }],
   },

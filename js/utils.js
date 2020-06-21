@@ -58,6 +58,17 @@ const create = (tag) => document.createElement(tag);
 
 const scrollTo = (element) => {
   element.scrollIntoView({ behavior: "auto", block: "start" });
+  // document.body.scrollTop -= 65; // For Safari
+  // document.documentElement.scrollTop -= 65; // For Chrome, Firefox, IE and Opera
+};
+
+Node.prototype.cloneNodeWithEvents = function () {
+  let clone = this.cloneNode(true);
+  // this.eventListenerList.forEach((listener) => {
+  // console.log(listener);
+  // clone.addEventListener()
+  // });
+  return clone;
 };
 
 // revereseColorAndBackgroundColor = function (element) {

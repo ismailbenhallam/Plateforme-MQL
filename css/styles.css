@@ -3,6 +3,13 @@
 @import "https://fonts.googleapis.com/css?family=Montserrat:300, 400, 700&display=swap";
 
 /***** General *****/
+.first-letter {
+  float: left;
+  width: 0.7em;
+  font-size: 400%;
+  font-family: algerian, courier;
+  line-height: 80;
+}
 a:hover {
   cursor: pointer;
 }
@@ -733,7 +740,7 @@ body {
     rgba(0, 0, 0, 0.2),
     transparent
   );
-  border: 0;
+  /* border: 0; */
   height: 1px;
   width: 100%;
   margin: 15px 0;
@@ -1212,12 +1219,129 @@ body {
   opacity: 0.7;
 }
 
+.evenement .read-more {
+  cursor: pointer;
+  color: black;
+  text-decoration: underline;
+}
+
+/** Evenement Details **/
+.evenement-details {
+  margin: 50px;
+  color: #000;
+  transition: all 0.3s;
+}
+
+.evenement-details .btn-back {
+  display: block;
+  outline: none;
+  font: inherit;
+  cursor: pointer;
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  padding: 0.6rem 1.5rem;
+  background-color: transparent;
+  border: 1px solid #09448a;
+  color: #09448a;
+
+  border-radius: 2px;
+  margin: 20px 0;
+
+  transition: all 0.2s;
+}
+
+.evenement-details .btn-back:hover {
+  font-size: 0.85rem;
+  letter-spacing: 0.2em;
+  transform: scale(1.06);
+  transition: all 0.2s;
+}
+
+.evenement-details .evenement-title {
+  /* margin-left: 50px; */
+  width: 100%;
+  /* text-align: center; */
+}
+
+.evenement-details .evenement-coordonnees {
+  margin-bottom: 15px;
+}
+
+.evenement-details > .evenement-content {
+  display: block;
+  margin-top: 10px;
+}
+
+.evenement-details > .evenement-content > img {
+  float: left;
+  margin-right: 10px;
+  margin-bottom: 5px;
+  border: 1px solid black;
+  padding: 2px;
+  max-width: 40%;
+  transition: opacity 0.2s;
+}
+
+.evenement-details img:hover {
+  cursor: pointer;
+  opacity: 0.7;
+  transition: opacity 0.2s;
+}
+
+.evenement-details > .gallery {
+  margin: auto;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-items: flex-start;
+  /* width: 100%; */
+}
+
+.evenement-details > .gallery img {
+  /* flex: 1 1 20%; */
+  /* max-width: 200px; */
+  /* margin-right: 10px; */
+  min-width: 250px;
+  max-width: 24%;
+  margin: 2px;
+  transition: visibility 2s;
+}
+.evenement-details > .gallery img:nth-child(odd) {
+  /* max-width: 200px; */
+}
+.evenement-details > .gallery img:nth-child(even) {
+  /* max-width: 190px; */
+}
+
+@media screen and (max-width: 768px) {
+  .evenement-details {
+    margin: 10px;
+  }
+
+  .evenement-details > .evenement-content {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .evenement-details > .evenement-content > img {
+    float: unset;
+    align-self: center;
+    margin-right: 10px;
+    margin-bottom: 5px;
+    border: 1px solid black;
+    padding: 2px;
+    max-width: 100%;
+  }
+}
+
+/* Evenement Details */
 .evenement-modal {
-  display: none;
+  display: flex;
   justify-content: space-around;
   align-items: center;
   position: fixed;
-  z-index: 100;
+  z-index: 1000;
   left: 0;
   top: 0;
   width: 100%;
@@ -1228,8 +1352,8 @@ body {
 
 .evenement-modal-content {
   display: block;
-  max-width: 100%;
-  max-height: 100%;
+  max-width: 88%;
+  max-height: 98%;
   animation-name: zoom;
   animation-duration: 1s;
 }
@@ -1238,7 +1362,7 @@ body {
 
 @media only screen and (max-width: 700px) {
   .modal-content {
-    width: 100%;
+    /* width: 100%; */
   }
   .contact,
   .liens {
@@ -1258,24 +1382,34 @@ body {
 }
 
 .evenement-close:hover,
+.evenement-close:focus {
+  color: #bbb;
+}
+
+.evenement-close:hover,
 .evenement-close:focus,
 .evenement-previous:hover,
 .evenement-previous:focus,
 .evenement-next:hover,
 .evenement-next:focus {
-  color: #bbb;
   cursor: pointer;
+  /* background-color: #09448a; */
+  /* clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%); */
 }
 
 .evenement-previous {
   transform: rotate(180deg);
-  width: 60px;
-  height: 60px;
 }
 
-.evenement-next {
-  width: 60px;
-  height: 60px;
+.evenement-next,
+.evenement-previous {
+  /* width: 7vw;
+  height: 7vh; */
+  /* width: 65px;
+  height: 65px; */
+  width: 7%;
+  height: 10%;
+  /* background-color: #524e4e; */
 }
 
 /***** Stages *****/
@@ -1951,8 +2085,10 @@ form {
     cursor: default;
   }
   #header .nav-list ul li a.shouldnt-be-active:hover {
+    /* TODO: NAVBAR */
     color: #d9323a;
     background-color: white;
+    border: 1px solid #d9323a;
   }
 
   #header .nav-list ul a:after {
@@ -2191,7 +2327,7 @@ button a {
   list-style: none;
 }
 
-h3.title-default-left:before {
+h3.title-default-left::before {
   content: "";
   height: 3px;
   width: 51px;
