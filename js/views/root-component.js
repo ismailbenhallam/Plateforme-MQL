@@ -1,5 +1,15 @@
 /********** Listener for displaying the Top Button **********/
 const HEADER_HEIGHT = 225;
+
+const progressBar = function () {
+  let winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+  let height =
+    document.documentElement.scrollHeight -
+    document.documentElement.clientHeight;
+  let scrolled = (winScroll / height) * 100;
+  $("myBar").style.width = scrolled + "%";
+};
+
 window.addEventListener("scroll", function () {
   const toTopBtn = $("toTop");
   if (
@@ -10,6 +20,8 @@ window.addEventListener("scroll", function () {
   } else {
     toTopBtn.style.display = "none";
   }
+
+  progressBar();
 });
 
 /********** Scroll To Top Button **********/

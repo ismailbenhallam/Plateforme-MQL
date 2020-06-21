@@ -186,7 +186,7 @@ EvenementComponent.prototype.showEventDetails = function (event, eventDiv) {
   let eventDetails = create("div");
   eventsDiv.appendChild(eventDetails);
   eventDetails.style.display = "block";
-  eventDetails.classList.add("evenement-details");
+  eventDetails.classList.add("evenement-details", "top-content");
 
   // Back button
   let backBtn = create("button");
