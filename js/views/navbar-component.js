@@ -29,8 +29,6 @@ NavbarComponent.prototype.createNavbarItems = function () {
       item.children !== null &&
       item.children.length > 0
     ) {
-      a.classList.add("has-children");
-      delete a.dataset.target;
       let ul = create("ul");
       li.appendChild(ul);
       item.children.forEach((child) => {
@@ -43,6 +41,10 @@ NavbarComponent.prototype.createNavbarItems = function () {
         a.dataset.parent = item.id;
         ul.appendChild(childLi);
       });
+    }
+    if (!item.target) {
+      a.classList.add("shouldnt-be-active");
+      delete a.dataset.target;
     }
   });
 };
@@ -118,9 +120,10 @@ NavbarComponent.prototype.addNavbarItemsListener = function () {
         $(activePage).classList.remove("active");
 
         // TODO: Ismaïl
-        // if (activePage != INDEX)
         let activeLink = $(activePage + LINKS_SUFFIX);
+        // if (activePage != INDEX) {
         activeLink.classList.remove("active");
+        // }
 
         // if the menu has a parent menu
         if (activeLink.dataset.parent)
@@ -143,7 +146,6 @@ NavbarComponent.prototype.addNavbarItemsListener = function () {
 
         let hamburger = document.querySelector("#navbar ul");
         hamburger.classList.remove("active");
-
       });
     }
   });

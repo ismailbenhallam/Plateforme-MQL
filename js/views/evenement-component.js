@@ -1,6 +1,6 @@
 const EvenementComponent = function (service) {
-  const charLimit = 450;
-  const ALL = "all";  
+  const charLimit = 350;
+  const ALL = "all";
   let applyButton = $("apply");
   let groupeCheckbox = $("group-checkbox");
 
@@ -16,29 +16,28 @@ const EvenementComponent = function (service) {
   groupeCheckbox.appendChild(labelAll);
 
   for (const event in service.eventTypes) {
-      let label = create("LABEL");
-      let input = create("INPUT");
-      input.setAttribute("type", "checkbox");
-      input.value = event;
-      let span = create("SPAN");
-      span.textContent = event;
-      label.appendChild(input);
-      label.appendChild(span);
-      groupeCheckbox.appendChild(label);
-    }
+    let label = create("LABEL");
+    let input = create("INPUT");
+    input.setAttribute("type", "checkbox");
+    input.value = event;
+    let span = create("SPAN");
+    span.textContent = event;
+    label.appendChild(input);
+    label.appendChild(span);
+    groupeCheckbox.appendChild(label);
+  }
 
   let filterButton = $("filter");
   let divExpand = $("expand");
-  filterButton.addEventListener("click", function() {
+  filterButton.addEventListener("click", function () {
     if (divExpand.style.display === "none") {
-      filterButton.children[1].setAttribute("src", "icons/collapse-arrow.png");
+      filterButton.children[1].src = "icons/collapse-arrow.png";
       divExpand.style.display = "block";
     } else {
-      filterButton.children[1].setAttribute("src", "icons/expand-arrow.png");
+      filterButton.children[1].src = "icons/expand-arrow.png";
       divExpand.style.display = "none";
     }
   });
-
 
   const wrapper = $("evenements-wrapper");
   for (const e of service.items) {
@@ -48,17 +47,16 @@ const EvenementComponent = function (service) {
     eventDiv.dataset.genre = e.genre;
     wrapper.appendChild(separator);
     wrapper.appendChild(eventDiv);
-    applyButton.addEventListener("click", function() {
+    applyButton.addEventListener("click", function () {
       const valuesChecked = [];
-      for (let i=0; i < groupeCheckbox.children.length; i++) {
-        if(groupeCheckbox.children[i].children[0].checked){
+      for (let i = 0; i < groupeCheckbox.children.length; i++) {
+        if (groupeCheckbox.children[i].children[0].checked) {
           valuesChecked.push(groupeCheckbox.children[i].children[0].value);
         }
         for (const eventDiv of wrapper.children) {
-          if(valuesChecked.includes(ALL)){
+          if (valuesChecked.includes(ALL)) {
             eventDiv.style.display = "block";
-          } 
-          else if (valuesChecked.includes(eventDiv.dataset.genre)){
+          } else if (valuesChecked.includes(eventDiv.dataset.genre)) {
             eventDiv.style.display = "block";
           } else eventDiv.style.display = "none";
         }
@@ -90,79 +88,11 @@ const EvenementComponent = function (service) {
     photoDiv.classList.add("evenement-photo");
     let photo = create("img");
     let currentPhoto = 0;
-    photo = e.photos[currentPhoto];
+    if (e.photos && e.photos.length > 0) photo = e.photos[currentPhoto];
 
-    /*********** Modal ***********/
-    let modal = create("div");
-    modal.classList.add("evenement-modal");
-    document.body.appendChild(modal);
-
-    let close = create("span");
-    close.classList.add("evenement-close");
-    close.innerHTML = "&times;";
-    modal.appendChild(close);
-
-    let modalContent = create("img");
-    modalContent.classList.add("evenement-modal-content");
-
-    photo.onclick = function () {
-      modal.style.display = "flex";
-      modalContent.src = photo.src;
-    };
-
-    let previous;
-    if (e.photos.length > 1) {
-      previous = create("img");
-      previous.classList.add("evenement-previous");
-      previous.src = "icons/next.png";
-      modal.appendChild(previous);
-
-      previous.onclick = (eventF) => {
-        if (eventF.target.tagName != "IMG") return;
-        currentPhoto--;
-        this.showNextAndPrevious(e.photos.length, currentPhoto, previous, next);
-        if (currentPhoto >= 0) {
-          modalContent.src = e.photos[currentPhoto].src;
-        }
-      };
-    }
-
-    modal.appendChild(modalContent);
-
-    let next;
-    if (e.photos.length > 1) {
-      next = create("img");
-      next.classList.add("evenement-next");
-      next.src = "icons/next.png";
-      modal.appendChild(next);
-
-      next.onclick = (eventF) => {
-        if (eventF.target.tagName != "IMG") return;
-        currentPhoto++;
-        this.showNextAndPrevious(e.photos.length, currentPhoto, previous, next);
-        if (currentPhoto < e.photos.length) {
-          modalContent.src = e.photos[currentPhoto].src;
-        }
-      };
-      this.showNextAndPrevious(e.photos.length, currentPhoto, previous, next);
-    }
-
-    close.onclick = () => {
-      modal.style.display = "none";
-      currentPhoto = 0;
-      if (e.photos.length > 1) {
-        this.showNextAndPrevious(e.photos.length, currentPhoto, previous, next);
-      }
-    };
-
-    modal.onclick = (ef) => {
-      if (!ef.target.classList.contains("evenement-modal")) return;
-      modal.style.display = "none";
-      currentPhoto = 0;
-      if (e.photos.length > 1) {
-        this.showNextAndPrevious(e.photos.length, currentPhoto, previous, next);
-      }
-    };
+    photo.addEventListener("click", () => {
+      this.showPhotosModal([photo], 0);
+    });
 
     /**********************/
 
@@ -195,45 +125,239 @@ const EvenementComponent = function (service) {
       description.innerHTML = e.description;
     else {
       let showStr = e.description.slice(0, charLimit);
-      let hideStr = e.description.slice(charLimit);
+      // let hideStr = e.description.slice(charLimit);
 
       description.innerHTML = showStr;
       let morePoints = create("span");
       morePoints.textContent = "...";
       morePoints.style.display = "inline";
-      let moreText = create("span");
-      moreText.style.display = "none";
-      moreText.innerHTML = hideStr;
+      // let moreText = create("span");
+      // moreText.style.display = "none";
+      // moreText.innerHTML = hideStr;
       description.appendChild(morePoints);
-      description.appendChild(moreText);
+      // description.appendChild(moreText);
 
       let readMore = create("div");
-      readMore.style.cursor = "pointer";
+      readMore.className = "read-more";
       readMore.textContent = "Lire plus";
-      readMore.style.color = "black";
-      readMore.style.textDecoration = "underline";
       description.appendChild(readMore);
 
       readMore.onclick = (ef) => {
         if (ef.target == readMore) {
-          // this.showEventDetails(e, eventDiv);
-          if (description.classList.contains("evenement-show-all")) {
-            moreText.style.display = "none";
-            morePoints.style.display = "inline";
-            readMore.textContent = "Lire Plus";
-          } else {
-            moreText.style.display = "inline";
-            morePoints.style.display = "none";
-            readMore.textContent = "Lire Moins";
-          }
-          description.classList.toggle("evenement-show-all");
-          eventDiv.classList.toggle("active");
-          ef.preventDefault();
-          scrollTo(eventDiv);
+          this.showEventDetails(e, eventDiv);
+          // if (description.classList.contains("evenement-show-all")) {
+          //   moreText.style.display = "none";
+          //   morePoints.style.display = "inline";
+          //   readMore.textContent = "Lire Plus";
+          // } else {
+          //   moreText.style.display = "inline";
+          //   morePoints.style.display = "none";
+          //   readMore.textContent = "Lire Moins";
+          // }
+          // description.classList.toggle("evenement-show-all");
+          // eventDiv.classList.toggle("active");
+          // ef.preventDefault();
+          // scrollTo(eventDiv);
         }
       };
     }
   }
+};
+
+EvenementComponent.prototype.showEventDetails = function (event, eventDiv) {
+  // Hide evenements
+  const eventsDiv = $("evenements");
+  const wrapper = $("evenements-wrapper");
+  const filter = $("evenements-filter-wrapper");
+  const wrapperDisplay = wrapper.style.display;
+  const filterDisplay = wrapper.style.display;
+  wrapper.style.display = "none";
+  filter.style.display = "none";
+
+  // Callback to return
+  const back = () => {
+    eventsDiv.removeChild(eventDetails);
+    wrapper.style.display = wrapperDisplay;
+    filter.style.display = filterDisplay;
+    scrollTo(eventDiv);
+  };
+
+  // Create a new div for the event details
+  let eventDetails = create("div");
+  eventsDiv.appendChild(eventDetails);
+  eventDetails.style.display = "block";
+  eventDetails.classList.add("evenement-details", "top-content");
+
+  // Back button
+  let backBtn = create("button");
+  eventDetails.appendChild(backBtn);
+  backBtn.className = "btn-back";
+  backBtn.textContent = "Retour";
+  backBtn.addEventListener("click", back);
+
+  // Title
+  let title = create("h3");
+  title.textContent = event.nom;
+  title.classList.add("title-default-left", "evenement-title");
+  eventDetails.appendChild(title);
+
+  // Content = Title + Date + Picture + Description
+  let content = create("div");
+  eventDetails.appendChild(content);
+  content.classList.add("evenement-content");
+
+  // If there is at least one picture of the event, add it to 'Content' div
+  if (event.photos && event.photos.length > 0) {
+    let img = create("img");
+    img.dataset.i = 0;
+    img.src = event.photos[0].src;
+    img.addEventListener("click", () => {
+      this.showPhotosModal(event.photos, 0);
+    });
+    content.appendChild(img);
+  }
+
+  // Date
+  let dateDiv = create("div");
+  dateDiv.className = "evenement-coordonnees";
+  dateDiv.textContent = `${event.date.toReadeableString()} - ${event.lieu}`;
+  content.appendChild(dateDiv);
+
+  // Description
+  let description = create("div");
+  description.innerHTML = event.description;
+  content.appendChild(description);
+
+  // Gallery
+  if (event.photos && event.photos.length > 1) {
+    let galleryTitle = create("h3");
+    galleryTitle.textContent = "Galeries photos";
+    galleryTitle.className = "title-default-left";
+    eventDetails.appendChild(galleryTitle);
+
+    let gallery = create("gallery");
+    gallery.className = "gallery";
+    eventDetails.appendChild(gallery);
+    for (let index = 1; index < event.photos.length; index++) {
+      let img = create("img");
+      img.dataset.i = index;
+      img.src = event.photos[index].src;
+      img.addEventListener("click", () => {
+        this.showPhotosModal(event.photos, index);
+      });
+      gallery.appendChild(img);
+    }
+  }
+
+  // Back button in the buttom
+  // FIXME: Ismaïl cloneNodeWithEvents()
+  let backBtnClone = backBtn.cloneNodeWithEvents();
+  backBtnClone.addEventListener("click", back);
+  eventDetails.appendChild(backBtnClone);
+
+  scrollTo(eventDetails);
+};
+
+EvenementComponent.prototype.showPhotosModal = function (
+  photoArray,
+  currentIndex
+) {
+  let currentPhoto = photoArray[currentIndex];
+  let modal = create("div");
+  modal.tabindex = 0;
+  modal.contenteditable = "true";
+  modal.classList.add("evenement-modal");
+  document.body.appendChild(modal);
+
+  let close = create("span");
+  close.classList.add("evenement-close");
+  close.innerHTML = "&times;";
+  modal.appendChild(close);
+
+  let modalContent = create("img");
+  modalContent.classList.add("evenement-modal-content");
+
+  // photo.onclick = function () {
+  //   modal.style.display = "flex";
+  //   modalContent.src = photo.src;
+  // };
+
+  modalContent.src = currentPhoto.src;
+
+  let previous, next;
+  if (photoArray.length > 1) {
+    previous = create("img");
+    previous.classList.add("evenement-previous");
+    previous.src = "icons/next.png";
+    modal.appendChild(previous);
+
+    previous.onclick = (eventF) => {
+      // TODO: Ismail
+      // if (eventF.target.tagName != "IMG") return;
+      currentIndex--;
+      currentPhoto = photoArray[currentIndex];
+      this.showNextAndPrevious(photoArray.length, currentIndex, previous, next);
+      if (currentIndex >= 0) {
+        modalContent.src = photoArray[currentIndex].src;
+      } else currentIndex = 0;
+    };
+  }
+
+  modal.appendChild(modalContent);
+
+  if (photoArray.length > 1) {
+    next = create("img");
+    next.classList.add("evenement-next");
+    next.src = "icons/next.png";
+    modal.appendChild(next);
+
+    next.onclick = (eventF) => {
+      // TODO: Ismail
+      // if (eventF.target.tagName != "IMG") return;
+      currentIndex++;
+      this.showNextAndPrevious(photoArray.length, currentIndex, previous, next);
+      if (currentIndex < photoArray.length) {
+        modalContent.src = photoArray[currentIndex].src;
+      } else currentIndex = photoArray.length - 1;
+    };
+    this.showNextAndPrevious(photoArray.length, currentIndex, previous, next);
+  }
+
+  close.onclick = () => {
+    document.body.removeChild(modal);
+    // modal.style.display = "none";
+    // currentIndex = 0;
+    // if (photoArray.length > 1) {
+    //   this.showNextAndPrevious(photoArray.length, currentIndex, previous, next);
+    // }
+  };
+
+  modal.addEventListener("click", (ef) => {
+    if (!ef.target.classList.contains("evenement-modal")) return;
+    close.dispatchEvent(new Event("click"));
+    // modal.style.display = "none";
+    // currentIndex = 0;
+    // if (photoArray.length > 1) {
+    //   this.showNextAndPrevious(photoArray.length, currentIndex, previous, next);
+    // }
+  });
+
+  // window.addEventListener("keyup", function (ef) {
+  //   if (modal.style.display == "none") return;
+  //   ef.preventDefault();
+  //   modal.focus();
+  //   console.log("codeKey " + ef.codeKey);
+  //   console.log("key " + ef.key);
+  //   console.log("code " + ef.code);
+  //   console.log("location " + ef.location);
+  //   console.log("___________________");
+
+  //   if (ef.code === "ArrowRight") {
+  //     next.dispatchEvent(new Event("click"));
+  //   } else if (ef.code === "ArrowLeft") {
+  //     previous.dispatchEvent(new Event("click"));
+  //   } else if (ef.code === "Escape") close.dispatchEvent(new Event("click"));
+  // });
 };
 
 EvenementComponent.prototype.showNextAndPrevious = function (
@@ -253,25 +377,4 @@ EvenementComponent.prototype.showNextAndPrevious = function (
   if (currentPhotoIndex == length - 1) {
     next.style.visibility = "hidden";
   } else next.style.visibility = "visible";
-};
-
-EvenementComponent.prototype.showEventDetails = function (event, eventDiv) {
-  wrapper.style.display = "none";
-  let eventDetails = $("evenement-details");
-  eventDetails.style.display = "block";
-  // TODO: Ismaïl
-  eventDetails.innerHTML = event.description;
-  let span = create("span");
-  span.textContent = "Lire moins";
-  span.style.textDecoration = "underline";
-  eventDetails.appendChild(span);
-
-  span.addEventListener("click", (e) => {
-    eventDetails.style.display = "none";
-    wrapper.style.display = "flex";
-    scrollTo(eventDiv);
-    // event.scrollIntoView({ behavior: "auto", block: "start" });
-  });
-
-  eventDetails.scrollIntoView({ behavior: "auto", block: "start" });
 };
