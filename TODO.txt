@@ -1,6 +1,7 @@
---------------- 15/6/2020 6:22 ----------------
-EVENEMENTS (fonctionnement) "ISMAIL"
-HEADER SHADOW + TITLE DES PAGES "KHADIJA"
-ACTIVITES (style) + VIDEO PRESENTATION "YAHYA"
-CARDS F PROGRAMME et LAUREATS + PHOTO DYAL LES BGS "HAMZA"
-EVENEMENTS (style)  "YOUSRA"
+/*******************  TO DO !!   *******************/
+crop photos lauréats,recherche des nouveaux lauréats, réglage de la nouvelle vidéo (Yahya)
+photo accueil tkber, transparent,add copy right,list-option lauréats,emplacement ancien vidéo (Khadija)
+le style partenaires,activités,animation lauréats (Yousra)
+réglage menu & the responsivity(Hamza) expect responsivity admission, it's khadija's
+selection à vérifier : contenu
+the line between events, search (Ismail)
