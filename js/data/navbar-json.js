@@ -7,11 +7,11 @@ var navbarJSON = [
   {
     target: "accueil",
     name: "Master MQL",
-    children: [
-      { target: "coordinateur", name: "Mot du Coordonnateur" },
-      { target: "presentationMaster", name: "Présentation" },
-    ],
+    // children: [
+    // { target: "presentationMaster", name: "Présentation" },
+    // ],
   },
+  { target: "presentationMaster", name: "Présentation" },
   {
     name: "Nous rejoindre",
     children: [{ target: "selection" }, { target: "admission" }],

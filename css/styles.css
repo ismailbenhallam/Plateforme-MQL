@@ -3,6 +3,21 @@
 @import "https://fonts.googleapis.com/css?family=Montserrat:300, 400, 700&display=swap";
 
 /***** General *****/
+@media screen and (max-width: 768px) {
+  .large-screen {
+    display: none;
+  }
+}
+@media screen and (min-width: 768px) {
+  .small-screen {
+    display: none;
+  }
+}
+
+/* p {
+  text-indent: 15px;
+} */
+
 .first-letter {
   float: left;
   width: 0.7em;
@@ -230,7 +245,7 @@ body {
   min-height: 8vh;
   background-color: white;
   transition: 0.3s ease background-color;
-  box-shadow: 0 8px 6px -6px;
+  box-shadow: 0 5px 6px -6px;
 }
 
 #header .nav-bar {
@@ -1060,6 +1075,24 @@ body {
   }
 }
 
+.presentation-video-wrapper {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin-bottom: 50px;
+}
+
+.presentation-video {
+  max-width: 50%;
+}
+
+@media screen and (max-width: 768px) {
+  .presentation-video {
+    max-width: 90%;
+  }
+}
+
 /* filtre */
 
 .form {
@@ -1220,6 +1253,8 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+  border: 1px solid black;
+  padding: 2px;
 }
 
 .evenement-photo > img {
@@ -1270,10 +1305,8 @@ body {
 }
 
 .evenement-details .btn-back:hover {
-  font-size: 0.85rem;
-  letter-spacing: 0.2em;
-  transform: scale(1.06);
-  transition: all 0.2s;
+  background-color: #09448a;
+  color: white;
 }
 
 .evenement-details .evenement-title {
@@ -1294,7 +1327,7 @@ body {
 .evenement-details > .evenement-content > img {
   float: left;
   margin-right: 10px;
-  margin-bottom: 5px;
+  margin-bottom: 20px;
   border: 1px solid black;
   padding: 2px;
   max-width: 40%;
@@ -1305,6 +1338,11 @@ body {
   cursor: pointer;
   opacity: 0.7;
   transition: opacity 0.2s;
+}
+
+.evenement-details > .evenement-gallery-title {
+  /* margin-top: 100px; */
+  clear: left;
 }
 
 .evenement-details > .gallery {
@@ -1320,10 +1358,9 @@ body {
   /* flex: 1 1 20%; */
   /* max-width: 200px; */
   /* margin-right: 10px; */
-  min-width: 250px;
+  min-height: 250px;
   max-width: 24%;
   margin: 2px;
-  transition: visibility 2s;
 }
 .evenement-details > .gallery img:nth-child(odd) {
   /* max-width: 200px; */
@@ -1632,7 +1669,8 @@ hr {
 }
 
 #accueil .partenaires-wrapper > div img {
-  margin: auto auto;
+  margin: auto;
+  padding: 5px;
   max-width: 127px;
   max-height: 78px;
   display: block;
