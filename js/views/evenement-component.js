@@ -99,9 +99,11 @@ const EvenementComponent = function (service) {
     groupeCheckbox.children[i].addEventListener("click", () => {
       let allChecked = true;
       for (let j = 1; j < groupeCheckbox.children.length; j++) {
-        let btn = groupeCheckbox.children[j];
         // Uncheck 'All' if a button is unchecked
-        if (btn.checked == false && inputAll.checked == true) {
+        if (
+          groupeCheckbox.children[j].checked === false &&
+          inputAll.checked === true
+        ) {
           inputAll.click();
           return;
         }
