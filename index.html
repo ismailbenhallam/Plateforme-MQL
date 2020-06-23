@@ -14,7 +14,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="stylesheet" type="text/css" media="screen" href="css/styles.css" />
     <link rel="stylesheet" type="text/css" media="screen" href="css/Chart.min.css" />
-    <link rel="stylesheet" type="text/css" media="screen" href="css/card.css" />
 
     <!-- Scripts -->
     <script src="js/utils.js" defer="defer"></script>
@@ -262,8 +261,8 @@
             </header>
             <div class="top-content">
                 <div>
-                    <div style="margin-left: 24rem;">
-                        <video width="500" controls>
+                    <div class="presentation-video-wrapper">
+                        <video class="presentation-video" controls>
                             <source src="videos/video-mql-smaller.mp4" type="video/mp4">
                         </video>
                     </div>
@@ -460,7 +459,6 @@
                 <div id="activities">
                     <div class="activities container-act">
                         <div class="activities-header">
-
                             <p>
                                 Un programme de formation de très grande qualité, souple, évolutif et facilement
                                 adaptable aux besoins des entreprises aussi bien sur le plan quantitatif que sur le plan
@@ -485,12 +483,7 @@
                                     <img src="images/travaux-individuelles.png" alt="">
                                 </div>
                                 <div class="blog-post__info">
-
-
-
                                     <h1 class="blog-post__title">Travaux<span> Individuels</span></h1>
-
-
                                     <p class="blog-post__text">Ce sont des travaux qui permettent à l'étudiant, d'un
                                         côté de partager ces compétences avec les autres membres de l'équipe, et d'autre
                                         côté d'avoir le courage et la responsabilité de faire le maximum possible pour
@@ -545,7 +538,7 @@
 
                                     <p class="blog-post__text">Ce sont des Travaux qui peuvent être Individuels ou en
                                         groupe, l'étudiant est chargé de mettre en pratique l'ensemble d'informations
-                                        qu'il a retenu dans les séances de cours et Tps, donc c'est une bonne
+                                        qu'il a retenu dans les séances de cours et TPs, donc c'est une bonne
                                         opportunité
                                         pour faire structurer les connaissances apprises et les affiner afin d'avoir une
                                         expérience anticipée soit dans le travail individuel ou au sein d'une équipe,
@@ -627,7 +620,7 @@
             </header>
             <div class="top-content">
                 <div>
-                    <p style="text-indent: 15px;">
+                    <p class="paragraph">
                         Un stage de fin d’études de six mois en milieu professionnel sous la direction d'un professeur
                         (encadrant pédagogique) avec un éventuel co-encadrant (ou encadrant professionnel) est
                         obligatoire au cours du 4ème semestre.
@@ -724,15 +717,17 @@
                 <hr>
                 <div class="footer-address">
                     <h6>
-                        <!-- TODO: MAP -->
-                        <a><img src="icons/position.png" /> B.P. 1796 Fès-Atlas,30003 MAROC</a>
+                        <a href="https://goo.gl/maps/p66sEJYfuzpWjaAW9" target="__blank"><img
+                                src="icons/position.png" /> B.P. 1796
+                            Fès-Atlas,30003 MAROC</a>
                     </h6>
                     <h6>
                         <a href="tel:+2126255451650"><img src="icons/phone.png" /> (+212) 535 64 23 98</a>
                     </h6>
                     <h6>
                         <a href="mailto:noureddine.chenfour@usmba.ac.ma"><img src="icons/email.png" />
-                            Noureddine.Chenfour@Usmba.Ac.Ma
+                            <span class="small-screen">Noureddine.Chenfour@ Usmba.Ac.Ma</span>
+                            <span class="large-screen">Noureddine.Chenfour@Usmba.Ac.Ma</span>
                         </a>
                     </h6>
                 </div>

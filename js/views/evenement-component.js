@@ -232,7 +232,7 @@ EvenementComponent.prototype.showEventDetails = function (event, eventDiv) {
   if (event.photos && event.photos.length > 1) {
     let galleryTitle = create("h3");
     galleryTitle.textContent = "Galeries photos";
-    galleryTitle.className = "title-default-left";
+    galleryTitle.classList.add("title-default-left", "evenement-gallery-title");
     eventDetails.appendChild(galleryTitle);
 
     let gallery = create("gallery");
@@ -248,12 +248,6 @@ EvenementComponent.prototype.showEventDetails = function (event, eventDiv) {
       gallery.appendChild(img);
     }
   }
-
-  // Back button in the buttom
-  // FIXME: Ismaïl cloneNodeWithEvents()
-  let backBtnClone = backBtn.cloneNodeWithEvents();
-  backBtnClone.addEventListener("click", back);
-  eventDetails.appendChild(backBtnClone);
 
   scrollTo(eventDetails);
 };

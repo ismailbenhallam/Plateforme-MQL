@@ -21,6 +21,7 @@ NavbarComponent.prototype.createNavbarItems = function () {
     let a = create("a");
     a.id = item.id;
     a.dataset.target = item.target;
+    a.href = "#" + item.target;
     a.textContent = item.name;
     li.appendChild(a);
     this.navbarUl.appendChild(li);
@@ -38,6 +39,7 @@ NavbarComponent.prototype.createNavbarItems = function () {
         a.id = child.id;
         a.textContent = child.name;
         a.dataset.target = child.target;
+        a.href = "#" + child.target;
         a.dataset.parent = item.id;
         ul.appendChild(childLi);
       });
@@ -45,6 +47,7 @@ NavbarComponent.prototype.createNavbarItems = function () {
     if (!item.target) {
       a.classList.add("shouldnt-be-active");
       delete a.dataset.target;
+      delete a.href;
     }
   });
 };
@@ -81,7 +84,7 @@ NavbarComponent.prototype.addHamburgerIconListener = function () {
 };
 
 NavbarComponent.prototype.addNavbarItemsListener = function () {
-  window.addEventListener("load", function () {
+  window.addEventListener("load", () => {
     const INDEX = "accueil";
     const LINKS_SUFFIX = "-link";
     let activePage = INDEX;
@@ -113,9 +116,7 @@ NavbarComponent.prototype.addNavbarItemsListener = function () {
 
     // Add click listener to navbar links
     for (const link of navbarLinks) {
-      link.addEventListener("click", function () {
-        window.toTop();
-
+      link.addEventListener("click", () => {
         // Hide the previous page
         $(activePage).classList.remove("active");
 
@@ -128,6 +129,8 @@ NavbarComponent.prototype.addNavbarItemsListener = function () {
         // if the menu has a parent menu
         if (activeLink.dataset.parent)
           $(activeLink.dataset.parent).classList.remove("active");
+
+        // this.addToHistoryList(link);
 
         // Display the new active page
         activePage = link.dataset.target;
@@ -146,7 +149,14 @@ NavbarComponent.prototype.addNavbarItemsListener = function () {
 
         let hamburger = document.querySelector("#navbar ul");
         hamburger.classList.remove("active");
+
+        window.toTop();
       });
     }
   });
 };
+
+// NavbarComponent.prototype.addToHistoryList = function (link) {
+//   historyList.list.push(link);
+//   historyList.index++;
+// };
