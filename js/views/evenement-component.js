@@ -1,27 +1,27 @@
 const EvenementComponent = function (service) {
   const charLimit = 350;
   const ALL = "all";
-  let applyButton = $("apply");
+  // let applyButton = $("apply");
   let groupeCheckbox = $("group-checkbox");
 
-  let labelAll = create("LABEL");
-  let inputAll = create("INPUT");
+  let labelAll = create("label");
+  let inputAll = create("input");
   inputAll.setAttribute("type", "checkbox");
   inputAll.checked = true;
   inputAll.value = ALL;
-  let spanAll = create("SPAN");
-  spanAll.textContent = "Tout les évènements";
+  let spanAll = create("span");
+  spanAll.textContent = "Tous les évènements";
   labelAll.appendChild(inputAll);
   labelAll.appendChild(spanAll);
   groupeCheckbox.appendChild(labelAll);
 
-  for (const event in service.eventTypes) {
-    let label = create("LABEL");
-    let input = create("INPUT");
+  for (const eventType in service.eventTypes) {
+    let label = create("label");
+    let input = create("input");
     input.setAttribute("type", "checkbox");
-    input.value = event;
-    let span = create("SPAN");
-    span.textContent = event;
+    input.value = eventType;
+    let span = create("span");
+    span.textContent = eventType;
     label.appendChild(input);
     label.appendChild(span);
     groupeCheckbox.appendChild(label);
@@ -29,17 +29,86 @@ const EvenementComponent = function (service) {
 
   let filterButton = $("filter");
   let divExpand = $("expand");
-  filterButton.addEventListener("click", function () {
+  divExpand.style.display = "none";
+
+  filterButton.addEventListener("click", () => {
     if (divExpand.style.display === "none") {
-      filterButton.children[1].src = "icons/collapse-arrow.png";
+      filterButton.children[1].src = this.collapseIconBlue;
       divExpand.style.display = "block";
     } else {
-      filterButton.children[1].src = "icons/expand-arrow.png";
+      filterButton.children[1].src = this.expandIconBlue;
       divExpand.style.display = "none";
+    }
+    filterButton.dispatchEvent(new Event("mouseover"));
+  });
+
+  filterButton.addMultipleEventListener(
+    () => {
+      if (divExpand.style.display === "none") {
+        filterButton.children[1].src = this.expandIconWhite;
+      } else {
+        filterButton.children[1].src = this.collapseIconWhite;
+      }
+    },
+    "mouseover",
+    "mouseenter"
+  );
+
+  filterButton.addEventListener("mouseout", () => {
+    if (divExpand.style.display === "none") {
+      filterButton.children[1].src = this.expandIconBlue;
+    } else {
+      filterButton.children[1].src = this.collapseIconBlue;
     }
   });
 
   const wrapper = $("evenements-wrapper");
+
+  // Apply callback
+  let applyCallback = function () {
+    const valuesChecked = [];
+    for (let i = 0; i < groupeCheckbox.children.length; i++) {
+      if (groupeCheckbox.children[i].children[0].checked) {
+        valuesChecked.push(groupeCheckbox.children[i].children[0].value);
+      }
+      for (const eventDiv of wrapper.children) {
+        if (valuesChecked.includes(ALL)) {
+          eventDiv.style.display = "block";
+        } else if (valuesChecked.includes(eventDiv.dataset.genre)) {
+          eventDiv.style.display = "block";
+        } else eventDiv.style.display = "none";
+      }
+    }
+  };
+
+  for (let i = 0; i < groupeCheckbox.children.length; i++) {
+    groupeCheckbox.children[i].addEventListener("click", applyCallback);
+  }
+
+  // If 'All' is checked, check also all other checkboxes
+  inputAll.addEventListener("click", () => {
+    let checkd = inputAll.checked;
+    for (let i = 1; i < groupeCheckbox.children.length; i++) {
+      if (groupeCheckbox.children[i].children[0].checked != checkd) {
+        groupeCheckbox.children[i].children[0].click();
+      }
+    }
+  });
+
+  for (let i = 1; i < groupeCheckbox.children.length; i++) {
+    groupeCheckbox.children[i].addEventListener("click", () => {
+      let allChecked = true;
+      for (let j = 1; j < groupeCheckbox.children.length; j++) {
+        let btn = groupeCheckbox.children[j];
+        // Uncheck 'All' if a button is unchecked
+        if (btn.checked == false && inputAll.checked == true) {
+          inputAll.click();
+          return;
+        }
+      }
+    });
+  }
+
   for (const e of service.items) {
     let eventDiv = create("div");
     let separator = create("div");
@@ -47,31 +116,17 @@ const EvenementComponent = function (service) {
     eventDiv.dataset.genre = e.genre;
     wrapper.appendChild(separator);
     wrapper.appendChild(eventDiv);
-    applyButton.addEventListener("click", function () {
-      const valuesChecked = [];
-      for (let i = 0; i < groupeCheckbox.children.length; i++) {
-        if (groupeCheckbox.children[i].children[0].checked) {
-          valuesChecked.push(groupeCheckbox.children[i].children[0].value);
-        }
-        for (const eventDiv of wrapper.children) {
-          if (valuesChecked.includes(ALL)) {
-            eventDiv.style.display = "block";
-          } else if (valuesChecked.includes(eventDiv.dataset.genre)) {
-            eventDiv.style.display = "block";
-          } else eventDiv.style.display = "none";
-        }
-      }
-    });
+    // applyButton.addEventListener("click", applyCallback);
     eventDiv.classList.add("evenement");
     let divG = create("div");
     divG.style.display = "flex";
     let divDate = create("div");
     divDate.classList.add("div-date");
 
-    let spanDate = create("SPAN");
+    let spanDate = create("span");
     spanDate.classList.add("date");
 
-    let em = create("EM");
+    let em = create("em");
     em.textContent = e.date.toReadeableString().slice(0, 2);
     strArray = e.date.toReadeableString().split(" ");
     spanDate.textContent = strArray[1];
@@ -95,7 +150,6 @@ const EvenementComponent = function (service) {
     });
 
     /**********************/
-
     photoDiv.appendChild(photo);
     body.appendChild(photoDiv);
 
@@ -164,6 +218,13 @@ const EvenementComponent = function (service) {
   }
 };
 
+// Constantes
+EvenementComponent.prototype.collapseIconWhite = "icons/collapse-arrow.png";
+EvenementComponent.prototype.expandIconWhite = "icons/expand-arrow.png";
+EvenementComponent.prototype.collapseIconBlue = "icons/collapse-arrow-blue.png";
+EvenementComponent.prototype.expandIconBlue = "icons/expand-arrow-blue.png";
+
+// Méthodes
 EvenementComponent.prototype.showEventDetails = function (event, eventDiv) {
   // Hide evenements
   const eventsDiv = $("evenements");
@@ -191,7 +252,7 @@ EvenementComponent.prototype.showEventDetails = function (event, eventDiv) {
   // Back button
   let backBtn = create("button");
   eventDetails.appendChild(backBtn);
-  backBtn.className = "btn-back";
+  backBtn.className = "btn";
   backBtn.textContent = "Retour";
   backBtn.addEventListener("click", back);
 

@@ -73,7 +73,7 @@
     <script src="js/main.js" defer="defer"></script>
 </head>
 
-<body>
+<body onscroll="progressBar()">
     <script src="js/views/loading-component.js"></script>
 
     <!-- Header -->
@@ -141,10 +141,9 @@
                         <div class="about-details">
                             <p>Le Master MQL est une véritable plateforme de formation et de production de la ressource
                                 humaine très hautement qualifiée en ingénierie du logiciel.</p>
-                            <p>Programme intergouvernemental France-Maroc FSP-ARESM Programme OTI
-                                (Offshoring des Technologies de l’Information) Mobilité et Double
-                                diplôme avec l’université de Brest (UBO) Insertion Professionnelle
-                                des étudiants.</p>
+                            <p>Programme intergouvernemental France-Maroc FSP-ARESM Programme OTI (Offshoring des
+                                Technologies de l’Information) Mobilité et Double diplôme avec l’université de Brest
+                                (UBO) Insertion Professionnelle des étudiants.</p>
                         </div>
                     </div>
                     <div class="about-img">
@@ -277,11 +276,11 @@
                     <ul style="list-style: none">
                         <li><img src="icons/nextRed.png" /> Fournir aux étudiants une formation scientifique et
                             technique de haut niveau en Informatique alliant un enseignement technologique de pointe et
-                            un enseignement théorique solide permettant
-                            de s’adapter à l'évolution rapide des technologies de l'information et de la communication.
+                            un enseignement théorique solide permettant de
+                            s’adapter à l'évolution rapide des technologies de l'information et de la communication.
                         </li>
-                        <li><img src="icons/nextRed.png" /> Enrichir l’offre de formation de l’université et
-                            participer à son ouverture sur l’environnement socio-économique.
+                        <li><img src="icons/nextRed.png" /> Enrichir l’offre de formation de l’université et participer
+                            à son ouverture sur l’environnement socio-économique.
                         </li>
                         <li><img src="icons/nextRed.png" /> Répondre aux besoins des entreprises en cadres de haut
                             niveau dans divers domaines de l’informatique appliquée- en particulier dans les métiers de
@@ -292,8 +291,8 @@
                                 <li><img src="icons/nextRed.png" /> Développeurs en migration et intégration des
                                     systèmes d’information
                                 </li>
-                                <li><img src="icons/nextRed.png" /> Spécialistes en support applicatif - maintenance
-                                    des applications actives et en infogérance</li>
+                                <li><img src="icons/nextRed.png" /> Spécialistes en support applicatif - maintenance des
+                                    applications actives et en infogérance</li>
                             </ul>
                     </ul>
                     </p>
@@ -589,25 +588,25 @@
                     <h1>évènements</h1>
                 </div>
             </header>
-            <form id="evenements-filter-wrapper" class="form">
+            <form class="form">
                 <div>
-                    <button id="filter" class="btn-filter" type="button">
+                    <button id="filter" class="btn" type="button">
                         <span class="">Filtres</span>
-                        <img id="expand-collapse" src="icons/expand-arrow.png" class="icon-10">
+                        <img id="expand-collapse" src="icons/expand-arrow-blue.png" class="icon-10">
                     </button>
                     <!-- <div id="choices" class=""></div> -->
                 </div>
-                <div id="expand" style="display: none">
+                <div id="expand">
                     <div id="group-checkbox" class="group-checkbox">
                         <!-- Checkboxes are added dynamically  -->
                     </div>
-                    <button id="apply" class="btn-apply" type="button">
-                        Appliquer
-                    </button>
                 </div>
             </form>
             <div id="evenements-wrapper" class="top-content evenements-wrapper">
                 <!-- Added dynamically -->
+            </div>
+            <div id="evenement-details" class="top-content">
+                <!-- TODO: Ismaïl -->
             </div>
         </div>
 
@@ -718,8 +717,7 @@
                 <div class="footer-address">
                     <h6>
                         <a href="https://goo.gl/maps/p66sEJYfuzpWjaAW9" target="__blank"><img
-                                src="icons/position.png" /> B.P. 1796
-                            Fès-Atlas,30003 MAROC</a>
+                                src="icons/position.png" /> B.P. 1796 Fès-Atlas,30003 MAROC</a>
                     </h6>
                     <h6>
                         <a href="tel:+2126255451650"><img src="icons/phone.png" /> (+212) 535 64 23 98</a>

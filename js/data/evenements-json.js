@@ -1,7 +1,7 @@
 const evenementsJSON = [
   {
     nom: "Cérémonie de remise des diplômes - Promotion 2018",
-    genre: "Cérémonie de remise des diplômes",
+    genre: "Cérémonies de remise des diplômes",
     date: "2019-04-27",
     lieu: "FSDM Fès",
     description:
@@ -38,7 +38,7 @@ const evenementsJSON = [
   },
   {
     nom: "Campagne de stages CGI 2019",
-    genre: "Campagne de stages",
+    genre: "Campagnes de stages",
     date: "2019-11-11",
     lieu: "FSDM Fès",
     description:
@@ -54,7 +54,7 @@ const evenementsJSON = [
   },
   {
     nom: "Campagne de stages Umanis 2019",
-    genre: "Campagne de stages",
+    genre: "Campagnes de stages",
     date: "2019-11-11",
     lieu: "FSDM Fès",
     description:
@@ -100,7 +100,7 @@ const evenementsJSON = [
   },
   {
     nom: "Campagne de stages Capgemini 2019",
-    genre: "Campagne de stages",
+    genre: "Campagnes de stages",
     date: "2019-10-21",
     lieu: "FSDM Fès",
     description:

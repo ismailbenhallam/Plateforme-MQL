@@ -1,3 +1,9 @@
+/*
+MQL Logo colors :
+  red : #d9323a
+  blue : #09448a
+*/
+
 @import "https://fonts.googleapis.com/css?family=Montserrat:300, 400, 700&display=swap";
 @import "https://fonts.googleapis.com/css?family=Raleway";
 @import "https://fonts.googleapis.com/css?family=Montserrat:300, 400, 700&display=swap";
@@ -14,9 +20,29 @@
   }
 }
 
-/* p {
-  text-indent: 15px;
-} */
+.btn {
+  display: block;
+  outline: none;
+  font: inherit;
+  cursor: pointer;
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  padding: 0.6rem 1.5rem;
+  background-color: transparent;
+  border: 1px solid #09448a;
+  color: #09448a;
+
+  border-radius: 2px;
+  margin: 20px 0;
+
+  transition: all 0.2s;
+}
+
+.btn:hover {
+  background-color: #09448a;
+  color: white;
+}
 
 .first-letter {
   float: left;
@@ -1107,7 +1133,7 @@ body {
   padding: 20px;
 }
 
-.btn-filter {
+/* .btn-filter {
   outline: none;
   font: inherit;
   cursor: pointer;
@@ -1119,7 +1145,7 @@ body {
   border: 1px solid #09448a;
   color: #fff;
   border-radius: 18px;
-}
+} */
 
 .icon-10 {
   width: 10px;
@@ -1283,30 +1309,6 @@ body {
   margin: 50px;
   color: #000;
   transition: all 0.3s;
-}
-
-.evenement-details .btn-back {
-  display: block;
-  outline: none;
-  font: inherit;
-  cursor: pointer;
-  font-size: 0.75rem;
-  text-transform: uppercase;
-  letter-spacing: 0.1em;
-  padding: 0.6rem 1.5rem;
-  background-color: transparent;
-  border: 1px solid #09448a;
-  color: #09448a;
-
-  border-radius: 2px;
-  margin: 20px 0;
-
-  transition: all 0.2s;
-}
-
-.evenement-details .btn-back:hover {
-  background-color: #09448a;
-  color: white;
 }
 
 .evenement-details .evenement-title {
