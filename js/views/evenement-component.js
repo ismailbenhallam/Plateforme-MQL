@@ -71,12 +71,12 @@ const EvenementComponent = function (service) {
       if (groupeCheckbox.children[i].children[0].checked) {
         valuesChecked.push(groupeCheckbox.children[i].children[0].value);
       }
-      for (const eventDiv of wrapper.children) {
+      for (const eventDivAndSeparator of wrapper.children) {
         if (valuesChecked.includes(ALL)) {
-          eventDiv.style.display = "block";
-        } else if (valuesChecked.includes(eventDiv.dataset.genre)) {
-          eventDiv.style.display = "block";
-        } else eventDiv.style.display = "none";
+          eventDivAndSeparator.style.display = "block";
+        } else if (valuesChecked.includes(eventDivAndSeparator.dataset.genre)) {
+          eventDivAndSeparator.style.display = "block";
+        } else eventDivAndSeparator.style.display = "none";
       }
     }
   };
@@ -95,27 +95,30 @@ const EvenementComponent = function (service) {
     }
   });
 
-  for (let i = 1; i < groupeCheckbox.children.length; i++) {
-    groupeCheckbox.children[i].addEventListener("click", () => {
-      let allChecked = true;
-      for (let j = 1; j < groupeCheckbox.children.length; j++) {
-        // Uncheck 'All' if a button is unchecked
-        if (
-          groupeCheckbox.children[j].checked === false &&
-          inputAll.checked === true
-        ) {
-          inputAll.click();
-          return;
-        }
-      }
-    });
-  }
+  //FIXME: Ismaïl
+  // for (let i = 1; i < groupeCheckbox.children.length; i++) {
+  //   groupeCheckbox.children[i].addEventListener("click", () => {
+  //     console.log("executed");
+  //     let allChecked = true;
+  //     for (let j = 1; j < groupeCheckbox.children.length; j++) {
+  //       // Uncheck 'All' if a button is unchecked
+  //       if (
+  //         groupeCheckbox.children[j].checked === false &&
+  //         inputAll.checked === true
+  //       ) {
+  //         inputAll.click();
+  //         return;
+  //       }
+  //     }
+  //   });
+  // }
 
   for (const e of service.items) {
     let eventDiv = create("div");
     let separator = create("div");
     separator.className = "separator";
     eventDiv.dataset.genre = e.genre;
+    separator.dataset.genre = e.genre;
     wrapper.appendChild(separator);
     wrapper.appendChild(eventDiv);
     // applyButton.addEventListener("click", applyCallback);
