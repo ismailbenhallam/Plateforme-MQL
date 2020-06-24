@@ -78,6 +78,7 @@ NavbarComponent.prototype.createSearchZone = function () {
 NavbarComponent.prototype.addHamburgerIconListener = function () {
   let hamburger = document.querySelector("#navbar .hamburger");
   hamburger.addEventListener("click", () => {
+    $("toTop").classList.toggle("hamburgerToTop");
     this.menu_icon.classList.toggle("active");
     this.menu.classList.toggle("active");
   });
