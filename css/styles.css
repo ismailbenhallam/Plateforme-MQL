@@ -1705,9 +1705,7 @@ hr {
   border-radius: 2px;
   flex-basis: 300px;
   height: auto;
-  opacity: 0.3;
   transition: all 0.5s;
-  transform: translateY(30px);
 }
 
 .person-content {
@@ -1821,12 +1819,6 @@ h3 {
   margin-top: 0;
   margin-bottom: 1rem;
   color: gray;
-}
-
-.animate {
-  transition-delay: 0.5s;
-  opacity: 1;
-  transform: translate(0);
 }
 
 /*****************/
