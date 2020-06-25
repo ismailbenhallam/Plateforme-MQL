@@ -2241,9 +2241,8 @@ form {
     cursor: default;
   }
   #header .nav-list ul li a.shouldnt-be-active:hover {
-    /* TODO: NAVBAR */
-    color: #d9323a;
-    background-color: white;
+    background-color: #d9323a;
+    color: white;
     /* border: 1px solid #d9323a; */
   }
 
