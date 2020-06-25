@@ -2918,7 +2918,19 @@ ul.event-wrapper {
   width: 100%;
   height: 100%;
 }
-
+.footer-bottom {
+  width: 100%;
+  height: auto;
+  background: #1a1a1a;
+  padding: 10px 0px;
+}
+.footer-copy p {
+  font-size: 13px;
+  font-weight: 500;
+  color: #fff;
+  margin: 0px;
+  text-align: center;
+}
 /* Begin activities section */
 
 #activites {
