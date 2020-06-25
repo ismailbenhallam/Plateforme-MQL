@@ -1031,7 +1031,7 @@ body {
 #toTop {
   display: none;
   position: fixed;
-  bottom: 20px;
+  bottom: 40px;
   right: -5px;
   z-index: 99;
   border: none;
@@ -1572,10 +1572,10 @@ body {
 /***** Stages *****/
 
 .chart-panel {
-  width: 90%;
+  width: 80%;
+  margin-right: auto;
+  margin-left: auto;
   height: auto;
-  /* overflow-x: auto; */
-  border: 1px solid #395480;
 }
 
 @media screen and (max-width: 1145px) {
@@ -2091,12 +2091,16 @@ h3 {
 }
 
 #choose-year-stage {
-  margin: 20px 0 auto auto;
+  font-size: 14px;
+  margin: 20px 0px auto 12px;
   text-align: center;
 }
 
 .pie-wrapper {
-  width: 90%;
+  width: 80%;
+  margin-right: auto;
+  margin-left: auto;
+  height: auto;
 }
 
 .stats {
@@ -2127,6 +2131,14 @@ h3 {
     flex-direction: column;
     justify-content: space-evenly;
     align-items: center;
+  }
+
+  .pie-wrapper {
+    width: 100%;
+  }
+
+  .chart-panel {
+    width: 100%;
   }
 }
 
@@ -2711,6 +2723,10 @@ ul li:nth-child(even) .content:after {
     right: auto;
     top: -9px;
     left: 47.5%;
+  }
+
+  .timeline ul li {
+    padding: 20px 10px;
   }
 }
 

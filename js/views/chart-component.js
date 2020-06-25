@@ -99,29 +99,46 @@ StageComponent.prototype.buildBarChart = function (service, canvas) {
       datasets: datasets,
     },
     options: {
+      tooltips: {
+        cornerRadius: 0,
+        caretSize: 0,
+        xPadding: 16,
+        yPadding: 10,
+        titleFontStyle: 'normal',
+        titleMarginBottom: 15,
+        titleFontFamily : "Nunito, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica Neue, Arial, Noto Sans, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji",
+        bodyFontFamily : "Nunito, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica Neue, Arial, Noto Sans, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji",
+      },
       //   responsive: false,
       //   maintainAspectRatio: false,
+      data: {
+        labels: {
+          fontFamily: "Nunito, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica Neue, Arial, Noto Sans, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji",
+          fontColor: "black",
+        },
+      },
       legend: {
         labels: {
-          // fontSize: 18,
+          fontFamily: "Nunito, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica Neue, Arial, Noto Sans, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji",
           fontColor: "black",
         },
       },
       title: {
         display: true,
-        // fontSize: 25,
+        fontFamily: "Nunito, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica Neue, Arial, Noto Sans, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji",
         // fontStyle: "italic",
         fontColor: "black",
+        fontSize: "20",
         text: `Insertion Multinationales ${service.premiereAnnee()} - ${service.derniereAnnee()}`,
       },
-      responsiveAnimationDuration: 1000, // animation duration after a resize
+      responsiveAnimationDuration: 500, // animation duration after a resize
       scales: {
         yAxes: [
           {
             scaleLabel: {
               display: true,
               labelString: "Etudiants",
-              // fontSize: 15,
+              fontFamily: "Nunito, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica Neue, Arial, Noto Sans, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji",
               // fontColor: "black",
             },
           },
@@ -131,7 +148,7 @@ StageComponent.prototype.buildBarChart = function (service, canvas) {
             scaleLabel: {
               display: true,
               labelString: "Promotions",
-              // fontSize: 15,
+              fontFamily: "Nunito, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica Neue, Arial, Noto Sans, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji",
               // fontColor: "black",
             },
           },
@@ -205,20 +222,34 @@ StageComponent.prototype.buildPieChart = buildPieChart = function (
       labels: labels,
     },
     options: {
-      responsive: true,
+      //   responsive: true,
       //   maintainAspectRatio: false,
+      tooltips: {
+        cornerRadius: 0,
+        caretSize: 0,
+        xPadding: 16,
+        yPadding: 10,
+        titleFontStyle: 'normal',
+        titleMarginBottom: 15,
+        titleFontFamily : "Nunito, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica Neue, Arial, Noto Sans, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji",
+        bodyFontFamily : "Nunito, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica Neue, Arial, Noto Sans, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji",
+      },
       legend: {
         labels: {
+          fontFamily: "Nunito, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica Neue, Arial, Noto Sans, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji",
           fontColor: "black",
         },
         position: "right",
       },
       title: {
         display: true,
+        fontFamily: "Nunito, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica Neue, Arial, Noto Sans, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji",
+        // fontStyle: "italic",
         fontColor: "black",
+        fontSize: "20",
         text: `Pourcentage Insertion Multinationales ${annee}`,
       },
-      responsiveAnimationDuration: 1000,
+      responsiveAnimationDuration: 500,
     },
   });
 };
