@@ -95,15 +95,6 @@ const LaureatComponent = function (service) {
     });
   });
 
-  window.addEventListener("scroll", function () {
-    const people = document.getElementsByClassName("person");
-    for (let i = 0; i < people.length; i++) {
-      window.scrollY > people[i].offsetHeight - 520
-        ? people[i].classList.add("animate")
-        : people[i].classList.remove("animate");
-    }
-  });
-
   select.addEventListener("change", function () {
     if (select.value == ALL) {
       for (const divPerson of wrapper.children) {
