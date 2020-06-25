@@ -61,6 +61,8 @@
     <script src="js/views/partenaire-component.js" defer="defer"></script>
     <script src="js/views/professeur-component.js" defer="defer"></script>
     <script src="js/views/navbar-component.js" defer="defer"></script>
+    <script src="js/views/recherche-component.js" defer="defer"></script>
+    <script src="js/views/history-component.js" defer="defer"></script>
     <script src="js/views/programme-component.js" defer="defer"></script>
     <script src="js/views/debouche-component.js" defer="defer"></script>
     <script src="js/views/evenement-component.js" defer="defer"></script>
@@ -85,7 +87,7 @@
 
                 <!-- Logo -->
                 <div class="brand">
-                    <a data-target="accueil" title="Accueil">
+                    <a id="header-logo" data-target="accueil" title="Accueil">
                         <img src="images/logo-mql-cropped.png" alt="Accueil" id="index-span" />
                         <div class="logo-title-wrapper">
                             <span class="logo-title">MASTER QUALITÉ LOGICIEL</span>
@@ -147,7 +149,7 @@
                 </div>
             </div>
             <!-- video accueil-->
-            <div class="gallery">
+            <div id="video-accueil" class="gallery">
                 <div class="gallery-container">
                     <div class="gallery-left">
                         <video class="gallery-video" controls="">
@@ -582,7 +584,7 @@
                     <h1>évènements</h1>
                 </div>
             </header>
-            <form class="form">
+            <form id="evenements-filter-wrapper" class="form">
                 <div>
                     <button id="filter" class="btn" type="button">
                         <span class="">Filtres</span>
@@ -694,17 +696,17 @@
     <footer>
         <div class="main-footer">
             <div class="footer-box">
-                <a data-target="accueil"><img src="images/logo-mql-cropped.png" class="footer-logo"
+                <a id="footer-logo" data-target="accueil"><img src="images/logo-mql-cropped.png" class="footer-logo"
                         title="Accueil" /></a>
             </div>
             <div class="footer-box">
                 <h2>Liens utiles</h2>
                 <hr>
                 <ul>
-                    <li><a data-target="presentationMaster">Présentation</a></li>
-                    <li><a data-target="activites">Activités</a></li>
-                    <li><a data-target="selection">Sélection</a></li>
-                    <li><a data-target="admission">Admission</a></li>
+                    <li><a id="footer-presentationMaster-link" data-target="presentationMaster">Présentation</a></li>
+                    <li><a id="footer-activites-link" data-target="activites">Activités</a></li>
+                    <li><a id="footer-selection-link" data-target="selection">Sélection</a></li>
+                    <li><a id="footer-admission-link" data-target="admission">Admission</a></li>
                 </ul>
             </div>
             <div class="footer-box">
@@ -720,8 +722,8 @@
                     </h6>
                     <h6>
                         <a href="mailto:noureddine.chenfour@usmba.ac.ma"><img src="icons/email.png" />
-                            <span class="small-screen">Noureddine.Chenfour@ Usmba.Ac.Ma</span>
-                            <span class="large-screen">Noureddine.Chenfour@Usmba.Ac.Ma</span>
+                            <span class="small-screen">noureddine.chenfour@ usmba.ac.ma</span>
+                            <span class="large-screen">noureddine.chenfour@usmba.ac.ma</span>
                         </a>
                     </h6>
                 </div>

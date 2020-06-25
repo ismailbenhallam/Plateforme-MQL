@@ -1,4 +1,24 @@
 let SelectComponent = function () {
+  /*a function that will close all select boxes in the document,
+  except the current select box:*/
+  let closeAllSelect = function (element) {
+    let indexes = [];
+    let selectItems = document.getElementsByClassName("select-items");
+    let selectSelected = document.getElementsByClassName("select-selected");
+    for (let i = 0; i < selectSelected.length; i++) {
+      if (element == selectSelected[i]) {
+        indexes.push(i);
+      } else {
+        selectSelected[i].classList.remove("select-arrow-active");
+      }
+    }
+    for (let i = 0; i < selectItems.length; i++) {
+      if (indexes.indexOf(i)) {
+        selectItems[i].classList.add("select-hide");
+      }
+    }
+  };
+
   /* Look for any elements with the class "custom-select":*/
   let selectElementWrappers = document.getElementsByClassName("custom-select");
   for (let i = 0; i < selectElementWrappers.length; i++) {
@@ -57,32 +77,7 @@ let SelectComponent = function () {
       this.classList.toggle("select-arrow-active");
     });
   }
-  function closeAllSelect(elmnt) {
-    /*a function that will close all select boxes in the document,
-    except the current select box:*/
-    var x,
-      y,
-      i,
-      xl,
-      yl,
-      arrNo = [];
-    x = document.getElementsByClassName("select-items");
-    y = document.getElementsByClassName("select-selected");
-    xl = x.length;
-    yl = y.length;
-    for (i = 0; i < yl; i++) {
-      if (elmnt == y[i]) {
-        arrNo.push(i);
-      } else {
-        y[i].classList.remove("select-arrow-active");
-      }
-    }
-    for (i = 0; i < xl; i++) {
-      if (arrNo.indexOf(i)) {
-        x[i].classList.add("select-hide");
-      }
-    }
-  }
+
   /*if the user clicks anywhere outside the select box,
   then close all select boxes:*/
   document.addEventListener("click", closeAllSelect);

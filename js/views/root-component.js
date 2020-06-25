@@ -32,24 +32,3 @@ window.addEventListener("scroll", function () {
 
   // progressBar();
 });
-
-// TODO: Ismail
-/***** Override Back action *****/
-// document.onHistoryGo = function () {
-//   return false;
-// };
-
-// var historyList = {
-//   list: [],
-//   index: 0,
-// };
-
-// window.history.back = function () {
-//   historyList.list[--historyList.index].dispatchEvent(new Event("click"));
-// };
-
-// window.history.forward = function () {
-//   historyList.list[++historyList.index].dispatchEvent(new Event("click"));
-// };
-
-// window.history.length = () => historyList.list.length;
