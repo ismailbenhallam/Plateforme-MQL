@@ -53,6 +53,12 @@ Date.prototype.toReadeableString = function () {
   return `${this.getDate()} ${month} ${this.getFullYear()}`;
 };
 
+EventTarget.prototype.addMultipleEventListener = function (listener, ...types) {
+  types.forEach((type) => {
+    this.addEventListener(type, listener);
+  });
+};
+
 const $ = (id) => document.getElementById(id);
 const create = (tag) => document.createElement(tag);
 
