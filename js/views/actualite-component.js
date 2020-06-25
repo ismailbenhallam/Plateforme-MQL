@@ -46,7 +46,7 @@ const ActualiteComponent = function (service) {
 };
 
 // Constantes
-ActualiteComponent.prototype.DELAY = 5000;
+ActualiteComponent.prototype.DELAY = 4000;
 ActualiteComponent.prototype.NBR_ANNONCES = 3;
 
 // Methods

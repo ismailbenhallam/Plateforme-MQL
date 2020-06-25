@@ -30,6 +30,7 @@ const EvenementComponent = function (service) {
   let filterButton = $("filter");
   let divExpand = $("expand");
   divExpand.style.display = "none";
+  filterButton.children[1].src = this.expandIconBlue;
 
   filterButton.addEventListener("click", () => {
     if (divExpand.style.display === "none") {
