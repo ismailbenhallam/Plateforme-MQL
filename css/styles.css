@@ -641,7 +641,7 @@ body {
   background: rgba(0, 0, 0, 0.68);
 }
 
-.mySlides {
+#slide .mySlides {
   display: inline-block;
   padding: 0 2rem;
   font-size: 1rem;
@@ -650,19 +650,19 @@ body {
   margin-top: -15px;
 }
 
-.mySlides a {
+#slide .mySlides a {
   color: white;
   cursor: default;
   text-decoration: none;
 }
 
-.mySlides a.has-link {
+#slide .mySlides a.has-link {
   color: white;
   cursor: pointer;
   text-decoration: underline;
 }
 
-.slideshow-container {
+#slide .slideshow-container {
   width: 1200px;
   display: inline-block;
   height: 4rem;
@@ -670,6 +670,14 @@ body {
   white-space: nowrap;
   padding-right: 100%;
   box-sizing: content-box;
+}
+
+/* TODO: Style the span : "Nouveau !" for 'Actualités' */
+#slide .new-actu {
+  margin-left: 20px;
+  padding: 0 5px;
+  background-color: #4caf50;
+  color: black;
 }
 
 /* Next & previous buttons */
