@@ -20,6 +20,11 @@ MQL Logo colors :
   }
 }
 
+/* Change the default icon for all "ul" tags */
+.ul {
+  list-style-image: url(../icons/next1.png);
+}
+
 .highlighted {
   background-color: yellow;
 }
@@ -1069,6 +1074,7 @@ body {
 }
 
 #accueil .partenaires-wrapper {
+  background: white;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-evenly;
@@ -1261,6 +1267,7 @@ body {
   flex-flow: row wrap;
   justify-content: center;
   align-items: flex-start;
+  padding: 50px 40px 60px 40px;
 }
 
 .evenement {
@@ -2241,9 +2248,8 @@ form {
     cursor: default;
   }
   #header .nav-list ul li a.shouldnt-be-active:hover {
-    /* TODO: NAVBAR */
-    color: #d9323a;
-    background-color: white;
+    background-color: #d9323a;
+    color: white;
     /* border: 1px solid #d9323a; */
   }
 
@@ -2484,9 +2490,9 @@ button a {
 
 /*SELECTION*/
 
-.selection-details ul {
+/* .selection-details ul {
   list-style: none;
-}
+} */
 
 h3.title-default-left::before {
   content: "";
@@ -2918,7 +2924,19 @@ ul.event-wrapper {
   width: 100%;
   height: 100%;
 }
-
+.footer-bottom {
+  width: 100%;
+  height: auto;
+  background: #1a1a1a;
+  padding: 10px 0px;
+}
+.footer-copy p {
+  font-size: 13px;
+  font-weight: 500;
+  color: #fff;
+  margin: 0px;
+  text-align: center;
+}
 /* Begin activities section */
 
 #activites {
@@ -2927,10 +2945,6 @@ ul.event-wrapper {
 
 .activite-presentation {
   padding: 30px 60px;
-}
-
-.activite-presentation > ul {
-  list-style: none;
 }
 
 .activite-wrapper {

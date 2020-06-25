@@ -11,7 +11,7 @@ let stageService = new StageService(promos, promosDetails);
 let laureatService = new LaureatService(laureatsJSON);
 
 new NavbarComponent(navbarService);
-// new RechercheComponent();
+new RechercheComponent();
 new HistoryComponent();
 new DeboucheComponent(deboucheService);
 new ProgrammeComponent(programmeService);
