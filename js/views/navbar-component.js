@@ -21,7 +21,7 @@ NavbarComponent.prototype.createNavbarItems = function () {
     let a = create("a");
     a.id = item.id;
     a.dataset.target = item.target;
-    a.href = "#" + item.target;
+    a.href = "#/" + item.target;
     a.textContent = item.name;
     li.appendChild(a);
     this.navbarUl.appendChild(li);
@@ -39,7 +39,7 @@ NavbarComponent.prototype.createNavbarItems = function () {
         a.id = child.id;
         a.textContent = child.name;
         a.dataset.target = child.target;
-        a.href = "#" + child.target;
+        a.href = "#/" + child.target;
         a.dataset.parent = item.id;
         ul.appendChild(childLi);
       });
