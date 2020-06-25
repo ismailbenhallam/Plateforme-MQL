@@ -64,12 +64,6 @@ const create = (tag) => document.createElement(tag);
 
 const scrollTo = (element) => {
   element.scrollIntoView({ behavior: "auto", block: "start" });
-  // document.body.scrollTop -= 65; // For Safari
-  // document.documentElement.scrollTop -= 65; // For Chrome, Firefox, IE and Opera
 };
 
-// revereseColorAndBackgroundColor = function (element) {
-//   let color = element.color;
-//   element.color = element.backgroundColor;
-//   element.backgroundColor = element.color;
-// };
+const getCurrentPageId = () => location.hash.slice(1);
