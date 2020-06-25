@@ -42,7 +42,7 @@ const ActualiteComponent = function (service) {
   nextSlider.addEventListener("click", this.showNextSlide.bind(this));
 
   if (this.nbrAnnonces > 1)
-    window.setTimeout(this.infinitShowSlides.bind(this), this.DELAY);
+    window.setInterval(this.showNextSlide.bind(this), this.DELAY);
 };
 
 // Constantes
@@ -50,11 +50,6 @@ ActualiteComponent.prototype.DELAY = 5000;
 ActualiteComponent.prototype.NBR_ANNONCES = 3;
 
 // Methods
-ActualiteComponent.prototype.infinitShowSlides = function () {
-  this.showNextSlide();
-  window.setTimeout(this.infinitShowSlides.bind(this), this.DELAY);
-};
-
 ActualiteComponent.prototype.showNextSlide = function () {
   this.slides[this.slideIndex].style.display = "none";
   this.slideIndex++;

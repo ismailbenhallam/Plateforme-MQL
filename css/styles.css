@@ -20,6 +20,21 @@ MQL Logo colors :
   }
 }
 
+.highlighted {
+  background-color: yellow;
+}
+.highlight {
+  background-color: #fff34d;
+  -moz-border-radius: 5px; /* FF1+ */
+  -webkit-border-radius: 5px; /* Saf3-4 */
+  border-radius: 5px; /* Opera 10.5, IE 9, Saf5, Chrome */
+  -moz-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.7); /* FF3.5+ */
+  -webkit-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.7); /* Saf3.0+, Chrome */
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.7); /* Opera 10.5+, IE 9.0 */
+  padding: 1px 4px;
+  margin: 0 -4px;
+}
+
 .btn {
   display: block;
   outline: none;
@@ -101,7 +116,7 @@ body {
 /***** All Select element with '.custom-select' class *****/
 
 .custom-select {
-  width: 400px;
+  width: 350px;
   margin-right: 30px;
   margin-top: 30px;
   position: relative;
@@ -148,6 +163,9 @@ body {
   left: 0;
   right: 0;
   z-index: 99;
+
+  max-height: 400px;
+  overflow: auto;
 }
 
 /*hide the items when the select box is closed:*/
@@ -467,7 +485,19 @@ body {
   width: 100%;
   position: relative;
   display: flex;
+  flex-direction: column;
   padding: 10px;
+}
+
+#header .search .search-input-wrapper {
+  display: flex;
+}
+
+#header .search .search-result {
+  /* background-color: #000; */
+  /* max-width: 50px; */
+  overflow: auto;
+  display: none;
 }
 
 #header .searchTerm {
@@ -482,6 +512,11 @@ body {
   border-radius: 5px 0 0 5px;
   outline: none;
   color: black;
+}
+
+#header .searchTerm:focus {
+  border-right: 3px solid #d9323a;
+  border-radius: 5px;
 }
 
 #header .searchTerm:focus {
@@ -1392,7 +1427,7 @@ body {
   }
 }
 
-/* Evenement Details */
+/** Evenement Modal **/
 .evenement-modal {
   display: flex;
   justify-content: space-around;
@@ -1409,7 +1444,7 @@ body {
 
 .evenement-modal-content {
   display: block;
-  max-width: 88%;
+  max-width: 86%;
   max-height: 98%;
   animation-name: zoom;
   animation-duration: 1s;
