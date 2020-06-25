@@ -53,6 +53,11 @@ Date.prototype.toReadeableString = function () {
   return `${this.getDate()} ${month} ${this.getFullYear()}`;
 };
 
+Date.prototype.DAY_IN_MILLIS = 24 * 60 * 60 * 1000;
+Date.prototype.isLessThanNDays = function (n) {
+  return new Date() - this < n * this.DAY_IN_MILLIS;
+};
+
 EventTarget.prototype.addMultipleEventListener = function (listener, ...types) {
   types.forEach((type) => {
     this.addEventListener(type, listener);
@@ -60,6 +65,7 @@ EventTarget.prototype.addMultipleEventListener = function (listener, ...types) {
 };
 
 const $ = (id) => document.getElementById(id);
+
 const create = (tag) => document.createElement(tag);
 
 const scrollTo = (element) => {

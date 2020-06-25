@@ -20,6 +20,11 @@ MQL Logo colors :
   }
 }
 
+/* Change the default icon for all "ul" tags */
+.ul {
+  list-style-image: url(../icons/next1.png);
+}
+
 .highlighted {
   background-color: yellow;
 }
@@ -636,7 +641,7 @@ body {
   background: rgba(0, 0, 0, 0.68);
 }
 
-.mySlides {
+#slide .mySlides {
   display: inline-block;
   padding: 0 2rem;
   font-size: 1rem;
@@ -645,19 +650,19 @@ body {
   margin-top: -15px;
 }
 
-.mySlides a {
+#slide .mySlides a {
   color: white;
   cursor: default;
   text-decoration: none;
 }
 
-.mySlides a.has-link {
+#slide .mySlides a.has-link {
   color: white;
   cursor: pointer;
   text-decoration: underline;
 }
 
-.slideshow-container {
+#slide .slideshow-container {
   width: 1200px;
   display: inline-block;
   height: 4rem;
@@ -665,6 +670,14 @@ body {
   white-space: nowrap;
   padding-right: 100%;
   box-sizing: content-box;
+}
+
+/* TODO: Style the span : "Nouveau !" for 'Actualités' */
+#slide .new-actu {
+  margin-left: 20px;
+  padding: 0 5px;
+  background-color: #4caf50;
+  color: black;
 }
 
 /* Next & previous buttons */
@@ -1069,6 +1082,7 @@ body {
 }
 
 #accueil .partenaires-wrapper {
+  background: white;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-evenly;
@@ -1261,6 +1275,7 @@ body {
   flex-flow: row wrap;
   justify-content: center;
   align-items: flex-start;
+  padding: 50px 40px 60px 40px;
 }
 
 .evenement {
@@ -2483,9 +2498,9 @@ button a {
 
 /*SELECTION*/
 
-.selection-details ul {
+/* .selection-details ul {
   list-style: none;
-}
+} */
 
 h3.title-default-left::before {
   content: "";
@@ -2938,10 +2953,6 @@ ul.event-wrapper {
 
 .activite-presentation {
   padding: 30px 60px;
-}
-
-.activite-presentation > ul {
-  list-style: none;
 }
 
 .activite-wrapper {
