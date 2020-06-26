@@ -30,7 +30,7 @@ const LaureatComponent = function (service) {
     divBioImg.className = "bio-img";
     let imgPerson = create("img");
     imgPerson.setAttribute("src", "images/laureats/" + l.photo);
-    imgPerson.setAttribute("alt", l.nom);
+    imgPerson.setAttribute("alt", l.nom + " " + l.prenom);
     let divSocial = create("div");
     divSocial.setAttribute("id", "social");
     divSocial.className = "social";
@@ -47,7 +47,7 @@ const LaureatComponent = function (service) {
     let divPersonContent = create("div");
     divPersonContent.className = "person-content";
     let name = create("h2");
-    name.textContent = l.nom + " (" + l.promotion + ")";
+    name.textContent = `${l.nom} ${l.prenom} (${l.promotion})`;
     let job = create("SPAN");
     job.className = "subtitle";
     if (l.ville == "") {

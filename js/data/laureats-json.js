@@ -1,7 +1,8 @@
 var laureatsJSON = [
   {
     linkedin: "https://www.linkedin.com/in/hicham-elmorabet-a70044172/",
-    nom: "EL MORABET Hicham",
+    nom: "EL MORABET",
+    prenom: "Hicham",
     promotion: "2017-2019",
     pfe: "Umanis, Casablanca",
     cdi: "Umanis, Casablanca",
@@ -13,7 +14,8 @@ var laureatsJSON = [
   },
   {
     linkedin: "https://www.linkedin.com/in/ibtissam-el-khairy-173b33141/",
-    nom: "El khairy Ibtissam",
+    nom: "El khairy",
+    prenom: "Ibtissam",
     promotion: "2017-2019",
     pfe: "Cegedim",
     cdi: "BITS",
@@ -26,7 +28,8 @@ var laureatsJSON = [
   {
     linkedin:
       "https://www.linkedin.com/in/aymane-hammioui-%E2%98%81%EF%B8%8F-535584139/",
-    nom: "HAMMIOUI Aymane",
+    nom: "HAMMIOUI",
+    prenom: "Aymane",
     promotion: "2016-2018",
     pfe: "Cegedim",
     cdi: "Umanis",
@@ -38,7 +41,8 @@ var laureatsJSON = [
   },
   {
     linkedin: "https://www.linkedin.com/in/hicham-haidar-050b1212b/",
-    nom: "HAIDAR Hicham",
+    nom: "HAIDAR",
+    prenom: "Hicham",
     promotion: "2018-2020",
     pfe: "CGI Fès",
     cdi: "",
@@ -50,7 +54,8 @@ var laureatsJSON = [
   },
   {
     linkedin: "https://www.linkedin.com/in/mouad-youssef/",
-    nom: "YOUSSEF Mouad",
+    nom: "YOUSSEF",
+    prenom: "Mouad",
     promotion: "2018-2020",
     pfe: "SQLI Rabat",
     cdi: "",
@@ -62,7 +67,8 @@ var laureatsJSON = [
   },
   {
     linkedin: "https://www.linkedin.com/in/safae-filali-sadiq-622b9a119/",
-    nom: "FILALI SADIQ Safae",
+    nom: "FILALI SADIQ",
+    prenom: " Safae",
     promotion: "2016-2018",
     pfe: "Capgemini",
     cdi: "Capgemini",
@@ -74,7 +80,8 @@ var laureatsJSON = [
   },
   {
     linkedin: "#",
-    nom: "EL HAKMI Ghita",
+    nom: "EL HAKMI",
+    prenom: "Ghita",
     promotion: "2017-2019",
     pfe: "Capgemini Rabat",
     cdi: "Capgemini Rabat",
@@ -87,6 +94,7 @@ var laureatsJSON = [
   {
     linkedin: "https://www.linkedin.com/in/fatima-zerkoun-51883213a/",
     nom: "ZERKOUN Fatima",
+    prenom: "Fatima",
     promotion: "2018-2020",
     pfe: "CGI",
     cdi: "",
@@ -98,7 +106,8 @@ var laureatsJSON = [
   },
   {
     linkedin: "https://www.linkedin.com/in/ahmed-belarbi-509908170/",
-    nom: "BELARBI Ahmed",
+    nom: "BELARBI",
+    prenom: "Ahmed",
     promotion: "2017-2019",
     pfe: "Capgemini",
     cdi: "Capgemini",
@@ -110,7 +119,8 @@ var laureatsJSON = [
   },
   {
     linkedin: "https://www.linkedin.com/in/ayoub-dadi-ba0a63105/",
-    nom: "DADI Ayoub",
+    nom: "DADI",
+    prenom: "Ayoub",
     promotion: "2016-2018",
     pfe: "CGI technologies et solutions",
     cdi: "CGI technologies et solutions",
@@ -122,7 +132,8 @@ var laureatsJSON = [
   },
   {
     linkedin: "https://www.linkedin.com/in/chaimae-laalahmi/",
-    nom: "LAALAHMI Chaimae",
+    nom: "LAALAHMI",
+    prenom: "Chaimae",
     promotion: "2017-2019",
     pfe: "Capgemini",
     cdi: "Capgemini",
@@ -134,7 +145,8 @@ var laureatsJSON = [
   },
   {
     linkedin: "https://www.linkedin.com/in/anouar-ma/",
-    nom: "MAJDOULIF Anouar",
+    nom: "MAJDOULIF",
+    prenom: "Anouar",
     promotion: "2017-2019",
     pfe: "Capgemini",
     cdi: "Capgemini",
@@ -146,7 +158,8 @@ var laureatsJSON = [
   },
   {
     linkedin: "https://www.linkedin.com/in/hala-mestadi/",
-    nom: "MESTADI Hala",
+    nom: "MESTADI",
+    prenom: "Hala",
     promotion: "2018-2020",
     pfe: "SQLI",
     cdi: "",
@@ -159,7 +172,8 @@ var laureatsJSON = [
   {
     linkedin:
       "https://www.linkedin.com/in/fatima-ez-zahrae-driouich-9802811a0/",
-    nom: "DRIOUICH Fatima ez-zahrae",
+    nom: "DRIOUICH",
+    prenom: "Fatima Ez-Zahrae",
     promotion: "2018-2020",
     pfe: "DXC Technology",
     cdi: "",
@@ -171,7 +185,8 @@ var laureatsJSON = [
   },
   {
     linkedin: "https://www.linkedin.com/in/marwa-mahboub-76a445142/",
-    nom: "MAHBOUB Marwa",
+    nom: "MAHBOUB ",
+    prenom: "Marwa",
     promotion: "2017-2019",
     pfe: "Capgemini",
     cdi: "Capgemini",
@@ -183,7 +198,8 @@ var laureatsJSON = [
   },
   {
     linkedin: "https://www.linkedin.com/in/riad-el-mansour-53836bb8/",
-    nom: "EL MANSOUR Riad",
+    nom: "EL MANSOUR",
+    prenom: "Riad",
     promotion: "2016-2018",
     pfe: "Capgemini",
     cdi: "Capgemini",
@@ -195,7 +211,8 @@ var laureatsJSON = [
   },
   {
     linkedin: "https://www.linkedin.com/in/nizar-yakoubi/",
-    nom: "YAKOUBI Nizar",
+    nom: "YAKOUBI",
+    prenom: "Nizar",
     promotion: "2016-2018",
     pfe: "Cgi",
     cdi: "",
@@ -207,7 +224,8 @@ var laureatsJSON = [
   },
   {
     linkedin: "https://www.linkedin.com/in/badr-zeroual-90b36b85/",
-    nom: "ZEROUAL Badr",
+    nom: "ZEROUAL",
+    prenom: "Badr",
     promotion: "2012-2014",
     pfe: "Alten",
     cdi: "Capgemini",
@@ -219,7 +237,8 @@ var laureatsJSON = [
   },
   {
     linkedin: "https://www.linkedin.com/in/mouna-chraibi-302895174/",
-    nom: "CHRAIBI Mouna",
+    nom: "CHRAIBI",
+    prenom: "Mouna",
     promotion: "2017-2019",
     pfe: "Umanis",
     cdi: "Umanis",
@@ -231,7 +250,8 @@ var laureatsJSON = [
   },
   {
     linkedin: "https://www.linkedin.com/in/salma-el-mansour-8b7580123/",
-    nom: "ELMansour Salma",
+    nom: "ELMansour",
+    prenom: "Salma",
     promotion: "2016-2018",
     pfe: "Capgemeni",
     cdi: "Capgemeni",
@@ -244,7 +264,8 @@ var laureatsJSON = [
   },
   {
     linkedin: "https://www.linkedin.com/in/ayyoub-gamrani/",
-    nom: "GAMRANI Ayyoub",
+    nom: "GAMRANI",
+    prenom: "Ayyoub",
     promotion: "2016-2018",
     pfe: "CGI Technologies et Solutions",
     cdi: "CGI Technologies et Solutions",
@@ -256,7 +277,8 @@ var laureatsJSON = [
   },
   {
     linkedin: "https://www.linkedin.com/in/chaimae-elgaddar-ab181a13b/",
-    nom: "ELGADDAR Chaimae",
+    nom: "ELGADDAR",
+    prenom: "Chaimae",
     promotion: "2017-2019",
     pfe: "Capgemini",
     cdi: "Capgemini",
@@ -268,7 +290,8 @@ var laureatsJSON = [
   },
   {
     linkedin: "https://www.linkedin.com/in/wafae-nabet-2032b811b/",
-    nom: "NABET Wafae",
+    nom: "NABET",
+    prenom: "Wafae",
     promotion: "2018-2020",
     pfe: "CEGEDIM",
     cdi: "",
@@ -281,7 +304,8 @@ var laureatsJSON = [
   },
   {
     linkedin: "https://www.linkedin.com/in/hind-aalouch-3a885a156/",
-    nom: "AALOUCH Hind",
+    nom: "AALOUCH",
+    prenom: "Hind",
     promotion: "2018-2020",
     pfe: "Spacebyte AG",
     cdi: "",
@@ -293,7 +317,8 @@ var laureatsJSON = [
   },
   {
     linkedin: "https://www.linkedin.com/in/youness-mouhim-75918597/",
-    nom: "MOUHIM Youness",
+    nom: "MOUHIM",
+    prenom: "Youness",
     promotion: "2015-2017",
     pfe: "CGI",
     cdi: "CGI",
@@ -305,7 +330,8 @@ var laureatsJSON = [
   },
   {
     linkedin: "https://www.linkedin.com/in/daoud-wirzgane-06688a129/",
-    nom: "WIRZGANE Daoud",
+    nom: "WIRZGANE",
+    prenom: "Daoud",
     promotion: "2018-2020",
     pfe: "Intelcia",
     cdi: "",
@@ -317,7 +343,8 @@ var laureatsJSON = [
   },
   {
     linkedin: "https://www.linkedin.com/in/abdelhamid-el-guarti-9a118011b/",
-    nom: "ELGUARTI Abdelhamid",
+    nom: "ELGUARTI",
+    prenom: "Abdelhamid",
     promotion: "2013-2015",
     pfe: "CEGEDIM",
     cdi: "CEGEDIM",
@@ -330,7 +357,8 @@ var laureatsJSON = [
   },
   {
     linkedin: "https://www.linkedin.com/in/soufiane-darbouz-b50a57196/",
-    nom: "DARBOUZ Soufiane",
+    nom: "DARBOUZ",
+    prenom: "Soufiane",
     promotion: "2018-2020",
     pfe: "SQLI",
     cdi: "",
@@ -342,7 +370,8 @@ var laureatsJSON = [
   },
   {
     linkedin: "https://www.linkedin.com/in/misdakmarouane/",
-    nom: "MISDAK Marouane",
+    nom: "MISDAK",
+    prenom: "Marouane",
     ville: "Casablanca",
     promotion: "2018-2020",
     pfe: "Capgemini",
@@ -354,7 +383,8 @@ var laureatsJSON = [
   },
   {
     linkedin: "https://www.linkedin.com/in/hajar-zaghba/",
-    nom: "ZAGHBA Hajar",
+    nom: "ZAGHBA",
+    prenom: "Hajar",
     ville: "Rabat",
     promotion: "2018-2020",
     pfe: "CEGEDIM",
@@ -366,7 +396,8 @@ var laureatsJSON = [
   },
   {
     linkedin: "https://www.linkedin.com/in/hatim-essadeq-371a9a136/",
-    nom: "Essadeq Hatim",
+    nom: "Essadeq",
+    prenom: "Hatim",
     ville: "Casablanca",
     promotion: "2018-2020",
     pfe: "Capgemini",
@@ -378,7 +409,8 @@ var laureatsJSON = [
   },
   {
     linkedin: "https://www.linkedin.com/in/amjida-abderrahim-756648153/",
-    nom: "Amjida Abderrahim",
+    nom: "Amjida",
+    prenom: "Abderrahim",
     ville: "Casablanca",
     promotion: "2018-2020",
     pfe: "Colas Digital Solutions",
@@ -390,7 +422,8 @@ var laureatsJSON = [
   },
   {
     linkedin: "https://www.linkedin.com/in/redouane-baghdad-0a5645134/",
-    nom: "BAGHDAD Redouane",
+    nom: "BAGHDAD",
+    prenom: "Redouane",
     ville: "Rabat",
     promotion: "2018-2020",
     pfe: "SQLI",
@@ -402,7 +435,8 @@ var laureatsJSON = [
   },
   {
     linkedin: "#",
-    nom: "JAMAI Hicham",
+    nom: "JAMAI",
+    prenom: "Hicham",
     ville: "Casablanca",
     promotion: "2018-2020",
     pfe: "Intelcia département PPV",
@@ -414,7 +448,8 @@ var laureatsJSON = [
   },
   {
     linkedin: "https://www.linkedin.com/in/nesrin-lakhal-760098169/",
-    nom: "LAKHAL Nesrin",
+    nom: "LAKHAL",
+    prenom: "Nesrin",
     ville: "Rabat",
     promotion: "2018-2020",
     pfe: "Capgemini",
@@ -426,7 +461,8 @@ var laureatsJSON = [
   },
   {
     linkedin: "https://www.linkedin.com/in/omar-ismaili-alaoui-3b66b6ab/",
-    nom: "ISMAILI-ALAOUI Omar",
+    nom: "ISMAILI ALAOUI",
+    prenom: "Omar",
     ville: "Rabat",
     promotion: "2018-2020",
     pfe: "Capgemini",
@@ -438,7 +474,8 @@ var laureatsJSON = [
   },
   {
     linkedin: "https://www.linkedin.com/in/zakaryaebenabbou/",
-    nom: "Benabbou Zakaryae",
+    nom: "Benabbou",
+    prenom: "Zakaryae",
     ville: "Casablanca",
     promotion: "2017-2019",
     pfe: "Capgemini",
@@ -450,7 +487,8 @@ var laureatsJSON = [
   },
   {
     linkedin: "https://www.linkedin.com/in/nourimane-ziani/",
-    nom: "ZIANi Nour-Imane",
+    nom: "ZIANi",
+    prenom: "Nour Imane",
     ville: "Rabat",
     promotion: "2018-2020",
     pfe: "CEGEDIM",
@@ -462,7 +500,8 @@ var laureatsJSON = [
   },
   {
     linkedin: "#",
-    nom: "KHEMLICHI Firdaous",
+    nom: "KHEMLICHI",
+    prenom: "Firdaous",
     promotion: "2018-2020",
     pfe: "CGI",
     cdi: "",
@@ -474,7 +513,8 @@ var laureatsJSON = [
   },
   {
     linkedin: "https://www.linkedin.com/in/hind-tajmouati-228a71120/",
-    nom: "TAJMOUATI Hind",
+    nom: "TAJMOUATI",
+    prenom: "Hind",
     promotion: "2016-2018",
     pfe: "CGI",
     cdi: "CGI",
@@ -486,7 +526,8 @@ var laureatsJSON = [
   },
   {
     linkedin: "https://www.linkedin.com/in/mehdi-bennani-214029132/",
-    nom: "BENNANI Mehdi",
+    nom: "BENNANI",
+    prenom: "Mehdi",
     promotion: "2015-2017",
     pfe: "CGI Fès",
     cdi: "CGI Fès",
@@ -498,7 +539,8 @@ var laureatsJSON = [
   },
   {
     linkedin: "https://www.linkedin.com/in/wafae-hmamed-52572710b/",
-    nom: "HMAMED Wafae",
+    nom: "HMAMED",
+    prenom: "Wafae",
     promotion: "2016-2018",
     pfe: "CGI",
     cdi: "CGI",
@@ -510,7 +552,8 @@ var laureatsJSON = [
   },
   {
     linkedin: "#",
-    nom: "LAZAAR Kawtar",
+    nom: "LAZAAR",
+    prenom: "Kawtar",
     promotion: "2014-2016",
     pfe: "CGI",
     cdi: "CGI",
@@ -522,7 +565,8 @@ var laureatsJSON = [
   },
   {
     linkedin: "https://www.linkedin.com/in/elomarisaleh/",
-    nom: "ELOMARI Saleh",
+    nom: "ELOMARI",
+    prenom: "Saleh",
     promotion: "2016-2018",
     pfe: "CGI",
     cdi: "",
@@ -534,7 +578,8 @@ var laureatsJSON = [
   },
   {
     linkedin: "https://www.linkedin.com/in/douniakarym/",
-    nom: "KARYM Dounia",
+    nom: "KARYM",
+    prenom: "Dounia",
     promotion: "2016-2018",
     pfe: "CGI",
     cdi: "CGI",
@@ -546,7 +591,8 @@ var laureatsJSON = [
   },
   {
     linkedin: "https://www.linkedin.com/in/souhayla-bouzria-82b550140/",
-    nom: "BOUZRIA Souhayla",
+    nom: "BOUZRIA",
+    prenom: "Souhayla",
     promotion: "2017-2019",
     pfe: "Capgemini",
     cdi: "Capgemini",
@@ -558,7 +604,8 @@ var laureatsJSON = [
   },
   {
     linkedin: "https://www.linkedin.com/in/samiha-el-bouchikhi-207737118/",
-    nom: "ELBOUCHIKHI Samiha",
+    nom: "ELBOUCHIKHI",
+    prenom: "Samiha",
     promotion: "2015-2017",
     pfe: "Capgemini",
     cdi: "Capgemini",
@@ -570,7 +617,8 @@ var laureatsJSON = [
   },
   {
     linkedin: "https://www.linkedin.com/in/omar-boushabi/",
-    nom: "BOUSHABI Omar",
+    nom: "BOUSHABI",
+    prenom: "Omar",
     promotion: "2015-2017",
     pfe: "Capgemini",
     cdi: "Capgemini",
@@ -582,7 +630,8 @@ var laureatsJSON = [
   },
   {
     linkedin: "https://www.linkedin.com/in/majda-agharbi-719858129/",
-    nom: "AGHARBI Majda",
+    nom: "AGHARBI",
+    prenom: "Majda",
     promotion: "2015-2017",
     pfe: "Sylob",
     cdi: "Sylob",
@@ -594,7 +643,8 @@ var laureatsJSON = [
   },
   {
     linkedin: "https://www.linkedin.com/in/elkharrat-issam-987145124/",
-    nom: "ELKHARRAT Issam",
+    nom: "ELKHARRAT",
+    prenom: "Issam",
     promotion: "2015-2017",
     pfe: "CGI",
     cdi: "CGI",
@@ -606,7 +656,8 @@ var laureatsJSON = [
   },
   {
     linkedin: "https://www.linkedin.com/in/saadmoumen/",
-    nom: "MOUMEN Saad",
+    nom: "MOUMEN",
+    prenom: "Saad",
     promotion: "2015-2017",
     pfe: "Capgemini",
     cdi: "Capgemini",
@@ -618,7 +669,8 @@ var laureatsJSON = [
   },
   {
     linkedin: "https://www.linkedin.com/in/saad-haidar-926990101/",
-    nom: "HAIDAR Saad",
+    nom: "HAIDAR",
+    prenom: "Saad",
     promotion: "2014-2016",
     pfe: "Atos",
     cdi: "Capgemini",
@@ -630,7 +682,8 @@ var laureatsJSON = [
   },
   {
     linkedin: "https://www.linkedin.com/in/nissrine-gmih-4097a9b9/",
-    nom: "GMIH Nissrine",
+    nom: "GMIH",
+    prenom: "Nissrine",
     promotion: "2013-2015",
     pfe: "CGI",
     cdi: "Capgemini",
@@ -642,7 +695,8 @@ var laureatsJSON = [
   },
   {
     linkedin: "https://www.linkedin.com/in/rianioussama/",
-    nom: "RIANI Oussama",
+    nom: "RIANI",
+    prenom: "Oussama",
     promotion: "2014-2016",
     pfe: "CGI",
     cdi: "Banque de France",
@@ -654,7 +708,8 @@ var laureatsJSON = [
   },
   {
     linkedin: "https://www.linkedin.com/in/hamza-bouhouss-81a93ab4/",
-    nom: "BOUHOUSS Hamza",
+    nom: "BOUHOUSS",
+    prenom: "Hamza",
     promotion: "2015-2017",
     pfe: "Capgemini",
     cdi: "Capgemini",
@@ -666,7 +721,8 @@ var laureatsJSON = [
   },
   {
     linkedin: "https://www.linkedin.com/in/hanae-ez-zaher-4715a3105/",
-    nom: "EZ-ZAHER Hanae",
+    nom: "EZ-ZAHER",
+    prenom: "Hanae",
     promotion: "2014-2016",
     pfe: "Atos",
     cdi: "Atos",
@@ -678,7 +734,8 @@ var laureatsJSON = [
   },
   {
     linkedin: "https://www.linkedin.com/in/saloua-benhiba-1701a7118/",
-    nom: "BENHIBA Saloua",
+    nom: "BENHIBA",
+    prenom: "Saloua",
     promotion: "2014-2016",
     pfe: "Atos",
     cdi: "Capgemini",
@@ -690,7 +747,8 @@ var laureatsJSON = [
   },
   {
     linkedin: "https://www.linkedin.com/in/tahabasri/",
-    nom: "BASRI Taha",
+    nom: "BASRI",
+    prenom: "Taha",
     promotion: "2016-2018",
     pfe: "CGI",
     cdi: "CGI",
@@ -702,7 +760,8 @@ var laureatsJSON = [
   },
   {
     linkedin: "https://www.linkedin.com/in/hadachi-sanae-138684113/",
-    nom: "HADACHI Sanae",
+    nom: "HADACHI",
+    prenom: "Sanae",
     promotion: "2016-2018",
     pfe: "CGI",
     cdi: "CGI",
@@ -714,7 +773,8 @@ var laureatsJSON = [
   },
   {
     linkedin: "https://www.linkedin.com/in/chahboune-khalid/",
-    nom: "CHAHBOUNE Khalid",
+    nom: "CHAHBOUNE",
+    prenom: "Khalid",
     promotion: "2018-2020",
     pfe: "CGI Fès",
     cdi: "",
@@ -726,7 +786,8 @@ var laureatsJSON = [
   },
   {
     linkedin: "https://www.linkedin.com/in/soukaina-bennani-a9138814b/",
-    nom: "BENNANI Soukaina",
+    nom: "BENNANI",
+    prenom: "Soukaina",
     promotion: "2017-2019",
     pfe: "CGI",
     cdi: "CGI",
@@ -738,7 +799,8 @@ var laureatsJSON = [
   },
   {
     linkedin: "https://www.linkedin.com/in/soukaina-farih-3717a6124/",
-    nom: "FARIH Soukaina",
+    nom: "FARIH",
+    prenom: "Soukaina",
     promotion: "2015-2017",
     pfe: "CGI",
     cdi: "CGI",
@@ -750,7 +812,8 @@ var laureatsJSON = [
   },
   {
     linkedin: "https://www.linkedin.com/in/houda-elyousfi-elfilali/",
-    nom: "ELFILALI Houda",
+    nom: "ELFILALI",
+    prenom: "Houda",
     promotion: "2016-2018",
     pfe: "CGI",
     cdi: "CGI",
@@ -762,7 +825,8 @@ var laureatsJSON = [
   },
   {
     linkedin: "https://www.linkedin.com/in/mouad-eddarraz-97557b10a/",
-    nom: "EDDARRAZ Mouad",
+    nom: "EDDARRAZ",
+    prenom: "Mouad",
     promotion: "2015-2017",
     pfe: "CGI",
     cdi: "CGI",
@@ -774,7 +838,8 @@ var laureatsJSON = [
   },
   {
     linkedin: "https://www.linkedin.com/in/chaimae-siffar-a35b53a0/",
-    nom: "SIFFAR Chaimae",
+    nom: "SIFFAR",
+    prenom: "Chaimae",
     promotion: "2013-2015",
     pfe: "Hewlett Packard Enterprise",
     cdi: "CEGEDIM",
@@ -786,7 +851,8 @@ var laureatsJSON = [
   },
   {
     linkedin: "https://www.linkedin.com/in/lachkham-hamza/",
-    nom: "LACHKHAM Hamza",
+    nom: "LACHKHAM",
+    prenom: "Hamza",
     promotion: "2017-2019",
     pfe: "Umanis",
     cdi: "Umanis",
@@ -798,7 +864,8 @@ var laureatsJSON = [
   },
   {
     linkedin: "https://www.linkedin.com/in/yassir-salih-727b15172/",
-    nom: "SALIH Yassir",
+    nom: "SALIH",
+    prenom: "Yassir",
     promotion: "2017-2019",
     pfe: "Capgemini",
     cdi: "Capgemini",
@@ -810,7 +877,8 @@ var laureatsJSON = [
   },
   {
     linkedin: "https://www.linkedin.com/in/hassan-elmzabi/",
-    nom: "MZABI Hassan",
+    nom: "MZABI",
+    prenom: "Hassan",
     promotion: "2017-2019",
     pfe: "Capgemini",
     cdi: "Capgemini",
@@ -822,7 +890,8 @@ var laureatsJSON = [
   },
   {
     linkedin: "https://www.linkedin.com/in/salma-taleb-724932142/",
-    nom: "TALEB Salma",
+    nom: "TALEB",
+    prenom: "Salma",
     promotion: "2017-2019",
     pfe: "Umanis",
     cdi: "Umanis",
@@ -834,7 +903,8 @@ var laureatsJSON = [
   },
   {
     linkedin: "https://www.linkedin.com/in/zouhair-bibi-126603136/",
-    nom: "BIBI Zouhair",
+    nom: "BIBI",
+    prenom: "Zouhair",
     promotion: "2017-2019",
     pfe: "Capgemini",
     cdi: "Capgemini",
@@ -846,7 +916,8 @@ var laureatsJSON = [
   },
   {
     linkedin: "https://www.linkedin.com/in/kenza-alami-a89022132/",
-    nom: "ALAMI Kenza",
+    nom: "ALAMI",
+    prenom: "Kenza",
     promotion: "2015-2017",
     pfe: "Capgemini",
     cdi: "Capgemini",
@@ -858,7 +929,8 @@ var laureatsJSON = [
   },
   {
     linkedin: "https://www.linkedin.com/in/fatima-zahra-selouani-02206a145/",
-    nom: "SELOUANI Fatima-Zahra",
+    nom: "SELOUANI",
+    prenom: "Fatima-Zahra",
     promotion: "2017-2019",
     pfe: "Capgemini",
     cdi: "CGI",
