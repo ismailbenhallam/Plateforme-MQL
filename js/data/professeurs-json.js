@@ -10,7 +10,7 @@ var professeursJSON = [{
         nom: "Omar EL BEQQALI",
         poste: "Enseignant",
         matiere: "Base de données",
-        photo: "elbaqqali.jpg"
+        photo: "Omar_El_Beqqali2.jpg"
     },
     {
         email: "ahmed.azough@usmba.ac.ma",
@@ -24,7 +24,7 @@ var professeursJSON = [{
         nom: "Ahmed ZINEDDINE",
         poste: "Enseignant",
         matiere: "Technologie XML",
-        photo: "AhmedZineddine.jpeg"
+        photo: "prof.png"
     },
     {
         email: "",
@@ -38,14 +38,14 @@ var professeursJSON = [{
         nom: "Najib ZERRAD",
         poste: "Enseignant",
         matiere: "Communication Professionnelle",
-        photo: "NajibZerrad.jpg"
+        photo: "prof.png"
     },
     {
         email: "",
         nom: "Jamal RIFFI",
         poste: "Enseignant",
         matiere: "BUSINESS INTELLIGENCE & BIG DATA",
-        photo: "user.png"
+        photo: "prof.png"
     },
     {
         email: "lamrini.mohamed@gmail.com",
