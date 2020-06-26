@@ -673,11 +673,20 @@ body {
 }
 
 /* TODO: Style the span : "Nouveau !" for 'Actualités' */
+/* @keyframes news-animation {
+  0% {
+    background-color: #4caf50;
+  }
+  100% {
+    background-color: yellow;
+  }
+} */
 #slide .new-actu {
   margin-left: 20px;
   padding: 0 5px;
   background-color: #4caf50;
   color: black;
+  /* animation: news-animation 0.5s infinite; */
 }
 
 /* Next & previous buttons */
@@ -1044,7 +1053,7 @@ body {
 #toTop {
   display: none;
   position: fixed;
-  bottom: 20px;
+  bottom: 27px;
   right: -5px;
   z-index: 99;
   border: none;
@@ -1098,6 +1107,9 @@ body {
   padding: 40px;
 }
 
+.top-content .pad{
+  padding: 30px 40px;
+}
 /*** video ***/
 #video-accueil.gallery {
   background: linear-gradient(#9198e5, #e66465);
@@ -1741,7 +1753,7 @@ table {
 }
 
 .main-content {
-  background-color: #f5f7ff;
+  background-color: #f5f5f5;
   padding: 50px 40px 60px 40px;
 }
 
@@ -2240,6 +2252,8 @@ form {
     display: block;
     height: auto;
     width: fit-content;
+    width: -moz-fit-content;
+    width: -moz-available;
     background-color: transparent;
   }
   #header .nav-list ul li {
@@ -2501,7 +2515,9 @@ button a {
 /* .selection-details ul {
   list-style: none;
 } */
-
+.selection-details ul{
+  margin-bottom: 40px;
+}
 h3.title-default-left::before {
   content: "";
   height: 3px;
@@ -2947,9 +2963,9 @@ ul.event-wrapper {
 }
 /* Begin activities section */
 
-#activites {
+/*#activites {
   color: #000;
-}
+}*/
 
 .activite-presentation {
   padding: 30px 60px;
@@ -3028,7 +3044,7 @@ ul.event-wrapper {
 
 /**** header title****/
 header .events-header {
-  margin: 60px 0 25px 0;
+  margin: 60px 0 0 0;
 }
 .events-header h1 {
   text-shadow: 0 1px 0 rgba(255, 255, 255, 0.7), 0px 2px 0 rgba(0, 0, 0, 0.5);
