@@ -28,10 +28,13 @@ const ActualiteComponent = function (service) {
 
     // If the 'actualité' is new, add a label ("Nouveau !")
     if (a.date.isLessThanNDays(this.SHOW_NEW_NBR_DAYS)) {
-      let newSpan = create("span");
+     /* let newSpan = create("span");
       newSpan.className = "new-actu";
       newSpan.textContent = "Nouveau !";
-      sliderItem.appendChild(newSpan);
+      sliderItem.appendChild(newSpan);*/
+      let newImg = document.createElement('img');
+      newImg.src ='images/nouveau.png';
+      sliderItem.appendChild(newImg);
     }
 
     slideWrapper.appendChild(sliderItem);
