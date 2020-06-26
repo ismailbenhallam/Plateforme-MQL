@@ -93,7 +93,7 @@ var laureatsJSON = [
   },
   {
     linkedin: "https://www.linkedin.com/in/fatima-zerkoun-51883213a/",
-    nom: "ZERKOUN Fatima",
+    nom: "ZERKOUN",
     prenom: "Fatima",
     promotion: "2018-2020",
     pfe: "CGI",
