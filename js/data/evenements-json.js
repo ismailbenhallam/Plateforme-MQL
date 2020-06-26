@@ -41,8 +41,16 @@ const evenementsJSON = [
     genre: "Campagnes de stages",
     date: "2019-11-11",
     lieu: "FSDM Fès",
-    description:
-      "Dans le cadre du partenariat des <b>Multinationales</b> et le <b>Master MQL</b>, se tiennent au sein de <b>la Faculté des Sciences Dhar El Mehraz de Fès</b>, des campagnes de prospéctions de futurs jeunes diplomés en voie de réalisation du PFE.</br>Ces campagnes de stages, qui ont pour objet d'informer les étudiants sur des offre de stages PFE rémunérés de 4 à 6 mois d'une part, et d'une autre part d'effectuer des tests psychotechniques et techniques ainsi que des entretiens RH durant la journée.</br></br>Sur ce, <b>CGI</b> organisa une campagne de recrutement de stagiaires PFE pour l’année <b>2020</b> au profit des étudiants du master MQL .</br></br>Fondé en 1976, Groupe CGI inc. est la cinquième plus importante entreprise indépendante de services en technologies de l’information et en gestion des processus d’affaires au monde.<ul><li>CGI, premier acteur majeur de l’IT au Maroc.</li><li>700 professionnels répartis à Casablanca, Rabat et Fès</li><li>400 CDI à pourvoir en 2017 dont une majeure proportion de jeunes diplômés</li><li>100 stages.</li><li>Inauguration du nouveau Centre d’excellence à Fès fin 2016</li><li>Expertises des services applicatifs, de l’infrastructure et du support</li><li>Environnements technologiques: data management, CRM, NTIC… </li>En effet, cette campagne a connu <b>15</b> décrochements de stages PFE par les étudiants MQL, qui aujourdh'ui font partie de l'équipe technique auprès de cette entreprise mondiale.",
+    description: `Dans le cadre du partenariat des <b>Multinationales</b> et le <b>Master MQL</b>, se tiennent au sein de <b>la Faculté des Sciences Dhar El Mehraz de Fès</b>, des campagnes de prospéctions de futurs jeunes diplomés en voie de réalisation du PFE.</br>Ces campagnes de stages, qui ont pour objet d'informer les étudiants sur des offre de stages PFE rémunérés de 4 à 6 mois d'une part, et d'une autre part d'effectuer des tests psychotechniques et techniques ainsi que des entretiens RH durant la journée.</br></br>Sur ce, <b>CGI</b> organisa une campagne de recrutement de stagiaires PFE pour l’année <b>2020</b> au profit des étudiants du master MQL .</br></br>Fondé en 1976, Groupe CGI inc. est la cinquième plus importante entreprise indépendante de services en technologies de l’information et en gestion des processus d’affaires au monde.
+      <ul class="ul">
+        <li>CGI, premier acteur majeur de l’IT au Maroc.</li>
+        <li>700 professionnels répartis à Casablanca, Rabat et Fès</li>
+        <li>400 CDI à pourvoir en 2017 dont une majeure proportion de jeunes diplômés</li>
+        <li>100 stages.</li>
+        <li>Inauguration du nouveau Centre d’excellence à Fès fin 2016</li>
+        <li>Expertises des services applicatifs, de l’infrastructure et du support</li>
+        <li>Environnements technologiques: data management, CRM, NTIC… </li>
+      En effet, cette campagne a connu <b>15</b> décrochements de stages PFE par les étudiants MQL, qui aujourdh'ui font partie de l'équipe technique auprès de cette entreprise mondiale.`,
     photos: [
       "photo2.jpg",
       "photo1.jpg",

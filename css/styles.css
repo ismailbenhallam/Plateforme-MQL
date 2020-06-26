@@ -20,6 +20,11 @@ MQL Logo colors :
   }
 }
 
+/* Change the default icon for all "ul" tags */
+.ul {
+  list-style-image: url(../icons/next1.png);
+}
+
 .highlighted {
   background-color: yellow;
 }
@@ -636,7 +641,7 @@ body {
   background: rgba(0, 0, 0, 0.68);
 }
 
-.mySlides {
+#slide .mySlides {
   display: inline-block;
   padding: 0 2rem;
   font-size: 1rem;
@@ -645,19 +650,19 @@ body {
   margin-top: -15px;
 }
 
-.mySlides a {
+#slide .mySlides a {
   color: white;
   cursor: default;
   text-decoration: none;
 }
 
-.mySlides a.has-link {
+#slide .mySlides a.has-link {
   color: white;
   cursor: pointer;
   text-decoration: underline;
 }
 
-.slideshow-container {
+#slide .slideshow-container {
   width: 1200px;
   display: inline-block;
   height: 4rem;
@@ -665,6 +670,23 @@ body {
   white-space: nowrap;
   padding-right: 100%;
   box-sizing: content-box;
+}
+
+/* TODO: Style the span : "Nouveau !" for 'Actualités' */
+/* @keyframes news-animation {
+  0% {
+    background-color: #4caf50;
+  }
+  100% {
+    background-color: yellow;
+  }
+} */
+#slide .new-actu {
+  margin-left: 20px;
+  padding: 0 5px;
+  background-color: #4caf50;
+  color: black;
+  /* animation: news-animation 0.5s infinite; */
 }
 
 /* Next & previous buttons */
@@ -1031,7 +1053,11 @@ body {
 #toTop {
   display: none;
   position: fixed;
+<<<<<<< HEAD
   bottom: 40px;
+=======
+  bottom: 27px;
+>>>>>>> 8f47dd3038a71c3782372592af14979c1a2870d8
   right: -5px;
   z-index: 99;
   border: none;
@@ -1069,6 +1095,7 @@ body {
 }
 
 #accueil .partenaires-wrapper {
+  background: white;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-evenly;
@@ -1084,6 +1111,9 @@ body {
   padding: 40px;
 }
 
+.top-content .pad{
+  padding: 30px 40px;
+}
 /*** video ***/
 #video-accueil.gallery {
   background: linear-gradient(#9198e5, #e66465);
@@ -1092,31 +1122,27 @@ body {
 
 #video-accueil .gallery-container {
   display: flex;
+  flex-direction: column-reverse;
   margin: auto;
-  width: 1100px;
+  width: 800px;
   height: 400px;
   box-shadow: 0px 0px 12px -1px rgba(0, 0, 0, 0.53);
 }
 
-#video-accueil .gallery-left {
-  -webkit-box-flex: 6;
-  flex: 6;
-}
-#video-accueil .gallery-left .gallery-video {
+#video-accueil .gallery-bottom .gallery-video {
   width: 100%;
   height: 100%;
 }
-#video-accueil .gallery-right {
-  background: #fff;
+#video-accueil .gallery-top {
+  background: black;
+  opacity: 0.8;
+  color: white;
   display: flex;
-  flex: 3;
-  flex-direction: column;
   justify-content: center;
   align-items: center;
-  box-sizing: border-box;
   padding: 0 18px;
 }
-#video-accueil .gallery-right .gallery-subtitle {
+#video-accueil .gallery-top .gallery-subtitle {
   font-size: 11px;
   letter-spacing: 0.06em;
   text-transform: uppercase;
@@ -1138,12 +1164,9 @@ body {
 @media (max-width: 1120px) {
   #video-accueil .gallery-container {
     box-shadow: none;
-    flex-direction: column;
     width: 724px;
   }
-  #video-accueil .gallery-right {
-    display: none;
-  }
+  
   #video-accueil.gallery {
     padding: 40px 0;
   }
@@ -1261,6 +1284,7 @@ body {
   flex-flow: row wrap;
   justify-content: center;
   align-items: flex-start;
+  padding: 50px 40px 60px 40px;
 }
 
 .evenement {
@@ -1726,7 +1750,7 @@ table {
 }
 
 .main-content {
-  background-color: #f5f7ff;
+  background-color: #f5f5f5;
   padding: 50px 40px 60px 40px;
 }
 
@@ -2237,6 +2261,8 @@ form {
     display: block;
     height: auto;
     width: fit-content;
+    width: -moz-fit-content;
+    width: -moz-available;
     background-color: transparent;
   }
   #header .nav-list ul li {
@@ -2495,10 +2521,12 @@ button a {
 
 /*SELECTION*/
 
-.selection-details ul {
+/* .selection-details ul {
   list-style: none;
+} */
+.selection-details ul{
+  margin-bottom: 40px;
 }
-
 h3.title-default-left::before {
   content: "";
   height: 3px;
@@ -2948,16 +2976,8 @@ ul.event-wrapper {
 }
 /* Begin activities section */
 
-#activites {
-  color: #000;
-}
-
 .activite-presentation {
   padding: 30px 60px;
-}
-
-.activite-presentation > ul {
-  list-style: none;
 }
 
 .activite-wrapper {
@@ -2973,6 +2993,7 @@ ul.event-wrapper {
   padding: 60px 100px;
   display: flex;
   width: 85%;
+  color: #000;
 }
 
 .col-sm:nth-child(even) {
@@ -3029,11 +3050,21 @@ ul.event-wrapper {
   }
 }
 
+@media only screen and (max-width: 425px) {
+  .image-text-modal-slider__content {
+    padding: 0;
+  }
+
+  .col-sm {
+    padding: 0;
+  }
+}
+
 /**** end activities section ****/
 
 /**** header title****/
 header .events-header {
-  margin: 60px 0 25px 0;
+  margin: 60px 0 0 0;
 }
 .events-header h1 {
   text-shadow: 0 1px 0 rgba(255, 255, 255, 0.7), 0px 2px 0 rgba(0, 0, 0, 0.5);

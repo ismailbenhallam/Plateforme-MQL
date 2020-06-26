@@ -20,10 +20,20 @@ const ActualiteComponent = function (service) {
     let sliderItemLink = create("a");
     sliderItem.appendChild(sliderItemLink);
     sliderItemLink.textContent = a.genre + " - " + a.nom;
+
     if (a.link) {
       sliderItemLink.href = a.link;
       sliderItemLink.classList.add("has-link");
     }
+
+    // If the 'actualité' is new, add a label ("Nouveau !")
+    if (a.date.isLessThanNDays(this.SHOW_NEW_NBR_DAYS)) {
+      let newSpan = create("span");
+      newSpan.className = "new-actu";
+      newSpan.textContent = "Nouveau !";
+      sliderItem.appendChild(newSpan);
+    }
+
     slideWrapper.appendChild(sliderItem);
   }
 
@@ -41,29 +51,46 @@ const ActualiteComponent = function (service) {
   nextSlider.innerHTML = "&#10095;";
   nextSlider.addEventListener("click", this.showNextSlide.bind(this));
 
-  if (this.nbrAnnonces > 1)
-    window.setInterval(this.showNextSlide.bind(this), this.DELAY);
+  this.setInterval();
 };
 
 // Constantes
 ActualiteComponent.prototype.DELAY = 4000;
 ActualiteComponent.prototype.NBR_ANNONCES = 3;
+ActualiteComponent.prototype.SHOW_NEW_NBR_DAYS = 5;
 
 // Methods
+ActualiteComponent.prototype.setInterval = function () {
+  if (this.nbrAnnonces > 1)
+    this.interval = window.setInterval(() => {
+      this.showNextSlide.call(this);
+    }, this.DELAY);
+};
+
 ActualiteComponent.prototype.showNextSlide = function () {
+  // to restart the counter : clearInterval and set it again in the end of this function
+  window.clearInterval(this.interval);
+
   this.slides[this.slideIndex].style.display = "none";
   this.slideIndex++;
   if (this.slideIndex >= this.nbrAnnonces) {
     this.slideIndex = 0;
   }
   this.slides[this.slideIndex].style.display = "block";
+
+  this.setInterval();
 };
 
 ActualiteComponent.prototype.showPreviousSlide = function () {
+  // to restart the counter : clearInterval and set it again in the end of this function
+  window.clearInterval(this.interval);
+
   this.slides[this.slideIndex].style.display = "none";
   this.slideIndex--;
   if (this.slideIndex < 0) {
     this.slideIndex = this.nbrAnnonces - 1;
   }
   this.slides[this.slideIndex].style.display = "block";
+
+  this.setInterval();
 };
