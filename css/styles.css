@@ -556,10 +556,10 @@ body {
   color: black;
 }
 
-#header .searchTerm:focus {
+/* #header .searchTerm:focus {
   border-right: 3px solid #d9323a;
   border-radius: 5px;
-}
+} */
 
 #header .searchTerm:focus {
   color: black;
@@ -671,6 +671,13 @@ body {
   text-decoration: none;
 }
 
+.mySlides img{
+  width: 90px;
+  height: 63px;
+  position: absolute;
+  margin-left: 10px;
+  transform: rotate(15deg);
+}
 #slide .mySlides a.has-link {
   color: white;
   cursor: pointer;
@@ -1258,6 +1265,9 @@ body {
 
 .presentation-video {
   max-width: 50%;
+  outline: 0;
+  box-shadow: 0px 10px 10px 0px grey;
+
 }
 
 @media screen and (max-width: 768px) {
@@ -2330,6 +2340,7 @@ form {
     width: fit-content;
     width: -moz-fit-content;
     width: -moz-available;
+    width: -webkit-fill-available;
     background-color: transparent;
   }
   #header .nav-list ul li {
@@ -3141,7 +3152,6 @@ header .events-header {
 }
 
 .events-header h1 {
-  text-shadow: 0 1px 0 rgba(255, 255, 255, 0.7), 0px 2px 0 rgba(0, 0, 0, 0.5);
   text-transform: uppercase;
   text-align: center;
   color: #35456c;
@@ -3185,4 +3195,68 @@ h1:after {
 
 .section-subtitle-act span {
   color: #35456c;
+}
+
+
+/***programme***/
+.programme .semestre-wrapper{
+  flex-basis: 475px;
+}
+.table.semestre {
+  background-color: #fff;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 0px 40px 0px rgba(0, 0, 0, 0.15);
+  -moz-box-shadow: 0 0px 40px 0px rgba(0, 0, 0, 0.15);
+  -webkit-box-shadow: 0 0px 40px 0px rgba(0, 0, 0, 0.15);
+  -o-box-shadow: 0 0px 40px 0px rgba(0, 0, 0, 0.15);
+  -ms-box-shadow: 0 0px 40px 0px rgba(0, 0, 0, 0.15);
+}
+
+.table.semestre table{
+  border-collapse: collapse;
+}
+.table.semestre th {
+  font-size: 18px;
+  color: #fa4251;
+  line-height: 1.4;
+  background-color: transparent;
+}
+.table.semestre td {
+  font-size: 15px;
+  color: #808080;
+  line-height: 1.4;
+}
+.table.semestre .table-head {
+  box-shadow: 0 5px 20px 0px rgba(0, 0, 0, 0.1);
+  -moz-box-shadow: 0 5px 20px 0px rgba(0, 0, 0, 0.1);
+  -webkit-box-shadow: 0 5px 20px 0px rgba(0, 0, 0, 0.1);
+  -o-box-shadow: 0 5px 20px 0px rgba(0, 0, 0, 0.1);
+  -ms-box-shadow: 0 5px 20px 0px rgba(0, 0, 0, 0.1);
+}
+.table-head th {
+  padding-top: 18px;
+  padding-bottom: 18px;
+}
+
+.table-body tr {
+  border-bottom: 1px solid #f2f2f2;
+}
+.table-body td {
+  padding-top: 16px;
+  padding-bottom: 16px;
+}
+.table.semestre .column1 {
+  width: 5%;
+  padding-left: 40px;
+}
+.table.semestre .column2 {
+    width: 33%;
+}
+.table.semestre th, td {
+  font-weight: unset;
+  padding-right: 10px;
+}
+.table.semestre th {
+  text-align: left;
 }
