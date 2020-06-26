@@ -1,4 +1,9 @@
 let RechercheComponent = function () {
+  // If the Window API: find, is not supported
+  if (!window.find || typeof window.find !== "function") {
+    return;
+  }
+
   this.navbarUl = document.querySelector("#navbar > ul");
 
   this.createSearchZone();
@@ -30,12 +35,9 @@ RechercheComponent.prototype.createSearchZone = function () {
   input.className = "searchTerm";
   input.placeholder = "Rechercher...";
 
-  //   input.addEventListener("keyup", (event) => {
-  //     search(event.target.value);
-  //   });
-
   // button for search
   let button = create("button");
+  this.button = button;
   div1.appendChild(button);
   button.type = "submit";
   button.id = "search-button";
@@ -47,32 +49,47 @@ RechercheComponent.prototype.createSearchZone = function () {
 
   // Hide the search icon "onfocus" on search div
   // wrapper.addEventListener("focus", () => {
-  input.addEventListener("focus", () => {
-    button.style.display = "none";
-    if (input.value.length >= this.CHARACTERS_TO_START_SEARCH) {
-      input.dispatchEvent(new Event("keyup"));
-    }
-  });
+  // input.addEventListener("focus", () => {
+  //   button.style.display = "none";
+  //   if (input.value.length >= this.CHARACTERS_TO_START_SEARCH) {
+  //     input.dispatchEvent(new Event("keyup"));
+  //   }
+  // });
 
-  input.addEventListener("blur", () => {
-    button.style.display = "block";
-    this.result.style.display = "none";
-  });
+  // input.addEventListener("blur", () => {
+  //   button.style.display = "block";
+  //   this.result.style.display = "none";
+  //   this.input.style.backgroundColor = "white";
+  // });
+
+  button.addMultipleEventListener(
+    () => {
+      // button.style.display = "block";
+      // this.result.style.display = "none";
+      this.input.style.backgroundColor = "white";
+    },
+    // "focus",
+    "blur"
+  );
 
   // Search result
-  let select = create("select");
-  this.result = select;
-  wrapper.appendChild(select);
-  select.id = "search-result";
-  select.className = "search-result";
+  // let select = create("select");
+  // this.result = select;
+  // wrapper.appendChild(select);
+  // select.id = "search-result";
+  // select.className = "search-result";
 };
 
 RechercheComponent.prototype.addKeyUpListener = function () {
-  this.input.addEventListener("keyup", (event) => {
-    if (event.target.value.length >= this.CHARACTERS_TO_START_SEARCH)
-      this.result.style.display = "block";
+  this.button.addEventListener("click", (event) => {
+    if (this.input.value.length >= this.CHARACTERS_TO_START_SEARCH) {
+      // this.result.style.display = "block";
+      if (!window.find(this.input.value, false, false, null, false, false))
+        this.input.style.backgroundColor = "pink";
+    }
     //   this.input.backgroundColor = "red";
-    else this.result.style.display = "none";
+    // else this.result.style.display = "none";
+    // this.input.style.backgroundColor = "white";
   });
 };
 

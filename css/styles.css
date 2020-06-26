@@ -556,10 +556,10 @@ body {
   color: black;
 }
 
-#header .searchTerm:focus {
+/* #header .searchTerm:focus {
   border-right: 3px solid #d9323a;
   border-radius: 5px;
-}
+} */
 
 #header .searchTerm:focus {
   color: black;
@@ -2330,6 +2330,7 @@ form {
     width: fit-content;
     width: -moz-fit-content;
     width: -moz-available;
+    width: -webkit-fill-available;
     background-color: transparent;
   }
   #header .nav-list ul li {
