@@ -29,20 +29,24 @@ const LaureatComponent = function (service) {
     let divBioImg = create("div");
     divBioImg.className = "bio-img";
     let imgPerson = create("img");
-    imgPerson.setAttribute("src", "images/laureats/" + l.photo);
+    if (l.photo) imgPerson.setAttribute("src", "images/laureats/" + l.photo);
+    else imgPerson.setAttribute("src", "images/laureats/laureat.png");
     imgPerson.setAttribute("alt", l.nom + " " + l.prenom);
+    divBioImg.appendChild(imgPerson);
     let divSocial = create("div");
     divSocial.setAttribute("id", "social");
     divSocial.className = "social";
-    let a = create("a");
-    a.setAttribute("href", l.linkedin);
-    let img = create("img");
-    img.setAttribute("src", "icons/linkedin.svg");
-    img.setAttribute("alt", "linkedin");
-    a.appendChild(img);
-    divSocial.appendChild(a);
-    divBioImg.appendChild(imgPerson);
-    divBioImg.appendChild(divSocial);
+    if (l.linkedin) {
+      let a = create("a");
+      a.setAttribute("href", l.linkedin);
+      a.target = "_blank";
+      let img = create("img");
+      img.setAttribute("src", "icons/linkedin.svg");
+      img.setAttribute("alt", "linkedin");
+      a.appendChild(img);
+      divSocial.appendChild(a);
+      divBioImg.appendChild(divSocial);
+    }
     divPerson.appendChild(divBioImg);
     let divPersonContent = create("div");
     divPersonContent.className = "person-content";
@@ -64,10 +68,7 @@ const LaureatComponent = function (service) {
     let spanPFE = create("SPAN");
     spanPFE.textContent = "Stage pré-embauche : " + l.pfe;
     let spanCDI = create("SPAN");
-    spanCDI.textContent = "Premier CDI : " + l.cdi;
-    if (l.cdi == "") {
-      spanCDI.textContent = "";
-    }
+    if (l.cdi) spanCDI.textContent = "Premier CDI : " + l.cdi;
     divTruncate.appendChild(spanPFE);
     divTruncate.appendChild(spanCDI);
     divTruncate.appendChild(toggledText);
@@ -77,21 +78,26 @@ const LaureatComponent = function (service) {
     divPersonContent.appendChild(divWrap);
     divPerson.appendChild(divPersonContent);
     wrapper.appendChild(divPerson);
+
     divPerson.addEventListener("mouseover", (ids) => {
       ids = divPerson.id;
       const bioImgChild = $(ids).getElementsByClassName("bio-img")[0]
         .firstElementChild;
       bioImgChild.classList.add("img-fluid");
-      const social = $(ids).getElementsByClassName("social")[0];
-      social.classList.add("translate");
+      if (l.linkedin) {
+        const social = $(ids).getElementsByClassName("social")[0];
+        social.classList.add("translate");
+      }
     });
     divPerson.addEventListener("mouseout", (ids) => {
       ids = divPerson.id;
       const bioImgChild = $(ids).getElementsByClassName("bio-img")[0]
         .firstElementChild;
       bioImgChild.classList.remove("img-fluid");
-      const social = $(ids).getElementsByClassName("social")[0];
-      social.classList.remove("translate");
+      if (l.linkedin) {
+        const social = $(ids).getElementsByClassName("social")[0];
+        social.classList.remove("translate");
+      }
     });
   });
 
