@@ -673,11 +673,20 @@ body {
 }
 
 /* TODO: Style the span : "Nouveau !" for 'Actualités' */
+/* @keyframes news-animation {
+  0% {
+    background-color: #4caf50;
+  }
+  100% {
+    background-color: yellow;
+  }
+} */
 #slide .new-actu {
   margin-left: 20px;
   padding: 0 5px;
   background-color: #4caf50;
   color: black;
+  /* animation: news-animation 0.5s infinite; */
 }
 
 /* Next & previous buttons */
@@ -1044,7 +1053,7 @@ body {
 #toTop {
   display: none;
   position: fixed;
-  bottom: 20px;
+  bottom: 27px;
   right: -5px;
   z-index: 99;
   border: none;
@@ -2240,6 +2249,8 @@ form {
     display: block;
     height: auto;
     width: fit-content;
+    width: -moz-fit-content;
+    width: -moz-available;
     background-color: transparent;
   }
   #header .nav-list ul li {
