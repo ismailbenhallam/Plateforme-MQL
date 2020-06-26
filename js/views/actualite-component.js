@@ -28,12 +28,8 @@ const ActualiteComponent = function (service) {
 
     // If the 'actualité' is new, add a label ("Nouveau !")
     if (a.date.isLessThanNDays(this.SHOW_NEW_NBR_DAYS)) {
-     /* let newSpan = create("span");
-      newSpan.className = "new-actu";
-      newSpan.textContent = "Nouveau !";
-      sliderItem.appendChild(newSpan);*/
-      let newImg = document.createElement('img');
-      newImg.src ='images/nouveau.png';
+      let newImg = document.createElement("img");
+      newImg.src = this.IMAGE_NEW;
       sliderItem.appendChild(newImg);
     }
 
@@ -61,6 +57,7 @@ const ActualiteComponent = function (service) {
 ActualiteComponent.prototype.DELAY = 4000;
 ActualiteComponent.prototype.NBR_ANNONCES = 3;
 ActualiteComponent.prototype.SHOW_NEW_NBR_DAYS = 5;
+ActualiteComponent.prototype.IMAGE_NEW = "images/nouveau.png";
 
 // Methods
 ActualiteComponent.prototype.setInterval = function () {

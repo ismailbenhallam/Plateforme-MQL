@@ -671,7 +671,7 @@ body {
   text-decoration: none;
 }
 
-.mySlides img{
+.mySlides img {
   width: 90px;
   height: 63px;
   position: absolute;
@@ -1267,7 +1267,6 @@ body {
   max-width: 50%;
   outline: 0;
   box-shadow: 0px 10px 10px 0px grey;
-
 }
 
 @media screen and (max-width: 768px) {
@@ -1815,6 +1814,7 @@ table {
 
 .programme {
   display: flex;
+  display: -ms-flex;
   flex-wrap: wrap;
   justify-content: space-evenly;
 }
@@ -1981,7 +1981,7 @@ h3 {
 }
 
 .person .bio-img .social {
-  z-index: 2;
+  z-index: -1;
   padding: 10px 0;
   width: 100%;
   position: absolute;
@@ -1989,6 +1989,10 @@ h3 {
   transform: translateY(100%);
   transition: 0.3s all ease;
   background: #4285f4;
+}
+
+.person:hover .bio-img .social {
+  z-index: 2;
 }
 
 .subtitle {
@@ -2340,6 +2344,7 @@ form {
     width: fit-content;
     width: -moz-fit-content;
     width: -moz-available;
+    width: -webkit-fit-content;
     width: -webkit-fill-available;
     background-color: transparent;
   }
@@ -2418,7 +2423,8 @@ form {
   right: 0;
   margin: 0 auto;
   position: absolute;
-  background-color: #42566dcc;
+  background-color: #42566d;
+  opacity: 0.8;
 }
 
 .mql-info-container {
@@ -2545,10 +2551,11 @@ button a {
 .banner_image {
   position: relative;
   opacity: 1;
-  animation-name: fadeInOpacity;
+  /* animation-name: fadeInOpacity;
   animation-iteration-count: 5s infinite;
   animation-timing-function: ease-in;
-  animation-duration: 20s;
+  animation-duration: 20s; */
+
   -webkit-animation: fadeInOpacity 13s infinite;
   -moz-animation: fadeInOpacity 13s infinite;
   -o-animation: fadeInOpacity 13s infinite;
@@ -3197,10 +3204,10 @@ h1:after {
   color: #35456c;
 }
 
-
 /***programme***/
-.programme .semestre-wrapper{
+.programme .semestre-wrapper {
   flex-basis: 475px;
+  margin: 0 10px;
 }
 .table.semestre {
   background-color: #fff;
@@ -3213,7 +3220,7 @@ h1:after {
   -ms-box-shadow: 0 0px 40px 0px rgba(0, 0, 0, 0.15);
 }
 
-.table.semestre table{
+.table.semestre table {
   border-collapse: collapse;
 }
 .table.semestre th {
@@ -3251,9 +3258,10 @@ h1:after {
   padding-left: 40px;
 }
 .table.semestre .column2 {
-    width: 33%;
+  width: 33%;
 }
-.table.semestre th, td {
+.table.semestre th,
+td {
   font-weight: unset;
   padding-right: 10px;
 }
