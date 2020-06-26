@@ -1,0 +1,30 @@
+.evenement-details > .gallery {
+  /* margin: auto; */
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  align-items: flex-start;
+  align-content: flex-start;
+  /* width: 100%; */
+}
+
+.evenement-details > .gallery > .column {
+  /* flex-basis: 25%; */
+  /* max-width: 25%;
+  display: flex;
+  flex-flow: column nowrap; */
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: flex-end;
+
+  min-width: 400px;
+  flex: 0 1 25%;
+  /* max-width: 24%; */
+  padding: 0 4px;
+}
+
+.evenement-details > .gallery > .column > img {
+  /* max-width: 250px; */
+  max-width: 100%;
+  margin-top: 8px;
+}

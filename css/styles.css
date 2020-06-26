@@ -1107,9 +1107,16 @@ body {
   padding: 40px;
 }
 
-.top-content .pad{
+.top-content .pad {
   padding: 30px 40px;
 }
+
+@media screen and (max-width: 425px) {
+  .top-content .pad {
+    padding: 30px 10px;
+  }
+}
+
 /*** video ***/
 #video-accueil.gallery {
   background: linear-gradient(#9198e5, #e66465);
@@ -1162,7 +1169,7 @@ body {
     box-shadow: none;
     width: 724px;
   }
-  
+
   #video-accueil.gallery {
     padding: 40px 0;
   }
@@ -1416,7 +1423,10 @@ body {
 
 .evenement .read-more {
   cursor: pointer;
-  color: black;
+  color: #09448a;
+}
+
+.evenement .read-more:hover {
   text-decoration: underline;
 }
 
@@ -1464,22 +1474,48 @@ body {
 }
 
 .evenement-details > .gallery {
-  margin: auto;
+  /* margin: auto; */
   display: flex;
   flex-flow: row wrap;
-  justify-content: center;
-  align-items: flex-start;
+  justify-content: space-between;
+  align-items: center;
+  align-content: center;
   /* width: 100%; */
 }
 
-.evenement-details > .gallery img {
-  /* flex: 1 1 20%; */
-  /* max-width: 200px; */
-  /* margin-right: 10px; */
-  min-height: 250px;
-  max-width: 24%;
-  margin: 2px;
+.evenement-details .img-wrapper {
+  flex: 1 1 23%;
+  min-width: 250px;
+  margin: 4px;
 }
+
+.evenement-details > .gallery > .img-wrapper > img {
+  max-width: 100%;
+  /* max-width: 250px; */
+  /* min-width: 300px; */
+  /* max-width: 25%; */
+  /* max-width: 100%; */
+  /* margin-top: 8px; */
+}
+
+.evenement-details > .gallery > .column > img:nth-child(even) {
+  /* height: 200px; */
+}
+
+/* This */
+/* .evenement-details > .gallery img {
+  flex: 1 1 20%;
+  max-width: 200px;
+  margin-right: 10px;
+
+  this
+  
+  flex: 1 1 25%;
+  min-height: 250px;
+  max-width: 250%;
+  margin: 2px;
+} */
+
 /*
 .evenement-details > .gallery img:nth-child(odd) {
   /* max-width: 200px; 
@@ -2522,7 +2558,7 @@ button a {
 /* .selection-details ul {
   list-style: none;
 } */
-.selection-details ul{
+.selection-details ul {
   margin-bottom: 40px;
 }
 h3.title-default-left::before {
@@ -3055,6 +3091,7 @@ ul.event-wrapper {
 
   .col-sm {
     padding: 0;
+    margin-bottom: 40px;
   }
 }
 
