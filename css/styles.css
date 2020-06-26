@@ -1575,7 +1575,7 @@ body {
   width: 80%;
   margin-right: auto;
   margin-left: auto;
-  height: auto;
+  height: 400px;
 }
 
 @media screen and (max-width: 1145px) {
@@ -2092,7 +2092,7 @@ h3 {
 
 #choose-year-stage {
   font-size: 14px;
-  margin: 20px 0px auto 12px;
+  margin: 20px 0px auto auto;
   text-align: center;
 }
 
@@ -2100,7 +2100,7 @@ h3 {
   width: 80%;
   margin-right: auto;
   margin-left: auto;
-  height: auto;
+  height: 400px;
 }
 
 .stats {

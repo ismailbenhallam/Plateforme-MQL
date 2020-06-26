@@ -109,8 +109,8 @@ StageComponent.prototype.buildBarChart = function (service, canvas) {
         titleFontFamily : "Nunito, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica Neue, Arial, Noto Sans, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji",
         bodyFontFamily : "Nunito, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica Neue, Arial, Noto Sans, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji",
       },
-      //   responsive: false,
-      //   maintainAspectRatio: false,
+      responsive: true,
+      maintainAspectRatio: false,
       data: {
         labels: {
           fontFamily: "Nunito, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica Neue, Arial, Noto Sans, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji",
@@ -222,8 +222,8 @@ StageComponent.prototype.buildPieChart = buildPieChart = function (
       labels: labels,
     },
     options: {
-      //   responsive: true,
-      //   maintainAspectRatio: false,
+      responsive: true,
+      maintainAspectRatio: false,
       tooltips: {
         cornerRadius: 0,
         caretSize: 0,
@@ -239,7 +239,7 @@ StageComponent.prototype.buildPieChart = buildPieChart = function (
           fontFamily: "Nunito, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica Neue, Arial, Noto Sans, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji",
           fontColor: "black",
         },
-        position: "right",
+        position: "top",
       },
       title: {
         display: true,
