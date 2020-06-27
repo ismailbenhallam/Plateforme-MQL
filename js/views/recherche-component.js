@@ -12,7 +12,8 @@ let RechercheComponent = function () {
 };
 
 // Constantes
-RechercheComponent.prototype.CHARACTERS_TO_START_SEARCH = 3;
+RechercheComponent.prototype.CHARACTERS_TO_START_SEARCH = 2;
+RechercheComponent.prototype.SEARCH_ICON = "icons/search_icon_white.png";
 
 // Methods
 RechercheComponent.prototype.createSearchZone = function () {
@@ -32,7 +33,7 @@ RechercheComponent.prototype.createSearchZone = function () {
   this.input = input;
   div1.appendChild(input);
   input.id = "search-input";
-  input.className = "searchTerm";
+  input.className = "search-term";
   input.placeholder = "Rechercher...";
 
   // button for search
@@ -44,52 +45,23 @@ RechercheComponent.prototype.createSearchZone = function () {
   button.className = "searchButton";
   let img = create("img");
   button.appendChild(img);
-  img.src = "icons/search_icon_white.png";
+  img.src = this.SEARCH_ICON;
   img.alt = "search";
-
-  // Hide the search icon "onfocus" on search div
-  // wrapper.addEventListener("focus", () => {
-  // input.addEventListener("focus", () => {
-  //   button.style.display = "none";
-  //   if (input.value.length >= this.CHARACTERS_TO_START_SEARCH) {
-  //     input.dispatchEvent(new Event("keyup"));
-  //   }
-  // });
-
-  // input.addEventListener("blur", () => {
-  //   button.style.display = "block";
-  //   this.result.style.display = "none";
-  //   this.input.style.backgroundColor = "white";
-  // });
-
-  button.addMultipleEventListener(
-    () => {
-      // button.style.display = "block";
-      // this.result.style.display = "none";
-      this.input.style.backgroundColor = "white";
-    },
-    // "focus",
-    "blur"
-  );
-
-  // Search result
-  // let select = create("select");
-  // this.result = select;
-  // wrapper.appendChild(select);
-  // select.id = "search-result";
-  // select.className = "search-result";
 };
 
 RechercheComponent.prototype.addKeyUpListener = function () {
   this.button.addEventListener("click", (event) => {
     if (this.input.value.length >= this.CHARACTERS_TO_START_SEARCH) {
-      // this.result.style.display = "block";
-      if (!window.find(this.input.value, false, false, null, false, false))
-        this.input.style.backgroundColor = "pink";
+      if (!window.find(this.input.value, false, false, null, false, false)) {
+        showNotif("Aucun résultat trouvé");
+      }
+    } else {
+      showNotif(
+        `Veuillez saisir au moins ${this.CHARACTERS_TO_START_SEARCH} caractère${
+          this.CHARACTERS_TO_START_SEARCH > 1 ? "s" : ""
+        }`
+      );
     }
-    //   this.input.backgroundColor = "red";
-    // else this.result.style.display = "none";
-    // this.input.style.backgroundColor = "white";
   });
 };
 

@@ -73,3 +73,21 @@ const scrollTo = (element) => {
 };
 
 const getCurrentPageId = () => location.hash.slice(1);
+
+const showNotif = function (message) {
+  var snackbar = create("div");
+  snackbar.id = "snackbar";
+
+  // Add the "show" class to DIV
+  snackbar.textContent = message;
+  document.body.appendChild(snackbar);
+  snackbar.className = "show";
+
+  // After 3 seconds, remove the show class from DIV
+  setTimeout(function () {
+    snackbar.classList.remove("show");
+  }, 3000);
+  setTimeout(function () {
+    document.body.removeChild(snackbar);
+  }, 3000);
+};
