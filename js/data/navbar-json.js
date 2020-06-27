@@ -10,6 +10,7 @@ var navbarJSON = [
   { target: "presentationMaster", name: "Présentation" },
   {
     name: "Nous rejoindre",
+    id: "nous-rejoindre",
     children: [{ target: "selection" }, { target: "admission" }],
   },
   { target: "activites", name: "Activités" },

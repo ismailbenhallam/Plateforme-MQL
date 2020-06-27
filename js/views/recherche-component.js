@@ -48,6 +48,16 @@ RechercheComponent.prototype.createSearchZone = function () {
   img.alt = "search";
 };
 
+RechercheComponent.prototype.getActivePage = function (navbarItems) {
+  for (let index = 0; index < navbarItems.length; index++) {
+    if (navbarItems[index].classList.contains("active")) {
+      return navbarItems[index];
+    }
+  }
+
+  return false;
+};
+
 RechercheComponent.prototype.addListener = function (navbarItems) {
   this.index = 0;
   this.everFound = false;
@@ -58,16 +68,21 @@ RechercheComponent.prototype.addListener = function (navbarItems) {
     this.index = 0;
     this.everFound = false;
     this.lastPageFoundIn = null;
+    this.initPage = null;
   });
   this.button.addEventListener("blur", (event) => {
     this.index = 0;
     this.everFound = false;
     this.lastPageFoundIn = null;
+    this.initPage = null;
   });
 
   this.button.addEventListener("click", (event) => {
     // If the minimum number of characters is entered
     if (this.input.value.length >= this.CHARACTERS_TO_START_SEARCH) {
+      event.preventDefault();
+      this.initPage = this.getActivePage(navbarItems);
+
       let found = false;
 
       if (this.index < navbarItems.length) {
@@ -91,9 +106,8 @@ RechercheComponent.prototype.addListener = function (navbarItems) {
 
           // If we found a result
           if (found) {
-            this.lastPageFoundIn =
-              navbarItems[this.index] + NavbarComponent.LINKS_SUFFIX;
             this.everFound = true;
+            this.lastPageFoundIn = navbarItems[this.index];
             break;
           } else {
             // Try in the nextPage
@@ -116,25 +130,28 @@ RechercheComponent.prototype.addListener = function (navbarItems) {
       }
 
       // If no result if found
-      if (!found && this.index == navbarItems.length) {
+      if (!found) {
         // If we ever found a result before this search
         if (this.everFound) {
           let event = new Event("click");
           // used in HistoryComponent
           event.fromSearch = true;
-          // setCurrentPageId(lastPageFoundIn);
           try {
-            $(lastPageFoundIn + NavbarComponent.LINKS_SUFFIX).dispatchEvent(
-              event
-            );
+            // Return to the last page in which we found a result
+            this.lastPageFoundIn.dispatchEvent(event);
           } catch (e) {}
           showNotif(`Pas d'autre résultat`);
-        } else {
+        }
+        // If never a result was found
+        else {
           showNotif(`Aucun résultat trouvé`);
           let event = new Event("click");
           // used in HistoryComponent
           event.fromSearch = true;
-          // $(initPage + NavbarComponent.LINKS_SUFFIX).dispatchEvent(event);
+          try {
+            // Return to the first page, in which the user was located before starting search
+            this.initPage.dispatchEvent(event);
+          } catch (e) {}
         }
       }
 
