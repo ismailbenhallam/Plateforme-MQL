@@ -21,3 +21,6 @@ window.addEventListener("scroll", function () {
     toTopBtn.style.display = "none";
   }
 });
+
+// To display the message to user again, after a page loading
+delete sessionStorage.tellUserArrowsCanPassPhotos;
