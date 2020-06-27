@@ -70,7 +70,6 @@ var partenairesJSON = [
     logoUrl: "images/partenaires/logic-group-logo.png",
   },
   {
-    //FIXME: website
     name: "Fedaso",
     website: "",
     logoUrl: "images/partenaires/fedaso-logo.png",

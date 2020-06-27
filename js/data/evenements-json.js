@@ -14,7 +14,7 @@ const evenementsJSON = [
       "photo5.jpg",
       "photo6.jpg",
     ],
-    photosFolder: "remise-diplomes/2019",
+    photosFolder: "remise-diplomes/2018",
   },
   {
     nom: "Red Hope",

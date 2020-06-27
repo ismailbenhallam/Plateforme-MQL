@@ -15,22 +15,6 @@ let RechercheComponent = function (navbarItems) {
 RechercheComponent.prototype.CHARACTERS_TO_START_SEARCH = 3;
 RechercheComponent.prototype.SEARCH_ICON = "icons/search_icon_white.png";
 
-// Methods
-/*RechercheComponent.prototype.clearSelection = function () {
-  if (window.getSelection) {
-    if (window.getSelection().empty) {
-      // Chrome
-      window.getSelection().empty();
-    } else if (window.getSelection().removeAllRanges) {
-      // Firefox
-      window.getSelection().removeAllRanges();
-    }
-  } else if (document.selection) {
-    // IE
-    document.selection.empty();
-  }
-};*/
-
 RechercheComponent.prototype.createSearchZone = function () {
   let li = create("li");
   this.navbarUl.appendChild(li);

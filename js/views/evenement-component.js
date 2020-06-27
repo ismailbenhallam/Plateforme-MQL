@@ -1,7 +1,6 @@
 const EvenementComponent = function (service) {
   const charLimit = 350;
   const ALL = "all";
-  // let applyButton = $("apply");
   let groupeCheckbox = $("group-checkbox");
 
   let labelAll = create("label");
@@ -96,24 +95,6 @@ const EvenementComponent = function (service) {
     }
   });
 
-  //FIXME: Ismaïl
-  // for (let i = 1; i < groupeCheckbox.children.length; i++) {
-  //   groupeCheckbox.children[i].addEventListener("click", () => {
-  //     console.log("executed");
-  //     let allChecked = true;
-  //     for (let j = 1; j < groupeCheckbox.children.length; j++) {
-  //       // Uncheck 'All' if a button is unchecked
-  //       if (
-  //         groupeCheckbox.children[j].checked === false &&
-  //         inputAll.checked === true
-  //       ) {
-  //         inputAll.click();
-  //         return;
-  //       }
-  //     }
-  //   });
-  // }
-
   for (const e of service.items) {
     let eventDiv = create("div");
     let separator = create("div");
@@ -185,17 +166,12 @@ const EvenementComponent = function (service) {
       description.innerHTML = e.description;
     else {
       let showStr = e.description.slice(0, charLimit);
-      // let hideStr = e.description.slice(charLimit);
 
       description.innerHTML = showStr;
       let morePoints = create("span");
       morePoints.textContent = "...";
       morePoints.style.display = "inline";
-      // let moreText = create("span");
-      // moreText.style.display = "none";
-      // moreText.innerHTML = hideStr;
       description.appendChild(morePoints);
-      // description.appendChild(moreText);
 
       let readMore = create("div");
       readMore.className = "read-more";
@@ -205,19 +181,6 @@ const EvenementComponent = function (service) {
       readMore.onclick = (ef) => {
         if (ef.target == readMore) {
           this.showEventDetails(e, eventDiv);
-          // if (description.classList.contains("evenement-show-all")) {
-          //   moreText.style.display = "none";
-          //   morePoints.style.display = "inline";
-          //   readMore.textContent = "Lire Plus";
-          // } else {
-          //   moreText.style.display = "inline";
-          //   morePoints.style.display = "none";
-          //   readMore.textContent = "Lire Moins";
-          // }
-          // description.classList.toggle("evenement-show-all");
-          // eventDiv.classList.toggle("active");
-          // ef.preventDefault();
-          // scrollTo(eventDiv);
         }
       };
     }
@@ -306,13 +269,6 @@ EvenementComponent.prototype.showEventDetails = function (event, eventDiv) {
     gallery.className = "gallery";
     eventDetails.appendChild(gallery);
 
-    // let columns = [];
-    // for (let i = 0; i < 4; i++) {
-    //   columns[i] = create("div");
-    //   columns[i].className = "column";
-    //   gallery.appendChild(columns[i]);
-    // }
-
     for (let index = 1; index < event.photos.length; index++) {
       let img = create("img");
       img.dataset.i = index;
@@ -325,33 +281,7 @@ EvenementComponent.prototype.showEventDetails = function (event, eventDiv) {
       imgWrapper.className = "img-wrapper";
       gallery.appendChild(imgWrapper);
       imgWrapper.appendChild(img);
-
-      // if (index % 4 == 0) {
-      //   columns[3].appendChild(img);
-      // } else if (index % 4 == 3) {
-      //   columns[2].appendChild(img);
-      // } else if (index % 4 == 2) {
-      //   columns[1].appendChild(img);
-      // } else columns[0].appendChild(img);
     }
-
-    /*
-    for (let i = 0; i < columns.length; i++) {
-      // const element = columns[i];
-      for (let j = 0; j < columns[i].children.length; j++) {
-        if ((i + 1) % 2 == 1) {
-          if ((j + 1) % 2 == 1) {
-            columns[i].children[j].style.height = "150px";
-            // columns[i].children[j].style.backgroundColor = "yellow";
-          }
-        } else {
-          if ((j + 1) % 4 == 3 || (j + 1) % 4 == 0) {
-            columns[i].children[j].style.height = "150px";
-            // columns[i].children[j].style.backgroundColor = "yellow";
-          }
-        }
-      }
-    }*/
   }
 
   scrollTo(eventDetails);
@@ -378,11 +308,6 @@ EvenementComponent.prototype.showPhotosModal = function (
   let modalContent = create("img");
   modalContent.classList.add("evenement-modal-content");
 
-  // photo.onclick = function () {
-  //   modal.style.display = "flex";
-  //   modalContent.src = photo.src;
-  // };
-
   modalContent.src = currentPhoto.src;
 
   let previous, next;
@@ -393,9 +318,6 @@ EvenementComponent.prototype.showPhotosModal = function (
     modal.appendChild(previous);
 
     previous.onclick = (eventF) => {
-      // TODO: Ismail
-      // if (eventF.target.tagName != "IMG") return;
-
       currentIndex--;
       currentPhoto = photoArray[currentIndex];
       this.showNextAndPrevious(photoArray.length, currentIndex, previous, next);
@@ -414,9 +336,6 @@ EvenementComponent.prototype.showPhotosModal = function (
     modal.appendChild(next);
 
     next.onclick = (eventF) => {
-      // TODO: Ismail
-      // if (eventF.target.tagName != "IMG") return;
-
       currentIndex++;
       this.showNextAndPrevious(photoArray.length, currentIndex, previous, next);
       if (currentIndex < photoArray.length) {
@@ -470,6 +389,7 @@ EvenementComponent.prototype.showPhotosModal = function (
     document.body.removeChild(modal);
   };
 
+  // TODO: listener to 'Esc' key
   /*
   window.addEventListener("keyup", (ef) => {
     if (!document.body.children.namedItem("evenement-modal-" + id)) {
@@ -487,13 +407,13 @@ EvenementComponent.prototype.showPhotosModal = function (
 
   if (photoArray.length > 1) {
     // If it is the first visite of the user, tell him that he can use ArrowLeft and ArrowRight to browse photos
-    // if (!sessionStorage.tellUserArrowsCanPassPhotos && !isMobileOrTablet()) {
-    showNotif(
-      "Vous pouvez utiliser les flèches pour parcourir les photos",
-      5000
-    );
-    sessionStorage.tellUserArrowsCanPassPhotos = true;
-    // }
+    if (!sessionStorage.tellUserArrowsCanPassPhotos && !isMobileOrTablet()) {
+      showNotif(
+        "Vous pouvez utiliser les flèches pour parcourir les photos",
+        5000
+      );
+      sessionStorage.tellUserArrowsCanPassPhotos = true;
+    }
   }
 };
 

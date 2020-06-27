@@ -25,12 +25,11 @@ const LaureatComponent = function (service) {
     divPerson.dataset.promotion = l.promotion;
     divPerson.setAttribute("id", "person-" + id);
     divPerson.className = "person";
-    // divPerson.classList.add("grow-shadow");
     let divBioImg = create("div");
     divBioImg.className = "bio-img";
     let imgPerson = create("img");
     if (l.photo) imgPerson.setAttribute("src", "images/laureats/" + l.photo);
-    else imgPerson.setAttribute("src", "images/laureats/laureat.png");
+    else imgPerson.setAttribute("src", "images/laureats/" + this.DEFAULT_PHOTO);
     imgPerson.setAttribute("alt", l.nom + " " + l.prenom);
     divBioImg.appendChild(imgPerson);
     let divSocial = create("div");
@@ -118,9 +117,6 @@ const LaureatComponent = function (service) {
       }
     }
   });
-
-  // Hide all 'Lauréats' by default
-  // for (const divPerson of wrapper.children) {
-  //   divPerson.style.display = "none";
-  // }
 };
+
+LaureatComponent.prototype.DEFAULT_PHOTO = "laureat.png";

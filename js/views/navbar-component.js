@@ -122,17 +122,12 @@ NavbarComponent.prototype.addNavbarItemsListener = function () {
         // Hide the previous page
         $(activePage).classList.remove("active");
 
-        // TODO: Ismaïl
         let activeLink = $(activePage + NavbarComponent.LINKS_SUFFIX);
-        // if (activePage != this.INDEX) {
         activeLink.classList.remove("active");
-        // }
 
         // if the menu has a parent menu
         if (activeLink.dataset.parent)
           $(activeLink.dataset.parent).classList.remove("active");
-
-        // this.addToHistoryList(link);
 
         // Display the new active page
         activePage = link.dataset.target;
@@ -152,7 +147,6 @@ NavbarComponent.prototype.addNavbarItemsListener = function () {
         let hamburger = document.querySelector("#navbar ul");
         hamburger.classList.remove("active");
 
-        // if (event.ignoreToTop == undefined || event.ignoreToTop !== true)
         window.toTop();
       });
     }

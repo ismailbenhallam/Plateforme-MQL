@@ -2,7 +2,7 @@ const annoncesJSON = [
   {
     nom: "Ouverture d'inscription MQL 2020/2021",
     genre: "Inscription",
-    date: "2020-08-15",
+    date: "2020-07-15",
     // link: "http://www.fsdmfes.ac.ma/Acces/Candidature",
   },
   {

@@ -64,7 +64,6 @@ const QuoteComponent = function (service) {
   }
 
   this.setUpInterval();
-  //   this.updateQuote();
 };
 
 // Contantes

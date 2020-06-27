@@ -10,7 +10,9 @@ const ProfesseurComponent = function (service) {
     divBioImg.className = "bio-img";
     let imgPerson = create("img");
     divBioImg.appendChild(imgPerson);
-    imgPerson.setAttribute("src", "images/professeurs/" + p.photo);
+    if (p.photo) imgPerson.setAttribute("src", "images/professeurs/" + p.photo);
+    else
+      imgPerson.setAttribute("src", "images/professeurs/" + this.DEFAULT_PHOTO);
     imgPerson.setAttribute("alt", p.nom);
     if (p.email) {
       let divSocial = create("div");
@@ -60,3 +62,5 @@ const ProfesseurComponent = function (service) {
     });
   });
 };
+
+ProfesseurComponent.prototype.DEFAULT_PHOTO = "prof.png";

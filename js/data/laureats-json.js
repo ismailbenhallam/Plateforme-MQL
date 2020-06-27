@@ -275,7 +275,6 @@ var laureatsJSON = [
     pfe: "Alten",
     cdi: "Capgemini",
     lieu: "Total Direct Energie",
-    //   posteOccupe: "Coach agile",
     posteOccupe: "Facilitateur et formateur agile",
     ville: "Antony, Île-de-France",
     pays: "France",
@@ -764,7 +763,6 @@ var laureatsJSON = [
     photo: "riani-oussama.jpg",
   },
   {
-    // linkedin: '',
     nom: "DIB",
     prenom: "Brahim",
     promotion: "2014-2016",
@@ -774,7 +772,6 @@ var laureatsJSON = [
     pfe: "USMBA presidence",
     lieu: "Ministère de l'Education Nationale",
     quote: "Une formation trop utile pour accéder au marché du travail ",
-    // photo: '',
   },
   ,
   {
@@ -1037,7 +1034,6 @@ var laureatsJSON = [
     posteOccupe: "Ingénieur Etudes et Développement",
     ville: "Paris, Île-de-France",
     pays: "France",
-    // photo: "laureat.png",
   },
   {
     linkedin: "https://www.linkedin.com/in/mehdi-selouane-a8b829126/",
@@ -1221,7 +1217,6 @@ var laureatsJSON = [
     pays: "Maroc",
     photo: "BELHISSI-Zakariae.jpg",
   },
-  //   2011-2013
   {
     linkedin: "https://www.linkedin.com/in/ryham-abirou-8043172b/",
     nom: "ABIROU",
@@ -1243,11 +1238,9 @@ var laureatsJSON = [
     posteOccupe: "Professeur d’enseignement supérieur",
     ville: "Fès",
     pays: "Maroc",
-    // pfe: "",
     lieu: "Université Sidi Mohammed Ben Abdellah",
-    // TODO: find photo
     photo: "",
-    // experience: ["Etige"],
+    experience: ["Etige"],
   },
   {
     linkedin: "https://www.linkedin.com/in/atailouloute/",
@@ -1302,7 +1295,6 @@ var laureatsJSON = [
     photo: "RACHIDI-Fadoua.jpg",
   },
 
-  // 2009-2011
   {
     linkedin: "https://www.linkedin.com/in/saad-hjira-58458734",
     nom: "HJIRA",
@@ -1317,6 +1309,5 @@ var laureatsJSON = [
     photo: "hjira-saad-2011.jpg",
     quote:
       "Très belle formation, reconnue par toutes les entreprises marocaines, et j'ai eu la chance de travailler avec plusieurs lauréat MQL dans les grandes SS2I marocaine ou internationales. ",
-    // experience: ["Devoceon", "Apprism", "Digital Factory"],
   },
 ];

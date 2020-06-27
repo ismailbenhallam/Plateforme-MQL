@@ -71,8 +71,7 @@
     <script src="js/views/evenement-component.js" defer="defer"></script>
     <script src="js/views/information-component.js" defer="defer"></script>
     <script src="js/views/Chart.min.js" defer="defer"></script>
-    <script src="js/views/chart-component.js" defer="defer"></script>
-    <!-- <script src="js/views/stage-component.js" defer="defer"></script> -->
+    <script src="js/views/stage-component.js" defer="defer"></script>
     <script src="js/views/actualite-component.js" defer="defer"></script>
     <script src="js/views/select-component.js" defer="defer"></script>
     <script src="js/main.js" defer="defer"></script>
@@ -390,12 +389,6 @@
                 </div>
             </header>
             <div class="top-content">
-                <!--
-          <div class="workflow-panel">
-            <img id="workflowBig" class="workflow big" src="images/workflow-big.png">
-            <img id="workflowSmall" class="workflow small" src="images/workflow-small.png">
-          </div>
-          -->
                 <div class="activite-presentation pad">
                     <p>Le modèle de formation sur lequel on s'appuie est un modèle riche, suivant l'évolution technique
                         et technologique et plein d'activités qui font à ce que le master MQL soit un master de qualité
@@ -553,35 +546,28 @@
                     <img id="workflowSmall" class="workflow small" src="images/workflow-small.png" />
                 </div>
 
-                <!-- <div class="data-panel">
-          <div id="table-insertions-wrapper" class="chart-panel">
-            Added dynamically
-          </div>
-        </div>
-        <div class="data-panel">
-          <div id="table-CDIs-wrapper" class="chart-panel">
-            Added dynamically
-          </div>
-        </div> -->
-            <div class="data-panel-wrapper">
-                <div class="data-panel">
-                    <div class="chart-panel">
-                        <canvas id="bar"></canvas>
-                    </div>
-                </div>
-            </div>
-            <div class="data-panel-wrapper">
-                <div class="data-panel">
-                    <div class="chart-panel">
-                        <div class="pie-wrapper">
-                            <canvas id="pie"></canvas>
-                        </div>
-                        <div id="choose-year-stage">
-                            <!-- Choices are added dynamically -->
+                <!-- Bar Chart -->
+                <div class="data-panel-wrapper">
+                    <div class="data-panel">
+                        <div class="chart-panel">
+                            <canvas id="bar"></canvas>
                         </div>
                     </div>
                 </div>
-            </div>
+
+                <!-- Pie Chart -->
+                <div class="data-panel-wrapper">
+                    <div class="data-panel">
+                        <div class="chart-panel">
+                            <div class="pie-wrapper">
+                                <canvas id="pie"></canvas>
+                            </div>
+                            <div id="choose-year-stage">
+                                <!-- Choices are added dynamically -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
 
@@ -594,13 +580,6 @@
             </header>
             <div id="blockquote-wrapper">
                 <!-- Added dynamically -->
-            </div>
-
-
-            <div class="dot-container">
-                <span class="dot" onclick="currentSlide(1)"></span>
-                <span class="dot" onclick="currentSlide(2)"></span>
-                <span class="dot" onclick="currentSlide(3)"></span>
             </div>
             <form>
                 <div class="custom-select">

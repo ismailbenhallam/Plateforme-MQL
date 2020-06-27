@@ -12,9 +12,9 @@ InformationComponent.prototype.addInformation = function (infos) {
     iconInfo.setAttribute("src", "icons/" + info.icon);
     let descInfo = create("p");
     let description = document.createTextNode(info.description);
-    descInfo.appendChild(description); /* */
-    newInfo.appendChild(iconInfo); /* */
-    newInfo.appendChild(descInfo); /* */
+    descInfo.appendChild(description);
+    newInfo.appendChild(iconInfo);
+    newInfo.appendChild(descInfo);
     infoContainer.appendChild(newInfo);
   });
 };
