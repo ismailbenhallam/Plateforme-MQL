@@ -1,7 +1,0 @@
-/*******************  TO DO !!   *******************/
-crop photos lauréats,recherche des nouveaux lauréats, réglage de la nouvelle vidéo (Yahya)
-photo accueil tkber, transparent,add copy right,list-option lauréats,emplacement ancien vidéo (Khadija)
-le style partenaires,activités,animation lauréats (Yousra)
-réglage menu & the responsivity(Hamza) expect responsivity admission, it's khadija's
-selection à vérifier : contenu
-the line between events, search (Ismail)

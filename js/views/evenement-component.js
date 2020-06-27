@@ -362,7 +362,7 @@ EvenementComponent.prototype.showPhotosModal = function (
     // If ">" is clicked
     if (ef.code === "ArrowRight") {
       if (next.style.visibility == "hidden" || next.style.visibility == "none")
-        showNotif("Pas d'autre photos");
+        showNotif("Pas d'autre photo");
       else next.dispatchEvent(new Event("click"));
     }
     // If "<" is clicked
