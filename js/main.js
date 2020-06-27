@@ -1,3 +1,4 @@
+// Services
 let navbarService = new NavbarService(navbarJSON);
 let deboucheService = new DeboucheService(debouchesJSON);
 let programmeService = new ProgrammeService(semestresJSON);
@@ -10,6 +11,7 @@ let actualiteService = new ActualiteService(annoncesJSON, evenementsJSON);
 let stageService = new StageService(promos, promosDetails);
 let laureatService = new LaureatService(laureatsJSON);
 
+// Components
 new NavbarComponent(navbarService);
 new RechercheComponent();
 new HistoryComponent();
@@ -23,6 +25,7 @@ new EvenementComponent(evenementService);
 new ActualiteComponent(actualiteService);
 new StageComponent(stageService, partenaireService);
 new LaureatComponent(laureatService);
+new QuoteComponent(laureatService);
 
 // To change the default style for all 'Select' elements with '.custom-select' class
 new SelectComponent();

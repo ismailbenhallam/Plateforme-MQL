@@ -56,21 +56,25 @@ const LaureatComponent = function (service) {
     job.className = "subtitle";
     if (l.ville == "") {
       job.textContent = l.posteOccupe + " à " + l.lieu + ", " + l.pays + ".";
-    }
-    job.textContent =
-      l.posteOccupe + " à " + l.lieu + ", " + l.ville + ", " + l.pays + ".";
+    } else
+      job.textContent =
+        l.posteOccupe + " à " + l.lieu + ", " + l.ville + ", " + l.pays + ".";
     let divWrap = create("div");
     divWrap.className = "wrap";
     let divTruncate = create("div");
     divTruncate.className = "truncate";
     let toggledText = create("p");
     toggledText.className = "toggledText";
-    let spanPFE = create("SPAN");
-    spanPFE.textContent = "Stage pré-embauche : " + l.pfe;
+    if (l.pfe) {
+      let spanPFE = create("SPAN");
+      spanPFE.textContent = "Stage pré-embauche : " + l.pfe;
+      divTruncate.appendChild(spanPFE);
+    }
     let spanCDI = create("SPAN");
-    if (l.cdi) spanCDI.textContent = "Premier CDI : " + l.cdi;
-    divTruncate.appendChild(spanPFE);
-    divTruncate.appendChild(spanCDI);
+    if (l.cdi) {
+      spanCDI.textContent = "Premier CDI : " + l.cdi;
+      divTruncate.appendChild(spanCDI);
+    }
     divTruncate.appendChild(toggledText);
     divWrap.appendChild(divTruncate);
     divPersonContent.appendChild(name);

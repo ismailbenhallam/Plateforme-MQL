@@ -9,7 +9,8 @@ const Laureat = function (
   pays,
   pfe,
   cdi,
-  photo
+  photo,
+  quote
 ) {
   this.linkedin = linkedin;
   this.nom = nom.trim().toUpperCase();
@@ -22,4 +23,5 @@ const Laureat = function (
   this.pfe = pfe;
   this.cdi = cdi;
   this.photo = photo;
+  this.quote = quote;
 };

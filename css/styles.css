@@ -842,10 +842,15 @@ body {
   cursor: auto;
 }
 
+.annonce-details a.has-link {
+  transition: padding 0.2s;
+}
+
 .annonce-details a.has-link:hover {
   cursor: pointer;
   text-decoration: underline;
   padding-left: 10px;
+  transition: padding 0.2s;
 }
 
 .annonces-content .separator,

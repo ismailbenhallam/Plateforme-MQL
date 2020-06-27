@@ -59,6 +59,7 @@
     <script src="js/views/root-component.js" defer="defer"></script>
     <script src="js/views/annonce-component.js" defer="defer"></script>
     <script src="js/views/laureat-component.js" defer="defer"></script>
+    <script src="js/views/quotes-components.js" defer="defer"></script>
     <script src="js/views/partenaire-component.js" defer="defer"></script>
     <script src="js/views/professeur-component.js" defer="defer"></script>
     <script src="js/views/navbar-component.js" defer="defer"></script>
@@ -589,42 +590,17 @@
                     <h1>lauréats</h1>
                 </div>
             </header>
-            <div>
-                <div class="blockquote-wrapper">
-                    <div class="blockquote">
-                        <h2>
-                            MQL is <span style="color:#160261">the choice</span> that every Geek <span
-                                style="color:#160261">should take.</span>
-                        </h2>
-                        <h4>&mdash;Yahya Ber<br><em>lauréat promotion...</em></h4>
-                    </div>
-                    <div class="blockquote">
-                        <h2>
-                            Yahya design happens when <span style="color:#160261">current knowledge</span> is the same
-                            as the <span style="color:#160261">target knowledge.</span>
-                        </h2>
-                        <h4>&mdash;BASRI Taha<br><em>Lauréat promotion 2018</em></h4>
-                    </div>
-                    <div class="blockquote">
-                        <h2>
-                            BER design happens when <span style="color:#160261">current knowledge</span> is the same as
-                            the <span style="color:#160261">target knowledge.</span>
-                        </h2>
-                        <h4>&mdash;Jared Spool<br><em>Web Site Usability: A Designer's Guide</em></h4>
-                    </div>
-                    <a class="prev1" style="margin-left: 18rem;" onclick="plusSlides(-1)">❮</a>
-                    <a class="next1" style="margin-right: 18rem;" onclick="plusSlides(1)">❯</a>
-                </div>
+            <div id="blockquote-wrapper">
+                <!-- Added dynamically -->
+            </div>
 
 
-                <div class="dot-container">
-                    <span class="dot" onclick="currentSlide(1)"></span>
-                    <span class="dot" onclick="currentSlide(2)"></span>
-                    <span class="dot" onclick="currentSlide(3)"></span>
-                </div>
+            <div class="dot-container">
+                <span class="dot" onclick="currentSlide(1)"></span>
+                <span class="dot" onclick="currentSlide(2)"></span>
+                <span class="dot" onclick="currentSlide(3)"></span>
             </div>
             <form>
-                <!-- FIXME : hamza -->
                 <div class="custom-select">
                     <select id="laureats-select-promo" class="select" size="1">
                         <!-- Options are added dynamically  -->
@@ -644,7 +620,7 @@
     <!-- Footer -->
     <footer>
         <!-- Scroll To Top Button -->
-        <img id="toTop" title="Go to top" src="icons/arrow-top.png" />
+        <img id="toTop" title="Défiler vers le haut" src="icons/arrow-top.png" />
         <div class="main-footer">
             <div class="footer-box">
                 <a id="footer-logo" data-target="accueil"><img src="images/logo-mql-cropped.png" class="footer-logo"
@@ -692,37 +668,5 @@
         </div>
     </footer>
 </body>
-<script>
-    var slideIndex = 1;
-    showSlides(slideIndex);
-
-    function plusSlides(n) {
-        showSlides(slideIndex += n);
-    }
-
-    function currentSlide(n) {
-        showSlides(slideIndex = n);
-    }
-
-    function showSlides(n) {
-        var i;
-        var slides = document.getElementsByClassName("blockquote");
-        var dots = document.getElementsByClassName("dot");
-        if (n > slides.length) {
-            slideIndex = 1
-        }
-        if (n < 1) {
-            slideIndex = slides.length
-        }
-        for (i = 0; i < slides.length; i++) {
-            slides[i].style.display = "none";
-        }
-        for (i = 0; i < dots.length; i++) {
-            dots[i].className = dots[i].className.replace(" active", "");
-        }
-        slides[slideIndex - 1].style.display = "block";
-        dots[slideIndex - 1].className += " active";
-    }
-</script>
 
 </html>

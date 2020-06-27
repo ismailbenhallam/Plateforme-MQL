@@ -16,7 +16,8 @@ const LaureatService = function (laureatsArray) {
         l.pays,
         l.pfe,
         l.cdi,
-        l.photo
+        l.photo,
+        l.quote
       )
     );
   });

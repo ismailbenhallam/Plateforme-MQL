@@ -11,7 +11,7 @@ var laureatsJSON = [
     ville: "Lyon",
     pays: "France",
     photo: "el-morabet-hicham.jpg",
-    rating:
+    quote:
       "En toute honnêteté, je peux dire que c’est le meilleur master au Maroc. En effet, la formation n’est pas uniquement consacrée aux aspects techniques mais aussi aux soft skills pour intégrer de la meilleure manière le monde de l’entreprise. Contrairement à d’autres masters ou bien d’autres grandes écoles, l’insertion professionnelle de ce master est proche de 100 %. En effet, ce master a réussi à se démarquer et à rompre la mauvaise image qu’on peut avoir de l’université au Maroc. Ce master a donc beaucoup de succès auprès des entreprises. En fin de compte, je ne peux que remercier le responsable de ce master pour m’avoir permis de vivre cette incroyable expérience qui a lancé ma carrière professionnelle.",
   },
   {
@@ -25,16 +25,17 @@ var laureatsJSON = [
     posteOccupe: "Ingénieur d'études et développement C/proC",
     ville: "Casablanca",
     pays: "Maroc",
-    rating: "Une formation complète et adaptée au monde d’entreprise",
+    quote: "Une formation complète et adaptée au monde d’entreprise",
   },
   {
     linkedin: "www.linkedin.com/in/mehdi-cheracher/",
-    nom: "Mehdi",
-    prenom: "Cheracher",
+    nom: "Cheracher",
+    prenom: "Mehdi",
     promotion: "2017-2019",
     pfe: "Société Générale",
     posteOccupe: "Software Engineer, SRE",
-    ville: "Dublin, Irlande",
+    ville: "Dublin",
+    pays: "Irlande",
     lieu: "Google",
     experience: ["Oracle Labs"],
     photo: "Cheracher-mehdi-2019.jpg",
@@ -51,7 +52,7 @@ var laureatsJSON = [
     ville: "Casablanca",
     pays: "Maroc",
     photo: "el-khairy-ibtissam1.jpg",
-    rating: "Nous avons réussi à MQL grâce à notre professeur Mr. Chenfour",
+    quote: "Nous avons réussi à MQL grâce à notre professeur Mr. Chenfour",
   },
   {
     linkedin:
@@ -66,7 +67,7 @@ var laureatsJSON = [
     ville: "Casablanca",
     pays: "Maroc",
     photo: "hammioui-aymane.jpg",
-    rating: `La formation MQL est une formation d'excellence et aujourd'hui les lauréats MQL sont présents dans toutes les structures du conseil IT surtout dans les grands parcs technologiques tels que Casa Neareshore et Rabat Technopolis.
+    quote: `La formation MQL est une formation d'excellence et aujourd'hui les lauréats MQL sont présents dans toutes les structures du conseil IT surtout dans les grands parcs technologiques tels que Casa Neareshore et Rabat Technopolis.
       Grâce aux efforts de notre coordonateur Mr Chenfour Noureddine et aux efforts des étudiants et professeurs, nous avons pu acquérir, durant les 2 années de formation, des compétences très solides dans l'ingénierie logicielle et cela nous a permis de s’intégrer facilement dans le monde professionnel et de montrer une grande efficacité et productivité.
       Ce qui diffère le master MQL c’est le fait que nous sommes formés non seulement sur l’aspect technique mais aussi sur l’aspect communication et savoir être, aussi sur l’aspect psychique, tous ces aspects sont très importants et ce sont des éléments qui, aujourd’hui, diffèrent les étudiants MQL des autres étudiants issus des autres formations. Nous sommes très fiers d’être MQListes et très fière d’être formés par un grand professeur qui maîtrise parfaitement ce qu’il fait et qui nous a donné tous les moyens pour dire en toute confiance : On est les meilleurs (en fait nous le disons pas mais nous le montrons).`,
   },
@@ -172,7 +173,7 @@ var laureatsJSON = [
     ville: "Casablanca",
     pays: "Maroc",
     photo: "ayoub-dadi.jpg",
-    rating:
+    quote:
       "La période qu’on a passée au master MQL ce n’était pas juste une période d’étude, mais une expérience humaine et professionnelle riche dans laquelle nous avons partagé des moments agréables avec des meilleures personnes",
   },
   {
@@ -279,7 +280,7 @@ var laureatsJSON = [
     ville: "Antony, Île-de-France",
     pays: "France",
     photo: "ZEROUAL-Badr.jpg",
-    rating:
+    quote:
       "Je garderai longtemps un souvenir ému de mon passage au Master MQL. Grâce à cette formation intense de deux ans, j'ai pu abordé une nouvelle étape - importante- de ma vie professionnelle avec confiance et dynamisme . Je profite pour représenter mes sincères remerciements à tout le corps professoral avec une pensée particulière à mon cher monsieur Chenfour.",
   },
   {
@@ -389,7 +390,7 @@ var laureatsJSON = [
   },
   {
     linkedin: "https://www.linkedin.com/in/abdelhamid-el-guarti-9a118011b/",
-    nom: "ELGUARTI",
+    nom: "EL GUARTI",
     prenom: "Abdelhamid",
     promotion: "2013-2015",
     pfe: "CEGEDIM",
@@ -606,26 +607,17 @@ var laureatsJSON = [
     pays: "Maroc",
     photo: "laureat.png",
   },
-  {
-    linkedin: "https://www.linkedin.com/in/saad-haidar-926990101/",
-    nom: "Hiadar",
-    prenom: "Saad",
-    promotion: "2014-2016",
-    posteOccupe: "Développeur Java/JavaEE",
-    ville: "Casablanca",
-    pfe: "Atos",
-    lieu: "Capgemini",
-    photo: "Hiadar-saad-2016.jpg",
-  },
+
   {
     nom: "Chekroud",
     prenom: "Mohammed",
     promotion: "2016-2018",
     posteOccupe: "Ingénieur d'Etudes et Développement Java EE - NodeJs",
-    ville: "Paris,France",
+    ville: "Paris",
+    pays: "France",
     pfe: "CGI",
     lieu: "CGI",
-    rating:
+    quote:
       "La meilleure formation dans le domaine informatique et la plus adaptée au marché de travail au Maroc",
   },
   {
@@ -669,7 +661,7 @@ var laureatsJSON = [
   },
   {
     linkedin: "https://www.linkedin.com/in/samiha-el-bouchikhi-207737118/",
-    nom: "ELBOUCHIKHI",
+    nom: "EL BOUCHIKHI",
     prenom: "Samiha",
     promotion: "2015-2017",
     pfe: "Capgemini",
@@ -694,15 +686,6 @@ var laureatsJSON = [
     photo: "boushabi-omar.jpg",
   },
   {
-    nom: "Aghrabi",
-    prenom: "Majda",
-    promotion: "2015-2017",
-    posteOccupe: "Ingénieur Analyste Java / Java EE / Oracle EBS",
-    pays: "France",
-    pfe: "Sylob",
-    lieu: "Sylob",
-  },
-  {
     linkedin: "https://www.linkedin.com/in/majda-agharbi-719858129/",
     nom: "AGHARBI",
     prenom: "Majda",
@@ -710,14 +693,14 @@ var laureatsJSON = [
     pfe: "Sylob",
     cdi: "Sylob",
     lieu: "Sylob",
-    posteOccupe: "Consultante Java JEE",
+    posteOccupe: "ingénieur d'étude et développement Java/Java EE",
     ville: "Casablanca",
     pays: "Maroc",
     photo: "AGHARBI-Majda.jpg",
   },
   {
     linkedin: "https://www.linkedin.com/in/elkharrat-issam-987145124/",
-    nom: "ELKHARRAT",
+    nom: "EL KHARRAT",
     prenom: "Issam",
     promotion: "2015-2017",
     pfe: "CGI",
@@ -749,7 +732,7 @@ var laureatsJSON = [
     pfe: "Atos",
     cdi: "Capgemini",
     lieu: "Capgemini",
-    posteOccupe: "Développeur Java/JEE",
+    posteOccupe: "Développeur Java/Java EE",
     ville: "Casablanca",
     pays: "Maroc",
     photo: "HAIDAR-Saad.jpg",
@@ -787,9 +770,10 @@ var laureatsJSON = [
     promotion: "2014-2016",
     posteOccupe: "Professeur du deuxième cycle",
     ville: "Fès",
+    pays: "Maroc",
     pfe: "USMBA presidence",
     lieu: "Ministère de l'Education Nationale",
-    rating: "Une formation trop utile pour accéder au marché du travail ",
+    quote: "Une formation trop utile pour accéder au marché du travail ",
     // photo: '',
   },
   ,
@@ -844,7 +828,7 @@ var laureatsJSON = [
     ville: "Casablanca",
     pays: "Maroc",
     photo: "BASRI-Taha.jpg",
-    rating: "Master MQL: La meilleure fabrique des meilleurs étudiants.",
+    quote: "Master MQL: La meilleure fabrique des meilleurs étudiants.",
   },
   {
     linkedin: "https://www.linkedin.com/in/hadachi-sanae-138684113/",
@@ -1258,7 +1242,8 @@ var laureatsJSON = [
     promotion: "2011-2013",
     posteOccupe: "Professeur d’enseignement supérieur",
     ville: "Fès",
-    pfe: "",
+    pays: "Maroc",
+    // pfe: "",
     lieu: "Université Sidi Mohammed Ben Abdellah",
     // TODO: find photo
     photo: "",
@@ -1330,7 +1315,7 @@ var laureatsJSON = [
     ville: "Casablanca",
     pays: "Maroc",
     photo: "hjira-saad-2011.jpg",
-    rating:
+    quote:
       "Très belle formation, reconnue par toutes les entreprises marocaines, et j'ai eu la chance de travailler avec plusieurs lauréat MQL dans les grandes SS2I marocaine ou internationales. ",
     // experience: ["Devoceon", "Apprism", "Digital Factory"],
   },
