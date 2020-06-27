@@ -12,7 +12,7 @@ var laureatsJSON = [
     pays: "France",
     photo: "el-morabet-hicham.jpg",
     quote:
-      "En toute honnêteté, je peux dire que c’est le meilleur master au Maroc. En effet, la formation n’est pas uniquement consacrée aux aspects techniques mais aussi aux soft skills pour intégrer de la meilleure manière le monde de l’entreprise. Contrairement à d’autres masters ou bien d’autres grandes écoles, l’insertion professionnelle de ce master est proche de 100 %. En effet, ce master a réussi à se démarquer et à rompre la mauvaise image qu’on peut avoir de l’université au Maroc. Ce master a donc beaucoup de succès auprès des entreprises. En fin de compte, je ne peux que remercier le responsable de ce master pour m’avoir permis de vivre cette incroyable expérience qui a lancé ma carrière professionnelle.",
+      "En toute honnêteté, je peux dire que c’est le meilleur master au Maroc. La formation n’est pas uniquement consacrée aux aspects techniques mais aussi aux soft skills pour pouvoir intégrer de la meilleure manière le monde de l’entreprise.[...]",
   },
   {
     linkedin: "https://www.linkedin.com/in/hamza-berrada67/",
@@ -67,9 +67,7 @@ var laureatsJSON = [
     ville: "Casablanca",
     pays: "Maroc",
     photo: "hammioui-aymane.jpg",
-    quote: `La formation MQL est une formation d'excellence et aujourd'hui les lauréats MQL sont présents dans toutes les structures du conseil IT surtout dans les grands parcs technologiques tels que Casa Neareshore et Rabat Technopolis.
-      Grâce aux efforts de notre coordonateur Mr Chenfour Noureddine et aux efforts des étudiants et professeurs, nous avons pu acquérir, durant les 2 années de formation, des compétences très solides dans l'ingénierie logicielle et cela nous a permis de s’intégrer facilement dans le monde professionnel et de montrer une grande efficacité et productivité.
-      Ce qui diffère le master MQL c’est le fait que nous sommes formés non seulement sur l’aspect technique mais aussi sur l’aspect communication et savoir être, aussi sur l’aspect psychique, tous ces aspects sont très importants et ce sont des éléments qui, aujourd’hui, diffèrent les étudiants MQL des autres étudiants issus des autres formations. Nous sommes très fiers d’être MQListes et très fière d’être formés par un grand professeur qui maîtrise parfaitement ce qu’il fait et qui nous a donné tous les moyens pour dire en toute confiance : On est les meilleurs (en fait nous le disons pas mais nous le montrons).`,
+    quote: `[...] Nous sommes très fiers d’être MQListes et très fière d’être formés par un grand professeur qui maîtrise parfaitement ce qu’il fait et qui nous a donné tous les moyens pour dire en toute confiance : On est les meilleurs (en fait nous le disons pas mais nous le montrons).`,
   },
   {
     linkedin: "https://www.linkedin.com/in/hicham-haidar-050b1212b/",
@@ -280,7 +278,7 @@ var laureatsJSON = [
     pays: "France",
     photo: "ZEROUAL-Badr.jpg",
     quote:
-      "Je garderai longtemps un souvenir ému de mon passage au Master MQL. Grâce à cette formation intense de deux ans, j'ai pu abordé une nouvelle étape - importante- de ma vie professionnelle avec confiance et dynamisme . Je profite pour représenter mes sincères remerciements à tout le corps professoral avec une pensée particulière à mon cher monsieur Chenfour.",
+      "Je garderai longtemps un souvenir ému de mon passage au Master MQL. Grâce à cette formation intense de deux ans, j'ai pu abordé une nouvelle étape - importante- de ma vie professionnelle avec confiance et dynamisme.[...]",
   },
   {
     linkedin: "https://www.linkedin.com/in/mouna-chraibi-302895174/",
