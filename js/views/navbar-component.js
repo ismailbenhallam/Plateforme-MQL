@@ -96,9 +96,9 @@ NavbarComponent.prototype.addNavbarItemsListener = function () {
     // Select the <a> tags with "data-target" attribut
     let links = document.getElementsByTagName("a");
     let navbarLinks = [];
-    for (const link of links) {
-      if (link.dataset.target != null) {
-        navbarLinks.push(link);
+    for (let i = 0; i < links.length; i++) {
+      if (links[i].dataset.target != null) {
+        navbarLinks.push(links[i]);
       }
     }
 

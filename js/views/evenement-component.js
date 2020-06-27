@@ -305,6 +305,14 @@ EvenementComponent.prototype.showEventDetails = function (event, eventDiv) {
     let gallery = create("gallery");
     gallery.className = "gallery";
     eventDetails.appendChild(gallery);
+
+    // let columns = [];
+    // for (let i = 0; i < 4; i++) {
+    //   columns[i] = create("div");
+    //   columns[i].className = "column";
+    //   gallery.appendChild(columns[i]);
+    // }
+
     for (let index = 1; index < event.photos.length; index++) {
       let img = create("img");
       img.dataset.i = index;
@@ -312,8 +320,38 @@ EvenementComponent.prototype.showEventDetails = function (event, eventDiv) {
       img.addEventListener("click", () => {
         this.showPhotosModal(event.photos, index);
       });
-      gallery.appendChild(img);
+
+      let imgWrapper = create("div");
+      imgWrapper.className = "img-wrapper";
+      gallery.appendChild(imgWrapper);
+      imgWrapper.appendChild(img);
+
+      // if (index % 4 == 0) {
+      //   columns[3].appendChild(img);
+      // } else if (index % 4 == 3) {
+      //   columns[2].appendChild(img);
+      // } else if (index % 4 == 2) {
+      //   columns[1].appendChild(img);
+      // } else columns[0].appendChild(img);
     }
+
+    /*
+    for (let i = 0; i < columns.length; i++) {
+      // const element = columns[i];
+      for (let j = 0; j < columns[i].children.length; j++) {
+        if ((i + 1) % 2 == 1) {
+          if ((j + 1) % 2 == 1) {
+            columns[i].children[j].style.height = "150px";
+            // columns[i].children[j].style.backgroundColor = "yellow";
+          }
+        } else {
+          if ((j + 1) % 4 == 3 || (j + 1) % 4 == 0) {
+            columns[i].children[j].style.height = "150px";
+            // columns[i].children[j].style.backgroundColor = "yellow";
+          }
+        }
+      }
+    }*/
   }
 
   scrollTo(eventDetails);

@@ -8,6 +8,7 @@ const LaureatService = function (laureatsArray) {
       new Laureat(
         l.linkedin,
         l.nom,
+        l.prenom,
         l.promotion,
         l.posteOccupe,
         l.lieu,
@@ -15,7 +16,8 @@ const LaureatService = function (laureatsArray) {
         l.pays,
         l.pfe,
         l.cdi,
-        l.photo
+        l.photo,
+        l.quote
       )
     );
   });
@@ -36,12 +38,14 @@ const LaureatService = function (laureatsArray) {
   this.promoYears.sort((a, b) => b.localeCompare(a));
 };
 
-LaureatService.prototype.sortByPromoThenByName = (a, b) => {
-  let comparePromos = b.promotion.substr(0, 4) - a.promotion.substr(0, 4);
-  if (comparePromos == 0) return a.nom.localeCompare(b.nom);
-  return comparePromos;
+LaureatService.prototype.sortByName = (a, b) => {
+  let c = a.nom.localeCompare(b.nom);
+  if (c != 0) return c;
+  return a.prenom.localeCompare(b.prenom);
 };
 
-LaureatService.prototype.sortByName = (a, b) => {
-  return a.nom.localeCompare(b.nom);
+LaureatService.prototype.sortByPromoThenByName = function (a, b) {
+  let comparePromos = b.promotion.substr(0, 4) - a.promotion.substr(0, 4);
+  if (comparePromos == 0) return this.sortByName(a, b);
+  return comparePromos;
 };

@@ -15,6 +15,7 @@
     <link rel="stylesheet" type="text/css" media="screen" href="css/styles.css" />
     <link rel="stylesheet" type="text/css" media="screen" href="css/Chart.min.css" />
     <link rel="stylesheet" type="text/css" media="screen" href="css/quote.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="css/snackbar.css" />
 
     <!-- Scripts -->
     <script src="js/utils.js" defer="defer"></script>
@@ -59,6 +60,7 @@
     <script src="js/views/root-component.js" defer="defer"></script>
     <script src="js/views/annonce-component.js" defer="defer"></script>
     <script src="js/views/laureat-component.js" defer="defer"></script>
+    <script src="js/views/quotes-components.js" defer="defer"></script>
     <script src="js/views/partenaire-component.js" defer="defer"></script>
     <script src="js/views/professeur-component.js" defer="defer"></script>
     <script src="js/views/navbar-component.js" defer="defer"></script>
@@ -81,6 +83,8 @@
 
     <!-- Header -->
     <header id="header">
+        <!-- Snackbar for notif. -->
+        <!-- <div id="snackbar"></div> -->
         <div class="header container sticky">
             <div class="nav-bar">
 
@@ -135,8 +139,11 @@
                             <h2> Nous formons des ingénieurs depuis 2007</h2>
                         </div>
                         <div class="about-details">
-                            <p>Le Master MQL est une véritable plateforme de formation et de production de la ressource humaine très hautement qualifiée en ingénierie du logiciel.</p>
-                            <p>Programme intergouvernemental France-Maroc FSP-ARESM Programme OTI (Offshoring des Technologies de l’Information) Mobilité et Double diplôme avec l’université de Brest (UBO) Insertion Professionnelle des étudiants.</p>
+                            <p>Le Master MQL est une véritable plateforme de formation et de production de la ressource
+                                humaine très hautement qualifiée en ingénierie du logiciel.</p>
+                            <p>Programme intergouvernemental France-Maroc FSP-ARESM Programme OTI (Offshoring des
+                                Technologies de l’Information) Mobilité et Double diplôme avec l’université de Brest
+                                (UBO) Insertion Professionnelle des étudiants.</p>
                         </div>
                     </div>
                     <div class="about-img">
@@ -205,23 +212,32 @@
                     </div>
                     <h3 class="title-default-left">Objectifs de la formation</h3>
                     <p>
-                        Le Master MQL est une véritable plateforme de formation et de production de la ressource humaine très hautement qualifiée en ingénierie du logiciel. Le Master permet à l’étudiant d’une part d’acquérir une compétence de pointe en haute technologie informatique
-                        et d’autre part une très bonne maitrise de l’entreprise et de son écosystème avec une insertion facile, naturelle et implicite dans les plus grandes SS2I du monde.
+                        Le Master MQL est une véritable plateforme de formation et de production de la ressource humaine
+                        très hautement qualifiée en ingénierie du logiciel. Le Master permet à l’étudiant d’une part
+                        d’acquérir une compétence de pointe en haute technologie informatique
+                        et d’autre part une très bonne maitrise de l’entreprise et de son écosystème avec une insertion
+                        facile, naturelle et implicite dans les plus grandes SS2I du monde.
 
-                        <ul class="ul">
-                            <li> Fournir aux étudiants une formation scientifique et technique de haut niveau en Informatique alliant un enseignement technologique de pointe et un enseignement théorique solide permettant de s’adapter à l'évolution rapide des
-                                technologies de l'information et de la communication.
-                            </li>
-                            <li> Enrichir l’offre de formation de l’université et participer à son ouverture sur l’environnement socio-économique.
-                            </li>
-                            <li> Répondre aux besoins des entreprises en cadres de haut niveau dans divers domaines de l’informatique appliquée- en particulier dans les métiers de l’offshore- à savoir :
-                                <ul class="ul">
-                                    <li> Développeurs d’applications spécifiques : Web - Mobile - Décisionnel - Client/Serveur</li>
-                                    <li> Développeurs en migration et intégration des systèmes d’information
-                                    </li>
-                                    <li> Spécialistes en support applicatif - maintenance des applications actives et en infogérance</li>
-                                </ul>
-                        </ul>
+                    <ul class="ul">
+                        <li> Fournir aux étudiants une formation scientifique et technique de haut niveau en
+                            Informatique alliant un enseignement technologique de pointe et un enseignement théorique
+                            solide permettant de s’adapter à l'évolution rapide des
+                            technologies de l'information et de la communication.
+                        </li>
+                        <li> Enrichir l’offre de formation de l’université et participer à son ouverture sur
+                            l’environnement socio-économique.
+                        </li>
+                        <li> Répondre aux besoins des entreprises en cadres de haut niveau dans divers domaines de
+                            l’informatique appliquée- en particulier dans les métiers de l’offshore- à savoir :
+                            <ul class="ul">
+                                <li> Développeurs d’applications spécifiques : Web - Mobile - Décisionnel -
+                                    Client/Serveur</li>
+                                <li> Développeurs en migration et intégration des systèmes d’information
+                                </li>
+                                <li> Spécialistes en support applicatif - maintenance des applications actives et en
+                                    infogérance</li>
+                            </ul>
+                    </ul>
                 </div>
             </div>
 
@@ -238,8 +254,11 @@
                 <div class="pad">
                     <h3 class="title-default-left">Débouchés de la Formation</h3>
                     <p>
-                        Le Master MQL participe très activement dans le domaine de l’offshore. Le principal « client » MQL se trouve dans tous les parcs d’activité offshore et Outsourcing au Maroc et principalement Casablanca Nearshore Park, Rabat Technopolis et Fès Shore avec
-                        un taux d’insertion de 100% des étudiants dans des multinationales : Capgemini, CGI Technologies, Atos, Cegedim et Accenture.<br>
+                        Le Master MQL participe très activement dans le domaine de l’offshore. Le principal « client »
+                        MQL se trouve dans tous les parcs d’activité offshore et Outsourcing au Maroc et principalement
+                        Casablanca Nearshore Park, Rabat Technopolis et Fès Shore avec
+                        un taux d’insertion de 100% des étudiants dans des multinationales : Capgemini, CGI
+                        Technologies, Atos, Cegedim et Accenture.<br>
                     </p>
                     <ul id="debouches">
                         <!-- Debouches are added dynamically -->
@@ -268,7 +287,8 @@
                     <h3 class="title-default-left">Conditions d’accès :</h3>
                     <ul class="learning-outcomes ul">
                         <li>
-                            Etre titulaire d’un Bac+3: licence en Sciences Mathématiques et Infomatiques(SMI) ,ou diplôme reconnu équivalent
+                            Etre titulaire d’un Bac+3: licence en Sciences Mathématiques et Infomatiques(SMI) ,ou
+                            diplôme reconnu équivalent
                         </li>
                         <li>
                             Pour les 6 semestres de formation universitaire : Avoir au moins 3 mentions Assez Bien.
@@ -324,7 +344,9 @@
             <div class="top-content">
                 <div class="timeline-text pad">
                     <h3 class="title-default-left">Critères d'admission</h3>
-                    <p>Plusieurs critères sont pris en compte pour l'admission des candidats en master. Nous évaluons le niveau académique du candidat, sa motivation, son projet professionnel, ses expériences et son parcours personnel. Nous considérons ainsi
+                    <p>Plusieurs critères sont pris en compte pour l'admission des candidats en master. Nous évaluons le
+                        niveau académique du candidat, sa motivation, son projet professionnel, ses expériences et son
+                        parcours personnel. Nous considérons ainsi
                         la cohérence entre le profil du candidat et l'offre de formation du programme. </p>
                 </div>
                 <div class="timeline">
@@ -332,20 +354,28 @@
                         <li>
                             <div class="content">
                                 <h3 class="title-default-left">Étude de dossier</h3>
-                                <p> Pour être pris en compte et évalué, votre dossier doit être complet et validé. Le parcours académique est évalué avec attention et les résultats obtenus sont des éléments essentiels lors de la sélection de nos futurs étudiants.</p>
+                                <p> Pour être pris en compte et évalué, votre dossier doit être complet et validé. Le
+                                    parcours académique est évalué avec attention et les résultats obtenus sont des
+                                    éléments essentiels lors de la sélection de nos futurs étudiants.</p>
                             </div>
                         </li>
                         <li>
                             <div class="content">
                                 <h3 class="title-default-left">Concours écrits </h3>
-                                <p>Cette ultime étape a pour objectif de tester concrètement les qualifications techniques et de distinguer vos capacités professionnelles de vos capacités innées. Le concours pourra prendre la forme d’un QCM ou des excercices.</p>
+                                <p>Cette ultime étape a pour objectif de tester concrètement les qualifications
+                                    techniques et de distinguer vos capacités professionnelles de vos capacités innées.
+                                    Le concours pourra prendre la forme d’un QCM ou des excercices.</p>
                             </div>
                         </li>
                         <li>
                             <div class="content">
                                 <h3 class="title-default-left">Entretien orale</h3>
-                                <p> A pour objet d'évaluer la motivation du candidat, son esprit critique ainsi que sa capacité à développer une réflexion personnelle et argumentée. Il s'agit notamment d’évaluer la cohérence de son projet personnel et professionnel,
-                                    les atouts et le potentiel dont il dispose, ainsi de découvrir sa capacité à s’intégrer dans une équipe, et à encadrer des équipes opérationnelles, avec autonomie, polyvalence, Initiative, responsabilité, sens critique..</p>
+                                <p> A pour objet d'évaluer la motivation du candidat, son esprit critique ainsi que sa
+                                    capacité à développer une réflexion personnelle et argumentée. Il s'agit notamment
+                                    d’évaluer la cohérence de son projet personnel et professionnel,
+                                    les atouts et le potentiel dont il dispose, ainsi de découvrir sa capacité à
+                                    s’intégrer dans une équipe, et à encadrer des équipes opérationnelles, avec
+                                    autonomie, polyvalence, Initiative, responsabilité, sens critique..</p>
                             </div>
                         </li>
                         <div style="clear: both;"></div>
@@ -369,7 +399,9 @@
           </div>
           -->
                 <div class="activite-presentation pad">
-                    <p>Le modèle de formation sur lequel on s'appuie est un modèle riche, suivant l'évolution technique et technologique et plein d'activités qui font à ce que le master MQL soit un master de qualité par excellence, dont le but principal
+                    <p>Le modèle de formation sur lequel on s'appuie est un modèle riche, suivant l'évolution technique
+                        et technologique et plein d'activités qui font à ce que le master MQL soit un master de qualité
+                        par excellence, dont le but principal
                         est l'insertion professionnelle au sein des multinationales:</p>
                     Le processus d'insertion chez les multinationales passent par 5 étapes en général:<br>
                     <ul class="ul">
@@ -379,7 +411,9 @@
                         <li> Test Technique</li>
                         <li> Entretien RH</li>
                     </ul>
-                    Sur ce, on peut déduire qu'il y'a 4 indicateurs de performances utilisés lors de ce processus et qui sont à la base d'accepter ou pas une ressource humaine dans un domaine précis, ces indicateurs sont :
+                    Sur ce, on peut déduire qu'il y'a 4 indicateurs de performances utilisés lors de ce processus et qui
+                    sont à la base d'accepter ou pas une ressource humaine dans un domaine précis, ces indicateurs sont
+                    :
                     <ul class="ul">
                         <li> Compétences techniques et technologiques</li>
                         <li> Maîtrise de métiers : Banking, Santé... </li>
@@ -390,13 +424,17 @@
                 </div>
                 <div class="activite-wrapper">
                     <div class="col-sm">
-                        <div class="image-text-modal-slider__image" style='background-image: url("images/deroulement-cours-2.jpg");'></div>
+                        <div class="image-text-modal-slider__image"
+                            style='background-image: url("images/deroulement-cours-2.jpg");'></div>
                         <div class="image-text-modal-slider__content">
                             <div>
                                 <h2>Déroulement des cours</h2>
                                 <div>
                                     <p>
-                                        le déroulement de cours dans MQL ne consiste pas seulement d'études théoriques, chaque module est une formation théorique et technique ou l'on apprend à être au courant des différents domaines de métiers, à utiliser l'ensemble des techniques et technologies
+                                        le déroulement de cours dans MQL ne consiste pas seulement d'études théoriques,
+                                        chaque module est une formation théorique et technique ou l'on apprend à être au
+                                        courant des différents domaines de métiers, à utiliser l'ensemble des techniques
+                                        et technologies
                                         tout en respectant les bonnes pratiques en développement (Design Patterns).
                                     </p>
                                 </div>
@@ -404,13 +442,17 @@
                         </div>
                     </div>
                     <div class="col-sm">
-                        <div class="image-text-modal-slider__image" style='background-image: url("images/travaux-individuelles.png");'></div>
+                        <div class="image-text-modal-slider__image"
+                            style='background-image: url("images/travaux-individuelles.png");'></div>
                         <div class="image-text-modal-slider__content">
                             <div>
                                 <h2>Travaux individuelles</h2>
                                 <div>
                                     <p>
-                                        Chaque étudiant est amené à mettre en pratique tous ce qui l'a acquis durant le déroulement de cours en réalisant des projets valorisant le maintien des bonnes pratiques, le respect des délais ainsi il pourra améliorer son sens d'autonomie, d'efficacité
+                                        Chaque étudiant est amené à mettre en pratique tous ce qui l'a acquis durant le
+                                        déroulement de cours en réalisant des projets valorisant le maintien des bonnes
+                                        pratiques, le respect des délais ainsi il pourra améliorer son sens d'autonomie,
+                                        d'efficacité
                                         et de créativité.
                                     </p>
                                 </div>
@@ -418,14 +460,19 @@
                         </div>
                     </div>
                     <div class="col-sm">
-                        <div class="image-text-modal-slider__image" style='background-image: url("images/travaux-equipe.jpg");'></div>
+                        <div class="image-text-modal-slider__image"
+                            style='background-image: url("images/travaux-equipe.jpg");'></div>
                         <div class="image-text-modal-slider__content">
                             <div>
                                 <h2>Travaux d'équipe</h2>
                                 <div>
                                     <p>
-                                        En deuxième et troisième semestre, Le travail d'équipe est primordiale, pour cela les étudiants sont tenus à former des équipes de 4 à 6 personnes pour mettre en oeuvre des projets ou des présentations valorisant ainsi l'esprit d'équipe, les méthodes
-                                        et pratiques de gestion de projets (SCRUM), l'utilisation des outils d'industrialisation, et le développement des compétences.
+                                        En deuxième et troisième semestre, Le travail d'équipe est primordiale, pour
+                                        cela les étudiants sont tenus à former des équipes de 4 à 6 personnes pour
+                                        mettre en oeuvre des projets ou des présentations valorisant ainsi l'esprit
+                                        d'équipe, les méthodes
+                                        et pratiques de gestion de projets (SCRUM), l'utilisation des outils
+                                        d'industrialisation, et le développement des compétences.
                                     </p>
                                 </div>
                             </div>
@@ -439,8 +486,13 @@
                                 <h2>Soft Skills</h2>
                                 <div>
                                     <p>
-                                        Les Soft Skills sont des compétences essentielles à tout métier. C'est pourquoi MQL tient à travers des présentations d'équipes et d'autres activités de groupe en dehors du programme officiel tel la participation aux compétitions d'entrepreneuriat, à
-                                        gagner ces compétences et qualités comme la détermination, la confiance en soi, la confiance aux collaborateurs, la communication, l'art de dire ou écrire de manière claire, correcte, concise et précise.
+                                        Les Soft Skills sont des compétences essentielles à tout métier. C'est pourquoi
+                                        MQL tient à travers des présentations d'équipes et d'autres activités de groupe
+                                        en dehors du programme officiel tel la participation aux compétitions
+                                        d'entrepreneuriat, à
+                                        gagner ces compétences et qualités comme la détermination, la confiance en soi,
+                                        la confiance aux collaborateurs, la communication, l'art de dire ou écrire de
+                                        manière claire, correcte, concise et précise.
                                     </p>
                                 </div>
                             </div>
@@ -474,9 +526,6 @@
             <div id="evenements-wrapper" class="top-content evenements-wrapper">
                 <!-- Added dynamically -->
             </div>
-            <div id="evenement-details" class="top-content">
-                <!-- TODO: Ismaïl -->
-            </div>
         </div>
 
         <!-- Stages -->
@@ -489,9 +538,15 @@
             <div class="top-content">
                 <div class="pad">
                     <p>
-                        Un stage de fin d’études de six mois en milieu professionnel sous la direction d'un professeur (encadrant pédagogique) avec un éventuel co-encadrant (ou encadrant professionnel) est obligatoire au cours du 4ème semestre.
-                        <br> Le stage professionnel représente 25% du volume horaire global de la filière. Il est équivalent à 6 modules ; soit un semestre.<br> Pendant le stage, les candidats seront demandés à réaliser des projets tirés de la réalité
-                        des entreprises d'accueil et définis en concertation entre ces dernières et la commission pédagogique de la filière.<br> Le stage est un stage pré-embauche, les étudiants MQL à ce stade sont déjà prêt a intégrer le marché d'emploi
+                        Un stage de fin d’études de six mois en milieu professionnel sous la direction d'un professeur
+                        (encadrant pédagogique) avec un éventuel co-encadrant (ou encadrant professionnel) est
+                        obligatoire au cours du 4ème semestre.
+                        <br> Le stage professionnel représente 25% du volume horaire global de la filière. Il est
+                        équivalent à 6 modules ; soit un semestre.<br> Pendant le stage, les candidats seront demandés à
+                        réaliser des projets tirés de la réalité
+                        des entreprises d'accueil et définis en concertation entre ces dernières et la commission
+                        pédagogique de la filière.<br> Le stage est un stage pré-embauche, les étudiants MQL à ce stade
+                        sont déjà prêt a intégrer le marché d'emploi
                         d'une maniere naturelle grâce à un programme complet :
                     </p>
                 </div>
@@ -538,39 +593,17 @@
                     <h1>lauréats</h1>
                 </div>
             </header>
-            <div>
-                <div class="blockquote-wrapper">
-                    <div class="blockquote">
-                        <h2>
-                            MQL is <span style="color:#160261">the choice</span> that every Geek <span style="color:#160261">should take.</span>
-                        </h2>
-                        <h4>&mdash;Yahya Ber<br><em>lauréat promotion...</em></h4>
-                    </div>
-                    <div class="blockquote">
-                        <h2>
-                            Yahya design happens when <span style="color:#160261">current knowledge</span> is the same as the <span style="color:#160261">target knowledge.</span>
-                        </h2>
-                        <h4>&mdash;BASRI Taha<br><em>Lauréat promotion 2018</em></h4>
-                    </div>
-                    <div class="blockquote">
-                        <h2>
-                            BER design happens when <span style="color:#160261">current knowledge</span> is the same as the <span style="color:#160261">target knowledge.</span>
-                        </h2>
-                        <h4>&mdash;Jared Spool<br><em>Web Site Usability: A Designer's Guide</em></h4>
-                    </div>
-                    <a class="prev1" style="margin-left: 18rem;" onclick="plusSlides(-1)">❮</a>
-                    <a class="next1" style="margin-right: 18rem;" onclick="plusSlides(1)">❯</a>
-                </div>
+            <div id="blockquote-wrapper">
+                <!-- Added dynamically -->
+            </div>
 
 
-                <div class="dot-container">
-                    <span class="dot" onclick="currentSlide(1)"></span>
-                    <span class="dot" onclick="currentSlide(2)"></span>
-                    <span class="dot" onclick="currentSlide(3)"></span>
-                </div>
+            <div class="dot-container">
+                <span class="dot" onclick="currentSlide(1)"></span>
+                <span class="dot" onclick="currentSlide(2)"></span>
+                <span class="dot" onclick="currentSlide(3)"></span>
             </div>
             <form>
-                <!-- FIXME : hamza -->
                 <div class="custom-select">
                     <select id="laureats-select-promo" class="select" size="1">
                         <!-- Options are added dynamically  -->
@@ -590,10 +623,11 @@
     <!-- Footer -->
     <footer>
         <!-- Scroll To Top Button -->
-        <img id="toTop" title="Go to top" src="icons/arrow-top.png" />
+        <img id="toTop" title="Défiler vers le haut" src="icons/arrow-top.png" />
         <div class="main-footer">
             <div class="footer-box">
-                <a id="footer-logo" data-target="accueil"><img src="images/logo-mql-cropped.png" class="footer-logo" title="Accueil" /></a>
+                <a id="footer-logo" data-target="accueil"><img src="images/logo-mql-cropped.png" class="footer-logo"
+                        title="Accueil" /></a>
             </div>
             <div class="footer-box">
                 <h2>Liens utiles</h2>
@@ -610,7 +644,8 @@
                 <hr>
                 <div class="footer-address">
                     <h6>
-                        <a href="https://goo.gl/maps/p66sEJYfuzpWjaAW9" target="__blank"><img src="icons/position.png" /> B.P. 1796 Fès-Atlas,30003 MAROC</a>
+                        <a href="https://goo.gl/maps/p66sEJYfuzpWjaAW9" target="__blank"><img
+                                src="icons/position.png" /> B.P. 1796 Fès-Atlas,30003 MAROC</a>
                     </h6>
                     <h6>
                         <a href="tel:+2126255451650"><img src="icons/phone.png" /> (+212) 535 64 23 98</a>
@@ -636,37 +671,5 @@
         </div>
     </footer>
 </body>
-<script>
-    var slideIndex = 1;
-    showSlides(slideIndex);
-
-    function plusSlides(n) {
-        showSlides(slideIndex += n);
-    }
-
-    function currentSlide(n) {
-        showSlides(slideIndex = n);
-    }
-
-    function showSlides(n) {
-        var i;
-        var slides = document.getElementsByClassName("blockquote");
-        var dots = document.getElementsByClassName("dot");
-        if (n > slides.length) {
-            slideIndex = 1
-        }
-        if (n < 1) {
-            slideIndex = slides.length
-        }
-        for (i = 0; i < slides.length; i++) {
-            slides[i].style.display = "none";
-        }
-        for (i = 0; i < dots.length; i++) {
-            dots[i].className = dots[i].className.replace(" active", "");
-        }
-        slides[slideIndex - 1].style.display = "block";
-        dots[slideIndex - 1].className += " active";
-    }
-</script>
 
 </html>

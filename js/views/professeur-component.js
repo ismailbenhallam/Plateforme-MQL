@@ -9,20 +9,22 @@ const ProfesseurComponent = function (service) {
     let divBioImg = create("div");
     divBioImg.className = "bio-img";
     let imgPerson = create("img");
+    divBioImg.appendChild(imgPerson);
     imgPerson.setAttribute("src", "images/professeurs/" + p.photo);
     imgPerson.setAttribute("alt", p.nom);
-    let divSocial = create("div");
-    divSocial.setAttribute("id", "social");
-    divSocial.className = "social";
-    let a = create("a");
-    a.setAttribute("href", "mailto:" + p.email);
-    let img = create("img");
-    img.setAttribute("src", "icons/email.svg");
-    img.setAttribute("alt", "email");
-    a.appendChild(img);
-    divSocial.appendChild(a);
-    divBioImg.appendChild(imgPerson);
-    divBioImg.appendChild(divSocial);
+    if (p.email) {
+      let divSocial = create("div");
+      divSocial.setAttribute("id", "social");
+      divSocial.className = "social";
+      let a = create("a");
+      a.setAttribute("href", "mailto:" + p.email);
+      let img = create("img");
+      img.setAttribute("src", "icons/email.svg");
+      img.setAttribute("alt", "email");
+      a.appendChild(img);
+      divSocial.appendChild(a);
+      divBioImg.appendChild(divSocial);
+    }
     divPerson.appendChild(divBioImg);
     let divPersonContent = create("div");
     divPersonContent.className = "person-content";
@@ -41,16 +43,20 @@ const ProfesseurComponent = function (service) {
       const bioImgChild = $(ids).getElementsByClassName("bio-img")[0]
         .firstElementChild;
       bioImgChild.classList.add("img-fluid");
-      const social = $(ids).getElementsByClassName("social")[0];
-      social.classList.add("translate");
+      if (p.email) {
+        const social = $(ids).getElementsByClassName("social")[0];
+        social.classList.add("translate");
+      }
     });
     divPerson.addEventListener("mouseout", (ids) => {
       ids = divPerson.id;
       const bioImgChild = $(ids).getElementsByClassName("bio-img")[0]
         .firstElementChild;
       bioImgChild.classList.remove("img-fluid");
-      const social = $(ids).getElementsByClassName("social")[0];
-      social.classList.remove("translate");
+      if (p.email) {
+        const social = $(ids).getElementsByClassName("social")[0];
+        social.classList.remove("translate");
+      }
     });
   });
 };

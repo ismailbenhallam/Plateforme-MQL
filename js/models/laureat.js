@@ -1,6 +1,7 @@
 const Laureat = function (
   linkedin,
   nom,
+  prenom,
   promotion,
   posteOccupe,
   lieu,
@@ -8,11 +9,12 @@ const Laureat = function (
   pays,
   pfe,
   cdi,
-  photo
+  photo,
+  quote
 ) {
   this.linkedin = linkedin;
-  nom = nom.split(" ");
-  this.nom = nom[0].toUpperCase() + " " + nom[1].capitalize();
+  this.nom = nom.trim().toUpperCase();
+  this.prenom = prenom.trim().capitalize();
   this.promotion = promotion;
   this.posteOccupe = posteOccupe;
   this.lieu = lieu;
@@ -21,4 +23,5 @@ const Laureat = function (
   this.pfe = pfe;
   this.cdi = cdi;
   this.photo = photo;
+  this.quote = quote;
 };
