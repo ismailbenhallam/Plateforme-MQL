@@ -140,11 +140,11 @@ RechercheComponent.prototype.addListener = function (navbarItems) {
             // Return to the last page in which we found a result
             this.lastPageFoundIn.dispatchEvent(event);
           } catch (e) {}
-          showNotif(`Pas d'autre résultat`);
+          showNotif(`Pas d'autre résultat`, null, "icons/not-found.png");
         }
         // If never a result was found
         else {
-          showNotif(`Aucun résultat trouvé`);
+          showNotif(`Aucun résultat trouvé`, null, "icons/not-found.png");
           let event = new Event("click");
           // used in HistoryComponent
           event.fromSearch = true;
@@ -157,7 +157,7 @@ RechercheComponent.prototype.addListener = function (navbarItems) {
 
       // Search just in the current page
       // if (!window.find(this.input.value, false, false, null, false, false)) {
-      //   showNotif("Aucun résultat trouvé");
+      //   showNotif("Aucun résultat trouvé", null, "icons/not-found.png");
       // }
 
       // If the minimum number of characters is not reached yet and the user try to search
@@ -165,7 +165,9 @@ RechercheComponent.prototype.addListener = function (navbarItems) {
       showNotif(
         `Veuillez saisir au moins ${this.CHARACTERS_TO_START_SEARCH} caractère${
           this.CHARACTERS_TO_START_SEARCH > 1 ? "s" : ""
-        }`
+        }`,
+        null,
+        "icons/not-found.png"
       );
     }
   });

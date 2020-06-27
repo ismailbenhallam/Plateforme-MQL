@@ -410,7 +410,7 @@ EvenementComponent.prototype.showPhotosModal = function (
     if (!sessionStorage.tellUserArrowsCanPassPhotos && !isMobileOrTablet()) {
       showNotif(
         "Vous pouvez utiliser les flèches pour parcourir les photos",
-        5000
+        3000
       );
       sessionStorage.tellUserArrowsCanPassPhotos = true;
     }

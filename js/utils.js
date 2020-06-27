@@ -82,17 +82,23 @@ const setCurrentPageId = (id) => (location.hash = "#" + id);
 
 // Show a snackbar for a notification
 const NOTIF_ANIMATION_DURATION = 500;
-const showNotif = function (message, delay = 3000) {
+const showNotif = function (message, delay, iconLocation) {
   let snackbar = create("div");
   snackbar.id = "snackbar";
 
+  if (!delay) delay = 3000;
+
   // Add the "show" class to DIV
   snackbar.textContent = message;
-  
-  let img = create("img");
-  img.src="icons/not-found.png";
-  snackbar.appendChild(img);
-  
+
+  // Add an icon
+  if (iconLocation) {
+    let img = create("img");
+    img.src = iconLocation;
+    snackbar.appendChild(img);
+  }
+
+  // Animation
   snackbar.style.animation = `fadein ${
     NOTIF_ANIMATION_DURATION / 1000
   }s, fadeout ${NOTIF_ANIMATION_DURATION / 1000}s ${delay / 1000}s`;
