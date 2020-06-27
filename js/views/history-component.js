@@ -18,7 +18,7 @@ const HistoryComponent = function () {
   for (const link of navbarLinks) {
     link.addEventListener("click", (event) => {
       // If this event triggred from 'popstate' callback, don't do anything
-      if (event.fromPopState) {
+      if (event.fromPopState || event.fromSearch) {
         return;
       }
 

@@ -18,6 +18,9 @@ NavbarComponent.prototype.INDEX = "accueil";
 NavbarComponent.LINKS_SUFFIX = "-link";
 
 NavbarComponent.prototype.createNavbarItems = function () {
+  // to use it in a nother component
+  this.navbarItems = [];
+
   this.service.items.forEach((item) => {
     let li = create("li");
     let a = create("a");
@@ -26,6 +29,8 @@ NavbarComponent.prototype.createNavbarItems = function () {
     if (item.target) {
       a.dataset.target = item.target;
       a.href = `#${item.target}`;
+
+      this.navbarItems.push(a);
     } else a.classList.add("shouldnt-be-active");
 
     a.textContent = item.name;
@@ -48,6 +53,8 @@ NavbarComponent.prototype.createNavbarItems = function () {
         a.href = `#${child.target}`;
         a.dataset.parent = item.id;
         ul.appendChild(childLi);
+
+        this.navbarItems.push(a);
       });
     }
   });
@@ -145,8 +152,13 @@ NavbarComponent.prototype.addNavbarItemsListener = function () {
         let hamburger = document.querySelector("#navbar ul");
         hamburger.classList.remove("active");
 
+        // if (event.ignoreToTop == undefined || event.ignoreToTop !== true)
         window.toTop();
       });
     }
   });
+};
+
+NavbarComponent.prototype.getNavbarItems = function () {
+  return this.navbarItems;
 };

@@ -68,7 +68,7 @@ const QuoteComponent = function (service) {
 };
 
 // Contantes
-QuoteComponent.prototype.DELAY = 5000;
+QuoteComponent.prototype.DELAY = 10000;
 
 // Methodes
 QuoteComponent.prototype.updateQuote = function () {

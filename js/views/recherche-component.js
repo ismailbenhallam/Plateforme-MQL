@@ -1,4 +1,4 @@
-let RechercheComponent = function () {
+let RechercheComponent = function (navbarItems) {
   // If the Window API: find, is not supported
   if (!window.find || typeof window.find !== "function") {
     return;
@@ -8,14 +8,29 @@ let RechercheComponent = function () {
 
   this.createSearchZone();
 
-  this.addKeyUpListener();
+  this.addListener(navbarItems);
 };
 
 // Constantes
-RechercheComponent.prototype.CHARACTERS_TO_START_SEARCH = 2;
+RechercheComponent.prototype.CHARACTERS_TO_START_SEARCH = 3;
 RechercheComponent.prototype.SEARCH_ICON = "icons/search_icon_white.png";
 
 // Methods
+/*RechercheComponent.prototype.clearSelection = function () {
+  if (window.getSelection) {
+    if (window.getSelection().empty) {
+      // Chrome
+      window.getSelection().empty();
+    } else if (window.getSelection().removeAllRanges) {
+      // Firefox
+      window.getSelection().removeAllRanges();
+    }
+  } else if (document.selection) {
+    // IE
+    document.selection.empty();
+  }
+};*/
+
 RechercheComponent.prototype.createSearchZone = function () {
   let li = create("li");
   this.navbarUl.appendChild(li);
@@ -49,12 +64,102 @@ RechercheComponent.prototype.createSearchZone = function () {
   img.alt = "search";
 };
 
-RechercheComponent.prototype.addKeyUpListener = function () {
+RechercheComponent.prototype.addListener = function (navbarItems) {
+  this.index = 0;
+  this.everFound = false;
+  this.lastPageFoundIn;
+
+  // To Search from the beginning
+  this.input.addEventListener("keyup", (event) => {
+    this.index = 0;
+    this.everFound = false;
+    this.lastPageFoundIn = null;
+  });
+  this.button.addEventListener("blur", (event) => {
+    this.index = 0;
+    this.everFound = false;
+    this.lastPageFoundIn = null;
+  });
+
   this.button.addEventListener("click", (event) => {
+    // If the minimum number of characters is entered
     if (this.input.value.length >= this.CHARACTERS_TO_START_SEARCH) {
-      if (!window.find(this.input.value, false, false, null, false, false)) {
-        showNotif("Aucun résultat trouvé");
+      let found = false;
+
+      if (this.index < navbarItems.length) {
+        let event = new Event("click");
+        // used in HistoryComponent, to not save it in the stack history
+        event.fromSearch = true;
+
+        // Go to the target page
+        navbarItems[this.index].dispatchEvent(event);
+
+        do {
+          // Search in the page
+          found = window.find(
+            this.input.value,
+            false,
+            false,
+            false,
+            false,
+            false
+          );
+
+          // If we found a result
+          if (found) {
+            this.lastPageFoundIn =
+              navbarItems[this.index] + NavbarComponent.LINKS_SUFFIX;
+            this.everFound = true;
+            break;
+          } else {
+            // Try in the nextPage
+            this.index++;
+
+            // No next page
+            if (this.index == navbarItems.length) break;
+
+            let event = new Event("click");
+            // used in HistoryComponent, to not save it in the stack history
+            event.fromSearch = true;
+
+            // Go to the target page
+            navbarItems[this.index].dispatchEvent(event);
+          }
+        } while (
+          // While there is no result, and there are other pages to search in : repeat
+          this.index < navbarItems.length
+        );
       }
+
+      // If no result if found
+      if (!found && this.index == navbarItems.length) {
+        // If we ever found a result before this search
+        if (this.everFound) {
+          let event = new Event("click");
+          // used in HistoryComponent
+          event.fromSearch = true;
+          // setCurrentPageId(lastPageFoundIn);
+          try {
+            $(lastPageFoundIn + NavbarComponent.LINKS_SUFFIX).dispatchEvent(
+              event
+            );
+          } catch (e) {}
+          showNotif(`Pas d'autre résultat`);
+        } else {
+          showNotif(`Aucun résultat trouvé`);
+          let event = new Event("click");
+          // used in HistoryComponent
+          event.fromSearch = true;
+          // $(initPage + NavbarComponent.LINKS_SUFFIX).dispatchEvent(event);
+        }
+      }
+
+      // Search just in the current page
+      // if (!window.find(this.input.value, false, false, null, false, false)) {
+      //   showNotif("Aucun résultat trouvé");
+      // }
+
+      // If the minimum number of characters is not reached yet and the user try to search
     } else {
       showNotif(
         `Veuillez saisir au moins ${this.CHARACTERS_TO_START_SEARCH} caractère${
@@ -64,5 +169,3 @@ RechercheComponent.prototype.addKeyUpListener = function () {
     }
   });
 };
-
-RechercheComponent.prototype.addResultEntry = function () {};

@@ -487,13 +487,13 @@ EvenementComponent.prototype.showPhotosModal = function (
 
   if (photoArray.length > 1) {
     // If it is the first visite of the user, tell him that he can use ArrowLeft and ArrowRight to browse photos
-    if (!sessionStorage.tellUserArrowsCanPassPhotos) {
-      showNotif(
-        "Vous pouvez utiliser les flèches pour parcourir les photos",
-        5000
-      );
-      sessionStorage.tellUserArrowsCanPassPhotos = true;
-    }
+    // if (!sessionStorage.tellUserArrowsCanPassPhotos && !isMobileOrTablet()) {
+    showNotif(
+      "Vous pouvez utiliser les flèches pour parcourir les photos",
+      5000
+    );
+    sessionStorage.tellUserArrowsCanPassPhotos = true;
+    // }
   }
 };
 

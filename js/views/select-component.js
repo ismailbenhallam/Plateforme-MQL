@@ -1,3 +1,4 @@
+// To change the default style for all 'Select' elements with '.custom-select' class
 let SelectComponent = function () {
   /*a function that will close all select boxes in the document,
   except the current select box:*/

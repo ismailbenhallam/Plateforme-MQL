@@ -105,15 +105,18 @@
 }
 
 @media screen and (max-width: 768px) {
-  .blockquote-wrapper .blockquote {
-  }
+  /*
+    .blockquote-wrapper .blockquote{
+
+    }
+  */
 
   .blockquote-wrapper .blockquote h2 {
     /* padding: 14rem 0 14rem 0; */
-    /* font-size: 4vw; */
+    font-size: 14px;
   }
   .blockquote-wrapper .blockquote h4 {
-    /* font-size: 40vw; */
+    font-size: 10px;
   }
 
   /* .blockquote-wrapper .blockquote h2 { */
