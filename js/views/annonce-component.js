@@ -18,6 +18,13 @@ const AnnonceComponent = function (service) {
     annonceDate.classList.add("annonce-date");
     annonceDate.textContent = a.date.toReadeableString();
 
+    if (a.date.isLessThanNDays(this.SHOW_NEW_NBR_DAYS)) {
+      let imgNew = create("img");
+      imgNew.src = this.IMAGE_NEW;
+      imgNew.className = "annonce-new-img";
+      annonceDate.appendChild(imgNew);
+    }
+
     let annonceDetails = create("div");
     annonce.appendChild(annonceDetails);
     annonceDetails.classList.add("annonce-details");
@@ -41,4 +48,6 @@ const AnnonceComponent = function (service) {
   }
 };
 
+AnnonceComponent.prototype.IMAGE_NEW = "images/nouveau.png";
 AnnonceComponent.prototype.ICON_NEXT = "icons/next1.png";
+AnnonceComponent.prototype.SHOW_NEW_NBR_DAYS = 5;
