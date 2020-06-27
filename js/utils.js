@@ -74,20 +74,31 @@ const scrollTo = (element) => {
 
 const getCurrentPageId = () => location.hash.slice(1);
 
-const showNotif = function (message) {
-  var snackbar = create("div");
+const NOTIF_ANIMATION_DURATION = 500;
+const showNotif = function (message, delay = 3000) {
+  let snackbar = create("div");
   snackbar.id = "snackbar";
 
   // Add the "show" class to DIV
   snackbar.textContent = message;
+  snackbar.style.animation = `fadein ${
+    NOTIF_ANIMATION_DURATION / 1000
+  }s, fadeout ${NOTIF_ANIMATION_DURATION / 1000}s ${delay / 1000}s`;
+  snackbar.style.webkitAnimation = `fadein ${
+    NOTIF_ANIMATION_DURATION / 1000
+  }s, fadeout ${NOTIF_ANIMATION_DURATION / 1000}s ${delay / 1000}s`;
+
   document.body.appendChild(snackbar);
+
+  snackbar.style.marginLeft = -snackbar.offsetWidth / 2 + "px";
+
   snackbar.className = "show";
 
   // After 3 seconds, remove the show class from DIV
-  setTimeout(function () {
-    snackbar.classList.remove("show");
-  }, 3000);
+  // setTimeout(function () {
+  //   snackbar.classList.remove("show");
+  // }, delay + 500);
   setTimeout(function () {
     document.body.removeChild(snackbar);
-  }, 3000);
+  }, delay + 500);
 };

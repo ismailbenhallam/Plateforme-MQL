@@ -1,8 +1,10 @@
 const EvenementService = function (evenementsArray) {
   this.items = [];
+  let id = 1;
   for (const e of evenementsArray) {
     this.items.push(
       new Evenement(
+        id++,
         e.nom,
         e.genre,
         Date.parse(e.date),

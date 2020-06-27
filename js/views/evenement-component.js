@@ -152,7 +152,7 @@ const EvenementComponent = function (service) {
     if (e.photos && e.photos.length > 0) photo = e.photos[currentPhoto];
 
     photo.addEventListener("click", () => {
-      this.showPhotosModal([photo], 0);
+      this.showPhotosModal(e.id, [photo], 0);
     });
 
     /**********************/
@@ -279,7 +279,7 @@ EvenementComponent.prototype.showEventDetails = function (event, eventDiv) {
     img.dataset.i = 0;
     img.src = event.photos[0].src;
     img.addEventListener("click", () => {
-      this.showPhotosModal(event.photos, 0);
+      this.showPhotosModal(event.id, event.photos, 0);
     });
     content.appendChild(img);
   }
@@ -318,7 +318,7 @@ EvenementComponent.prototype.showEventDetails = function (event, eventDiv) {
       img.dataset.i = index;
       img.src = event.photos[index].src;
       img.addEventListener("click", () => {
-        this.showPhotosModal(event.photos, index);
+        this.showPhotosModal(event.id, event.photos, index);
       });
 
       let imgWrapper = create("div");
@@ -358,11 +358,13 @@ EvenementComponent.prototype.showEventDetails = function (event, eventDiv) {
 };
 
 EvenementComponent.prototype.showPhotosModal = function (
+  id,
   photoArray,
   currentIndex
 ) {
   let currentPhoto = photoArray[currentIndex];
   let modal = create("div");
+  modal.id = "evenement-modal-" + id;
   modal.tabindex = 0;
   modal.contenteditable = "true";
   modal.classList.add("evenement-modal");
@@ -393,6 +395,7 @@ EvenementComponent.prototype.showPhotosModal = function (
     previous.onclick = (eventF) => {
       // TODO: Ismail
       // if (eventF.target.tagName != "IMG") return;
+
       currentIndex--;
       currentPhoto = photoArray[currentIndex];
       this.showNextAndPrevious(photoArray.length, currentIndex, previous, next);
@@ -413,6 +416,7 @@ EvenementComponent.prototype.showPhotosModal = function (
     next.onclick = (eventF) => {
       // TODO: Ismail
       // if (eventF.target.tagName != "IMG") return;
+
       currentIndex++;
       this.showNextAndPrevious(photoArray.length, currentIndex, previous, next);
       if (currentIndex < photoArray.length) {
@@ -422,41 +426,75 @@ EvenementComponent.prototype.showPhotosModal = function (
     this.showNextAndPrevious(photoArray.length, currentIndex, previous, next);
   }
 
-  close.onclick = () => {
-    document.body.removeChild(modal);
-    // modal.style.display = "none";
-    // currentIndex = 0;
-    // if (photoArray.length > 1) {
-    //   this.showNextAndPrevious(photoArray.length, currentIndex, previous, next);
-    // }
-  };
-
   modal.addEventListener("click", (ef) => {
     if (!ef.target.classList.contains("evenement-modal")) return;
+    ef.preventDefault();
     close.dispatchEvent(new Event("click"));
-    // modal.style.display = "none";
-    // currentIndex = 0;
-    // if (photoArray.length > 1) {
-    //   this.showNextAndPrevious(photoArray.length, currentIndex, previous, next);
-    // }
   });
 
-  // window.addEventListener("keyup", function (ef) {
-  //   if (modal.style.display == "none") return;
-  //   ef.preventDefault();
-  //   modal.focus();
-  //   console.log("codeKey " + ef.codeKey);
-  //   console.log("key " + ef.key);
-  //   console.log("code " + ef.code);
-  //   console.log("location " + ef.location);
-  //   console.log("___________________");
+  // Callback on 'keyup'
+  let handleKeyUp = function (ef) {
+    if (!document.body.children.namedItem("evenement-modal-" + id)) {
+      return;
+    }
 
-  //   if (ef.code === "ArrowRight") {
-  //     next.dispatchEvent(new Event("click"));
-  //   } else if (ef.code === "ArrowLeft") {
-  //     previous.dispatchEvent(new Event("click"));
-  //   } else if (ef.code === "Escape") close.dispatchEvent(new Event("click"));
-  // });
+    ef.preventDefault();
+
+    // If ">" is clicked
+    if (ef.code === "ArrowRight") {
+      if (next.style.visibility == "hidden" || next.style.visibility == "none")
+        showNotif("Pas d'autre photos");
+      else next.dispatchEvent(new Event("click"));
+    }
+    // If "<" is clicked
+    else if (ef.code === "ArrowLeft") {
+      if (
+        previous.style.visibility == "hidden" ||
+        previous.style.visibility == "none"
+      )
+        showNotif("Première photo");
+      else previous.dispatchEvent(new Event("click"));
+    }
+  };
+
+  // If there is many pictures, handle the 'keyup' events (rightArrow and leftArrow)
+  if (photoArray.length > 1) {
+    window.addEventListener("keyup", handleKeyUp);
+  }
+
+  close.onclick = () => {
+    // Remove the listener for 'keyup'
+    window.removeEventListener("keyup", handleKeyUp);
+
+    // Remove the modal from the DOM
+    document.body.removeChild(modal);
+  };
+
+  /*
+  window.addEventListener("keyup", (ef) => {
+    if (!document.body.children.namedItem("evenement-modal-" + id)) {
+      return;
+    }
+    // If "Esc" is clicked
+    if (ef.code === "Escape") {
+      document.body.removeChild(modal);
+      ef.preventDefault();
+      ef.stopImmediatePropagation();
+      // window.removeEventListener("keyup", handleKeyUp);
+    }
+  });
+  */
+
+  if (photoArray.length > 1) {
+    // If it is the first visite of the user, tell him that he can use ArrowLeft and ArrowRight to browse photos
+    if (!sessionStorage.tellUserArrowsCanPassPhotos) {
+      showNotif(
+        "Vous pouvez utiliser les flèches pour parcourir les photos",
+        5000
+      );
+      sessionStorage.tellUserArrowsCanPassPhotos = true;
+    }
+  }
 };
 
 EvenementComponent.prototype.showNextAndPrevious = function (
@@ -470,10 +508,19 @@ EvenementComponent.prototype.showNextAndPrevious = function (
     next.style.visibility = "hidden";
     return;
   }
-  if (currentPhotoIndex == 0) {
+  if (this.hasPrevious(length, currentPhotoIndex)) {
     previous.style.visibility = "hidden";
   } else previous.style.visibility = "visible";
-  if (currentPhotoIndex == length - 1) {
+
+  if (this.hasNext(length, currentPhotoIndex)) {
     next.style.visibility = "hidden";
   } else next.style.visibility = "visible";
+};
+
+EvenementComponent.prototype.hasNext = function (length, index) {
+  return index == length - 1;
+};
+
+EvenementComponent.prototype.hasPrevious = function (length, index) {
+  return index == 0;
 };

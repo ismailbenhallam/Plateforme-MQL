@@ -104,23 +104,20 @@
   color: white;
 }
 
-
-
 @media screen and (max-width: 768px) {
-    .blockquote-wrapper .blockquote{
-
-    }
+  .blockquote-wrapper .blockquote {
+  }
 
   .blockquote-wrapper .blockquote h2 {
     /* padding: 14rem 0 14rem 0; */
     /* font-size: 4vw; */
   }
   .blockquote-wrapper .blockquote h4 {
-      /* font-size: 40vw; */
+    /* font-size: 40vw; */
   }
 
   /* .blockquote-wrapper .blockquote h2 { */
-    /* font-family: "Montserrat", sans-serif;
+  /* font-family: "Montserrat", sans-serif;
     position: relative;
 
     color: #e74848;
@@ -132,5 +129,4 @@
     border: solid 2px;
     border-radius: 20px;
     padding: 25px; */
-  }
 }
