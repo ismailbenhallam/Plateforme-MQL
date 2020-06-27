@@ -61,7 +61,7 @@ const QuoteComponent = function (service) {
   let img1 = create("img");
   quoteText.appendChild(img1);
   // FIXME: Khadija
-  img1.src = "images/dbQt5.png";
+  img1.src = "icons/dblQt.png";
   img1.className = "img1";
 
   // quote-details
@@ -87,7 +87,7 @@ const QuoteComponent = function (service) {
   let img2 = create("img");
   quoteText.appendChild(img2);
   // FIXME: Khadija
-  img2.src = "images/dbQt5.png";
+  img2.src = "icons/dblQt.png";
   img2.className = "img2";
 
   // Next icon

@@ -7,7 +7,7 @@
   height: 100%;
   flex-direction: row;
   width: 100%;
-  justify-content: center;
+  justify-content: space-evenly;
   align-items: center;
 }
 
@@ -32,18 +32,9 @@
 
 .quote-content {
   font-family: "Montserrat", sans-serif;
-  background-color: transparent;
-  border-radius: 3px;
   color: #fff;
-  position: absolute;
-  top: 70%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 400px;
-  height: 300px;
-  transform-style: preserve-3d;
-  perspective: 2000px;
-  transition: 0.4s;
+  position: relative;
+  max-width: 400px;
   text-align: center;
 }
 .quote-content:before {
@@ -87,40 +78,27 @@
   background: #b71540;
 }
 .quote-content .quote-text {
-  position: relative;
-  top: 30px;
-  left: -30px;
-  width: 115%;
-  height: 80%;
-  background-color: #2c3a47;
-  border-radius: 3px;
-  transition: 0.4s;
+    position: relative;
+    margin: 31px 0;
+    left: -30px;
+    width: calc(100% + 60px);
+    min-height: 300px;
+    background-color: #2c3a47;
+    border-radius: 3px;
 }
 
 .quote-content .quote-text .quote-details {
-  position: absolute;
-  top: 50%;
-  left: 0;
-  transform: translateY(-50%);
-  text-align: center;
-  width: 100%;
   padding: 30px 60px;
-  line-height: 1.5;
   box-sizing: border-box;
 }
 .quote-content .quote-text .quote-details h3 {
-  font-size: 30px;
+  font-size: 25px;
   margin-bottom: 5px;
+  color: #fff;
+  font-weight: bold;
+  margin-top: 0;
 }
-.quote-content .quote-text .quote-details p {
-  font-size: 15px;
-}
-.quote-content:hover {
-  transform: translate(-50%, -50%) rotateY(-20deg) skewY(3deg);
-}
-.quote-content:hover .quote-text {
-  transform: rotateY(20deg) skewY(-3deg);
-}
+
 
 /*mobile */
 @media screen and (max-width: 768px) {
