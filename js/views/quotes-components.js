@@ -8,13 +8,13 @@ const QuoteComponent = function (service) {
     return false;
   });
 
-  // If no laureate has a quote
+  // If no laureate has a quote, exit
   if (this.laureats.length == 0) {
     this.wrapper.style.display = "none";
     return;
   }
 
-  this.wrapper.classList.add("blockquote-wrapper", "top-content");
+  this.wrapper.classList.add("blockquote-wrapper");
 
   // Previous icon
   if (this.laureats.length > 0) {
@@ -33,23 +33,45 @@ const QuoteComponent = function (service) {
 
   let l = this.laureats[0];
 
-  // A wrapper
-  let block = create("div");
-  block.className = "blockquote";
+  // quote-content
+  let content = create("div");
+  content.className = "quote-content";
 
-  // The quote
-  let h2 = create("h2");
-  h2.innerHTML = l.quote;
-  this.quote = h2;
-  block.appendChild(h2);
+  // quote-text
+  let quoteText = create("div");
+  quoteText.className = "quote-text";
+  content.appendChild(quoteText);
 
-  // The laureate
-  let h4 = create("h4");
-  this.quoteCaption = h4;
-  h4.innerHTML = `&mdash;${l.nom} ${l.prenom} <em>Lauréat promotion ${l.promotion}</em>`;
-  block.appendChild(h4);
+  // img1
+  let img1 = create("img");
+  quoteText.appendChild(img1);
+  img1.src = this.QUOTE_ICON;
+  img1.className = "img1";
 
-  this.wrapper.appendChild(block);
+  // quote-details
+  let quoteDetails = create("div");
+  quoteDetails.className = "quote-details";
+  quoteText.appendChild(quoteDetails);
+
+  // h3
+  let h3 = create("h3");
+  h3.innerHTML = `&mdash;${l.nom} ${l.prenom} <em>Lauréat promotion ${l.promotion}</em>`;
+  this.quoteCaption = h3;
+  quoteDetails.appendChild(h3);
+
+  // p
+  let p = create("p");
+  p.innerHTML = l.quote;
+  this.quote = p;
+  quoteDetails.appendChild(p);
+
+  this.wrapper.appendChild(content);
+
+  // img2
+  let img2 = create("img");
+  quoteText.appendChild(img2);
+  img2.src = this.QUOTE_ICON;
+  img2.className = "img2";
 
   // Next icon
   if (this.laureats.length > 0) {
@@ -109,3 +131,5 @@ QuoteComponent.prototype.showPreviousQuote = function () {
 
   this.setUpInterval();
 };
+
+QuoteComponent.prototype.QUOTE_ICON = "icons/dblQt.png";
