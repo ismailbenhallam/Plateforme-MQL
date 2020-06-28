@@ -1,4 +1,5 @@
 const Evenement = function (
+  id,
   nom,
   genre,
   date,
@@ -8,6 +9,7 @@ const Evenement = function (
   photosFolder,
   titleColor
 ) {
+  this.id = id;
   this.nom = nom;
   this.genre = genre;
   this.date = new Date(date);

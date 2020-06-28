@@ -1,8 +1,14 @@
 const DeboucheComponent = function (service) {
-  let ul = document.getElementById("debouches");
+  let ul = $("debouches");
   for (const item of service.items) {
-    let li = document.createElement("li");
-    li.textContent = item.role;
+    let imgNext = create("img");
+    imgNext.setAttribute("src", "icons/nextRed.png");
+    let li = create("li");
+    li.style.listStyle = "none";
+    let span = create("SPAN");
+    span.textContent = " " + item.role;
+    li.appendChild(imgNext);
+    li.appendChild(span);
     ul.appendChild(li);
   }
 };

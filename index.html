@@ -2,472 +2,652 @@
 <html>
 
 <head>
-  <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
-  <link rel="icon" href="favicon.ico" type="image/x-icon">
-  <title>Plateforme MQL</title>
-  <meta name="description" content="Le Master MQL est une véritable plateforme de formation et de production de la ressource
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <title>Plateforme MQL</title>
+    <meta name="description" content="Le Master MQL est une véritable plateforme de formation et de production de la ressource
     humaine très hautement qualifiée en ingénierie du logiciel. Le Master permet à l'étudiant d'une
     part d'acquérir une compétence de pointe en haute technologie informatique et d'autre part une
     très bonne maitrise de l'entreprise et de son écosystème avec une insertion facile, naturelle et
     implicite dans les plus grandes SS2I du monde." />
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <link rel="stylesheet" type="text/css" media="screen" href="css/styles.css" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" type="text/css" media="screen" href="css/styles.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="css/Chart.min.css" />
+
+    <!-- Scripts -->
+    <script src="js/utils.js" defer="defer"></script>
+    <script src="js/data/navbar-json.js" defer="defer"></script>
+    <script src="js/data/annonces-json.js" defer="defer"></script>
+    <script src="js/data/partenaires-json.js" defer="defer"></script>
+    <script src="js/data/promos-json.js" defer="defer"></script>
+    <script src="js/data/promos-details-json.js" defer="defer"></script>
+    <script src="js/data/professeurs-json.js" defer="defer"></script>
+    <script src="js/data/laureats-json.js" defer="defer"></script>
+    <script src="js/data/debouches-json.js" defer="defer"></script>
+    <script src="js/data/evenements-json.js" defer="defer"></script>
+    <script src="js/data/semestres-json.js" defer="defer"></script>
+    <script src="js/data/informations-json.js" defer="defer"></script>
+
+    <script src="js/models/laureat.js" defer="defer"></script>
+    <script src="js/models/annonce.js" defer="defer"></script>
+    <script src="js/models/navbar-item.js" defer="defer"></script>
+    <script src="js/models/partenaire.js" defer="defer"></script>
+    <script src="js/models/promo.js" defer="defer"></script>
+    <script src="js/models/promo-details.js" defer="defer"></script>
+    <script src="js/models/professeur.js" defer="defer"></script>
+    <script src="js/models/debouche.js" defer="defer"></script>
+    <script src="js/models/evenement.js" defer="defer"></script>
+    <script src="js/models/module.js" defer="defer"></script>
+    <script src="js/models/semestre.js" defer="defer"></script>
+    <script src="js/models/information.js" defer="defer"></script>
+    <script src="js/models/actualite.js" defer="defer"></script>
+
+    <script src="js/service/annonce-service.js" defer="defer"></script>
+    <script src="js/service/navbar-service.js" defer="defer"></script>
+    <script src="js/service/partenaire-service.js" defer="defer"></script>
+    <script src="js/service/professeur-service.js" defer="defer"></script>
+    <script src="js/service/stage-service.js" defer="defer"></script>
+    <script src="js/service/laureat-service.js" defer="defer"></script>
+    <script src="js/service/debouche-service.js" defer="defer"></script>
+    <script src="js/service/evenement-service.js" defer="defer"></script>
+    <script src="js/service/programme-service.js" defer="defer"></script>
+    <script src="js/service/information-service.js" defer="defer"></script>
+    <script src="js/service/actualite-service.js" defer="defer"></script>
+
+    <script src="js/views/root-component.js" defer="defer"></script>
+    <script src="js/views/annonce-component.js" defer="defer"></script>
+    <script src="js/views/laureat-component.js" defer="defer"></script>
+    <script src="js/views/quotes-components.js" defer="defer"></script>
+    <script src="js/views/partenaire-component.js" defer="defer"></script>
+    <script src="js/views/professeur-component.js" defer="defer"></script>
+    <script src="js/views/navbar-component.js" defer="defer"></script>
+    <script src="js/views/recherche-component.js" defer="defer"></script>
+    <script src="js/views/history-component.js" defer="defer"></script>
+    <script src="js/views/programme-component.js" defer="defer"></script>
+    <script src="js/views/debouche-component.js" defer="defer"></script>
+    <script src="js/views/evenement-component.js" defer="defer"></script>
+    <script src="js/views/information-component.js" defer="defer"></script>
+    <script src="js/views/Chart.min.js" defer="defer"></script>
+    <script src="js/views/stage-component.js" defer="defer"></script>
+    <script src="js/views/actualite-component.js" defer="defer"></script>
+    <script src="js/views/select-component.js" defer="defer"></script>
+    <script src="js/main.js" defer="defer"></script>
 </head>
 
 <body>
-  <script src="js/views/loading-component.js"></script>
+    <script src="js/views/loading-component.js"></script>
 
-  <!-- Header -->
-  <header id="header" class="header">
-    <!-- Logo -->
-    <div>
-      <a href="#" data-target="presentation">
-        <img class="logo principal" src="images/logo-mql.png" alt="Logo MQL" />
-      </a>
-      <p id="slogan" class="title slogan">Première passerelle d’Insertion Professionnelle en Informatique au Maroc
-      </p>
-    </div>
+    <!-- Header -->
+    <header id="header">
+        <div class="header container sticky">
+            <div class="nav-bar">
 
-    <!-- Navigation Bar -->
-    <nav id="navbar" class="navbar">
-      <ul>
-        <li>
-          <a id="navbar-icon" class="navbar-icon" href="javascript:toggleResponsiveNavbar();">
-            <img src="icons/navbar-icon.svg" />
-          </a>
-        </li>
-        <!-- More items are added dynamically -->
-      </ul>
-    </nav>
-  </header>
+                <!-- Logo -->
+                <div class="brand">
+                    <a id="header-logo" data-target="accueil" title="Accueil">
+                        <img src="images/logo-mql-cropped.png" alt="Accueil" id="index-span" />
+                        <div class="logo-title-wrapper">
+                            <span class="logo-title">MASTER QUALITÉ LOGICIEL</span>
+                        </div>
+                    </a>
+                </div>
 
-  <!-- Main content -->
-  <main class="main">
-    <!-- Presentation -->
-    <div id="presentation" class="active">
-      <header>
-        <div>
-          <img class="logo-page" src="images/undraw_Presentation_62e1.svg">
-          <h1 class="title page">Présentation</h1>
+                <!-- Navbar  -->
+                <nav id="navbar" class="nav-list">
+                    <div class="hamburger">
+                        <img src="images/iconmonstr-menu-1-32-white.png">
+                    </div>
+                    <ul>
+                        <!-- Added dynamically -->
+                    </ul>
+                </nav>
+            </div>
         </div>
-        <hr class="divider">
-      </header>
+    </header>
 
-      <div class="top-content">
-        <div>
-          <h2 class="section-header">Objectifs de la formation</h3>
-            <p>
-              Le Master MQL est une véritable plateforme de formation et de production de la ressource
-              humaine très hautement qualifiée en ingénierie du logiciel. Le Master permet à l’étudiant d’une
-              part d’acquérir une compétence de pointe en haute technologie informatique et d’autre part une
-              très bonne maitrise de l’entreprise et de son écosystème avec une insertion facile, naturelle et
-              implicite dans les plus grandes SS2I du monde.
+    <!-- Main content -->
+    <main class="main">
 
-            <ul>
-              <li>Fournir aux étudiants une formation scientifique et technique de haut niveau en Informatique alliant
-                un
-                enseignement technologique de pointe et un enseignement théorique solide permettant de s’adapter à
-                l'évolution rapide des technologies de l'information et de la communication.</li>
-              <li>Enrichir l’offre de formation de l’université et participer à son ouverture sur l’environnement
-                socio-économique.</li>
-              <li>Répondre aux besoins des entreprises en cadres de haut niveau dans divers domaines de l’informatique
-                appliquée- en particulier dans les métiers de l’offshore- à savoir :
+        <!-- Accueil -->
+        <div id="accueil">
+            <div class="image-content">
+                <section class="banner_image">
+                    <div class="banner-container">
+                        <h3>Master MQL</h3>
+                        <h1>Première passerelle d’Insertion Professionnelle en Informatique au Maroc
+                        </h1>
+                    </div>
+                    <div id="slide">
+                        <div id="slide-wrapper" class="slideshow-container">
+                            <!-- Slides are added dynamically -->
+                        </div>
+                    </div>
+                </section>
+            </div>
+            <!--about-->
+            <div class="about-container">
+                <div class="about">
+                    <div class="about-info">
+                        <div class="section-title">
+                            <h4>Master Qualité du logiciel</h4>
+                            <h2> Nous formons des ingénieurs depuis 2007</h2>
+                        </div>
+                        <div class="about-details">
+                            <p>Le Master MQL est une véritable plateforme de formation et de production de la ressource
+                                humaine très hautement qualifiée en ingénierie du logiciel.</p>
+                            <p>Programme intergouvernemental France-Maroc FSP-ARESM Programme OTI (Offshoring des
+                                Technologies de l’Information) Mobilité et Double diplôme avec l’université de Brest
+                                (UBO) Insertion Professionnelle des étudiants.</p>
+                        </div>
+                    </div>
+                    <div class="about-img">
+                        <img src="icons/undraw_product_iteration_kjok.svg" />
+                    </div>
+                </div>
+            </div>
+            <!-- video accueil-->
+            <div id="video-accueil" class="gallery">
+                <div class="gallery-container">
+                    <div class="gallery-bottom">
+                        <video class="gallery-video" controls="">
+                            <source src="videos/video-mql-smaller.mp4" type="video/mp4">
+                        </video>
+                    </div>
+                    <div class="gallery-top">
+                        <div class="gallery-subtitle">
+                            Master Qualité du Logiciel en vidéo
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!--Annonces-->
+            <div class="annonces-content">
+                <h3 class="title-default-left">Actualités</h3>
+                <div id="annonces-wrapper">
+                    <!-- Added dynamically  -->
+                </div>
+            </div>
+
+            <!-- Informations -->
+            <div>
+                <div class="mql-info mql-padding">
+                    <div class="mql-info-container" id="informations">
+                        <!-- Informations are added dynamically-->
+                    </div>
+                </div>
+            </div>
+
+
+            <!-- Pertenaires -->
+            <div class="partenaires">
+                <h2 class="special-heading-tag">Nos partenaires<strong> nous font confiance</strong></h2>
+                <hr>
+                <div id="partenaires-wrapper" class="main-content partenaires-wrapper">
+                    <!-- Partners are added dynamically -->
+                </div>
+            </div>
+        </div>
+
+        <!-- Présentation -->
+        <div id="presentationMaster">
+            <header>
+                <div class="events-header">
+                    <h1>Présentation</h1>
+                </div>
+
+            </header>
+            <div class="top-content">
+                <div class="pad">
+                    <div class="presentation-video-wrapper">
+                        <video class="presentation-video" controls="">
+                            <source src="videos/fesNews-mql.mp4" type="video/mp4">
+                        </video>
+                    </div>
+                    <h3 class="title-default-left">Objectifs de la formation</h3>
+                    <p>
+                        Le Master MQL est une véritable plateforme de formation et de production de la ressource humaine
+                        très hautement qualifiée en ingénierie du logiciel. Le Master permet à l’étudiant d’une part
+                        d’acquérir une compétence de pointe en haute technologie informatique
+                        et d’autre part une très bonne maitrise de l’entreprise et de son écosystème avec une insertion
+                        facile, naturelle et implicite dans les plus grandes SS2I du monde.
+
+                    <ul class="ul">
+                        <li> Fournir aux étudiants une formation scientifique et technique de haut niveau en
+                            Informatique alliant un enseignement technologique de pointe et un enseignement théorique
+                            solide permettant de s’adapter à l'évolution rapide des
+                            technologies de l'information et de la communication.
+                        </li>
+                        <li> Enrichir l’offre de formation de l’université et participer à son ouverture sur
+                            l’environnement socio-économique.
+                        </li>
+                        <li> Répondre aux besoins des entreprises en cadres de haut niveau dans divers domaines de
+                            l’informatique appliquée- en particulier dans les métiers de l’offshore- à savoir :
+                            <ul class="ul">
+                                <li> Développeurs d’applications spécifiques : Web - Mobile - Décisionnel -
+                                    Client/Serveur</li>
+                                <li> Développeurs en migration et intégration des systèmes d’information
+                                </li>
+                                <li> Spécialistes en support applicatif - maintenance des applications actives et en
+                                    infogérance</li>
+                            </ul>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="main-content">
+                <h3 class="title-default-left">Déscriptif du programme</h3>
+                <div class="programme-content">
+                    <div id="programme" class="programme">
+                        <!-- Programme is added dynamically -->
+                    </div>
+                </div>
+            </div>
+
+            <div class="top-content">
+                <div class="pad">
+                    <h3 class="title-default-left">Débouchés de la Formation</h3>
+                    <p>
+                        Le Master MQL participe très activement dans le domaine de l’offshore. Le principal « client »
+                        MQL se trouve dans tous les parcs d’activité offshore et Outsourcing au Maroc et principalement
+                        Casablanca Nearshore Park, Rabat Technopolis et Fès Shore avec
+                        un taux d’insertion de 100% des étudiants dans des multinationales : Capgemini, CGI
+                        Technologies, Atos, Cegedim et Accenture.<br>
+                    </p>
+                    <ul id="debouches">
+                        <!-- Debouches are added dynamically -->
+                    </ul>
+                </div>
+            </div>
+            <div class="main-content">
+                <div>
+                    <h3 class="title-default-left">Professeurs</h3>
+                    <div id="professeurs-wrapper" class="boxing">
+                        <!-- Professors are added dynamically -->
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- selection -->
+        <div id="selection">
+            <header>
+                <div class="events-header">
+                    <h1>selection</h1>
+                </div>
+            </header>
+            <div class="top-content">
+                <div class="selection-details pad">
+                    <h3 class="title-default-left">Conditions d’accès :</h3>
+                    <ul class="learning-outcomes ul">
+                        <li>
+                            Etre titulaire d’un Bac+3: licence en Sciences Mathématiques et Infomatiques(SMI) ,ou
+                            diplôme reconnu équivalent
+                        </li>
+                        <li>
+                            Pour les 6 semestres de formation universitaire : Avoir au moins 3 mentions Assez Bien.
+                        </li>
+                        <li>
+                            L'âge doit être moins de 26 ans
+                        </li>
+                    </ul>
+                    <h3 class="title-default-left">Dossier de candidature:</h3>
+                    <ul class="learning-outcomes ul">
+                        <li>
+                            Copie de tous les diplômes obtenus (Bac, DEUG, Licence ou équivalents…)
+                        </li>
+                        <li>
+                            Copies certifiées des relevés de notes
+                        </li>
+                        <li>
+                            Copie de la Carte d’Identité Nationale
+                        </li>
+                        <li>
+                            1 photo récente
+                        </li>
+                    </ul>
+                    <h3 class="title-default-left">Calendrier du concours:</h3>
+                    <ul class="learning-outcomes ul">
+                        <li>
+                            Inscription en ligne et dépôt des dossiers: Du 05 juillet Au 02 septembre 2020
+                        </li>
+                        <li>
+                            Affichage des résultats de la 1ère sélection 12 septembre 2020
+                        </li>
+                        <li>
+                            Concours écrits et Entretiens oraux 16 - 21 septembre 2020
+                        </li>
+                        <li>
+                            Inscriptions listes principales 24 – 26 septembre 2020
+                        </li>
+                        <li>
+                            Inscriptions listes d’attente 28 septembre 2020
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- Admission -->
+        <div id="admission">
+            <header>
+                <div class="events-header">
+                    <h1>admission</h1>
+                </div>
+            </header>
+            <div class="top-content">
+                <div class="timeline-text pad">
+                    <h3 class="title-default-left">Critères d'admission</h3>
+                    <p>Plusieurs critères sont pris en compte pour l'admission des candidats en master. Nous évaluons le
+                        niveau académique du candidat, sa motivation, son projet professionnel, ses expériences et son
+                        parcours personnel. Nous considérons ainsi
+                        la cohérence entre le profil du candidat et l'offre de formation du programme. </p>
+                </div>
+                <div class="timeline">
+                    <ul>
+                        <li>
+                            <div class="content">
+                                <h3 class="title-default-left">Étude de dossier</h3>
+                                <p> Pour être pris en compte et évalué, votre dossier doit être complet et validé. Le
+                                    parcours académique est évalué avec attention et les résultats obtenus sont des
+                                    éléments essentiels lors de la sélection de nos futurs étudiants.</p>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="content">
+                                <h3 class="title-default-left">Concours écrits </h3>
+                                <p>Cette ultime étape a pour objectif de tester concrètement les qualifications
+                                    techniques et de distinguer vos capacités professionnelles de vos capacités innées.
+                                    Le concours pourra prendre la forme d’un QCM ou des excercices.</p>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="content">
+                                <h3 class="title-default-left">Entretien orale</h3>
+                                <p> A pour objet d'évaluer la motivation du candidat, son esprit critique ainsi que sa
+                                    capacité à développer une réflexion personnelle et argumentée. Il s'agit notamment
+                                    d’évaluer la cohérence de son projet personnel et professionnel,
+                                    les atouts et le potentiel dont il dispose, ainsi de découvrir sa capacité à
+                                    s’intégrer dans une équipe, et à encadrer des équipes opérationnelles, avec
+                                    autonomie, polyvalence, Initiative, responsabilité, sens critique..</p>
+                            </div>
+                        </li>
+                        <div style="clear: both;"></div>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- Activites -->
+        <div id="activites">
+            <header>
+                <div class="events-header">
+                    <h1>activités</h1>
+                </div>
+            </header>
+            <div class="top-content">
+                <div class="activite-presentation pad">
+                    <h3 class="title-default-left">Activités du Master MQL</h3>
+                    <p>Le modèle de formation sur lequel on s'appuie est un modèle riche, suivant l'évolution technique
+                        et technologique et plein d'activités qui font à ce que le master MQL soit un master de qualité
+                        par excellence, dont le but principal
+                        est l'insertion professionnelle au sein des multinationales:</p>
+                    Le processus d'insertion chez les multinationales passent par 5 étapes en général:<br>
+                    <ul class="ul">
+                        <li> Etude du CV</li>
+                        <li> Assessment Center</li>
+                        <li> Test Psychotechnique</li>
+                        <li> Test Technique</li>
+                        <li> Entretien RH</li>
+                    </ul>
+                    Sur ce, on peut déduire qu'il y'a 4 indicateurs de performances utilisés lors de ce processus et qui
+                    sont à la base d'accepter ou pas une ressource humaine dans un domaine précis, ces indicateurs sont
+                    :
+                    <ul class="ul">
+                        <li> Compétences techniques et technologiques</li>
+                        <li> Maîtrise de métiers : Banking, Santé... </li>
+                        <li> Méthodes et pratiques de gestion de projets</li>
+                        <li> Soft Skills</li>
+                    </ul>
+                    Donc comme activités visant faire acquérir ces performances, on trouve :
+                </div>
+                <div class="activite-wrapper">
+                    <div class="col-sm">
+                        <div class="image-text-modal-slider__image"
+                            style='background-image: url("images/deroulement-cours-2.jpg");'></div>
+                        <div class="image-text-modal-slider__content">
+                            <div>
+                                <h2>Déroulement des cours</h2>
+                                <div>
+                                    <p>
+                                        le déroulement de cours dans MQL ne consiste pas seulement d'études théoriques,
+                                        chaque module est une formation théorique et technique ou l'on apprend à être au
+                                        courant des différents domaines de métiers, à utiliser l'ensemble des techniques
+                                        et technologies
+                                        tout en respectant les bonnes pratiques en développement (Design Patterns).
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm">
+                        <div class="image-text-modal-slider__image"
+                            style='background-image: url("images/travaux-individuelles.png");'></div>
+                        <div class="image-text-modal-slider__content">
+                            <div>
+                                <h2>Travaux individuelles</h2>
+                                <div>
+                                    <p>
+                                        Chaque étudiant est amené à mettre en pratique tous ce qui l'a acquis durant le
+                                        déroulement de cours en réalisant des projets valorisant le maintien des bonnes
+                                        pratiques, le respect des délais ainsi il pourra améliorer son sens d'autonomie,
+                                        d'efficacité
+                                        et de créativité.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm">
+                        <div class="image-text-modal-slider__image"
+                            style='background-image: url("images/travaux-equipe.jpg");'></div>
+                        <div class="image-text-modal-slider__content">
+                            <div>
+                                <h2>Travaux d'équipe</h2>
+                                <div>
+                                    <p>
+                                        En deuxième et troisième semestre, Le travail d'équipe est primordiale, pour
+                                        cela les étudiants sont tenus à former des équipes de 4 à 6 personnes pour
+                                        mettre en oeuvre des projets ou des présentations valorisant ainsi l'esprit
+                                        d'équipe, les méthodes
+                                        et pratiques de gestion de projets (SCRUM), l'utilisation des outils
+                                        d'industrialisation, et le développement des compétences.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm">
+                        <div class="image-text-modal-slider__image" style='background-image: url("images/pres2.jpg");'>
+                        </div>
+                        <div class="image-text-modal-slider__content">
+                            <div>
+                                <h2>Soft Skills</h2>
+                                <div>
+                                    <p>
+                                        Les Soft Skills sont des compétences essentielles à tout métier. C'est pourquoi
+                                        MQL tient à travers des présentations d'équipes et d'autres activités de groupe
+                                        en dehors du programme officiel tel la participation aux compétitions
+                                        d'entrepreneuriat, à
+                                        gagner ces compétences et qualités comme la détermination, la confiance en soi,
+                                        la confiance aux collaborateurs, la communication, l'art de dire ou écrire de
+                                        manière claire, correcte, concise et précise.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Evènements -->
+        <div id="evenements">
+            <header>
+                <div class="events-header">
+                    <h1>évènements</h1>
+                </div>
+            </header>
+            <form id="evenements-filter-wrapper" class="form">
+                <div>
+                    <button id="filter" class="btn" type="button">
+                        <span class="">Filtres</span>
+                        <img id="expand-collapse" src="icons/expand-arrow.png" class="icon-10">
+                    </button>
+                    <!-- <div id="choices" class=""></div> -->
+                </div>
+                <div id="expand">
+                    <div id="group-checkbox" class="group-checkbox">
+                        <!-- Checkboxes are added dynamically  -->
+                    </div>
+                </div>
+            </form>
+            <div id="evenements-wrapper" class="top-content evenements-wrapper">
+                <!-- Added dynamically -->
+            </div>
+        </div>
+
+        <!-- Stages -->
+        <div id="stages">
+            <header>
+                <div class="events-header">
+                    <h1>stages</h1>
+                </div>
+            </header>
+            <div class="top-content">
+                <div class="pad">
+                    <h3 class="title-default-left">Procédure d'embauche chez un MQListe</h3>
+                    <p>
+                        Un stage de fin d’études de six mois en milieu professionnel sous la direction d'un professeur
+                        (encadrant pédagogique) avec un éventuel co-encadrant (ou encadrant professionnel) est
+                        obligatoire au cours du 4ème semestre.
+                        <br> Le stage professionnel représente 25% du volume horaire global de la filière. Il est
+                        équivalent à 6 modules ; soit un semestre.<br> Pendant le stage, les candidats seront demandés à
+                        réaliser des projets tirés de la réalité
+                        des entreprises d'accueil et définis en concertation entre ces dernières et la commission
+                        pédagogique de la filière.<br> Le stage est un stage pré-embauche, les étudiants MQL à ce stade
+                        sont déjà prêt a intégrer le marché d'emploi
+                        d'une maniere naturelle grâce à un programme complet :
+                    </p>
+                </div>
+                <div class="workflow-panel">
+                    <img id="workflowBig" class="workflow big" src="images/workflow-big.png" />
+                    <img id="workflowSmall" class="workflow small" src="images/workflow-small.png" />
+                </div>
+
+                <!-- Bar Chart -->
+                <div class="data-panel-wrapper">
+                    <div class="data-panel">
+                        <div class="chart-panel">
+                            <canvas id="bar"></canvas>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Pie Chart -->
+                <div class="data-panel-wrapper">
+                    <div class="data-panel">
+                        <div class="chart-panel">
+                            <div class="pie-wrapper">
+                                <canvas id="pie"></canvas>
+                            </div>
+                            <div id="choose-year-stage">
+                                <!-- Choices are added dynamically -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Lauréat -->
+        <div id="laureats">
+            <header>
+                <div class="events-header">
+                    <h1>lauréats</h1>
+                </div>
+            </header>
+            <div id="blockquote-wrapper">
+                <!-- Added dynamically -->
+            </div>
+            <form>
+                <div class="custom-select">
+                    <select id="laureats-select-promo" class="select" size="1">
+                        <!-- Options are added dynamically  -->
+                    </select>
+                </div>
+            </form>
+            <div class="heading-laureat">
+                <div class="title-wrap">
+                </div>
+            </div>
+            <div id="laureats-wrapper" class="boxing">
+                <!-- Laureats are added dynamically -->
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <!-- Scroll To Top Button -->
+        <img id="toTop" title="Défiler vers le haut" src="icons/arrow-top.png" />
+        <div class="main-footer">
+            <div class="footer-box">
+                <a id="footer-logo" data-target="accueil"><img src="images/logo-mql-cropped.png" class="footer-logo"
+                        title="Accueil" /></a>
+            </div>
+            <div class="footer-box">
+                <h2>Liens utiles</h2>
+                <hr>
                 <ul>
-                  <li>Développeurs d’applications spécifiques : Web - Mobile - Décisionnel - Client/Serveur</li>
-                  <li>Développeurs en migration et intégration des systèmes d’information</li>
-                  <li>Spécialistes en support applicatif - maintenance des applications actives et en infogérance</li>
+                    <li><a id="footer-presentationMaster-link" data-target="presentationMaster">Présentation</a></li>
+                    <li><a id="footer-activites-link" data-target="activites">Activités</a></li>
+                    <li><a id="footer-selection-link" data-target="selection">Sélection</a></li>
+                    <li><a id="footer-admission-link" data-target="admission">Admission</a></li>
                 </ul>
-            </ul>
-            </p>
-            <div class="stats">
-              <div class="stats-wrapper">
-                <div class="stats-icon"><img src="icons/iconmonstr-school-20.svg" alt=""></div>
-                <p>12 Années d’existance</p>
-              </div>
-              <div class="stats-wrapper">
-                <div class="stats-icon"><img src="icons/iconmonstr-school-26.svg" alt=""></div>
-                <p>9 Promotions sorties</p>
-              </div>
-              <div class="stats-wrapper">
-                <div class="stats-icon"><img src="icons/iconmonstr-school-23.svg" alt=""></div>
-                <p>350 Etudiants</p>
-              </div>
-              <div class="stats-wrapper">
-                <div class="stats-icon"><img src="icons/iconmonstr-building-16.svg" alt=""></div>
-                <p>215 Contrats CDI</p>
-              </div>
+            </div>
+            <div class="footer-box">
+                <h2>Contacts</h2>
+                <hr>
+                <div class="footer-address">
+                    <h6>
+                        <a href="https://goo.gl/maps/p66sEJYfuzpWjaAW9" target="__blank"><img
+                                src="icons/position.png" /> B.P. 1796 Fès-Atlas,30003 MAROC</a>
+                    </h6>
+                    <h6>
+                        <a href="tel:+2126255451650"><img src="icons/phone.png" /> (+212) 535 64 23 98</a>
+                    </h6>
+                    <h6>
+                        <a href="mailto:noureddine.chenfour@usmba.ac.ma"><img src="icons/email.png" />
+                            <span class="small-screen">noureddine.chenfour@ usmba.ac.ma</span>
+                            <span class="large-screen">noureddine.chenfour@usmba.ac.ma</span>
+                        </a>
+                    </h6>
+                </div>
+            </div>
+            <div class="footer-box">
+                <a href="http://www.usmba.ac.ma">
+                    <img src="images/white-usmba-logo.png" class="footer-logo" />
+                </a>
             </div>
         </div>
-      </div>
-
-      <div class="main-content">
-        <h2 class="section-header">Déscriptif du programme</h3>
-          <div class="programme-content">
-            <div id="programme" class="programme">
-              <!-- Programme is added dynamically -->
+        <div class="footer-bottom">
+            <div class="footer-copy">
+                <p>Copyright &copy; 2020 All Rights Reserved.</p>
             </div>
-          </div>
-      </div>
-
-      <div class="top-content">
-        <div>
-          <h2 class="section-header">Débouchés de la Formation</h3>
-            <p>
-              Le Master MQL participe très activement dans le domaine de l’offshore. Le principal « client »
-              MQL se trouve dans tous les parcs d’activité offshore et Outsourcing au Maroc et principalement
-              Casablanca Nearshore Park, Rabat Technopolis et Fès Shore avec un taux d’insertion de 100%
-              des étudiants dans des multinationales : Capgemini, CGI Technologies, Atos, Cegedim et Accenture.<br>
-            </p>
-            <ul id="debouches">
-              <!-- Debouches are added dynamically -->
-            </ul>
         </div>
-      </div>
-    </div>
-
-    <!-- Admission -->
-    <div id="admission">
-      <header>
-        <div>
-          <img class="logo-page" src="images/undraw_sign_in_e6hj.svg">
-          <h1 class="title page">Admission</h1>
-        </div>
-        <hr class="divider">
-      </header>
-      <div class="top-content">
-        <h3>Condition d'accès</h3>
-        L'accès au Master Qualité du Logiciels est limité par ses capacités
-        d'accueil, l'admission se passe par trois étapes :
-        <ul>
-          <li>Traitement de dossiers de candidature (classés suivant leur
-            qualité).</li>
-          <li>Concours écrit dans les modules suivants (C, POO, C++, Java, Web,
-            Connaissances Techniques Générales)</li>
-          <li>Entretien oral</li>
-        </ul>
-
-        <h3>Prérequis pour suivre le master MQL</h3>
-        <ul>
-          <li>Avoir une sensibilité scientifique</li>
-          <li>Avoir une aptitude à l’approche analytique</li>
-          <li>Avoir le sens du relationnel et de la communication</li>
-          <li>Doit manifester une curiosité sans fin et se tient au courant des évolutions dans son
-            domaine.</li>
-          <li>Capable à utiliser à bon escient l'essentiel des technologies matures ou innovantes</li>
-        </ul>
-        <h3>Modalités d'inscription</h3>
-        Dossier de candidature :
-        <ul>
-          <li>Photocopies des Attestations de réussite</li>
-          <li>Photocopies des Relevés des notes des années universitaires</li>
-          <li>Photocopie de la carte d’identité nationale</li>
-          <li>Une photo</li>
-        </ul>
-
-        <h3>Public cible</h3>
-        <p>
-          SMI, Licence Informatique, Télécommunications ou tout diplôme
-          équivalent.
-        </p>
-      </div>
-    </div>
-
-    <!-- Activites -->
-    <div id="activites">
-      <header>
-        <div>
-          <img class="logo-page" src="images/undraw_developer_activity_bv83.svg">
-          <h1 class="title page">Activités</h1>
-        </div>
-        <hr class="divider">
-      </header>
-      <div class="top-content paragraph">
-        <!--
-        <div class="workflow-panel">
-          <img id="workflowBig" class="workflow big" src="images/workflow-big.png">
-          <img id="workflowSmall" class="workflow small" src="images/workflow-small.png">
-        </div>
-        -->
-        <div class="activity-presentation">
-          <p>Le modèle de formation sur lequel on s'appuie est un modèle riche, suivant l'évolution technique et
-            technologique et plein d'activités qui font à ce que le master MQL soit un master de qualité par excellence,
-            dont le but principal est l'insertion professionnelle au sein des multinationales:</p>
-          Le processus d'insertion chez les multinationales passent par 5 étapes en général:</br>
-          <ul>
-            <li>Etude du CV</li>
-            <li>Assessment Center</li>
-            <li>Test Psychotechnique</li>
-            <li>Test Technique</li>
-            <li>Entretien RH</li>
-          </ul>
-          Sur ce, on peut déduire qu'il y'a 4 indicateurs de performances utilisés lors de ce processus et qui sont à la
-          base d'accepter ou pas une ressource humaine dans un domaine précis, ces indicateurs sont :
-          <ul>
-            <li>Compétences techniques et technologiques</li>
-            <li>Maîtrise de métiers : Banking, Santé... </li>
-            <li>Méthodes et pratiques de gestion de projets</li>
-            <li>Soft Skills</li>
-          </ul>
-          Donc comme activités visant faire acquérir ces performances, on trouve :
-          </p>
-        </div>
-
-        <div class="main-activity first">
-          <div>
-            <p class="title-activity">Déroulement des cours</p>
-            <p>
-              le déroulement de cours dans MQL ne consiste pas seulement d'études théoriques,
-              chaque module est une formation théorique et technique ou l'on apprend à être au
-              courant des différents domaines de métiers, à utiliser l'ensemble des techniques et
-              technologies tout en respectant les bonnes pratiques en développement (Design Patterns).
-            </p>
-          </div>
-          <img class="deroulement" src="images/deroulement-cours.jpg" alt="">
-        </div>
-        <div class="main-activity">
-          <img class="travaux" src="images/travaux-individuelles.png" alt="">
-          <div>
-            <p class="title-activity">Travaux individuelles</p>
-            <p>
-              Chaque étudiant est amené à mettre en pratique tous ce qui l'a acquis durant le déroulement
-              de cours en réalisant des projets valorisant le maintien des bonnes pratiques, le respect des
-              délais ainsi il pourra améliorer son sens d'autonomie, d'efficacité et de créativité.
-            </p>
-          </div>
-        </div>
-        <div class="main-activity">
-          <div>
-            <p class="title-activity">Travaux d'équipe</p>
-            <p>
-              En deuxième et troisième semestre, Le travail d'équipe est primordiale, pour cela les
-              étudiants sont tenus à former des équipe de 4 à 6 personnes pour mettre en oeuvre des
-              projets ou des présentations valorisant ainsi l'esprit d'équipe, les méthodes et pratiques
-              de gestion de projets (SCRUM), et Le développement des compétences.
-            </p>
-          </div>
-          <img class="equipe" src="images/travaux-equipe.jpg" alt="">
-        </div>
-        <div class="main-activity">
-          <img class="soft" src="images/soft-skills.JPG" alt="">
-          <div>
-            <p class="title-activity">Soft Skills</p>
-            <p>
-              Les Soft Skills sont la tendance d'aujourd'hui, ce sont des compétences qui ne s’apprennent pas
-              à l’école et qui sont pourtant essentielles à tout métier. D’autant plus que les métiers évoluent
-              en permanence. C'est pourquoi MQL tient à travers des présentations d'équipes et d'autres activités
-              de groupe en dehors du programme officiel tel la participation aux compétitions d'entrepreneuriat,
-              à gagner ces compétences et qualités comme la détermination, la confiance en soi, la confiance aux
-              collaborateurs, la communication, l'art de dire ou écrire de manière claire, correcte, concise et
-              précise.
-            </p>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- Evènements -->
-    <div id="evenements">
-      <header>
-        <div>
-          <img class="logo-page" src="images/undraw_newspaper_k72w.svg">
-          <h1 class="title page">Évènements</h1>
-        </div>
-        <hr class="divider">
-      </header>
-      <div id="evenements-wrapper" class="top-content evenements-wrapper">
-      </div>
-    </div>
-
-    <!-- Stages -->
-    <div id="stages">
-      <header>
-        <div>
-          <img class="logo-page" src="images/undraw_interview_rmcf.svg">
-          <h1 class="title page">Stages</h1>
-        </div>
-        <hr class="divider">
-      </header>
-      <div class="top-content">
-        <div>
-          <p style="text-indent: 15px;">
-            Un stage de fin d’études de six mois en milieu professionnel sous la direction d'un
-            professeur (encadrant pédagogique) avec un éventuel co-encadrant (ou encadrant
-            professionnel) est obligatoire au cours du 4ème semestre.<br>
-            Le stage professionnel représente 25% du volume horaire global de la filière. Il est équivalent
-            à 6 modules ; soit un semestre.<br>
-            Pendant le stage, les candidats seront demandés à réaliser des projets tirés de la réalité des
-            entreprises d'accueil et définis en concertation entre ces dernières et la commission
-            pédagogique de la filière.<br>
-            Le stage est un stage pré-embauche, les étudiants MQL à ce stade sont déjà prêt a intégrer le
-            marché d'emploi d'une maniere naturelle grâce à un programme complet :
-          </p>
-        </div>
-        <div class="workflow-panel">
-          <img id="workflowBig" class="workflow big" src="images/workflow-big.png">
-          <img id="workflowSmall" class="workflow small" src="images/workflow-small.png">
-        </div>
-        <div class="data-panel">
-          <div id="table-insertions-wrapper" class="chart-panel">
-            <!-- Added dynamically -->
-          </div>
-        </div>
-
-        <div class="data-panel">
-          <div id="table-CDIs-wrapper" class="chart-panel">
-            <!-- Added dynamically -->
-          </div>
-        </div>
-
-      </div>
-    </div>
-
-    <!-- Lauréat -->
-    <div id="laureats">
-      <header>
-        <div>
-          <img class="logo-page" src="images/undraw_Graduation_ktn0.svg">
-          <h1 class="title page">Lauréats</h1>
-        </div>
-        <hr class="divider">
-      </header>
-      <FORM>
-        <SELECT id="laureats-select-promo" class="select" size="1">
-          <!-- Options are added dynamically  -->
-        </SELECT>
-      </FORM>
-      <div class="heading-laureat">
-        <div class="title-wrap">
-
-        </div>
-      </div>
-      <div id="laureats-wrapper" class="boxing">
-        <!-- Laureats are added dynamically -->
-      </div>
-    </div>
-
-    <!-- Partenaires -->
-    <div id="partenaires">
-      <header>
-        <div>
-          <img class="logo-page" src="images/undraw_agreement_aajr.svg">
-          <h1 class="title page">Partenaires</h1>
-        </div>
-        <hr class="divider">
-      </header>
-      <div class="top-content paragraph">
-        MQL est parfaitement consciente du rôle primordial du monde professionnel dans la formation de ses étudiants et
-        de la contribution au développement académique, culturel et au rayonnement international du Maroc. C'est pour
-        cela,
-        MQL a construit un réseau de partenaires professionnels en informatique dans le secteur privé pour offrir à ses
-        étudiants des opportunités de stages et des contacts solides, leur permettant ainsi une insertion dans le marché
-        de travail
-        plus facile.</br>
-        Le Master MQL dispose actuellement de plusieurs partenariats :
-        <ul>
-          <li>Un Partenariat avec l'Université de Bretagne Occidentale - Brest – France, Signé le 28 mars 2012</li>
-          <li>Un Partenariat avec Maroc Numeric Cluster à Travers Soft Centre – Rabat. La collaboration a débuté le 20
-            Février 2013</li>
-          <li>Un Partenariat avec la multinationale ALTEN. Les travaux ont démarré le 14 Février 2014.</li>
-        </ul>
-      </div>
-      <div id="partenaires-wrapper" class="main-content partenaires-wrapper" style="background: white;">
-        <!-- Partners are added dynamically -->
-      </div>
-    </div>
-  </main>
-
-  <!-- Footer -->
-  <footer id="footer" class="footer">
-    <div class="logo-wrapper">
-      <a href="#" data-target="presentation"><img alt="Logo MQL" src="images/logo-mql.png" class="logo" /></a>
-    </div>
-    <div class="contact">
-      <div class="titre">
-        <h2>Nous contacter</h2>
-      </div>
-      <address class="adresse">
-        Master Qualité Logiciel (N. Chenfour)<br />Département d’Informatique<br />
-        Faculté des Sciences Dhar El Mahraz<br />BP : 1796 <br />Atlas - Fès - MAROC
-        <br />
-        E.mail :
-        <a href="mailto:noureddine.chenfour@usmba.ac.ma" target="__blank">noureddine.chenfour@usmba.ac.ma</a><br />
-        Site web :
-        <a href="http://www.fsdm.usmba.ac.ma" target="__blank">www.fsdm.usmba.ac.ma</a>
-        <br />
-      </address>
-    </div>
-    <div class="liens">
-      <div class="titre">
-        <h2>Liens</h2>
-      </div>
-      <div class="mentions-legales">
-        <a href="#">Mentions légales</a>
-      </div>
-    </div>
-    <!-- <div class="suivez-nous">
-      <div class="titre">
-        <h2>Suivez-nous</h2>
-      </div>
-      <ul class="rs">
-        <li>
-          <a title="Twitter" href="#"> <img src="icons/twitter.png" /></a>
-        </li>
-        <li>
-          <a title="Facebook" href="#"> <img src="icons/facebook.png" /></a>
-        </li>
-        <li>
-          <a title="Youtube" href="#"> <img src="icons/youtube.png" /></a>
-        </li>
-      </ul>
-    </div> -->
-    <div class="copyright">
-      <small>Copyright © 2020. Tous droits réservés.</small>
-    </div>
-
-    <!-- Scroll To Top Button -->
-    <img id="toTop" title="Go to top" src="icons/arrow-top.png" />
-  </footer>
-  <script src="js/utils.js" defer="defer"></script>
-  <script src="js/data/global.js" defer="defer"></script>
-  <script src="js/data/navbar-json.js" defer="defer"></script>
-  <script src="js/data/partenaires-json.js" defer="defer"></script>
-  <script src="js/data/promos-json.js" defer="defer"></script>
-  <script src="js/data/promos-details-json.js" defer="defer"></script>
-  <script src="js/data/laureats-json.js" defer="defer"></script>
-  <script src="js/data/debouches-json.js" defer="defer"></script>
-  <script src="js/data/evenement-json.js" defer="defer"></script>
-  <script src="js/data/semestres-json.js" defer="defer"></script>
-
-  <script src="js/models/laureat.js" defer="defer"></script>
-  <script src="js/models/navbar-item.js" defer="defer"></script>
-  <script src="js/models/partenaire.js" defer="defer"></script>
-  <script src="js/models/promo.js" defer="defer"></script>
-  <script src="js/models/promo-details.js" defer="defer"></script>
-  <script src="js/models/debouche.js" defer="defer"></script>
-  <script src="js/models/evenement.js" defer="defer"></script>
-  <script src="js/models/module.js" defer="defer"></script>
-  <script src="js/models/semestre.js" defer="defer"></script>
-
-  <script src="js/service/navbar-service.js" defer="defer"></script>
-  <script src="js/service/partenaire-service.js" defer="defer"></script>
-  <script src="js/service/stage-service.js" defer="defer"></script>
-  <script src="js/service/laureat-service.js" defer="defer"></script>
-  <script src="js/service/debouche-service.js" defer="defer"></script>
-  <script src="js/service/evenement-service.js" defer="defer"></script>
-  <script src="js/service/programme-service.js" defer="defer"></script>
-
-  <script src="js/views/laureat-component.js" defer="defer"></script>
-  <script src="js/views/partenaire-component.js" defer="defer"></script>
-  <script src="js/views/navbar-component.js" defer="defer"></script>
-  <script src="js/views/presentation-component.js" defer="defer"></script>
-  <script src="js/views/debouche-component.js" defer="defer"></script>
-  <script src="js/views/evenement-component.js" defer="defer"></script>
-
-  <!-- <script src="js/Chart.bundle.min.js"></script> -->
-  <script src="js/views/stage-component.js" defer="defer"></script>
-  <script src="js/views/root-component.js" defer="defer"></script>
-  <script src="js/main.js" defer="defer"></script>
+    </footer>
 </body>
 
 </html>
