@@ -1198,14 +1198,16 @@ body {
 }
 
 .presentation-video {
-  max-width: 60%;
+  width: 60%;
+  height: 600px;
   outline: 0;
   box-shadow: 0px 10px 10px 0px grey;
 }
 
 @media screen and (max-width: 768px) {
   .presentation-video {
-    max-width: 90%;
+    width: 90%;
+    height: 300px;
   }
 }
 
